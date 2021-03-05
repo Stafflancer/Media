@@ -1,0 +1,14 @@
+@mixin column($columnsWanted, $total: 12) {
+  $columnsTotal: $total;
+  $gapSize: 4;
+  $percentage: (($columnsWanted / $columnsTotal) * 100) * 1%;
+  $offset: ($gapSize / $columnsTotal) * ($columnsTotal - $columnsWanted) + px;
+
+  max-width: calc(#{$percentage} - #{$offset});
+
+  @media ($minWidth1024) {
+    $gapSize: 20;
+    $offset: ($gapSize / $columnsTotal) * ($columnsTotal - $columnsWanted) + px;
+    max-width: calc(#{$percentage} - #{$offset});
+  }
+}

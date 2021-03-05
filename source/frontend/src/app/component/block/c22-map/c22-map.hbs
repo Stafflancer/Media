@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="./c22-map.scss">
+<script src="./C22Map.ts"></script>
+
+<section id="{{id}}" class="c22-map" data-component="c22-map" data-scroll-component>
+  {{> elements/background-visuals locations-collection }}
+
+  <div class="content-wrapper" data-transition-item data-content-wrapper>
+    {{> elements/regions-navigation locations-collection }}
+    {{> elements/regions-wrapper locations-collection }}
+    {{> elements/hotspot-navigation locations-collection }}
+  </div>
+  {{> elements/info-panel locations-collection }}
+</section>

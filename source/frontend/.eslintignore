@@ -1,0 +1,6 @@
+build/**/*
+build-tools/**/*
+template/**/*
+script/**/*
+*.ts
+src/app/util

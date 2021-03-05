@@ -1,0 +1,66 @@
+.visual-content {
+  display: block;
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    content: "";
+  }
+
+  .content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.4rem;
+  }
+
+  .visual-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to bottom, transparent 50%, var(--color-black));
+      opacity: 0.6;
+      content: "";
+    }
+
+    .visual {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  @media ($minWidth768) {
+    @include column(8);
+  }
+
+  @media ($minWidth768) {
+    @include column(8, 11);
+  }
+
+  @media ($minWidth1024) {
+    @include column(5, 8);
+  }
+
+  @media ($minWidth1440) {
+    @include column(3, 5);
+    max-height: 71.2rem;
+
+    &::before {
+      padding-bottom: 124%;
+    }
+  }
+}

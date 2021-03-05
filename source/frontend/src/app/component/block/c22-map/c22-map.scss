@@ -1,0 +1,11 @@
+@import "../../../style/base/padding-settings";
+
+.c22-map {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  max-width: 192rem;
+  margin: 4rem auto;
+
+  @import "styles/content-wrapper";
+}

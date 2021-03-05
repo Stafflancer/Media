@@ -1,0 +1,13 @@
+.c05-masonry-grid {
+  --top-offset: 24rem;
+
+  @media ($minWidth1440) {
+    --top-offset: 31.2rem;
+  }
+
+  @import "styles/title-wrapper";
+  @import "styles/copy-wrapper";
+  @import "styles/masonry-grid";
+  @import "styles/masonry-list";
+  @import "styles/grid-item";
+}

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./c26-error-message.scss">
+<script src="./C26ErrorMessage.ts"></script>
+
+<section id="{{id}}" class="c26-error-message" data-component="c26-error-message" data-scroll-component>
+  <div class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="content-wrapper" data-transition-item>
+      <div class="icon-wrapper" data-transition-item>
+        {{> general/icon name=icon }}
+      </div>
+      {{> general/heading title class="heading-3 highlight main-title" data-attr="transition-item" }}
+      <div class="copy-wrapper rich-text" data-transition-item>
+        {{{rich-text}}}
+      </div>
+      <div class="cta-wrapper">
+        {{> cta/cta-pill cta }}
+      </div>
+    </div>
+  </div>
+</section>

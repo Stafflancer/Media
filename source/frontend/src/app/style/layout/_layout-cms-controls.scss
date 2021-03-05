@@ -1,0 +1,64 @@
+#block-nfe-theme-local-tasks {
+  color: var(--color-light-grey);
+  position: fixed;
+  top: 50%;
+  right: 0;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  background: #fff;
+  z-index: 10;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0.4rem solid currentColor;
+    border-right: 0;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: calc(100% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(45deg, currentColor 50%, transparent 50%);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+    content: "";
+  }
+
+  button {
+    padding: 2.7rem;
+    background: var(--color-light-blue);
+    font-family: var(--default-font-family-bold);
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--color-white);
+    border-radius: 3.2rem;
+    margin-bottom: 2rem;
+    display: none;
+  }
+
+  .visually-hidden {
+    display: none !important;
+  }
+
+  a {
+    font-size: 1.4rem;
+    color: var(--color-light-blue);
+  }
+
+  button,
+  a {
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.c03-colored-cards {
+  overflow: hidden;
+  background: var(--color-backgrounds);
+
+  @media ($maxWidth1439) {
+    .carousel-title-wrapper .carousel-controls {
+      display: none;
+    }
+  };
+
+  @import "styles/carousel-wrapper";
+  @import "styles/card";
+  @import "styles/visual-content";
+  @import "styles/copy-wrapper";
+  @import "styles/play-button";
+}

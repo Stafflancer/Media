@@ -1,0 +1,14 @@
+.logo {
+  width: 16rem;
+  position: relative;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media ($minWidth1440) {
+    width: 20rem;
+  }
+}

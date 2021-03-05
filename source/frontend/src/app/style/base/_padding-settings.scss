@@ -1,0 +1,34 @@
+@mixin padding-settings {
+  padding: 0 2.4rem;
+  --small-padding: 1rem;
+  --medium-padding: 2rem;
+  --large-padding: 4rem;
+
+  @media ($minWidth1024) {
+    padding: 0 4rem;
+  }
+
+  &.top-small {
+    padding-top: var(--small-padding);
+  }
+
+  &.top-medium {
+    padding-top: var(--medium-padding);
+  }
+
+  &.top-large {
+    padding-top: var(--large-padding);
+  }
+
+  &.bottom-small {
+    padding-bottom: var(--small-padding);
+  }
+
+  &.bottom-medium {
+    padding-bottom: var(--medium-padding);
+  }
+
+  &.bottom-large {
+    padding-bottom: var(--large-padding);
+  }
+}

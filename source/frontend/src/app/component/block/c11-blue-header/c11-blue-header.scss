@@ -1,0 +1,50 @@
+.c11-blue-header {
+  color: var(--color-white);
+  position: relative;
+  margin-bottom: 2.4rem;
+
+  &::before {
+    position: absolute;
+    top: 2.4rem;
+    bottom: 0;
+    left: 2.4rem;
+    right: 2.4rem;
+    background: var(--color-light-blue);
+    content: "";
+  }
+
+  @import "styles/copy-wrapper";
+
+  .cta {
+    margin-top: 2.4rem;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    padding: 16rem 0 3.2rem;
+  }
+
+  @media ($minWidth768) {
+    padding-top: 0;
+
+    .content-wrapper {
+      position: relative;
+      justify-content: center;
+    }
+  }
+
+  @media ($minWidth1024) {
+    .block-wrapper {
+      padding: 2.4rem;
+    }
+  }
+
+  @media ($minWidth1440) {
+    .content-wrapper {
+      padding: 31.2rem 0 12rem;
+    }
+  }
+}

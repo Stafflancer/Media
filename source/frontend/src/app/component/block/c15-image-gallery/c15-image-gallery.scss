@@ -1,0 +1,8 @@
+.c15-image-gallery {
+  overflow: hidden;
+
+  @import "styles/title-wrapper";
+  @import "styles/gallery-wrapper";
+  @import "styles/gallery-item";
+  @import "styles/gallery-controls";
+}

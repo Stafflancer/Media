@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="./cta-arrow.scss">
+
+<a href="{{link}}" class="cta cta-arrow{{#if class}} {{class}}{{/if}}"{{#if data-attr}} data-{{data-attr}}{{/if}}>
+  <div class="icon-wrapper">
+    {{> general/outline-icon name="arrow"}}
+    {{> general/outline-icon name="arrow"}}
+  </div>
+  <span class="copy">{{copy}}</span>
+  {{> general/icon class="chevron" name="chevron"}}
+</a>

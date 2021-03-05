@@ -1,0 +1,124 @@
+.form-item {
+  color: var(--color-grey);
+  margin: 3.2rem 0;
+  display: block;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.1rem;
+    opacity: 0.8;
+    background: currentColor;
+    content: "";
+  }
+
+  label {
+    cursor: pointer;
+    color: currentColor;
+    display: block;
+
+    &.form-required::before {
+      content: "*";
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1.8rem;
+    padding: 1.6rem 0;
+    color: var(--default-color);
+  }
+
+  .select-wrapper {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0.4rem;
+      height: 0.8rem;
+      width: 0.8rem;
+      transform: translateY(-50%) rotate(45deg);
+      border: 2px solid currentColor;
+      border-top: none;
+      border-left: none;
+      content: "";
+    }
+  }
+
+  .js-webform-radios {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .js-form-type-radio {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+
+      &:not(:first-of-type) {
+        margin-left: 3.2rem;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      label {
+        display: block;
+        margin-left: 1.6rem;
+        color: var(--default-color);
+      }
+
+      .radio-button-wrapper {
+        .faux-radio-button {
+          position: relative;
+          width: 2.4rem;
+          height: 2.4rem;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            content: "";
+          }
+
+          &::after {
+            position: absolute;
+            top: 0.7rem;
+            left: 0.7rem;
+            background: var(--color-light-blue);
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 250ms ease-in-out;
+            content: "";
+          }
+        }
+
+        input {
+          border: none;
+          width: 2.4rem;
+          height: 2.4rem;
+          display: none;
+
+          &:checked ~ .faux-radio-button::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

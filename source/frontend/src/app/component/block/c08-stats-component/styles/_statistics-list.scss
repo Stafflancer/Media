@@ -1,0 +1,14 @@
+.statistics-list {
+
+  @media ($minWidth768) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media ($minWidth1024) {
+    flex-wrap: nowrap;
+  }
+}

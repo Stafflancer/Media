@@ -1,0 +1,43 @@
+title: Join us in our quest in providing positive energy
+
+navigation-item:
+  - copy: Invest
+    href: #
+    title: Read about how you can invest
+  - copy: Careers
+    href: #
+    title: Join us
+  - copy: Contact us
+    href: #
+    title: Contact us
+
+visual:
+  source:
+    - srcset: "media/footer/girl-smiling-while-collecting-garbage-large.jpg"
+      media: "(min-width: 1440px)"
+  src: "media/footer/girl-smiling-while-collecting-garbage.jpg"
+  alt: "Logistics"
+
+cta:
+  href: #
+  copy: How you can help
+  title: How you can help providing positive energy
+
+quick-links:
+  title: Jump to
+  link:
+    - copy: About
+      href: #
+      title: About us
+    - copy: Solutions
+      href: #
+      title: Our Solutions
+    - copy: Operations
+      href: #
+      title: How we operate
+    - copy: Impact
+      href: #
+      title: How we have an impact
+    - copy: Stories
+      href: #
+      title: Read our stories

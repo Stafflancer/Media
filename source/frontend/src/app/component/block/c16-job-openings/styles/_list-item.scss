@@ -1,0 +1,30 @@
+.list-item {
+  position: relative;
+  display: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-light-blue);
+    opacity: 0;
+    transition: opacity 250ms linear;
+    content: "";
+  }
+
+  &.is-active {
+    display: block;
+  }
+
+  @media ($minWidth1024) {
+    &.is-active:hover {
+      color: #fff;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

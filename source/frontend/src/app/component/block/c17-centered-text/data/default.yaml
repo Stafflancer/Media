@@ -1,0 +1,26 @@
+# all fields are mandatory
+
+# component padding
+# components have different variants of padding for the top and bottom
+# the default is top: none and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: small
+bottom-padding: medium
+fullwidth: true #true or false
+
+copy: >
+  <h1>hello world!</h1> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+  corporis debitis et iste minima sit ullam voluptatum? Laborum maxime non officiis rem tempora.
+  Accusamus accusantium aliquid asperiores corporis cum cupiditate distinctio dolore dolorem error
+  est explicabo fuga harum hic, itaque <a href="#">labore</a> magnam mollitia nam natus nesciunt nihil nobis numquam
+  omnis perferendis perspiciatis, qui, quis quisquam quo ratione repudiandae sapiente sed sit vero
+  voluptatem? Cum doloribus ea hic iusto magnam praesentium quasi recusandae unde? Asperiores cum
+  delectus dicta earum eligendi, exercitationem fuga fugiat inventore magnam magni minus modi
+  molestiae nisi odio quas quibusdam ratione repellendus repudiandae sint vero. Iusto, quam,
+  tempore.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+  corporis debitis et bus ea hic iusto magnam praesentium quasi recusandae unde? Asperiores cum
+  delectus dicta earum eligendi, exercitationem fuga fugiat inventore magnam magni minus modi
+  molestiae nisi odio quas quibusdam ratione repellendus repudiandae sint vero. Iusto, quam,
+  tempore.</p>

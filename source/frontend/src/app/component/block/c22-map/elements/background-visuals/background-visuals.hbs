@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="./background-visuals.scss">
+<script src="./BackgroundVisuals.ts"></script>
+
+<div class="background-visuals is-hidden" data-component="background-visuals" data-background-visuals>
+    <ul class="visual-list" data-visual-list>
+    {{#each regions}}
+    <li class="list-item" data-visual>
+      {{> general/picture background-image class="visual-wrapper" }}
+    </li>
+    {{/each}}
+  </ul>
+  <span class="visual-overlay" data-overlay></span>
+</div>

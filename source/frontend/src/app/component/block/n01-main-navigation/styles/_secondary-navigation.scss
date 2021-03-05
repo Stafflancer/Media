@@ -1,0 +1,49 @@
+.secondary-navigation {
+  color: var(--color-light-blue);
+  pointer-events: auto;
+  padding: 0 2rem;
+
+  .cta-contact {
+    margin: 2.4rem 0 4rem;
+  }
+
+  @media (orientation: landscape) and ($maxWidth1023) {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+
+    .cta-contact {
+      margin: 0 0 0 3.2rem;
+    }
+  }
+
+  @media ($minWidth1024) {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-white);
+
+    &.scrolled-navigation {
+      color: var(--color-light-blue);
+    }
+
+    .cta-contact {
+      margin: 0 0 0 2rem;
+
+      .icon,
+      .copy {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  @media ($minWidth1440) {
+    .cta-contact {
+      margin-left: 4rem;
+    }
+  }
+}

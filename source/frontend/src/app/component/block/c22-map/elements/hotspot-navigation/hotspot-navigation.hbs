@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./hotspot-navigation.scss">
+<script src="./HotspotNavigation.ts"></script>
+
+<nav class="hotspot-navigation" data-component="hotspot-navigation" data-hotspot-navigation>
+  {{#each regions}}
+  <ul class="navigation-list" data-draggable-navigation>
+    {{#each locales}}
+    <li class="list-item" data-navigation-item>
+      {{> ../hotspot-button }}
+    </li>
+    {{/each}}
+  </ul>
+  {{/each}}
+</nav>

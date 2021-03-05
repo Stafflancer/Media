@@ -1,0 +1,32 @@
+# The only thing that the user can update for this component is the collection of social media accounts.
+# The copyright year is rendered by JavaScript. We can also let the server to this but in that case
+# We should remove the JS functionality.
+
+copyrights:
+  label: Foo
+
+privacy:
+  link: '#'
+  label: 'Foo'
+
+language-selector: false
+
+social-media:
+  title: Get the latest stories on social media
+  account:
+    - name: instagram
+      href: #
+      title: Follow us on Instagram
+      data-attr: transition-item
+    - name: linkedin
+      href: #
+      title: Connect with us on LinedIn
+      data-attr: transition-item
+    - name: facebook
+      href: #
+      title: Follow us on Facebook
+      data-attr: transition-item
+    - name: twitter
+      href: #
+      title: Follow us on Twitter
+      data-attr: transition-item

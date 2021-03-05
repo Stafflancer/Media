@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="./c14-iconic-cards.scss">
+<script src="./C14IconicCards.ts"></script>
+
+<section id="{{id}}" class="c14-iconic-cards" data-component="c14-iconic-cards" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    {{> general/carousel-title-wrapper }}
+    <div class="cards-content-wrapper">
+      <div class="carousel-wrapper" data-carousel-wrapper>
+        <ul class="cards-list" data-carousel>
+          {{#each card}}
+          <li class="card" data-carousel-item>
+            <div class="content-wrapper">
+              <div data-icon-wrapper class="icon-wrapper">
+                {{> general/outline-icon name=icon}}
+              </div>
+              <div data-heading class="heading-wrapper">
+                {{> general/heading title class="heading-3 title bold"}}
+              </div>
+              <p class="copy" data-copy>
+                {{copy}}
+              </p>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

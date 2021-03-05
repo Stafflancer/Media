@@ -1,0 +1,327 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: medium
+bottom-padding: medium
+
+title:
+  type: h2
+  copy: Join our crew
+
+card:
+  - icon: holiday
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: healthcare
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: savings
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: flexibility
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: check
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: car
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: customers
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: gym
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: health
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: leaf
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: ship
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: team
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: tree
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: truck
+    title:
+      type: h3
+      copy: Generous vacation
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: abundant
+    title:
+      type: h3
+      copy: abundant
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: abundant2
+    title:
+      type: h3
+      copy: abundant2
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: air
+    title:
+      type: h3
+      copy: air
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: award
+    title:
+      type: h3
+      copy: award
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: bar-chart
+    title:
+      type: h3
+      copy: bar-chart
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: calendar
+    title:
+      type: h3
+      copy: calendar
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: community
+    title:
+      type: h3
+      copy: community
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: decrease-arrow
+    title:
+      type: h3
+      copy: decrease-arrow
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: decrease
+    title:
+      type: h3
+      copy: decrease
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: gas
+    title:
+      type: h3
+      copy: gas
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: gas2
+    title:
+      type: h3
+      copy: gas2
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: increase-arrow
+    title:
+      type: h3
+      copy: increase-arrow
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: increase
+    title:
+      type: h3
+      copy: increase
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: phone
+    title:
+      type: h3
+      copy: phone
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: safe
+    title:
+      type: h3
+      copy: safe
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: sun
+    title:
+      type: h3
+      copy: sun
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: thumbs-up
+    title:
+      type: h3
+      copy: thumbs-up
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: train
+    title:
+      type: h3
+      copy: train
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: wind
+    title:
+      type: h3
+      copy: wind
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: world
+    title:
+      type: h3
+      copy: world
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: world2
+    title:
+      type: h3
+      copy: world2
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: card-envelope
+    title:
+      type: h3
+      copy: card-envelope
+    copy: card-envelope
+
+  - icon: card-play
+    title:
+      type: h3
+      copy: card-play
+    copy: card-play
+
+  - icon: card-facebook
+    title:
+      type: h3
+      copy: card-facebook
+    copy: card-facebook
+
+  - icon: card-facebook2
+    title:
+      type: h3
+      copy: card-facebook2
+    copy: card-facebook2
+
+  - icon: card-instagram
+    title:
+      type: h3
+      copy: card-instagram
+    copy: card-instagram
+
+  - icon: card-instagram2
+    title:
+      type: h3
+      copy: card-instagram2
+    copy: card-instagram2
+
+  - icon: card-linkedin
+    title:
+      type: h3
+      copy: card-linkedin
+    copy: card-linkedin
+
+  - icon: card-linkedin2
+    title:
+      type: h3
+      copy: card-linkedin2
+    copy: card-linkedin2
+
+  - icon: card-twitter
+    title:
+      type: h3
+      copy: card-twitter
+    copy: card-twitter
+
+  - icon: card-twitter2
+    title:
+      type: h3
+      copy: card-twitter2
+    copy: card-twitter2
+
+  - icon: double-chevron
+    title:
+      type: h3
+      copy: double-chevron
+    copy: double-chevron
+
+  - icon: double-chevron2
+    title:
+      type: h3
+      copy: double-chevron2
+    copy: double-chevron2
+
+  - icon: health2
+    title:
+      type: h3
+      copy: health2
+    copy: health2
+
+  - icon: house
+    title:
+      type: h3
+      copy: house
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: house2
+    title:
+      type: h3
+      copy: house2
+    copy: Certe, inquam, pertinax non quo voluptas nulla pariatur? at magnum periculum adiit in.
+
+  - icon: gas2
+    title:
+      type: h3
+      copy: gas2
+    copy: gas2
+
+  - icon: gas3
+    title:
+      type: h3
+      copy: gas3
+    copy: gas3

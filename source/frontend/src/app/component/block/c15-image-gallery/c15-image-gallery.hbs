@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./c15-image-gallery.scss">
+<script src="./C15ImageGallery.ts"></script>
+
+<section id="{{id}}" class="c15-image-gallery" data-component="c15-image-gallery" data-scroll-component>
+  <div class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="title-wrapper" data-transition-item>
+      {{> general/heading main-title class="heading-2 highlight" }}
+    </div>
+    <div class="gallery-wrapper" data-gallery-wrapper data-transition-item>
+      <div class="content-wrapper" data-carousel-wrapper>
+        <ul class="gallery-list" data-carousel>
+          {{#each gallery-item}}
+            <li class="gallery-item" data-carousel-item>
+              <div class="figure">
+                {{> general/picture visual}}
+                <div class="item-content">
+                  <div class="caption">{{caption}}</div>
+                  <div class="counter" data-counter></div>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="gallery-controls">
+        <div class="button-wrapper">
+          <button class="gallery-control previous" data-control-previous data-transition-item>
+            {{> general/icon name="arrow"}}
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <button class="gallery-control next" data-control-next data-transition-item>
+            {{> general/icon name="arrow"}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

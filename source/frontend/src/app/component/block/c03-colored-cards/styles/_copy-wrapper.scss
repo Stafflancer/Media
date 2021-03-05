@@ -1,0 +1,80 @@
+.copy-wrapper {
+  position: relative;
+  padding: 4rem 4.8rem 4rem 3.2rem;
+  background: currentColor;
+
+  .copy-wrapper-animation {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // opacity: 0;
+    // transform: translateX(30px);
+  }
+
+  .heading {
+    color: var(--color-white);
+  }
+
+  .cta {
+    margin-top: 3.2rem;
+
+    .icon-wrapper::before {
+      color: var(--color-white);
+      background: transparent;
+      transition: background-color 250ms ease-in-out;
+    }
+
+    .copy {
+      color: var(--color-white);
+    }
+
+    .outline-icon {
+      color: var(--color-white);
+
+      &:nth-child(2) {
+        color: currentColor;
+      }
+    }
+
+    &:hover .icon-wrapper::before {
+      background: var(--color-white);
+    }
+  }
+
+  @media ($minWidth768) {
+    @include column(5);
+    margin-left: auto;
+    margin-right: 0;
+    position: absolute;
+    top: 5.6rem;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media ($minWidth1024) {
+    @include column(4, 8);
+  }
+
+  @media ($minWidth1440) {
+    @include column(3, 5);
+
+    .copy-wrapper-animation {
+      // opacity: 1;
+      // transform: none;
+    }
+  }
+
+  @media ($minWidth1440) and ($maxWidth1919) {
+    top: 11.2rem;
+
+    .heading {
+      font-size: 2rem;
+    }
+  }
+
+  @media ($minWidth1920) {
+    padding: 4.8rem 4.8rem 4.8rem 3.2rem;
+  }
+}

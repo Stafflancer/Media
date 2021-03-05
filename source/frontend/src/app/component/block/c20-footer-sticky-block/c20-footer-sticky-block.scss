@@ -1,0 +1,9 @@
+.c20-footer-sticky-block {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+
+  @import "styles/main-items";
+  @import "styles/visual-container";
+  @import "styles/quick-links";
+}

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./c07-numbered-cards.scss">
+<script src="./C07NumberedCards.ts"></script>
+
+<section id="{{id}}" class="c07-numbered-cards" data-component="c07-numbered-cards" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    {{> general/carousel-title-wrapper}}
+    <div class="offset-wrapper">
+      <div class="carousel-wrapper" data-carousel-wrapper>
+        <ol class="cards-list" data-carousel>
+          {{#each card}}
+          <li class="carousel-item" data-carousel-item>
+            <div class="card-title-wrapper">
+              <div class="card-index">
+                <div class="heading heading-3"><span class="index"></span></div>
+              </div>
+              <div class="card-title" data-card-heading>
+                {{> general/heading title class="heading-4 highlight" }}
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <div class="card-copy-wrapper" data-play-button>
+                <p>
+                  {{copy}}
+                </p>
+                {{#if cta}}
+                {{> cta/cta-arrow cta}}
+                {{/if}}
+              </div>
+              <div class="visual-wrapper">
+                {{> general/picture visual}}
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>

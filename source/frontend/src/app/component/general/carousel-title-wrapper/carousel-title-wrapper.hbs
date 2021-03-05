@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./carousel-title-wrapper.scss">
+
+<div class="carousel-title-wrapper">
+  {{> general/heading title class="heading-2 semi-bold highlight main-title" data-attr="transition-item"}}
+  {{#if copy}}<p>{{copy}}</p>{{/if}}
+  {{#if cta}}{{> cta/cta-chevron cta class="highlight" data-attr="transition-item" }}{{/if}}
+  <div class="carousel-controls">
+    <button class="carousel-control previous" data-control-previous data-transition-item>
+      {{> general/outline-icon name="pointer"}}
+    </button>
+    <button class="carousel-control next" data-control-next data-transition-item>
+      {{> general/outline-icon name="pointer"}}
+    </button>
+  </div>
+</div>

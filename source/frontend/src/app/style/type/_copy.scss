@@ -1,0 +1,30 @@
+@import "../base/color-varions";
+
+.copy {
+  @include color-variations;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.77;
+
+  &.small {
+    font-size: 1.4rem;
+    line-height: 1.43;
+  }
+
+  &.semi-bold {
+    font-family: var(--default-font-family-semibold);
+  }
+
+  &.bold,
+  &.strong {
+    font-family: var(--default-font-family-bold);
+  }
+
+  @media ($minWidth1024) {
+    font-size: 1.8rem;
+  }
+
+  a {
+    color: var(--color-light-blue);
+  }
+}

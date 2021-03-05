@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="./c03-colored-cards.scss">
+<script src="./C03ColoredCards.ts"></script>
+
+<section id="{{id}}" class="c03-colored-cards" data-component="c03-colored-cards" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    {{> general/carousel-title-wrapper }}
+    <div class="carousel-wrapper" data-carousel-wrapper data-transition-item>
+      <ul class="cards-list" data-carousel>
+        {{#each card}}
+        <li class="card" data-carousel-item>
+          <div class="card-wrapper">
+            <div class="visual-content">
+              {{> general/picture visual class="visual-wrapper" }}
+              {{#if video}}
+              <div class="content-wrapper">
+                {{#with video}}
+                <button class="play-button" data-video-popup="{{id}}" data-play-button>
+                  <div class="icon-wrapper">
+                    {{> general/icon name="play"}}
+                    {{> general/icon name="play"}}
+                  </div>
+                  <div class="label">{{label}}</div>
+                </button>
+                {{/with}}
+              </div>
+              {{/if}}
+            </div>
+            <div class="copy-wrapper">
+              <div class="copy-wrapper-animation" data-card-heading>
+                <p class="heading heading-3 semi-bold">
+                  {{title.copy}}
+                </p>
+                {{> cta/cta-arrow cta}}
+              </div>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

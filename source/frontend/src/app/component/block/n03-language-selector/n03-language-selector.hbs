@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./n03-language-selector.scss">
+<script src="./N03LanguageSelector.ts"></script>
+
+<section class="n03-language-selector is-hidden" data-component="n03-language-selector">
+  {{> general/overlay }}
+  <div class="content-wrapper">
+    <div class="content-drawer" data-content-drawer>
+      <button class="close-button" data-close-button>
+        {{> general/icon name="close" }}
+      </button>
+      <div class="copy-wrapper">
+        {{> general/heading title class="heading-3 highlight semi-bold title" data-attr="transition-item"}}
+        <ul class="language-list">
+          {{#each language}}
+          <li class="list-item" data-transition-item>
+            {{> cta/cta-chevron cta }}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

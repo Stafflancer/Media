@@ -1,0 +1,21 @@
+.c08-stats-component {
+  overflow: hidden;
+  color: var(--color-light-blue);
+
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  @import "styles/title-wrapper";
+  @import "styles/statistics-list";
+  @import "styles/scrollbar-wrapper";
+  @import "styles/list-item";
+
+  @media ($minWidth1440) {
+    .carousel-wrapper {
+      @include column(10);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

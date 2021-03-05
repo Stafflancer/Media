@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./c10-partner-cards.scss">
+<script src="./C10PartnerCards.ts"></script>
+
+<section id="{{id}}" class="c10-partner-cards" data-component="c10-partner-cards" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    {{> general/carousel-title-wrapper }}
+
+    <div class="cards-content-wrapper">
+      <div class="cards-wrapper" data-carousel-wrapper>
+        <ul class="cards-list" data-carousel>
+          {{#each card}}
+          <li class="card" data-carousel-item>
+            <div class="content-wrapper">
+              <div class="data-content" data-picture data-content>
+                {{> general/picture visual }}
+              </div>
+              <div class="data-heading" data-heading data-content>
+                {{> general/heading title class="heading-3 title bold"}}
+              </div>
+              <p class="card-copy data-description" data-copy data-description>
+                {{copy}}
+              </p>
+              {{#if cta}}
+              <div class="data-description" data-arrow data-description>
+                {{> cta/cta-arrow cta }}
+              </div>
+              {{/if}}
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

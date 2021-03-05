@@ -1,0 +1,24 @@
+.media-wrapper {
+  margin-bottom: 3.2rem;
+
+  .video {
+    width: 100%;
+  }
+
+  @media ($minWidth768) {
+    @include column(8);
+    margin-left: auto;
+    margin-right: auto;
+
+    .video {
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  @media ($minWidth1024) {
+    @include column(6);
+    margin: 0;
+  }
+}

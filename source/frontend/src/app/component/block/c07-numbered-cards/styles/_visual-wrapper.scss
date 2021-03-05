@@ -1,0 +1,20 @@
+.visual-wrapper {
+  width: calc(100% + 2.4rem);
+
+  @media ($minWidth768) {
+    width: calc(50% + 2.2rem);
+    margin-left: auto;
+  }
+
+  @media ($minWidth1024) {
+    width: 100%;
+    max-width: 44.8rem;
+  }
+
+  @media ($minWidth1440) {
+    width: 100%;
+    @include column(3, 7);
+    transform: translateX(var(--gutter-offset));
+    background: #e8bf2a;
+  }
+}

@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./c23-thank-you.scss">
+<script src="./C23ThankYou.ts"></script>
+
+<section id="{{id}}" class="c23-thank-you" data-component="c23-thank-you" data-scroll-component>
+  <div class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="content-wrapper" data-transition-item>
+      <div class="icon-wrapper" data-transition-item>
+        {{> general/icon name="check" }}
+      </div>
+      {{> general/heading title class="heading-3 highlight main-title" data-attr="transition-item" }}
+      <div class="copy-wrapper" data-transition-item>
+        {{copy}}
+      </div>
+    </div>
+  </div>
+</section>

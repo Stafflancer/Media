@@ -1,0 +1,17 @@
+@mixin color-variations {
+  &.light {
+    color: var(--color-white);
+  }
+
+  &.grey {
+    color: var(--color-grey);
+  }
+
+  &.dark {
+    color: var(--color-black);
+  }
+
+  &.highlight {
+    color: var(--color-light-blue);
+  }
+}

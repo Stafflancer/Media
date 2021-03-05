@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="./n01-main-navigation.scss">
+<script src="./N01MainNavigation.ts"></script>
+
+<section class="n01-main-navigation" data-component="n01-main-navigation" data-scroll-component>
+  <div class="main-content-wrapper" data-content-wrapper>
+    <div class="logo-wrapper" data-menu-bar>
+      {{#with home-link}}
+      <a href="{{href}}" title="{{title}}">
+        {{> general/logo/logo }}
+      </a>
+      {{/with}}
+      {{> general/menu-button data-attr="menu-button"}}
+    </div>
+    <div class="content-wrapper" data-menu-wrapper>
+      <span class="background-drawer" data-background-drawer></span>
+      <div class="block-wrapper navigation-block-wrapper" data-block-wrapper>
+        <nav class="navigation-wrapper" data-navigation-wrapper>
+          {{#each main-navigation-item}}
+          {{#if links}}
+          <div class="navigation-link navigation-sub-menu-item {{active}}" title="{{title}}"
+            data-navigation-link data-sub-menu-item>
+            <span class="navigation-link-copy">{{copy}}</span>
+            <div class="sub-menu-wrapper" data-sub-menu-list>
+              <ul class="sub-menu-list">
+                {{#each links}}
+                <li class="sub-menu-list-item">
+                  {{#if sub-links}}
+                  <span>{{copy}}</span>
+                  {{else}}
+                  <span><a href="{{href}}">{{copy}}</a></span>
+                  {{/if}}
+                  {{#if sub-links}}
+                  <div class="sub-links-wrapper">
+                    <ul class="sub-links-list">
+                      {{#each sub-links}}
+                      <li class="sub-link-item">
+                        </span><a href="{{href}}">{{copy}}</a></span>
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          {{else}}
+          <a href="{{href}}" class="navigation-link {{active}}" title="{{title}}" data-navigation-link>
+            {{copy}}
+          </a>
+          {{/if}}
+          {{/each}}
+        </nav>
+        <div class="secondary-navigation" data-secondary-navigation>
+          {{#if language-selector}}
+          <div data-navigation-link>
+            {{> general/language-selector/language-selector class="link" data-attr="language-selector" }}
+          </div>
+          {{/if}}
+          {{> cta/cta-contact/cta-contact cta data-attr="contact-button" }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+.main-content-wrapper {
+  height: 100%;
+  position: relative;
+
+  @media ($minWidth1024) {
+    padding: 0.8rem 4.8rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      background: var(--color-white);
+      transition: opacity var(--transition-time-settings);
+      content: "";
+    }
+
+    &.scrolled-navigation::before {
+      opacity: 1;
+    }
+  }
+
+  @media ($minWidth1440) {
+    padding-left: 7.2rem;
+    padding-right: 7.2rem;
+  }
+
+  @media ($minWidth1920) {
+    padding-left: 9.6rem;
+    padding-right: 9.6rem;
+  }
+}

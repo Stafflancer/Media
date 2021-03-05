@@ -1,0 +1,46 @@
+.gallery-controls {
+  display: none;
+
+  @media ($minWidth1024) {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    color: var(--color-light-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+
+    .button-wrapper {
+      @include column(1);
+      min-width: 8rem;
+      width: 100%;
+    }
+
+    .gallery-control {
+      display: block;
+      width: 6.4rem;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 250ms;
+
+      &.is-disabled {
+        color: var(--color-light-grey);
+        opacity: 0.3;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      &.previous .icon {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  @media ($minWidth1440) {
+    .button-wrapper {
+      @include column(1, 10);
+    }
+  }
+}

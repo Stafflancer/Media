@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="./c04-image-text.scss">
+<script src="./C04ImageText.ts"></script>
+
+<section id="{{id}}" class="c04-image-text" data-component="c04-image-text" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="content-wrapper{{#if inverted-alignment}} row-reversed{{/if}}">
+        <div class="media-wrapper" data-transition-item>
+          {{#if visual}}
+          {{> general/picture visual}}
+          {{/if}}
+          {{#if video}}
+            {{> general/video video class="video"}}
+          {{/if}}
+        </div>
+      <div class="copy-wrapper">
+        <div class="container">
+          {{> general/heading title class="heading-3 title bold highlight" data-attr="transition-item" }}
+          <div class="rich-text" data-transition-item>
+            {{{rich-text}}}
+          </div>
+          <div class="cta-wrapper">
+            {{#if cta.isLink }}
+            {{> cta/cta-chevron/cta-chevron cta class="highlight" data-attr="transition-item" }}
+            {{/if}}
+
+            {{#if cta.isButton }}
+            {{> cta/cta-pill/cta-pill cta class="highlight" data-attr="transition-item" }}
+            {{/if}}
+
+            {{> general/social-links/social-links account=social-account }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

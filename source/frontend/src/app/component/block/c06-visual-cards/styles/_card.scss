@@ -1,0 +1,158 @@
+.card {
+  width: 100%;
+  position: relative;
+  max-height: 48rem;
+  z-index: 0;
+  flex-shrink: 0;
+
+  &:nth-child(3n + 1) .color-overlay {
+    background: var(--color-yellow);
+  }
+
+  &:nth-child(3n + 2) .color-overlay {
+    background: var(--color-light-blue);
+  }
+
+  &:nth-child(3n + 3) .color-overlay {
+    background: var(--color-green);
+  }
+
+  .link {
+    display: block;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: 150%;
+    content: "";
+  }
+
+  .visual-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    & + .color-overlay {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, var(--color-black));
+      opacity: 0.6;
+      content: "";
+    }
+
+    .visual {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content-wrapper {
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .card-heading,
+  .card-button {
+    // opacity: 0;
+    // transform: translateX(30px);
+  }
+
+  .category-label {
+    display: block;
+    margin-bottom: 1.6rem;
+  }
+
+  .card-title {
+    max-width: 32rem;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  @media ($minWidth768) {
+    .content-wrapper {
+      padding: 6.4rem;
+      top: 0;
+    }
+
+    .cta {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  @media ($minWidth1024) {
+    @include column(7, 12);
+    max-height: none;
+    overflow: hidden;
+    height: auto;
+    align-self: flex-start;
+
+    &::before {
+      padding-bottom: 64%;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 2rem;
+    }
+
+    &:nth-child(even) {
+      @include column(5, 12);
+      margin-top: 4rem;
+
+      &::before {
+        padding-bottom: 100%;
+      }
+    }
+
+    .link {
+      right: 4.4rem;
+    }
+
+    .card-heading,
+    .card-button {
+      // opacity: 0;
+      // transform: translateX(30px);
+    }
+  }
+
+  @media ($minWidth1440) {
+    @include column(6, 10);
+
+    &:nth-child(even) {
+      @include column(4, 10);
+      margin-top: 8rem;
+    }
+  }
+}

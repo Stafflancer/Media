@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="./video-player.scss">
+<script src="./VideoPlayer.ts"></script>
+
+<div class="video-player" data-component="video-player" youtube-id="{{youtube-id}}" {{#if data-attr}}
+  data-{{data-attr}}{{/if}}>
+  <div id="player" data-player></div>
+</div>

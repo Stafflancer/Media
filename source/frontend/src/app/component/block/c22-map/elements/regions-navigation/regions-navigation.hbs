@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./regions-navigation.scss">
+<script src="./RegionsNavigation.ts"></script>
+
+<div class="regions-navigation" data-component="regions-navigation">
+  <div class="label">
+    {{title}}
+  </div>
+  <div data-draggable-wrapper>
+    <nav class="navigation" data-draggable-content>
+    {{#each regions}}
+      <button class="navigation-button" data-location-button>
+        <span class="location">{{name}}</span>
+        <span class="locations-total">
+        <span>{{operations.total}}</span>
+        <span>{{operations.copy}}</span>
+        </span>
+      </button>
+    {{/each}}
+    </nav>
+  </div>
+</div>

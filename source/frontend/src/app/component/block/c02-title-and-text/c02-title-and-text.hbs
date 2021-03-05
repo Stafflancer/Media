@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./c02-title-and-text.scss">
+<script src="./C02TitleAndText.ts"></script>
+
+<section id="{{id}}" class="c02-title-and-text" data-component="c02-title-and-text" data-scroll-component>
+  <div class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="content-wrapper">
+      {{#if label}}
+      {{> general/heading label class="heading-5 grey label" data-attr="transition-item" }}
+      {{/if}}
+      <div class="wrapper">
+        {{> general/heading title class="heading-2 semi-bold highlight title" data-attr="transition-item" }}
+        <div class="copy-wrapper rich-text" data-transition-item>
+          {{{rich-text}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

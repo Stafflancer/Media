@@ -1,0 +1,10 @@
+title:
+  type: h1
+  copy: Project Manager
+
+richtext: >
+  Good to have you here. You can contact us for questions and requests through the form below or at <a href="#">info@newfortressenergy.com</a>
+
+cta:
+  link: '#'
+  copy: View all jobs

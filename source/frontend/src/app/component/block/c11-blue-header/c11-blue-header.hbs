@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./c11-blue-header.scss">
+<script src="./C11BlueHeader.ts"></script>
+
+<section id="{{id}}" class="c11-blue-header" data-component="c11-blue-header" data-scroll-component>
+  <div class="block-wrapper">
+    <div class="content-wrapper">
+      <div class="copy-wrapper">
+        {{> general/heading title class="heading-1 semi-bold title"}}
+        <p>
+          {{{richtext}}}
+        </p>
+        {{#if cta}}
+          {{> cta/cta-pill cta class="outline"}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>
+

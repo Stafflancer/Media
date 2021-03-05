@@ -1,0 +1,12 @@
+title:
+  type: h1
+  copy: Become part of our story
+
+hero-image:
+  source:
+    - srcset: "media/hero/hero-girl-in-nature-with-waterfall-large.jpg"
+      media: "(min-width: 1440px)"
+    - srcset: "media/hero/hero-girl-in-nature-with-waterfall-medium.jpg"
+      media: "(min-width: 768px)"
+  src: "media/hero/hero-girl-in-nature-with-waterfall-small.jpg"
+  alt: "Girl in nature with waterfall in the background"

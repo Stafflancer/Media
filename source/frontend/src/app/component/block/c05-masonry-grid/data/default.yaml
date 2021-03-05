@@ -1,0 +1,89 @@
+# ALl fields are mandatory
+# Except for the copy
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: medium
+bottom-padding: medium
+
+main-title:
+  type: h2
+  copy: Our solutions
+copy: >
+  We help customers <a href="#">replace oil-based fuels</a> with natural gas. The cheaper, cleaner and renewable
+  alternative.
+
+item:
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    video:
+      src: "media/hero/video/nfe-hero-720-fast.mp4"
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    video:
+      src: "media/hero/video/nfe-hero-720-fast.mp4"
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-small-place-next-to-see.jpg
+      alt: top down view of an intersection in a city
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-crossroad-in-city.jpg
+      alt: top down view of an intersection in a city
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-small-place-next-to-see.jpg
+      alt: top down view of an intersection in a city
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-crossroad-in-city.jpg
+      alt: top down view of an intersection in a city
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-construction-space.jpg
+      alt: top down view of an intersection in a city
+
+  - href: #
+    title: Read about logistics
+    solution-title:
+      type: h3
+      copy: Logistics
+    visual:
+      src: media/image-masonry/top-down-view-on-crossroad-in-city.jpg
+      alt: top down view of an intersection in a city

@@ -1,0 +1,69 @@
+.cta-contact {
+  display: inline-block;
+  position: relative;
+  padding: 0.6rem 3rem;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0.2rem solid currentColor;
+    border-radius: 2rem;
+    content: "";
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .copy {
+    font-family: var(--default-font-family-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1.4rem;
+    line-height: 1;
+    position: relative;
+  }
+
+  @media ($minWidth1024) {
+    &::before {
+      border: 0;
+      opacity: 0.5;
+      background: currentColor;
+      backdrop-filter: blur(2rem);
+    }
+
+    .copy {
+      color: currentColor;
+    }
+  }
+
+  @media ($minWidth1024) and ($maxWidth1439) {
+    padding: 0;
+
+    &::before {
+      border-radius: 50%;
+    }
+
+    .icon {
+      position: relative;
+      display: block;
+      height: 6.4rem;
+      width: 6.4rem;
+    }
+
+    .copy {
+      display: none;
+    }
+  }
+
+  @media ($minWidth1440) {
+    padding: 1.8rem 3rem;
+
+    &::before {
+      border-radius: 3.2rem;
+    }
+  }
+}

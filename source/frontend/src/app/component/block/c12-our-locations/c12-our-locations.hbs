@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="./c12-our-locations.scss">
+<script src="./C12OurLocations.ts"></script>
+
+<section id="{{id}}" class="c12-our-locations" data-component="c12-our-locations" data-scroll-component>
+  <div
+    class="block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}}">
+    <div class="content-wrapper location-container">
+      {{> general/carousel-title-wrapper }}
+      <div class="location-wrapper" data-carousel-wrapper data-transition-item>
+        <ul class="location-list" data-carousel>
+          {{#each card}}
+          <li class="list-item" data-carousel-item>
+            {{> general/picture visual class="visual-wrapper" data-attr="transition-item  " }}
+            <div class="copy-wrapper">
+              <div class="location-address" data-transition-item>
+                <div data-heading class="heading-wrapper data-heading">
+                  {{> general/heading title class="heading-2 title bold slider-title" }}
+                </div>
+                <p class="slider-description data-copy" data-copy>{{{copy}}}</p>
+              </div>
+              <div class="email-address data-cta" data-transition-item data-cta>
+                {{> cta/cta-chevron cta }}
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

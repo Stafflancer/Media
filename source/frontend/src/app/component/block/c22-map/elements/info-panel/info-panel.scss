@@ -1,0 +1,24 @@
+.info-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  color: var(--color-white);
+  z-index: zindex(map-info-panel);
+  padding: 4rem 2.4rem;
+
+  &.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .cta-wrapper {
+    margin-top: 2rem;
+  }
+
+  @import "styles/close-button";
+  @import "styles/drawer";
+  @import "styles/locales-list";
+}

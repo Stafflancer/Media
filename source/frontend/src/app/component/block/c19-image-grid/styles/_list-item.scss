@@ -1,0 +1,51 @@
+.list-item {
+  width: 100%;
+
+  .item-title {
+    margin-bottom: 2.4rem;
+  }
+
+  .list-item-copy {
+    margin-bottom: 4rem;
+    max-width: 56rem;
+  }
+
+  @media ($minWidth768) {
+    @include column(5, 10);
+    width: 100%;
+
+    .list-item-content {
+      @include column(4, 5);
+    }
+  }
+
+  @media ($minWidth1024) {
+    @include column(4);
+
+    @media ($maxWidth1439) {
+      &:not(:nth-child(3n + 1)) {
+        margin-left: 2rem;
+      }
+    }
+
+    &:nth-child(even) .visual-wrapper::before {
+      padding-bottom: 120%;
+    }
+
+    .list-item-content {
+      max-width: none;
+    }
+  }
+
+  @media ($minWidth1440) {
+    width: calc(25% - 4.8rem);
+
+    &:not(:nth-child(4n + 1)) {
+      margin-left: 6.4rem;
+    }
+
+    .list-item-copy {
+      padding-right: 4rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.c06-visual-cards {
+  position: relative;
+  overflow: hidden;
+
+  @import "styles/cards-wrapper";
+  @import "styles/cards-list";
+  @import "styles/card";
+}

@@ -1,0 +1,19 @@
+.hotspot-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .hotspot {
+    position: absolute;
+    z-index: 0;
+    cursor: pointer;
+    transform: translate(-2.4rem, -2.4rem);
+    pointer-events: auto;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+}

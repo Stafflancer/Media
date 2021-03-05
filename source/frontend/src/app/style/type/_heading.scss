@@ -1,0 +1,96 @@
+@import "../base/color-varions";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.heading {
+  font-family: var(--default-font-family);
+  @include color-variations;
+  word-break: break-word;
+}
+
+.heading-1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  font-family: var(--default-font-family-bold);
+
+  &.semi-bold {
+    font-weight: 600;
+    font-family: var(--default-font-family-semibold);
+  }
+
+  @media ($minWidth1440) {
+    font-size: 7.2rem;
+    line-height: 1.06;
+  }
+}
+
+.heading-2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+
+  &.semi-bold {
+    font-family: var(--default-font-family-semibold);
+  }
+
+  &.bold {
+    font-family: var(--default-font-family-bold);
+  }
+
+  @media ($minWidth1440) {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-3 {
+  font-size: 2.2rem;
+  line-height: 1.45;
+
+  &.semi-bold {
+    font-family: var(--default-font-family-semibold);
+    font-weight: 600;
+  }
+
+  &.bold {
+    font-family: var(--default-font-family-bold);
+    font-weight: 700;
+  }
+
+  @media ($minWidth1440) {
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+}
+
+.heading-4 {
+  font-family: var(--default-font-family-semibold);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.45;
+
+  @media ($minWidth1440) {
+    font-family: var(--default-font-family);
+    font-size: 2.3rem;
+    line-height: 1.39;
+  }
+}
+
+.heading-5 {
+  font-family: var(--default-font-family-bold);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.2em;
+}

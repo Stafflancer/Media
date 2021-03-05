@@ -1,0 +1,93 @@
+# ALl fields are mandatory
+# Except for the visuals of the cards
+# When there are no visuals available it will show a background color instead.
+# Ideally we don't have visuals and colors mixing but either one type or the other
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: medium
+bottom-padding: medium
+
+title:
+  type: h2
+  copy: Our impact
+
+cta:
+  href: '#'
+  copy: Discover more
+  title: Discover more about our impact
+
+card:
+  - title:
+      type: h3
+      copy: Advancing Natural Gas Infrastructure
+    category:
+      type: h5
+      copy: category
+    cta:
+      href: '#'
+      title: Read more about Advancing Natural Gas Infrastructure
+      copy: Discover more
+    visual:
+      src: media/visual-cards/person-working-in-shipyard.jpg
+      alt: Person working in the shipyard
+
+  - title:
+      type: h3
+      copy: Advancing Natural Gas Infrastructure
+    category:
+      type: h5
+      copy: category
+    cta:
+      href: '#'
+      title: Read more about Advancing Natural Gas Infrastructure
+      copy: Discover more
+    visual:
+      src: media/visual-cards/person-seen-through-window-drinking-coffee.jpg
+      alt: Person drinking coffee looking in the camera through the window
+
+  - title:
+      type: h3
+      copy: Advancing Natural Gas Infrastructure
+    category:
+      type: h5
+      copy: category
+    cta:
+      href: '#'
+      title: Read more about Advancing Natural Gas Infrastructure
+      copy: Discover more
+    visual:
+      src: media/visual-cards/person-working-in-shipyard.jpg
+      alt: Person working in the shipyard
+
+  - title:
+      type: h3
+      copy: Advancing Natural Gas Infrastructure
+    category:
+      type: h5
+      copy: category
+    cta:
+      href: '#'
+      title: Read more about Advancing Natural Gas Infrastructure
+      copy: Discover more
+    visual:
+      src: media/visual-cards/person-seen-through-window-drinking-coffee.jpg
+      alt: Person drinking coffee looking in the camera through the window
+
+  - title:
+      type: h3
+      copy: Advancing Natural Gas Infrastructure
+    category:
+      type: h5
+      copy: category
+    cta:
+      href: '#'
+      title: Read more about Advancing Natural Gas Infrastructure
+      copy: Discover more
+    visual:
+      src: media/visual-cards/person-working-in-shipyard.jpg
+      alt: Person working in the shipyard

@@ -1,0 +1,44 @@
+.c23-thank-you {
+  background: var(--color-backgrounds);
+
+  .content-wrapper {
+    background: var(--color-white);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .main-title {
+    margin-bottom: 1rem;
+  }
+
+  .icon-wrapper {
+    width: 8rem;
+    height: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: var(--color-light-blue);
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 1px solid currentColor;
+      border-radius: 100%;
+      content: "";
+    }
+  }
+
+  @media ($minWidth1024) {
+    .content-wrapper {
+      padding: 6.4rem;
+      @include column(6);
+    }
+  }
+}

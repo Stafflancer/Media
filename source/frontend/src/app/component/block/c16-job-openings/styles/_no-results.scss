@@ -1,0 +1,8 @@
+.no-results {
+  opacity: 0;
+  transition: opacity 250ms linear;
+
+  &.is-active {
+    opacity: 1;
+  }
+}

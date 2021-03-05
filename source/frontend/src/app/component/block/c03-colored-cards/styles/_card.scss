@@ -1,0 +1,35 @@
+.card {
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+
+  &:nth-child(3n + 1) {
+    color: var(--color-yellow);
+  }
+
+  &:nth-child(3n + 2) {
+    color: var(--color-light-blue);
+  }
+
+  &:nth-child(3n + 3) {
+    color: var(--color-green);
+  }
+
+  .card-wrapper {
+    position: relative;
+  }
+
+  @media ($minWidth768) {
+    .card-wrapper {
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  @media ($minWidth1440) {
+    @include column(5, 10);
+
+    .card-wrapper {
+      padding-bottom: 3.2rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+title: About us
+
+meta:
+  id: B
+  status: qa
+  notes:
+  category:
+
+blocks:
+
+  - name: n01-main-navigation
+    data: import!../app/component/block/n01-main-navigation/data/default
+
+  - name: c01-hero
+    data: import!../app/component/block/c01-hero/data/default
+
+  - name: c02-title-and-text
+    data: import!../app/component/block/c02-title-and-text/data/default
+
+  - name: c04-image-text
+    data: import!../app/component/block/c04-image-text/data/default
+
+  - name: c07-numbered-cards
+    data: import!../app/component/block/c07-numbered-cards/data/default
+
+  - name: c03-colored-cards
+    data: import!../app/component/block/c03-colored-cards/data/default
+
+  - name: c20-footer-sticky-block
+    data: import!../app/component/block/c20-footer-sticky-block/data/default
+
+  - name: n02-footer-navigation
+    data: import!../app/component/block/n02-footer-navigation/data/default
+
+  - name: n03-language-selector
+    data: import!../app/component/block/n03-language-selector/data/default
+
+  - name: n04-video-overlay
+    data: import!../app/component/block/n04-video-overlay/data/default

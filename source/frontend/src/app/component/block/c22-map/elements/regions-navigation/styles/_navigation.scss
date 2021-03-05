@@ -1,0 +1,104 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  pointer-events: none;
+
+  .navigation-button {
+    text-transform: uppercase;
+    font-family: var(--default-font-family-bold);
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    padding: 2rem 2.4rem;
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 150ms linear;
+    pointer-events: auto;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.2rem;
+      background: currentColor;
+      opacity: 0;
+      transition: opacity 250ms linear;
+      content: "";
+    }
+
+    &.is-active {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .locations-total {
+    display: none;
+  }
+
+  @media ($minWidth1440) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0.1rem;
+      right: 0;
+      background: var(--color-white);
+      opacity: 0.3;
+      content: '';
+    }
+
+    .navigation-button {
+      padding-bottom: 0;
+      font-family: var(--default-font-family-semibold);
+      letter-spacing: 0;
+      text-transform: none;
+      text-align: left;
+      font-size: 3.2rem;
+      opacity: 1;
+      margin-top: 2rem;
+      transition: font-size 200ms ease-in-out;
+
+      &:not(:first-of-type) {
+        margin-top: 4rem;
+      }
+
+      &::before {
+        height: auto;
+        width: 0.1rem;
+        top: 0;
+        right: auto;
+      }
+
+      &.is-active {
+        font-size: 4.5rem;
+
+        &::before {
+          width: 0.2rem;
+          transition: all 250ms linear;
+        }
+      }
+    }
+
+    .locations-total {
+      margin-top: 0.8rem;
+      font-family: var(--default-font-family);
+      display: block;
+      font-size: 1.4rem;
+    }
+  }
+}

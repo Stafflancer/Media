@@ -1,0 +1,72 @@
+.visual-container {
+  pointer-events: none;
+
+  .visual-wrapper {
+    display: none;
+  }
+
+  .cta-wrapper {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 2.4rem 4rem;
+    background: var(--color-dark-blue);
+
+    .cta {
+      pointer-events: auto;
+    }
+  }
+
+  @media ($minWidth768) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2.4rem;
+    left: 2.4rem;
+
+    .content-wrapper {
+      @include column(6);
+      margin-left: auto;
+      margin-right: 0;
+      height: 100%;
+      position: relative;
+    }
+
+    .visual-wrapper {
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: -2.4rem;
+
+      .visual {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+      }
+    }
+
+    .cta-wrapper {
+      background: transparent;
+      padding: 4rem;
+    }
+  }
+
+  @media ($minWidth1024) {
+    right: 4rem;
+    left: 4rem;
+
+    .content-wrapper {
+      @include column(7);
+    }
+
+    .visual-wrapper {
+      right: -4rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.form-navigation {
+  position: relative;
+  color: var(--color-light-grey);
+  margin: 0 -2.4rem;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.1rem;
+    background: currentColor;
+    opacity: 0.3;
+    content: "";
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  [data-active="active"] a {
+    cursor: default;
+    pointer-events: none;
+    color: var(--color-light-blue);
+
+    &::before {
+      opacity: 1;
+      content: "";
+    }
+  }
+
+  a {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    padding: 2.4rem 0.8rem;
+    transition: color 250ms linear;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.2rem;
+      background: currentColor;
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+      content: "";
+    }
+  }
+
+  @media ($minWidth768) {
+    margin: 0;
+
+    a {
+      flex-grow: 0;
+      padding: 2.4rem;
+    }
+  }
+}

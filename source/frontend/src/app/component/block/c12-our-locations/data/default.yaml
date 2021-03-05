@@ -1,0 +1,131 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: none and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: medium
+bottom-padding: large
+
+title:
+  type: h2
+  copy: Our locations
+
+card:
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Puerto Rico
+    title:
+      type: h2
+      copy: Puerto Rico
+    copy: 954 Ponce de León, Suite 406 San Juan, Puerto Rico 00907
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Puerto Rico
+      title: Contact our Puerto Rico location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Puerto Rico
+    title:
+      type: h2
+      copy: Puerto Rico
+    copy: 954 Ponce de León, Suite 406 San Juan, Puerto Rico 00907
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Puerto Rico
+      title: Contact our Puerto Rico location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Jamaica
+    title:
+      type: h2
+      copy: Jamaica
+    copy: 14a Hope Road, Kingston 10 Jamaica
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Jamaica
+      title: Contact our Jamaican location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location New York
+    title:
+      type: h2
+      copy: New York
+    copy: 111 W 19th Street New York, NY 10011
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact New York
+      title: Contact our New York location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Miami
+    title:
+      type: h2
+      copy: Miami
+    copy: 700 NW 1st Avenue Miami, FL 33136
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Miami
+      title: Contact our Miami location
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Puerto Rico
+    title:
+      type: h2
+      copy: Puerto Rico
+    copy: 954 Ponce de León, Suite 406 San Juan, Puerto Rico 00907
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Puerto Rico
+      title: Contact our Puerto Rico location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Jamaica
+    title:
+      type: h2
+      copy: Jamaica
+    copy: 14a Hope Road, Kingston 10 Jamaica
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Jamaica
+      title: Contact our Jamaican location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location New York
+    title:
+      type: h2
+      copy: New York
+    copy: 111 W 19th Street New York, NY 10011
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact New York
+      title: Contact our New York location
+
+  - visual:
+      src: media/location/puerto-rico-location.jpg
+      alt: Location Miami
+    title:
+      type: h2
+      copy: Miami
+    copy: 700 NW 1st Avenue Miami, FL 33136
+    cta:
+      mailto: true
+      href: info@newfortressenergy.com
+      copy: Contact Miami
+      title: Contact our Miami location

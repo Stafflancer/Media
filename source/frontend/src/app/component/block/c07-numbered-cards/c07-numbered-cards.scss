@@ -1,0 +1,16 @@
+.c07-numbered-cards {
+  --gutter-offset: -32px;
+  overflow: hidden;
+
+  @media ($minWidth1440) {
+    .offset-wrapper {
+      @include column(8);
+    }
+  }
+
+  @import "styles/carousel-wrapper";
+  @import "styles/cards-list";
+  @import "styles/card-title-wrapper";
+  @import "styles/card-copy-wrapper";
+  @import "styles/visual-wrapper";
+}

@@ -1,0 +1,31 @@
+.copy-wrapper {
+  margin-bottom: 3.2rem;
+  max-width: 56rem;
+  width: 100%;
+
+  @media ($minWidth1024) {
+    max-width: calc(50% - 1.8rem);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: var(--top-offset);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+
+    .rich-text {
+      max-width: 48rem;
+      padding: 2.4rem;
+    }
+  }
+
+  @media ($minWidth1440) {
+    @include column(6);
+
+    .rich-text {
+      max-width: 48rem;
+      margin-left: 4.8rem;
+    }
+  }
+}

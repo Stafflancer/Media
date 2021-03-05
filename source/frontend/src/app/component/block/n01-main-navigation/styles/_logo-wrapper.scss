@@ -1,0 +1,38 @@
+.logo-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  background: var(--color-white);
+  padding: 0 0.6rem 0 1.6rem;
+  pointer-events: auto;
+
+  .copy {
+    color: var(--color-dark-blue);
+  }
+
+  @media ($minWidth1024) {
+    height: 8rem;
+    background: transparent;
+    padding: 0;
+
+    .copy {
+      transition: color var(--transition-time-settings);
+      color: var(--color-white);
+      fill: currentColor;
+    }
+
+    &.scrolled-navigation .logo {
+      .flame-part {
+        // This important hack is to fix an issue with the block c11-blue-header
+        fill: var(--color-light-blue) !important;
+      }
+
+      .copy {
+        color: var(--color-dark-blue);
+      }
+    }
+  }
+}

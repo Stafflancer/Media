@@ -1,0 +1,22 @@
+.title-wrapper {
+  margin: 2rem 0;
+  font-family: var(--default-font-family-semibold);
+
+  .controls-wrapper {
+    display: none;
+  }
+
+  @media screen and($minWidth1024) {
+    margin: 6rem 0;
+    font-size: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .controls-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

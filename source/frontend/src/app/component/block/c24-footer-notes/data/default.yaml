@@ -1,0 +1,20 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: small
+bottom-padding: small
+
+copy: >
+  <ul>
+    <li>List <strong>strong</strong></li>
+    <li><a href="#">link</a> <i>italic</i></li>
+  </ul>
+  <ol>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quisquam!</li>
+    <li>Ad consequuntur corporis eos fugit hic impedit laboriosam maiores <a href="#">neque placeat quis sint</a>. soluta suscipit, vitae. Autem eius ipsum iste optio vero.</li>
+  </ol>

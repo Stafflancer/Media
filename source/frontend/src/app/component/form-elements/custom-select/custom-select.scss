@@ -1,0 +1,63 @@
+.custom-select {
+  position: relative;
+  color: currentColor;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 9.6rem;
+    background: linear-gradient(to left, var(--color-white) 50%, rgba(#fff, 0));
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid currentColor;
+    border-radius: 3.2rem;
+    z-index: 2;
+    pointer-events: none;
+    content: "";
+  }
+
+  .icon {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 3.2rem;
+    transform: translateY(-50%) rotate(90deg);
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+  }
+
+  select {
+    position: relative;
+    display: block;
+    padding: 2.4rem 5.6rem 2.4rem 3.2rem;
+    background: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    font-family: var(--default-font-family-bold);
+    text-transform: uppercase;
+    color: currentColor;
+    -webkit-appearance: none;
+    margin-right: 3.2rem;
+  }
+}

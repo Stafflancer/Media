@@ -1,0 +1,28 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: large
+bottom-padding: large
+
+endpoint: './mock-jobs.json'
+#endpoint: 'https://d12masfwlwi6bn.cloudfront.net/api/v1/search/jobs_search'
+locations: true
+departments: true
+
+location-default: 'All locations'
+departments-default: 'All departments'
+
+title:
+  type: h2
+  copy: Current job openings
+
+copy: >
+  <p>Some footer copy <a href="#" title="Join the New Fortress Talent Community">join our talent community</a></p>
+
+no-results: >
+  There are currently no jobs available that match your search criteria

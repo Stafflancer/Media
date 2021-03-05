@@ -1,0 +1,28 @@
+# ALl fields are mandatory except the label
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: none and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+# For titles the content manager can select a type: h1-h6.
+# Choosing a type will not impact the title visually
+# It will only provide an option for SEO
+
+# Rich text is copy added by a wysiwyg editor
+# For this component the options should probably be limited to paragraphs only.
+# Optional might be: anchors, strong, italic.
+
+top-padding: large
+bottom-padding: large
+
+title:
+  type: h2
+  copy: We want to light the world
+
+rich-text: >
+  <p>We want to light the world. Billions of people around the planet lack access to affordable
+  power. Electricity should not be a luxury good.</p> <p>  To provide capital, expertise and vision
+  to address this problem while also making positive and meaningful impacts on communities and the
+  environment.</p>

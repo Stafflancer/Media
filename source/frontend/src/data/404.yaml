@@ -1,0 +1,30 @@
+title: 404
+
+meta:
+  id: H
+  status: dev
+  notes:
+  category:
+
+blocks:
+
+  - name: n01-main-navigation
+    data: import!../app/component/block/n01-main-navigation/data/default
+
+  - name: c26-error-message
+    data: import!../app/component/block/c26-error-message/data/default
+
+  - name: c23-thank-you
+    data: import!../app/component/block/c23-thank-you/data/default
+
+  - name: c20-footer-sticky-block
+    data: import!../app/component/block/c20-footer-sticky-block/data/default
+
+  - name: n02-footer-navigation
+    data: import!../app/component/block/n02-footer-navigation/data/default
+
+  - name: n03-language-selector
+    data: import!../app/component/block/n03-language-selector/data/default
+
+  - name: n04-video-overlay
+    data: import!../app/component/block/n04-video-overlay/data/default

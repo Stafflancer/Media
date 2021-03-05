@@ -1,0 +1,72 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+top-padding: large
+bottom-padding: medium
+
+main-title:
+  type: h2
+  copy: Behind the scenes
+
+gallery-item:
+  - visual:
+      src: media/image-carousel/close-up-of-person-explaining.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-laughing-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-helping-each-other-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+  - visual:
+      src: media/image-carousel/close-up-of-person-explaining.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-laughing-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-helping-each-other-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+  - visual:
+      src: media/image-carousel/close-up-of-person-explaining.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-laughing-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-helping-each-other-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+  - visual:
+      src: media/image-carousel/close-up-of-person-explaining.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-laughing-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.
+
+  - visual:
+      src: media/image-carousel/people-helping-each-other-behind-their-laptops.jpg
+      alt: foo
+    caption: Probabo, inquit, sic agam, ut labore et voluptates omittantur maiorum dolorum fuga et.

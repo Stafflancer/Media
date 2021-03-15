@@ -9,7 +9,7 @@
     margin-top: 1.6rem;
   }
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -63,7 +63,7 @@
     }
   }
 
-  @media ($minWidth1440) {
+  @include respond-to(LARGE) {
     @include column(10);
   }
 }

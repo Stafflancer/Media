@@ -1,0 +1,9 @@
+meta:
+  id: '' # can be number or string, used for ordering
+  status: 'done' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Base' # to group pages in the overview
+
+blocks:
+  - name: 'style-guide'
+    data: 'import!../app/component/block/style-guide/data/default.yaml'

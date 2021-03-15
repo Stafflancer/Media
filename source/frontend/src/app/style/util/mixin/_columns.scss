@@ -6,7 +6,7 @@
 
   max-width: calc(#{$percentage} - #{$offset});
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     $gapSize: 20;
     $offset: ($gapSize / $columnsTotal) * ($columnsTotal - $columnsWanted) + px;
     max-width: calc(#{$percentage} - #{$offset});

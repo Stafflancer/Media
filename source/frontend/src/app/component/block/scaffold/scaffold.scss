@@ -1,0 +1,9 @@
+.scaffold {
+  .scaffold__title {
+    text-align: center;
+    line-height: 1.5;
+    @include position(auto, 2.6rem, 4.4rem, auto);
+    @include size(100px, 100px)
+    @include offset(100px, 100px)
+  }
+}

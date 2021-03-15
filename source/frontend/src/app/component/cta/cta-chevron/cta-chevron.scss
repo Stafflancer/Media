@@ -21,7 +21,7 @@
     height: 1.6rem;
     margin-bottom: 0.3rem;
   }
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     .copy {
       font-size: 1.8rem;
     }

@@ -15,7 +15,7 @@
     overflow: visible;
   }
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     display: none;
   }
 }

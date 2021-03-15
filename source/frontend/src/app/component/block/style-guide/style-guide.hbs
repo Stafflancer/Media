@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="./style-guide.scss">
+<script src="./StyleGuide.ts"></script>
+
+<section class="style-guide" data-component="style-guide" data-scroll-component>
+  <div class="block-wrapper">
+    <header>
+      <h1 class="heading-01">Style <em>Guide</em></h1>
+      {{> general/icon name='logo' className='brand-midea' }}
+    </header>
+    <section class="content-section">
+      <h2 class="heading-02">Colours</h2>
+      <div class="content-inner-section">
+        <h3 class="heading-02 inner-section-heading">Primary</h3>
+        <div class="colors">
+          <div class="color" data-variant="primary">
+            <div class="color-swatch"></div>
+            <p class="copy-01">--default-color</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-inner-section">
+        <h3 class="heading-02 inner-section-heading">Primary Colors</h3>
+        <div class="colors">
+          <div class="color-wrapper">
+            <div class="color" data-variant="blueShade1">
+              <div class="color-swatch"></div>
+              <p class="copy-01">-color-dark-blue</p>
+            </div>
+            <div class="color" data-variant="blueShade2">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-light-blue</p>
+            </div>
+          </div>
+          <div class="color-wrapper">
+            <div class="color" data-variant="whiteShade1">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-white</p>
+            </div>
+            <div class="color" data-variant="whiteShade2">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-light-grey</p>
+            </div>
+          </div>
+          <div class="color-wrapper">
+            <div class="color" data-variant="grayShade1">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-grey</p>
+            </div>
+            <div class="color" data-variant="grayShade2">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-dark-gray</p>
+            </div>
+          </div>
+          <div class="color-wrapper">
+            <div class="color" data-variant="blackShade1">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-black</p>
+            </div>
+            <div class="color" data-variant="blackShade2">
+              <div class="color-swatch"></div>
+              <p class="copy-01">--color-dark</p>
+            </div>
+          </div>
+        </div>
+        {{! <div class="colors">
+          <div class="color-wrapper">
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Intro Section Dark</p>
+            </div>
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Intro Section Light</p>
+            </div>
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Intro Section Cta</p>
+            </div>
+          </div>
+          <div class="color-wrapper">
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Engine Section Dark</p>
+            </div>
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Engine Section Light</p>
+            </div>
+            <div class="color" data-variant="">
+              <div class="color-swatch"></div>
+              <p class="copy-01">Engine Section Cta</p>
+            </div>
+          </div> --}}
+      </div>
+      <div class="content-inner-section">
+        <h3 class="heading-04 inner-section-heading">UI Colours</h3>
+        <div class="colors">
+          <div class="color" data-variant="errorRed">
+            <div class="color-swatch"></div>
+            <p class="copy-01">--error-red</p>
+          </div>
+          <div class="color" data-variant="textColor">
+            <div class="color-swatch"></div>
+            <p class="copy-01">--default-color</p>
+          </div>
+          {{!-- <div class="color" data-variant="colorUiSuccess">
+            <div class="color-swatch"></div>
+            <p class="copy-01">Success</p>
+          </div>
+          <div class="color" data-variant="colorUiWarning">
+            <div class="color-swatch"></div>
+            <p class="copy-01">Warning Yellow</p>
+          </div> --}}
+        </div>
+      </div>
+      <div class="content-inner-section">
+        <h3 class="heading-04 inner-section-heading">Text Colours</h3>
+        <div class="colors">
+          <div class="color" data-variant="whiteShade1">
+            <div class="color-swatch"></div>
+            <p class="copy-01">White</p>
+          </div>
+          <div class="color" data-variant="blackShade1">
+            <div class="color-swatch"></div>
+            <p class="copy-01">Black</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2 class="heading-02">Typography</h2>
+      <p class="copy-01">H1</p>
+      {{> general/heading h1 class="heading-1" }}
+      <p class="copy-01">H2</p>
+      {{> general/heading h2 class="heading-2" }}
+      <p class="copy-01">H3</p>
+      {{> general/heading h3 class="heading-3" }}
+      <p class="copy-01">H4</p>
+      {{> general/heading h4 class="heading-4" }}
+      <p class="copy-01">H5</p>
+      {{> general/heading h5 class="heading-5" }}
+      <p class="copy-01">H6</p>
+      {{> general/heading h6 class="heading-6" }}
+    </section>
+    <section class="content-section">
+      <h2 class="heading-02">Copy</h2>
+      <p class="copy-01">Large</p>
+      <p class="copy large">{{copy}}</p>
+      <p class="copy-01">CTA current font doesn't support weight</p>
+      <p class="copy cta">{{copy}}</p>
+      <p class="copy-01">Standard</p>
+      <p class="copy">{{copy}}</p>
+      <p class="copy-01">Small</p>
+      <p class="copy small">{{copy}}</p>
+    </section>
+    <section class="content-section">
+      <h2 class="heading-02">Button</h2>
+      <div class="content-inner-section">
+        
+      </div>
+    </section>
+    <section class="content-section">
+      <h2 class="heading-02">Icons</h2>
+      <div class="content-inner-section">
+        <div class="icons">
+          {{#each icons}}
+            <div class="icon-wrapper">
+              {{> general/icon name=this }}
+              <code>{{this}}</code>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

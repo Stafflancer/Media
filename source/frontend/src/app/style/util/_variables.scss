@@ -1,17 +1,13 @@
 $pathAsset: "~app";
 $zLayout: default, navigation, video-overlay, language-selector, map-info-panel;
 
-$minWidth768: "min-width: 768px";
-$minWidth1024: "min-width: 1024px";
-$minWidth1440: "min-width: 1440px";
-$minWidth1920: "min-width: 1920px";
-
 $maxWidth767: "max-width: 767px";
 $maxWidth1023: "max-width: 1023px";
 $maxWidth1439: "max-width: 1439px";
 $maxWidth1919: "max-width: 1919px";
-
 $maxHeight767: "max-height: 767px";
 
 $minimumFluidTypeViewportWidth: 375px !global;
 $maximumFluidTypeViewportWidth: 1440px !global;
+
+@import "../../data/shared-variable/media-queries.json";

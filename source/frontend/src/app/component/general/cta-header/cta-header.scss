@@ -1,0 +1,36 @@
+.cta-header {
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #2191e5;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 0 26px;
+  //display: flex;
+  //align-items: center;
+
+  .copy {
+    font-family: var(--default-font-family-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    color: #2191e5;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: text-top;
+
+    &.left-icon {
+      margin-right: 9.6px;
+    }
+
+    &.right-icon {
+      margin-left: 9.6px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+title: Scaffold
+
+meta:
+  id: A
+  status: qa
+  notes:
+  category:
+
+layout: home
+
+blocks:
+
+  - name: scaffold
+    data: import!../app/component/block/scaffold/data/default

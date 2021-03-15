@@ -1,0 +1,11 @@
+<button class="cta cta-play-button{{#if class}} {{class}}{{/if}}" {{#if data-attr}} data-{{data-attr}}{{/if}}
+  data-video-popup="{{id}}" data-component="cta-play-button">
+  <div class="button-content-wrapper">
+    <div class="button-icon-wrapper">
+      {{> general/icon/icon name="play"}}
+    </div>
+    <div class="button-copy-wrapper">
+      <span class="heading-3 bold">{{copy}}</span>
+    </div>
+  </div>
+</button>

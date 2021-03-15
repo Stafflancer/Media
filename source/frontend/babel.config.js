@@ -7,7 +7,7 @@ module.exports = function(api) {
         '@babel/preset-env',
         {
           targets: {
-            browsers: ['last 3 iOS versions', 'last 3 versions', 'ie >= 10'],
+            browsers: ['last 3 iOS versions', 'last 2 versions', 'ie >= 11'],
           },
           modules: false,
           useBuiltIns: 'entry',

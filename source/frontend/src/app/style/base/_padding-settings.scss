@@ -4,7 +4,7 @@
   --medium-padding: 2rem;
   --large-padding: 4rem;
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     padding: 0 4rem;
   }
 

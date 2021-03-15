@@ -1,28 +1,32 @@
 :root {
   font-size: 62.5%;
   --max-width: 192rem;
-  --color-light-blue: #00a7e6;
-  --color-dark-blue: #00446e;
-  --color-black: #191c1c;
-  --color-yellow: #ffb800;
-  --color-green: #01b1a7;
-  --color-white: #fff;
-  --color-grey: #a7aaac;
-  --color-light-grey: #a7aaac;
-  --default-color: #4d4d4d;
-  --color-dividers: #d8d8d8;
-  --color-backgrounds: #f5f5f5;
-  --focus-color: #e8bf2a;
+  --color-light-blue: #2191E5; // blue shade 2
+  --color-dark-blue: #0D7DD1; // blue shade 1
+  --color-black: #070F1D;
+  --color-dark: #1B2331;
+  --color-white: #fff; // white shade 1
+  --color-grey: #D0D7E5; // gray shade 1
+  --color-light-grey: #F5F5F5; // white shade 2
+  --color-dark-gray: #BCC3D1;
+  --color-gradient-dark-blue: linear-gradient(225deg, #2191E5 0%, #1F73B3 100%);
+  --color-gradient-blue: linear-gradient(43.14deg, #6AB2FD 0%, #B1D5FB 115.14%);
+  --color-gradient-canton: linear-gradient(43.14deg, #c8def4 -30%, #f8fbfe 40%, #f8fbfe 60%, #d5e9fc 130%);
+  --default-color: #1B2331; // text-color
+  --error-red: #D21C1C;
+  //--color-dividers: #d8d8d8;
+  //--color-backgrounds: #f5f5f5;
+  //--focus-color: #e8bf2a;
   --default-font-family: "Mont-Regular", serif;
   --default-font-family-bold: "Mont-Bold", serif;
   --default-font-family-semibold: "Mont-SemiBold", serif;
   --gutter: 16px;
 
-  @media ($minWidth768) {
+  @include respond-to(MEDIUM) {
     --gutter: 4px;
   }
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
     --gutter: 20px;
   }
 }
@@ -46,6 +50,7 @@ body {
   color: var(--default-color);
   font-size: 1.6rem;
   line-height: 1.77;
+  background: var(--color-gradient-canton);
 }
 
 p {

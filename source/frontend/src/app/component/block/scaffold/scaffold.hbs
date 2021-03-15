@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./scaffold.scss">
+<script src="./Scaffold.ts"></script>
+
+<section id="{{id}}" class="scaffold" data-component="scaffold" data-scroll-component>
+  <div class="scaffod__content-wrapper block-wrapper{{#if top-padding}} top-{{top-padding}}{{/if}}{{#if bottom-padding}} bottom-{{bottom-padding}}{{/if}} col-4" >
+    {{> general/logo }}
+    {{> general/heading title class="scaffold__title heading-4 semi-bold title" data-attr="transition-item" }}
+    <div class="">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+          </div>
+        </div>
+        <!-- form -->
+    </div>
+  </div>
+</section>

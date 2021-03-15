@@ -1,0 +1,12 @@
+<a href="{{link.href}}" class="overview-item" title="{{link.title}}" data-component="overview-item">
+  {{#if visual}}
+    {{> general/picture/picture visual class="visual-wrapper" data-attr="transition-item" }}
+  {{else}}
+    <span class="background-panel" data-transition-item></span>
+  {{/if}}
+  <div class="copy-wrapper" data-transition-item>
+    {{#if label}}<div class="label">{{label.copy}}</div>{{/if}}
+    {{> general/heading/heading title class="heading-3 semi-bold"}}
+    {{> general/outline-icon/outline-icon name="arrow" }}
+  </div>
+</a>

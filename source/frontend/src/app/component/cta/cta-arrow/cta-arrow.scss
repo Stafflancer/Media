@@ -28,7 +28,7 @@
     margin-bottom: 0.3rem;
   }
 
-  @media ($minWidth1024) {
+  @include respond-to(LARGE) {
 
     &:hover .outline-icon {
       transform: translateX(100%);

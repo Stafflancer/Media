@@ -1,0 +1,158 @@
+.style-guide {
+  background: var(--color-white);
+  padding: 1.5rem;
+
+  $colors: (
+    primary var(--default-color),
+    blueShade1 var(--color-dark-blue),
+    blueShade2 var(--color-light-blue),
+    whiteShade1 var(--color-white),
+    whiteShade2 var(--color-light-grey),
+    grayShade1 var(--color-grey),
+    grayShade2 var(--color-dark-gray),
+    blackShade1 var(--color-black),
+    blackShade2 var(--color-dark),
+    errorRed var(--error-red),
+    textColor var(--default-color)
+  );
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .brand-midea {
+    @include size(5rem, auto);
+
+    padding: 1rem;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    margin-left: 2rem;
+
+    &.inverse {
+      color: var(--color-black);
+      background-color: var(--color-white);
+    }
+  }
+
+  .content-section {
+    > .heading-01,
+    > .heading-02 {
+      border-bottom: 1px solid var(--color-black);
+      margin-bottom: 2rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .content-inner-section {
+    width: 100%;
+
+    .inner-section-heading {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  code {
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: #d8d8d8;
+    color: var(--color-black);
+  }
+
+  .colors {
+    display: flex;
+    flex-wrap: wrap;
+
+    .color-wrapper {
+      margin-right: auto;
+    }
+  }
+
+  .color {
+    @include size(20rem, auto);
+    margin-right: 2rem;
+    margin-top: 2rem;
+
+    p {
+      padding: 0;
+    }
+
+    .color-swatch {
+      @include size(100%, 5rem);
+      position: relative;
+      border: 0.1rem solid var(--color-black);
+
+      &::before {
+        // stylelint-disable-next-line
+        font-family: monospace;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background: var(--color-white);
+        padding: 0.2rem;
+      }
+    }
+
+    @each $name, $color in $colors {
+      &[data-variant="#{$name}"] {
+        .color-swatch {
+          background: $color;
+
+          &::before {
+            content: "$#{$name}";
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    background: var(--color-black);
+    padding: 1rem 0;
+
+    [class*="-button"] {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .icons {
+    $iconSize: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .icon-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .icon {
+      @include size($iconSize * 0.5);
+      padding: 1rem;
+      border: 1px solid var(--color-black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

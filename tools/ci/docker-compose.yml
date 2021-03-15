@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        container_name: php-tnt
+        build:
+            context: ../..
+            dockerfile: ./tools/ci/Dockerfile
+        volumes:
+            - ".:/make-root"
+        tty: true

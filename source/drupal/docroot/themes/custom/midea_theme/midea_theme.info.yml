@@ -1,0 +1,12 @@
+name: Midea theme
+type: theme
+base theme: stable
+description: 'Midea theme'
+core_version_requirement: ^8|^9
+regions:
+  header: 'Header'
+  content_admin: 'Main content admin'
+  content: 'Main content'
+  footer: 'Footer'
+libraries:
+  - midea_theme/global-styling

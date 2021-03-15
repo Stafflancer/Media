@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+$repo_root = getcwd();
+$original_argv = $_SERVER['argv'];
+$commit_msg = rtrim(file_get_contents($original_argv[1]), "\n");
+
+$_SERVER['argv'] = [
+  $repo_root . '/../../../vendor/bin/robo',
+  'commit:msg-hook',
+  $commit_msg,
+];
+
+require __DIR__ . '/../../../vendor/bin/robo';

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+files=$(git ls-files -om --exclude-standard ./docroot/modules/custom/ ./docroot/themes/custom/)
+if [[ $files != "" ]]; then
+  if [[ $(which php) ]]; then
+    /app/source/drupal/vendor/bin/phpcs $files
+  else
+    phpcs $files
+  fi
+else
+  echo "No changes to ckeck."
+fi

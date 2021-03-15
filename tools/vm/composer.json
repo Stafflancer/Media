@@ -1,0 +1,54 @@
+{
+    "name": "mediamonks/drupalboxvm",
+    "description": "MediaMonks Drupal Vagrant box vm",
+    "type": "library",
+    "config" : {
+        "prepend-autoloader": false,
+        "vendor-dir": "../../vendor",
+        "platform": {
+            "php": "7.2"
+        }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Lopes",
+            "email": "guilherme.lopes@mediamonks.com"
+        },
+        {
+            "name": "Kees Kodde",
+            "email": "kees.kodde@mediamonks.com"
+        }
+    ],
+    "require": {
+        "symfony/dependency-injection": "^4.4",
+        "symfony/event-dispatcher": "^4.4",
+        "drupal/drupal-extension": "^4.0",
+        "composer/installers": "^1.9",
+        "drush/drush": "^10.1",
+        "drupal/coder": "^8.3",
+        "symfony/class-loader": "^3.4",
+        "symfony/filesystem": "^4.4",
+        "symfony/finder": "^4.4",
+        "jcalderonzumba/gastonjs": "^1.2",
+        "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^8",
+        "consolidation/robo": "^2.2"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "RoboFile\\": "RoboFile.php",
+            "VagrantBox\\": "./src/"
+        }
+    }
+  }

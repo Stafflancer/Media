@@ -1,0 +1,11 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      asset/preview.css: {}
+      asset/bundle.css: {}
+  js:
+    asset/preview.js: {}
+    asset/bundle.js: {}
+  dependencies:
+    - core/drupal

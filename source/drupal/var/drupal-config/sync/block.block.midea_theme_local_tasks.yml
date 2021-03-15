@@ -1,0 +1,22 @@
+uuid: 012a1ab0-4e19-4a59-8e70-e663444fb3aa
+langcode: en
+status: true
+dependencies:
+  theme:
+    - midea_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: midea_theme_local_tasks
+theme: midea_theme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

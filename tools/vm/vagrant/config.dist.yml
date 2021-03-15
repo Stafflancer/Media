@@ -1,0 +1,9 @@
+brandname: <%= brandName %>
+projectname: <%= projectName %>
+hostname: <%= projectHost %>
+ip_address: <%= ipAddress %>
+docroot: <%= docRoot %>
+has_solr: <%= hasSolr %>
+drupal_profile: <%= drupalProfile %>
+cpus: 2
+memory: 3076

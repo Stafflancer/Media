@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Destroying all remote repositories, please wait..."
+sleep 10s
+echo ";-)"
+sleep 2s

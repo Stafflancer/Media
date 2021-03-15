@@ -1,45 +1,45 @@
-# .gitignore examples
-# https://github.com/github/gitignore
+.vagrant
+tools/vagrant/config.local.yml
+/build/*
+/!build/.gitkeep
 
-# todo??
-# https://github.com/github/gitignore/blob/master/Global/NetBeans.gitignore
-# https://github.com/github/gitignore/blob/master/Symfony.gitignore
-# https://github.com/github/gitignore/blob/master/SymphonyCMS.gitignore
-# https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+#Binairy files are generated with composer
+source/drupal/bin
 
-# osx metadata
-.DS_Store
+# Vendor directories.
+vendor
+*/vendor
 
-# JetBrains project files (contains local paths)
-# https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
-.idea
-
-
-# node_modules should be installed with 'npm install' in the folder containing a 'package.json'
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules
-npm-debug.log
-
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
-/deploy/composer.phar
-/deploy/vendor
-
-/deploy/htdocs/data/mcith
-
-# a frontend build should be generated with 'grunt release' in the /tools/build/ folder
-/build
-
-# build cache
-.tscache
-.sass-cache
+# Drupal console language directory.
+source/drupal/console
 
 # sourcemaps
 *.css.map
 *.js.map
 
-# Coverage directory used by tools like istanbul
-coverage
+# Drupal folders
+# Ignore core and contrib files, use composer
+source/drupal/docroot/*
+!source/drupal/docroot/modules/
+source/drupal/docroot/modules/*
+!source/drupal/docroot/modules/custom/
+!source/drupal/docroot/modules/patches/
+!source/drupal/docroot/themes/
+source/drupal/docroot/themes/*
+!source/drupal/docroot/themes/custom/
+!source/drupal/docroot/themes/patches/
+!source/drupal/docroot/sites/
+!source/drupal/docroot/.*
+!source/drupal/docroot/*.*
+# Change/add as needed for your project.
 
-# Project specific
+# Ignore paths that contain user-generated content.
+source/drupal/docroot/sites/*/files
+source/drupal/docroot/sites/*/private
+
+# Ignore dev and IDE files
+nbproject
+/**/.idea/*
+.idea
+.DS_Store
+*.DS_Store

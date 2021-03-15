@@ -1,0 +1,7 @@
+#!/bin/bash
+
+drush cset locale.settings translation.use_source remote_and_local -y
+drush locale-check
+drush locale-update
+drush langexp
+drush cset locale.settings translation.use_source local -y

@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -i php /bin/bash -c "cd /app/tools/vm && /app/vendor/bin/robo  $1 $2 $3 $4 $5 $6"

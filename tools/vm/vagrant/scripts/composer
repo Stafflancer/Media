@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CURDIR=$(pwd)
+
+# Escape seccond parameter bcs it can contain package definitions with quotes.
+if [ $2 ]; then
+  ARG2="'$2'"
+fi
+docker exec -it php bash -c "stty rows 80 && cd ${CURDIR} && composer $1 $ARG2 $3 $4 $5 $6"

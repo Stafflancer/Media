@@ -1,0 +1,57 @@
+version: "2"
+services:
+  solr:
+    image: wodby/drupal-solr:8-6.4-2.3.0
+    container_name: solr
+    restart: unless-stopped
+    volumes:
+      - ./solr:/opt/solr/server/solr/mycores
+    environment:
+      SOLR_HEAP: 1024m
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.solr.rule=Host(`solr.<%= projectHost %>`)
+
+  memcache:
+    image: memcached:1.4-alpine
+    container_name: memcache
+
+  varnish:
+    image: guilopes/acquia-varnish:4.1
+    container_name: varnish
+    environment:
+      VARNISH_SECRET: secret
+      VARNISH_BACKEND_HOST: <%= webServer %>
+      VARNISH_BACKEND_PORT: 80
+    depends_on:
+      - traefik
+      - <%= webServer %>
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.varnish.rule=Host(`<%= projectHost %>`)
+
+  webgrind:
+    image: wodby/webgrind
+    container_name: webgrind
+    restart: unless-stopped
+    environment:
+      WEBGRIND_PROFILER_DIR: /app/tools/data/webgrind
+    volumes:
+      - ../..:/app
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.webgrind.rule=Host(`webgrind.<%= projectHost %>`)
+    ports:
+      - '81:8080'
+
+  node:
+    image: node:alpine
+    container_name: node
+    working_dir: /app/source/frontend
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.node.rule=Host(`front.<%= projectHost %>`)
+    expose:
+      - "3000"
+    volumes:
+      - '../../source/frontend:/app/source/frontend'

@@ -1,0 +1,20 @@
+#!/bin/sh
+rm -rf ../source-clone
+git clone . ../source-clone -b master
+rm -rf ../source-clone/.git
+mkdir -p ../source-clone/docroot/sites/default/files
+
+echo "Copy the things we need to keep like uploaded files"
+cp -a ../drupal/docroot/sites/default/files ../source-clone/docroot/sites/default
+
+echo "Create backup and replace with new build"
+chmod 766 -R ../drupal-bac/docroot/sites/
+rm -rf ../drupal-bac
+mv ../drupal ../drupal-bac
+mv ../source-clone ../drupal
+
+SCRIPT=../drupal/hooks/monkapps/post-update.sh
+if [ -f "$SCRIPT" ]; then
+  echo "executing ${SCRIPT}"
+  source ${SCRIPT}
+fi

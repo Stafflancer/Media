@@ -1,0 +1,39 @@
+#!/bin/bash
+
+CUR_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+DUMP_DIR="$CUR_DIR/../../../../tools/data/mysql/"
+SQL_DUMPS="$(find $DUMP_DIR -type f -regex ".*\.sql")"
+
+if [ "${SQL_DUMPS}" == "" ]; then
+    (>&2 echo "No SQL dump to import are found.")
+    (>&2 echo "Files can be placed in tools/data/mysql.")
+else
+  if [ $1 ]; then
+      database=$1
+  else
+      database="drupal"
+  fi
+
+  echo "Which dump do you want to import into database \"$database\"?"
+  echo ""
+
+  INDEX=0
+  find $DUMP_DIR -type f -regex '.*.sql' | while read FILE_NAME; do
+      echo "${INDEX}) $(basename "${FILE_NAME}")"
+      INDEX=$((INDEX+1))
+  done
+  echo -n "Import number: "
+  read DUMP_PICKED
+
+  INDEX=0
+  find $DUMP_DIR -type f -regex '.*.sql' | while read FILE_NAME; do
+      if [ "${DUMP_PICKED}" == "${INDEX}" ]; then
+          echo "Recreating $database ...."
+          mysql -uroot -proot -h 127.0.0.1 -e "DROP DATABASE IF EXISTS $database; CREATE DATABASE $database;"
+          echo "importing $(basename "${FILE_NAME}") into $database ...."
+          mysql -uroot -proot -h 127.0.0.1 $database < "${FILE_NAME}"
+          exit 0;
+      fi
+      INDEX=$((INDEX+1))
+  done
+fi

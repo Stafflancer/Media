@@ -1,0 +1,5 @@
+#!/bin/bash
+
+CURDIR=$(pwd)
+
+docker exec -it php bash -c "stty rows 80 && cd ${CURDIR} && drupal $1 $2 $3 $4 $5 $6"

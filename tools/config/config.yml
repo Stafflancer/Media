@@ -1,0 +1,9 @@
+brandname: 'midea'
+projectname: 'finance-system'
+hostname: 'mideafinancesystem.local'
+ip_address: '192.168.33.58'
+docroot: '/app/source/drupal/docroot'
+has_solr: ''
+drupal_profile: 'none'
+cpus: 2
+memory: 3076

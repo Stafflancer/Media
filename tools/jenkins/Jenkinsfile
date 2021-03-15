@@ -1,0 +1,87 @@
+pipeline {
+    agent any
+    stages {
+
+        stage('get keys') {
+            steps {
+                dir('tools/ci') {
+                    sh "pwd"
+                    sh "ls -al"
+                    withCredentials([
+                        sshUserPrivateKey(credentialsId: 'assembla-kk', keyFileVariable: 'keyfile1'),
+                        sshUserPrivateKey(credentialsId: 'friso-tnt-monkapps2', keyFileVariable: 'keyfile2')
+                    ]){
+                        sh "chmod 766 ssh/*"
+                        sh "cp ${keyfile1} ssh/id_rsa_assembla"
+                        sh "cp ${keyfile2} ssh/id_rsa_monkappseu"
+                    }
+                }
+            }
+        }
+
+				stage('Prepare docker and filesystem') {
+            steps {
+                dir('tools/ci') {
+                    sh "make prepare"
+                }
+            }
+				}
+
+				stage('Checkout source repo') {
+            steps {
+                dir('tools/ci') {
+                  sh "make pull-source"
+                }
+            }
+				}
+
+				stage('Checkout target repo') {
+            steps {
+                dir('tools/ci') {
+                  sh "make pull-target"
+                }
+            }
+				}
+
+				stage('Build backend') {
+            steps {
+                dir('tools/ci') {
+                  sh "make build"
+                }
+            }
+				}
+
+				stage('Commit target repo') {
+            steps {
+                dir('tools/ci') {
+                  sh "make commit-target"
+                }
+            }
+				}
+
+				stage('Push & Tag') {
+            steps {
+                dir('tools/ci') {
+                  sh "make push-tag-repos"
+                }
+            }
+				}
+
+				stage('Optional post-build') {
+            steps {
+                dir('tools/ci') {
+                  sh "make post-build"
+                }
+            }
+				}
+
+		}
+
+    post {
+        always {
+            dir('tools/ci') {
+              sh "make cleanup"
+            }
+        }
+		}
+}

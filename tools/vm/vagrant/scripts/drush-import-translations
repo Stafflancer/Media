@@ -1,0 +1,5 @@
+#!/bin/bash
+
+drush cset locale.settings translation.use_source local -y
+drush locale-update
+drush drush langimp

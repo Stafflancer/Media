@@ -1,0 +1,27 @@
+{
+    "name": "mediamonks/drupalbox",
+    "description": "MediaMonks Drupal Vagrant box",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Kees Kodde",
+            "email": "kees.kodde@mediamonks.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Installer\\": "./tools/vm/src/Installer"
+        }
+    },
+    "scripts": {
+        "install-box": [
+          "composer install -d tools/vm",
+           "Installer\\VagrantBox::install"
+        ],
+        "post-create-project-cmd": [
+           "composer install -d tools/vm",
+            "Installer\\VagrantBox::install"
+        ],
+        "update-box": "Installer\\VagrantBox::update"
+    }
+  }

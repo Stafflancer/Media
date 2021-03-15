@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Takes an optional drush alias like "drush-update @alias"
+
+robo update $1

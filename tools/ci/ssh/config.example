@@ -1,0 +1,23 @@
+Host git-codecommit.eu-west-1.amazonaws.com
+    HostName git-codecommit.eu-west-1.amazonaws.com
+    User USERID
+    IdentityFile ~/.ssh/id_rsa_aws
+    StrictHostKeyChecking no
+
+Host mediamonks-git.assembla.com
+    HostName mediamonks-git.assembla.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_assembla
+    StrictHostKeyChecking no
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github
+    StrictHostKeyChecking no
+
+Host eu.dev.monkapps.com
+    HostName eu.dev.monkapps.com
+    User project-name
+    IdentityFile ~/.ssh/id_rsa_monkappseu
+    StrictHostKeyChecking no

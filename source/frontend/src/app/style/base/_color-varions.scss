@@ -1,0 +1,17 @@
+@mixin color-variations {
+  &.light {
+    color: $whiteShade1;
+  }
+
+  &.grey {
+    color: $grayShade1;
+  }
+
+  &.dark {
+    color: $black;
+  }
+
+  &.highlight {
+    color: $blueShade2;
+  }
+}

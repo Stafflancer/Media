@@ -1,0 +1,6 @@
+[data-component="cta-text"] {
+	transition: color .3s;
+	&:hover {
+		color: $blueShade2 !important;
+	}
+}

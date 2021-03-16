@@ -1,0 +1,4 @@
+@function zindex($element, $list: $zLayout) {
+  $zIndex: index($list, $element);
+  @return $zIndex;
+}

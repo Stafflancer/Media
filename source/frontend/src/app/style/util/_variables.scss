@@ -1,0 +1,29 @@
+$pathAsset: "~app";
+$zLayout: default, navigation, video-overlay, language-selector, map-info-panel;
+
+$maxWidth767: "max-width: 767px";
+$maxWidth1023: "max-width: 1023px";
+$maxWidth1439: "max-width: 1439px";
+$maxWidth1919: "max-width: 1919px";
+$maxHeight767: "max-height: 767px";
+
+$minimumFluidTypeViewportWidth: 375px !global;
+$maximumFluidTypeViewportWidth: 1440px !global;
+
+$defaultFontFamily: "NeueHaasGroteskDisplay";
+$defaultColor: #1B2331;
+$blueShade1: #0D7DD1;
+$blueShade2: #2191E5;
+$whiteShade1: #fff;
+$whiteShade2: #F5F5F5;
+$grayShade1: #D0D7E5;
+$grayShade2: #BCC3D1;
+$blackShade1: #070F1D;
+$blackShade2: #1B2331;
+$black: #000;
+$textColor: #151617;
+$uiError: #D21C1C;
+$darkBlueGradient: linear-gradient(225deg, #2191E5 0%, #1F73B3 100%);
+$lightBlueGradient: linear-gradient(43.14deg, #6AB2FD 0%, #B1D5FB 115.14%);
+
+@import "../../data/shared-variable/media-queries.json";

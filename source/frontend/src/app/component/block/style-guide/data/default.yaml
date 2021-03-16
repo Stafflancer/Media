@@ -1,0 +1,57 @@
+# ALl fields are mandatory
+
+# component padding
+# Components have different variants of padding for the top and bottom
+# The Default is top: false and a bottom of medium
+# top-padding: false | small | medium | large
+# bottom-padding: false | small | medium | large
+
+h1:
+  type: h1
+  copy: Example Title Text
+
+h2:
+  type: h2
+  copy: Example Title Text
+
+h3:
+  type: h3
+  copy: Example Title Text
+
+h4:
+  type: h4
+  copy: Example Title Text
+
+h5:
+  type: h5
+  copy: Example Title Text
+
+h6:
+  type: h6
+  copy: Example Title Text
+
+copy: The quick brown fox jumps over the lazy dog
+
+cta-underline:
+  copy: Scroll to Explore
+
+cta-border:
+  copy: Scroll to Explore
+
+cta-border-with-icon:
+  icon: arrow-right
+  copy: Scroll to Explore
+
+cta-right:
+  right: true
+  copy: Cancel
+
+cta-text:
+  copy: About
+
+cta-round:
+  icon: icon-play
+
+cta-text-heading:
+  heading: heading-4
+  copy: About

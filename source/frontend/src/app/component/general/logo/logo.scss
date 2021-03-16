@@ -1,0 +1,14 @@
+.logo {
+  width: 14.4rem;
+  position: relative;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include respond-to(LARGE) {
+    width: 20rem;
+  }
+}

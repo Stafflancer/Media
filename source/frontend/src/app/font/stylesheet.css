@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'NeueHaasGroteskText Std';
+    src: url('NHaasGroteskTXStd-55Rg.eot');
+    src: url('NHaasGroteskTXStd-55Rg.eot?#iefix') format('embedded-opentype'),
+        url('NHaasGroteskTXStd-55Rg.woff2') format('woff2'),
+        url('NHaasGroteskTXStd-55Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskText Std Md';
+    src: url('NHaasGroteskTXStd-65Md.eot');
+    src: url('NHaasGroteskTXStd-65Md.eot?#iefix') format('embedded-opentype'),
+        url('NHaasGroteskTXStd-65Md.woff2') format('woff2'),
+        url('NHaasGroteskTXStd-65Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskText Std';
+    src: url('NHaasGroteskTXStd-75Bd.eot');
+    src: url('NHaasGroteskTXStd-75Bd.eot?#iefix') format('embedded-opentype'),
+        url('NHaasGroteskTXStd-75Bd.woff2') format('woff2'),
+        url('NHaasGroteskTXStd-75Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Thin.eot');
+    src: url('NeueHaasDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Thin.woff2') format('woff2'),
+        url('NeueHaasDisplay-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Roman.eot');
+    src: url('NeueHaasDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Roman.woff2') format('woff2'),
+        url('NeueHaasDisplay-Roman.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Mediu.eot');
+    src: url('NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Mediu.woff2') format('woff2'),
+        url('NeueHaasDisplay-Mediu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Light.eot');
+    src: url('NeueHaasDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Light.woff2') format('woff2'),
+        url('NeueHaasDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Bold.eot');
+    src: url('NeueHaasDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Bold.woff2') format('woff2'),
+        url('NeueHaasDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('NeueHaasDisplay-Black.eot');
+    src: url('NeueHaasDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('NeueHaasDisplay-Black.woff2') format('woff2'),
+        url('NeueHaasDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

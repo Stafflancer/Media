@@ -1,0 +1,63 @@
+#block-nfe-theme-local-tasks {
+  color: $grayShade2;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  background: #fff;
+  z-index: 10;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0.4rem solid currentColor;
+    border-right: 0;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: calc(100% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(45deg, currentColor 50%, transparent 50%);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+    content: "";
+  }
+
+  button {
+    padding: 2.7rem;
+    background: $blueShade2;
+    font-size: 1rem;
+    line-height: 1;
+    color: $whiteShade1;
+    border-radius: 3.2rem;
+    margin-bottom: 2rem;
+    display: none;
+  }
+
+  .visually-hidden {
+    display: none !important;
+  }
+
+  a {
+    font-size: 1.4rem;
+    color: $blueShade2;
+  }
+
+  button,
+  a {
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

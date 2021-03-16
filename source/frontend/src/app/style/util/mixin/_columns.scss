@@ -1,0 +1,14 @@
+@mixin column($columnsWanted, $total: 12) {
+  $columnsTotal: $total;
+  $gapSize: 4;
+  $percentage: (($columnsWanted / $columnsTotal) * 100) * 1%;
+  $offset: ($gapSize / $columnsTotal) * ($columnsTotal - $columnsWanted) + px;
+
+  max-width: calc(#{$percentage} - #{$offset});
+
+  @include respond-to(LARGE) {
+    $gapSize: 20;
+    $offset: ($gapSize / $columnsTotal) * ($columnsTotal - $columnsWanted) + px;
+    max-width: calc(#{$percentage} - #{$offset});
+  }
+}

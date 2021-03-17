@@ -1,0 +1,15 @@
+[data-component="cta-round-border"] {
+  width: 5.6rem;
+  height: 5.6rem;
+  transition: transform 0.3s;
+
+  span[data-component="icon"] {
+    color: #ffffff;
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  &:hover {
+    transform: scale(0.8);
+  }
+}

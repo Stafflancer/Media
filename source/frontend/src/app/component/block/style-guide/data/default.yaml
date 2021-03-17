@@ -61,6 +61,9 @@ cta-text:
 cta-round:
   icon: icon-play
 
+cta-round-border:
+  icon: icon-round-border
+
 cta-text-heading:
   heading: heading-4
   copy: About

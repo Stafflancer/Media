@@ -1,12 +1,13 @@
-import AbstractTransitionBlock from 'app/component/block/AbstractTransitionBlock';
-import ScaffoldTransitionController from './ScaffoldTransitionController';
+import AbstractBlock from '../AbstractBlock';
 
-export default class Scaffold extends AbstractTransitionBlock {
-  public static displayName:string = 'scaffold';
-  public transitionController:ScaffoldTransitionController;
+export default class Scaffold extends AbstractBlock {
+  public static readonly displayName:string = 'scaffold';
 
   constructor(el:HTMLElement) {
     super(el);
-    this.transitionController = new ScaffoldTransitionController(this);
+  }
+
+  public dispose() {
+    super.dispose();
   }
 }

@@ -77,7 +77,6 @@
     "modernizr-loader": "^1.0.1",
     "muban-convert-hbs": "^1.1.1",
     "muban-core": "^2.1.2",
-    "muban-transition-component": "^4.0.3",
     "normalize.css": "^8.0.1",
     "qs": "^6.6.0",
     "regenerator-runtime": "^0.13.7",

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./cta-border.scss">
 
-<a data-component="cta-border">
+<a data-component="cta-border" {{#if class}}class="{{class}}"{{/if}}>
   <span class="copy cta">{{copy}}</span>
   {{#if icon}}
     {{> general/icon name=icon }}

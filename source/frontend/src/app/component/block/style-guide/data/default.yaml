@@ -56,6 +56,7 @@ cta-text-heading:
   heading: heading-4
   copy: About
 
+
 cardInfo:
   title: Historical event title
   subtitle: Optional pre-title
@@ -71,3 +72,9 @@ cardVideo:
   video: '12'
   cta-round:
     icon: icon-play
+
+cardWeather:
+  # centigrade: 38°C
+  placeholder: Use your location
+  desc: It's hot in Shenzhen today! Beat the heat with Midea. 
+  tips: Find out which Midea solution is best for your situation.

@@ -38,6 +38,15 @@ cta-underline:
 cta-border:
   copy: Scroll to Explore
 
+cta-border-white:
+  class: white
+  copy: Scroll to Explore
+
+cta-border-white-with-icon:
+  class: white
+  icon: arrow-right
+  copy: Scroll to Explore
+
 cta-border-with-icon:
   icon: arrow-right
   copy: Scroll to Explore

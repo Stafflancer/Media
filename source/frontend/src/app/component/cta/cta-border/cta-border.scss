@@ -55,4 +55,29 @@
 			}
 		}
 	}
+
+	&.white {
+		border: 2px solid $whiteShade1;
+		.copy {
+			color: $whiteShade1;
+		}
+
+		span[data-component=icon] {
+			svg {
+				stroke: $whiteShade1;
+			}
+		}
+
+		&:hover {
+			background: $whiteShade1;
+			.copy {
+				color: $blueShade1;
+			}
+			span[data-component=icon] {
+				svg {
+					stroke: $blueShade1;
+				}
+			}
+		}
+	}
 }

@@ -32,7 +32,25 @@ h6:
 
 copy: The quick brown fox jumps over the lazy dog
 
+cta-text:
+  copy: About
+
+cta-left-icon:
+  with-icon: true
+  left-icon: arrow-right
+  copy: Scroll to Explore
+
+cta-right-icon:
+  with-icon: true
+  right-icon: arrow-right
+  copy: Scroll to Explore
+
+cta-text-active:
+  class: active
+  copy: About
+
 cta-underline:
+  class: underline
   copy: Scroll to Explore
 
 cta-border:
@@ -54,9 +72,6 @@ cta-border-with-icon:
 cta-right:
   right: true
   copy: Cancel
-
-cta-text:
-  copy: About
 
 cta-round:
   icon: icon-play

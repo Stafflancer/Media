@@ -105,10 +105,25 @@ cardVideo:
   subtitle: Optional pre-title
   video: '12'
   cta-round:
-    icon: icon-play
+    iconName: play-icon
+    className: card__media-play
 
 cardWeather:
   # centigrade: 38°C
   placeholder: Use your location
-  desc: It's hot in Shenzhen today! Beat the heat with Midea. 
+  desc: It's hot in Shenzhen today! Beat the heat with Midea.
   tips: Find out which Midea solution is best for your situation.
+
+videoInfo:
+  videoSrc: ''
+  title: Take A Tour
+  content: FACTORY OF THE FUTURE
+  time: '2:05'
+  play:
+    iconName: play-icon
+    className: card-video__play
+  stop:
+    iconName: stop-icon
+    className: card-video__stop
+  playicon: play-icon
+  stopicon: stop-icon

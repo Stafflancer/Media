@@ -55,3 +55,19 @@ cta-round:
 cta-text-heading:
   heading: heading-4
   copy: About
+
+cardInfo:
+  title: Historical event title
+  subtitle: Optional pre-title
+  descript: The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products.
+  img: ./app/svg/icon/logo.svg
+  cta-round:
+    icon: icon-play
+
+
+cardVideo:
+  title: Historical event title
+  subtitle: Optional pre-title
+  video: '12'
+  cta-round:
+    icon: icon-play

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="./card.scss">
+
+<div data-component="card">
+  <div class="card-content">
+    {{#if img}}
+      <img src="{{img}}" alt="" class="card-media">
+    {{/if}}
+    {{#if video}}
+      <video src="{{video}}" class="card-media"></video>
+      {{> cta/cta-round cta-round }}
+    {{/if}}
+    <div class="card-content-title">{{title}}</div>
+    <div class="card-content-subtitle">{{subtitle}}</div>
+  </div>
+  {{#if descript}}
+    <div class="card-footer">
+      {{descript}}
+    </div>
+  {{/if}}
+</div>

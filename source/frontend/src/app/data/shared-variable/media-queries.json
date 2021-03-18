@@ -2,7 +2,7 @@
   "mediaQueries": {
     "XSMALL": "'(max-width: 479px)'",
     "SMALL": "'(min-width: 480px)'",
-    "MEDIUM": "'(min-width: 992px)'",
+    "MEDIUM": "'(min-width: 1024px)'",
     "LARGE": "'(min-width: 1280px)'",
     "EXTRA_LARGE": "'(min-width: 1400px)'",
     "ULTRA_LARGE": "'(min-width: 1920px)'"

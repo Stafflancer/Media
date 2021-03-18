@@ -8,7 +8,7 @@
     height: auto;
   }
 
-  @include respond-to(LARGE) {
+  @include respond-to(MEDIUM) {
     width: 20rem;
   }
 }

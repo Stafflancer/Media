@@ -64,7 +64,6 @@
     "@types/webpack-env": "^1.13.6",
     "bootstrap": "^4.6.0",
     "browserslist": "^4.14.1",
-    "caniuse-lite": "^1.0.30001124",
     "core-js": "3",
     "flat": "^5.0.2",
     "gsap": "^3.6.0",

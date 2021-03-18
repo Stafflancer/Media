@@ -7,6 +7,27 @@
 		color: $defaultColor;
 	}
 
+	&.dark-mode {
+		.cta-text-copy {
+			color: $whiteShade1;
+		}
+	}
+
+	&.with-dot {
+		position: relative;
+		&::after {
+			position: absolute;
+			border-radius: 50%;
+			display: block;
+			content: '';
+			background: $uiError;
+			width: 6px;
+			height: 6px;
+			top: 0;
+			left: 100%;
+		}
+	}
+
 	&.underline {
 		cursor: pointer;
 		border-bottom: 2px solid $blueShade1;

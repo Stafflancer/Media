@@ -45,6 +45,13 @@ cta-right-icon:
   right-icon: arrow-right
   copy: Scroll to Explore
 
+cta-left-right-icon:
+  tag: span
+  with-icon: true
+  left-icon: arrow-right
+  right-icon: arrow-right
+  copy: Scroll to Explore
+
 cta-text-active:
   class: active
   copy: About

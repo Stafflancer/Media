@@ -15,7 +15,7 @@
     uiError $uiError,
     textColor $textColor,
     darkBlueGradient $darkBlueGradient,
-    lightBlueGradient $lightBlueGradient,
+    lightBlueGradient $lightBlueGradient
   );
 
   header {
@@ -146,5 +146,10 @@
         margin-right: 1.5rem;
       }
     }
+  }
+
+  .cta-round-border {
+    @include size(4.8rem, 4.8rem);
+    background: rgba(7, 15, 29, 0.8);
   }
 }

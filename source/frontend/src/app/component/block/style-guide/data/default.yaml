@@ -127,3 +127,7 @@ videoInfo:
     className: card-video__stop
   playicon: play-icon
   stopicon: stop-icon
+
+videoPlayer:
+  src: ''
+  data: controls

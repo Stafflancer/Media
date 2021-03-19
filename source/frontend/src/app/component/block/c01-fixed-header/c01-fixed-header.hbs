@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./c01-fixed-header.scss">
+
+<div data-component="c01-fixed-header">
+  <div class="c01-fixed-header__nav">
+    {{> general/logo }}
+    <div class="c01-fixed-header__nav-menu">
+      {{#each nav }}
+        {{> cta/cta-text this }}
+      {{/each}}
+    </div>
+    <div class="c01-fixed-header__menu">
+      {{> general/icon name=menu }}
+    </div>
+  </div>
+
+</div>

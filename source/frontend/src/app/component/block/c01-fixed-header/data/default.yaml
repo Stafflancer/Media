@@ -1,0 +1,16 @@
+title: c01-fixed-header
+
+fixedHeader:
+  nav:
+    - navItem:
+      copy: Products
+      class： with-dot
+    - navItem:
+        copy: Canton Fair
+    - navItem:
+        copy: ''
+    - navItem:
+        copy: ''
+  menu: header-menu
+  close: header-menu
+

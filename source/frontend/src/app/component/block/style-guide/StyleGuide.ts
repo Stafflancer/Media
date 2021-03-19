@@ -15,7 +15,7 @@ export default class StyleGuide extends AbstractBlock {
   }
 
   private handleVideoOverlay = (event: Event): void => {
-    this.videoOverlayPopup.style.display = 'block';
+    this.videoOverlayPopup!.style.display = 'block';
   };
 
   public dispose() {

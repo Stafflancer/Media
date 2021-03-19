@@ -9,8 +9,8 @@ export default class VideoOverlay extends AbstractBlock {
 
   constructor(el: HTMLElement) {
     super(el);
-    this.closePopup.addEventListener('click', this.closePopupHandel);
-    this.closeH5Popup.addEventListener('click', this.closePopupHandel);
+    this.closePopup!.addEventListener('click', this.closePopupHandel);
+    this.closeH5Popup!.addEventListener('click', this.closePopupHandel);
   }
 
   protected closePopupHandel = (event: Event): void => {

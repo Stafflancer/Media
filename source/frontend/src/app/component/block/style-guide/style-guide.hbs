@@ -5,8 +5,8 @@
   <div class="block-wrapper">
     <header>
       <h1 class="heading-01">Style <em>Guide</em></h1>
-      {{> general/logo className='brand-midea' }}
-      {{> general/logo fill='#000' className='brand-midea' }}
+      {{> general/logo class='brand-midea' }}
+      {{> general/logo fill='#000' class='brand-midea' }}
     </header>
     <section class="content-section">
       <h2 class="heading-02">Colours</h2>
@@ -198,6 +198,9 @@
         {{> cta/cta-border cta-border-white-with-icon }}
         <p class="copy-01">cta-round</p>
         {{> cta/cta-round cta-round }}
+        <p class="copy-01">cta-gradient</p>
+        {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+        {{> cta/cta-gradient icon="icon-pause"}}
         <p class="copy-01">cta-round-border</p>
         {{> cta/cta-round-border cta-round-border }}
       </div>
@@ -219,7 +222,7 @@
         </div>
         <p class="copy-01">video-overlay</p>
         <div class="js-video-overlay">
-          {{> cta/cta-round videoOverlay }}
+          {{> cta/cta-gradient videoOverlay }}
         </div>
       </div>
 

@@ -1,16 +1,26 @@
 <link rel="stylesheet" href="./c01-fixed-header.scss">
+<script src="./C01FixedHeader.ts"></script>
 
 <div data-component="c01-fixed-header">
   <div class="c01-fixed-header__nav">
-    {{> general/logo }}
+    <a href="{{logoUrl}}">
+      {{> general/logo }}
+    </a>
     <div class="c01-fixed-header__nav-menu">
-      {{#each nav }}
+      {{#each fixedHeader.nav }}
         {{> cta/cta-text this }}
       {{/each}}
     </div>
     <div class="c01-fixed-header__menu">
-      {{> general/icon name=menu }}
+      {{> general/icon name=fixedHeader.menu }}
+    </div>
+    <div class="c01-fixed-header__close">
+      {{> general/icon name=fixedHeader.close }}
     </div>
   </div>
-
+  <div class="c01-fixed-header__popup">
+    {{#each fixedHeader.nav }}
+      {{> cta/cta-text this }}
+    {{/each}}
+  </div>
 </div>

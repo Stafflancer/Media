@@ -131,3 +131,7 @@ videoInfo:
 videoPlayer:
   src: ''
   data: controls
+
+videoOverlay:
+  icon: icon-play
+    

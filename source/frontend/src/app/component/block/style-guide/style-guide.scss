@@ -152,4 +152,8 @@
     @include size(4.8rem, 4.8rem);
     background: rgba(7, 15, 29, 0.8);
   }
+
+  .video-player {
+    @include size(30rem, 20rem);
+  }
 }

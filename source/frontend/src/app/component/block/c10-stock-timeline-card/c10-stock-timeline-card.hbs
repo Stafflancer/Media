@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="./c10-stock-timeline-card.scss">
+<script src="./C10StockTimelineCard.ts"></script>
+
+<div class="c10-stock-timeline-card" data-component="c10-stock-timeline-card">
+  <div class="c10-stock-timeline-card__container">
+    <div class="c10-stock-timeline-card__title">
+      <p class="copy cta">{{cardTitle}}</p>
+    </div>
+    <div class="c10-stock-timeline-card__content">
+      <div class="c10-stock-timeline-card__vector">
+        <img src="{{vectorImage}}" class="visual" />
+        <div class="c10-stock-timeline-card__step">
+          {{#each timeLine}}
+          <div class="c10-stock-timeline-card__dot {{#if isActive}} c10-stock-timeline-card__dot-{{isActive}}{{/if}}">
+            {{> general/icon name='icon-dot' }}
+          </div>
+          {{/each}}
+        </div>
+        <div class="c10-stock-timeline-card__text-white">
+          <div class="c10-stock-timeline-card__text1">
+            {{> general/heading h41 class="heading-4" }}
+          </div>
+          <div class="c10-stock-timeline-card__text2">
+            {{> general/heading h42 class="heading-4" }}
+          </div>
+          <div class="c10-stock-timeline-card__text3">
+            {{> general/heading h61 class="heading-6" }}
+          </div>
+          <div class="c10-stock-timeline-card__text4">
+            {{> general/heading h62 class="heading-6" }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c10-stock-timeline-card__text-white c10-stock-timeline-card__card">
+    <div class="c10-stock-timeline-card__t">
+      <div>
+        {{> general/heading timeLine.h61 class="heading-6" }}
+      </div>
+      <div class="c10-stock-timeline-card__text6">
+        {{> general/heading timeLine.h62 class="heading-6" }}
+      </div>
+      <div class="c10-stock-timeline-card__bg-white"></div>
+      <div class="c10-stock-timeline-card__bg-black"></div>
+    </div>
+    <div>
+      {{> general/heading timeLine.h5 class="heading-5" }}
+    </div>
+  </div>
+</div>

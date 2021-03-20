@@ -1,1 +1,10 @@
 title: c09-media-box-scroll-indicator
+
+cta-border-white-with-icon:
+  class: white
+  icon: arrow-right
+  copy: Take a tour in Midea factory
+
+cta-border-with-icon:
+  icon: arrow-right
+  copy: Take a tour in Midea factory

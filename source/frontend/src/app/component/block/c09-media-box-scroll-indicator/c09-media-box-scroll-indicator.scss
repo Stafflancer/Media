@@ -13,9 +13,19 @@
     z-index: 2;
     background: $grayShade1;
     border-radius: 6rem;
+
+    .c09-media-box-scroll-indicator__button {
+      position: absolute;
+      right: 4rem;
+      bottom: 4rem;
+    }
+
+    .c09-media-box-scroll-indicator__button-h5 {
+      display: none;
+    }
   }
 
-  &__button {
+  &__fixed-button {
     @include size(8.8rem, 21.7rem);
     background: $blueShade2;
     border-radius: 8rem;
@@ -63,9 +73,20 @@
 
     &__image {
       border-radius: 0;
+
+      .c09-media-box-scroll-indicator__button {
+        display: none;
+      }
+
+      .c09-media-box-scroll-indicator__button-h5 {
+        display: block;
+        position: absolute;
+        left: 2.4rem;
+        bottom: -22.8rem;
+      }
     }
 
-    &__button {
+    &__fixed-button {
       @include size(3.8rem, 10.3rem);
       position: absolute;
       right: 0;

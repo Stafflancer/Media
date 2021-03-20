@@ -1,0 +1,15 @@
+title: c07-on-page-jump-links
+
+cta-text-active:
+ 
+navList:
+  - copy: Our Mission
+    href: #a
+    tag: span
+    class: active
+  - copy: The History
+    href: #b
+    tag: span
+  - copy: Global Capacity
+    href: #c
+    tag: span

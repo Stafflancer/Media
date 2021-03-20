@@ -1,0 +1,18 @@
+.c07-on-page-jump-links {
+  background: rgb(232, 239, 250);
+  height: 74.9rem;
+  padding-left: 22.9rem;
+  padding-top: 22rem;
+
+  &__block-wrapper {
+    li {
+      font-size: 4rem;
+      color: #151617;
+      margin-bottom: 2.4rem;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

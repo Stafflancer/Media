@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./c07-on-page-jump-links.scss">
+<script src="./C07OnPageJumpLinks.ts"></script>
+
+<div class="c07-on-page-jump-links" data-component="c07-on-page-jump-links">
+  <div class="c07-on-page-jump-links__block-wrapper">
+    <ul>
+      {{#each navList}}
+      <li>
+        <a href="{{this.href}}">
+          {{> cta/cta-text this }}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+title: c09-media-box-scroll-indicator
+
+meta:
+  id: A # can be number or string, used for ordering
+  status: dev # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: '' # to group pages in the overview
+
+layout: home
+
+blocks:
+
+  - name: c09-media-box-scroll-indicator
+    data: import!../app/component/block/c09-media-box-scroll-indicator/data/default

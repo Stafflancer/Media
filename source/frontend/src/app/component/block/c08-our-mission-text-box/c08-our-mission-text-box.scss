@@ -1,0 +1,22 @@
+.c08-our-mission-text-box {
+  @include size(51.1rem, auto);
+
+  &__title {
+    color: #151617;
+    letter-spacing: -3px;
+    margin-bottom: 4rem;
+
+    .heading-1 {
+      line-height: 12rem;
+    }
+  }
+
+  &__content {
+    color: #151617;
+    opacity: 0.8;
+
+    .large {
+      line-height: 32px;
+    }
+  }
+}

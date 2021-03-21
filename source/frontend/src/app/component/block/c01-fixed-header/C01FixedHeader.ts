@@ -1,6 +1,6 @@
 import AbstractComponent from 'app/component/AbstractComponent';
 
-export default class CardVideo extends AbstractComponent {
+export default class C01FixedHeader extends AbstractComponent {
   public static readonly displayName: string = 'c01-fixed-header';
 
   private readonly openMenuTag = this.getElement<HTMLElement>('.c01-fixed-header__menu');

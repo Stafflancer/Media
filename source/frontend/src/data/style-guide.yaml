@@ -7,3 +7,6 @@ meta:
 blocks:
   - name: 'style-guide'
     data: 'import!../app/component/block/style-guide/data/default.yaml'
+
+  - name: video-overlay
+    data: import!../app/component/block/video-overlay/data/default 

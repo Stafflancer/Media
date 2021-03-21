@@ -6,6 +6,9 @@
     display: block;
     width: 100%;
     height: auto;
+    * {
+      transition: fill .3s;
+    }
   }
 
   @include respond-to(MEDIUM) {

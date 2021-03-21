@@ -105,8 +105,8 @@ cardVideo:
   subtitle: Optional pre-title
   video: '12'
   cta-round:
-    iconName: play-icon
-    className: card__media-play
+    icon: icon-play
+    class: card__media-play
 
 cardWeather:
   # centigrade: 38°C
@@ -120,14 +120,18 @@ videoInfo:
   content: FACTORY OF THE FUTURE
   time: '2:05'
   play:
-    iconName: play-icon
-    className: card-video__play
+    icon: icon-play
+    class: card-video__play
   stop:
-    iconName: stop-icon
-    className: card-video__stop
-  playicon: play-icon
-  stopicon: stop-icon
+    icon: icon-pause
+    class: card-video__stop
+  playicon: icon-play
+  stopicon: icon-pause
 
 videoPlayer:
   src: ''
   data: controls
+
+videoOverlay:
+  icon: icon-play
+    

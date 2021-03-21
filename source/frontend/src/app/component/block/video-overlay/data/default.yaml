@@ -1,0 +1,8 @@
+title: video-overlay
+
+cta-round-border:
+  icon: icon-round-border
+
+videoPlayer:
+  src: ''
+  data: controls

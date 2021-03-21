@@ -1,6 +1,33 @@
 [data-component="cta-gradient"] {
-  [data-component="icon"] {
-    width: 6rem;
-    height: 6rem;
+  @include size(6rem, 6rem);
+  position: relative;
+  
+  .cta-gradient-shape {
+    @include size(100%, 100%);
+    @include position(0, 0);
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient(60.53% 60.53% at 50% 50%, rgba(255, 255, 255, 0) 53.12%, rgba(255, 255, 255, 0.8) 100%);
+    backdrop-filter: blur(3px);
+    transition: transform .3s;
   }
+
+  [data-component="icon"] {
+    position: absolute;
+    @include size(20%, 20%);
+    @include position(50%, 50%);
+    margin-left: -10%;
+    margin-top: -10%;
+    svg {
+      * {
+				fill: $whiteShade1;
+			}
+    }
+  }
+
+  &:hover {
+		.cta-gradient-shape {
+			transform: scale(1.2);
+		}
+	}
 }

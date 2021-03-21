@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="./cta-round-border.scss">
 
-<a data-component="cta-round-border">
+<{{#if tag}}{{tag}}{{else}}a{{/if}} data-component="cta-round-border" {{#if class}}class="{{class}}"{{/if}} {{#if href}}href="{{href}}"{{/if}}>
   {{> general/icon name=icon }}
-</a>
+</{{#if tag}}{{tag}}{{else}}a{{/if}}>

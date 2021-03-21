@@ -1,0 +1,89 @@
+[data-component="c05-self-segmentation-hero"] {
+  width: 100%;
+  height: 100vh;
+  background: url("~/assets/c05-self-segmentation-hero/hero_bg1.png") no-repeat;
+  background-size: cover;
+  padding-top: 13.9rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .swiper-container {
+    height: 100%;
+    .swiper-wrapper {
+      height: 100%;
+      .swiper-slide {
+        width: 127.6rem;
+        height: 100%;
+        position: relative;
+
+        &:nth-child(2) {
+          width: 58rem;
+          .c05-self-segmentation-hero__title {
+            position: absolute;
+            bottom: 42.8rem;
+            left: 0;
+            .c05-self-segmentation-hero__title-air {
+              font-size: 14.4rem;
+              font-weight: 300;
+              line-height: 11.2rem;
+              letter-spacing: -0.3rem;
+              color: #151617;
+
+              span {
+                color: #2191e5;
+              }
+            }
+
+            .c05-self-segmentation-hero__descript {
+              width: 28.7rem;
+              line-height: 3.2rem;
+              margin-top: 4.4rem;
+            }
+          }
+          .card-weather {
+            position: absolute;
+            bottom: 33.4rem;
+            right: 0;
+          }
+        }
+
+        .c05-self-segmentation-hero__name {
+          position: absolute;
+          top: 28.8rem;
+          left: 23.3rem;
+          font-size: 20rem;
+          line-height: 24rem;
+          letter-spacing: -0.3rem;
+          color: #ffffff;
+          &.right {
+            left: auto;
+            right: 21.1rem;
+          }
+        }
+        [data-component="cta-border"] {
+          position: absolute;
+          top: 54.4rem;
+          left: 24.2rem;
+          &.right {
+            left: auto;
+            right: 22.9rem;
+          }
+        }
+        .c05-self-segmentation-hero__img {
+          position: absolute;
+          bottom: 5.2rem;
+          left: 17.9rem;
+          width: 112rem;
+          height: 51.6rem;
+          &.right {
+            left: auto;
+            right: -8rem;
+            bottom: 10.5rem;
+            width: 111.2rem;
+            height: 44.4rem;
+          }
+        }
+      }
+    }
+  }
+}

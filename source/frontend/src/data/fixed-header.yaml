@@ -7,3 +7,5 @@ meta:
 blocks:
   - name: 'c01-fixed-header'
     data: 'import!../app/component/block/c01-fixed-header/data/default.yaml'
+  - name: 'c05-self-segmentation-hero'
+    data: 'import!../app/component/block/c05-self-segmentation-hero/data/default.yaml'

@@ -7,7 +7,53 @@ isActive: isActive
 vectorImage: media/stock-timeline-card/vector.png
 
 timeLine:
-  id: 1
+  - id: 1
+    dotImage: media/stock-timeline-card/dot.png
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2014
+    h5:
+      type: h5
+      copy: Toshiba-Carrier
+  - id: 2
+    dotImage: media/stock-timeline-card/dot.png
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2014
+    h5:
+      type: h5
+      copy: Toshiba-Carrier
+  - id: 3
+    dotImage: media/stock-timeline-card/dot.png
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2014
+    h5:
+      type: h5
+      copy: Toshiba-Carrier
+  - id: 4
+    dotImage: media/stock-timeline-card/dot.png
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2014
+    h5:
+      type: h5
+      copy: Toshiba-Carrier
+
+timeLine0:
+  dotImage: media/stock-timeline-card/dot.png
   h61:
     type: h6
     copy: toshiba

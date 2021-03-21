@@ -8,11 +8,11 @@
     </div>
     <div class="c10-stock-timeline-card__content">
       <div class="c10-stock-timeline-card__vector">
-        <img src="{{vectorImage}}" class="visual" />
+        <img src="{{vectorImage}}" class="c10-stock-timeline-card__image-vector" />
         <div class="c10-stock-timeline-card__step">
           {{#each timeLine}}
-          <div class="c10-stock-timeline-card__dot {{#if isActive}} c10-stock-timeline-card__dot-{{isActive}}{{/if}}">
-            {{> general/icon name='icon-dot' }}
+          <div class="c10-stock-timeline-card__dot">
+            <img src="{{dotImage}}"/>
           </div>
           {{/each}}
         </div>
@@ -36,16 +36,16 @@
   <div class="c10-stock-timeline-card__text-white c10-stock-timeline-card__card">
     <div class="c10-stock-timeline-card__t">
       <div>
-        {{> general/heading timeLine.h61 class="heading-6" }}
+        {{> general/heading timeLine0.h61 class="heading-6" }}
       </div>
       <div class="c10-stock-timeline-card__text6">
-        {{> general/heading timeLine.h62 class="heading-6" }}
+        {{> general/heading timeLine0.h62 class="heading-6" }}
       </div>
       <div class="c10-stock-timeline-card__bg-white"></div>
       <div class="c10-stock-timeline-card__bg-black"></div>
     </div>
     <div>
-      {{> general/heading timeLine.h5 class="heading-5" }}
+      {{> general/heading timeLine0.h5 class="heading-5" }}
     </div>
   </div>
 </div>

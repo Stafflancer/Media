@@ -9,6 +9,7 @@ $prm: 100vw / 360;
   padding-top: 61 * $prm;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 
   @include respond-to(MEDIUM) {
     height: 100vh;
@@ -111,8 +112,6 @@ $prm: 100vw / 360;
             top: 405 * $prd;
             left: 242 * $prd;
             &.right {
-              top: auto;
-              bottom: 480 * $prd;
               left: auto;
               right: 229 * $prd;
             }
@@ -134,13 +133,33 @@ $prm: 100vw / 360;
             width: 1120 * $prd;
             height: 516 * $prd;
             &.right {
-              left: 159 * $prd;
+              left: 105 * $prd;
               bottom: 52 * $prd;
               width: 1112 * $prd;
               height: 444 * $prd;
             }
           }
         }
+      }
+    }
+  }
+
+  .c05-self-segmentation-hero__mouse {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    color: transparent;
+    bottom: 40 * $prm;
+    display: flex;
+    align-items: center;
+    [data-component="cta-text"] {
+      margin-left: 15 * $prm;
+    }
+
+    @include respond-to(MEDIUM) {
+      bottom: 88 * $prd;
+      [data-component="cta-text"] {
+        margin-left: 15 * $prd;
       }
     }
   }

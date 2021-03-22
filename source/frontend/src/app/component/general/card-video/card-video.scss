@@ -129,4 +129,7 @@ $prm: 100vw / 375;
       }
     }
   }
+  [data-component="video-player"] {
+    display: none;
+  }
 }

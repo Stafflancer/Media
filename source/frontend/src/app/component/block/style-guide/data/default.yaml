@@ -103,7 +103,14 @@ cardInfo:
 cardVideo:
   title: Historical event title
   subtitle: Optional pre-title
-  video: '12'
+  video: ../../assets/placeholder/sample.mp4
+  videoInfo:
+    cta-round-border:
+      icon: icon-round-border
+    videoPlayer:
+      src: ../../assets/placeholder/sample.mp4
+      data: controls
+      class: video-popup
   cta-round:
     icon: icon-play
     class: card__media-play
@@ -115,7 +122,14 @@ cardWeather:
   tips: Find out which Midea solution is best for your situation.
 
 videoInfo:
-  videoSrc: ''
+  imgSrc: ../../assets/placeholder/demo.jpg
+  videoSrc: ../../assets/placeholder/sample.mp4
+  videoOverlay:
+    icon: icon-play
+    videoPlayer:
+      src: ../../assets/placeholder/sample.mp4
+      data: controls
+      class: video-popup
   title: Take A Tour
   content: FACTORY OF THE FUTURE
   time: '2:05'
@@ -134,4 +148,3 @@ videoPlayer:
 
 videoOverlay:
   icon: icon-play
-    

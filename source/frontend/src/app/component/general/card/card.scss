@@ -22,6 +22,27 @@ $prm: 100vw / 375;
       object-fit: cover;
       background: rgba(0, 4, 38, 0.9);
       border-radius: 1rem 6rem 1rem 1rem;
+      &.img {
+        display: block;
+      }
+      &.video {
+        display: none;
+      }
+      @include respond-to(MEDIUM) {
+        &.img {
+          display: none;
+        }
+        &.video {
+          display: block;
+        }
+      }
+    }
+    .card-video__play {
+      cursor: pointer;
+    }
+    .card__media-stop {
+      cursor: pointer;
+      display: none;
     }
 
     [data-component="cta-gradient"] {

@@ -1,9 +1,7 @@
-import AbstractBlock from '../AbstractBlock';
+import AbstractBlock from 'app/component/AbstractComponent';
 
 export default class VideoOverlay extends AbstractBlock {
   public static readonly displayName: string = 'video-overlay';
-  // private readonly makeBtn: HTMLElement = this.getElement<HTMLElement>('.popup__make-btn');
-  private readonly videoOverlayPopup = this.getElement<HTMLElement>('.js-video-overlay');
   private readonly closePopup = this.getElement<HTMLElement>('.video-overlay__popup-close');
   private readonly closeH5Popup = this.getElement<HTMLElement>('.video-overlay__popup-close-h5');
 

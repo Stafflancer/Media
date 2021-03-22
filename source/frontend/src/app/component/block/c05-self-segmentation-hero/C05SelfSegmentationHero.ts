@@ -15,6 +15,7 @@ export default class C05SelfSegmentationHero extends AbstractComponent {
   protected init = (): void => {
     var swiper = new Swiper(this.swiperContainer!, {
       slidesPerView: 'auto',
+      freeMode: true,
     });
   };
 }

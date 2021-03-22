@@ -1,86 +1,140 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 360;
+
 [data-component="c05-self-segmentation-hero"] {
   width: 100%;
-  height: 100vh;
+  height: 640 * $prm;
   background: url("~/assets/c05-self-segmentation-hero/hero_bg1.png") no-repeat;
   background-size: cover;
-  padding-top: 13.9rem;
+  padding-top: 61 * $prm;
   box-sizing: border-box;
   overflow: hidden;
+
+  @include respond-to(MEDIUM) {
+    height: 1080 * $prd;
+    padding-top: 139 * $prd;
+  }
 
   .swiper-container {
     height: 100%;
     .swiper-wrapper {
       height: 100%;
       .swiper-slide {
-        width: 127.6rem;
+        width: 534 * $prm;
         height: 100%;
         position: relative;
 
+        @include respond-to(MEDIUM) {
+          width: 1276 * $prd;
+        }
+
         &:nth-child(2) {
-          width: 58rem;
+          width: 260 * $prm;
+          @include respond-to(MEDIUM) {
+            width: 580px;
+          }
           .c05-self-segmentation-hero__title {
             position: absolute;
-            bottom: 42.8rem;
+            top: 75 * $prm;
             left: 0;
+            font-size: 6.4rem;
+            line-height: 5.6rem;
+            @include respond-to(MEDIUM) {
+              top: 80 * $prd;
+            }
             .c05-self-segmentation-hero__title-air {
-              font-size: 14.4rem;
+              font-size: 6.4rem;
               font-weight: 300;
-              line-height: 11.2rem;
-              letter-spacing: -0.3rem;
+              line-height: 4.6rem;
               color: #151617;
 
+              @include respond-to(MEDIUM) {
+                font-size: 14.4rem;
+                line-height: 9.2rem;
+                letter-spacing: -0.3px;
+              }
               span {
                 color: #2191e5;
               }
             }
 
             .c05-self-segmentation-hero__descript {
-              width: 28.7rem;
-              line-height: 3.2rem;
-              margin-top: 4.4rem;
+              font-size: 1.6rem;
+              width: 209 * $prm;
+              line-height: 24 * $prm;
+              margin-top: 16 * $prm;
+              @include respond-to(MEDIUM) {
+                width: 287 * $prd;
+                line-height: 32 * $prd;
+                margin-top: 44 * $prd;
+              }
             }
           }
           .card-weather {
             position: absolute;
-            bottom: 33.4rem;
+            bottom: 148 * $prm;
             right: 0;
+            @include respond-to(MEDIUM) {
+              bottom: 264 * $prd;
+              right: 0;
+            }
           }
         }
 
         .c05-self-segmentation-hero__name {
           position: absolute;
-          top: 28.8rem;
-          left: 23.3rem;
-          font-size: 20rem;
-          line-height: 24rem;
-          letter-spacing: -0.3rem;
+          top: 123 * $prm;
+          left: 23 * $prm;
+          font-size: 6.4rem;
+          line-height: 5.6rem;
           color: #ffffff;
-          &.right {
-            left: auto;
-            right: 21.1rem;
+          @include respond-to(MEDIUM) {
+            top: 149 * $prd;
+            left: 233 * $prd;
+            font-size: 20rem;
+            line-height: 24rem;
+            letter-spacing: -0.3px;
+            &.right {
+              left: auto;
+              right: 211 * $prd;
+            }
           }
         }
         [data-component="cta-border"] {
           position: absolute;
-          top: 54.4rem;
-          left: 24.2rem;
-          &.right {
-            left: auto;
-            right: 22.9rem;
+          top: 195 * $prm;
+          left: 23 * $prm;
+          @include respond-to(MEDIUM) {
+            top: 405 * $prd;
+            left: 242 * $prd;
+            &.right {
+              top: auto;
+              bottom: 480 * $prd;
+              left: auto;
+              right: 229 * $prd;
+            }
           }
         }
         .c05-self-segmentation-hero__img {
           position: absolute;
-          bottom: 5.2rem;
-          left: 17.9rem;
-          width: 112rem;
-          height: 51.6rem;
+          bottom: 104 * $prm;
+          left: 0;
+          width: 100%;
           &.right {
-            left: auto;
-            right: -8rem;
-            bottom: 10.5rem;
-            width: 111.2rem;
-            height: 44.4rem;
+            width: 563 * $prm;
+            height: 224 * $prm;
+          }
+          @include respond-to(MEDIUM) {
+            bottom: 52 * $prd;
+            left: 179 * $prd;
+            width: 1120 * $prd;
+            height: 516 * $prd;
+            &.right {
+              left: 159 * $prd;
+              bottom: 52 * $prd;
+              width: 1112 * $prd;
+              height: 444 * $prd;
+            }
           }
         }
       }

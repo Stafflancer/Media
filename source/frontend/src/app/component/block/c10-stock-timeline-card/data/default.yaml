@@ -8,7 +8,6 @@ vectorImage: media/stock-timeline-card/vector.png
 
 timeLine:
   - id: 1
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
@@ -18,8 +17,8 @@ timeLine:
     h5:
       type: h5
       copy: Toshiba-Carrier
+    small: Joint venture with  
   - id: 2
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
@@ -29,8 +28,8 @@ timeLine:
     h5:
       type: h5
       copy: Toshiba-Carrier
+    small: Joint venture with  
   - id: 3
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
@@ -40,8 +39,8 @@ timeLine:
     h5:
       type: h5
       copy: Toshiba-Carrier
+    small: Joint venture with  
   - id: 4
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
@@ -51,9 +50,9 @@ timeLine:
     h5:
       type: h5
       copy: Toshiba-Carrier
+    small: Joint venture with  
 
 timeLine0:
-  dotImage: media/stock-timeline-card/dot.png
   h61:
     type: h6
     copy: toshiba
@@ -63,6 +62,7 @@ timeLine0:
   h5:
     type: h5
     copy: Toshiba-Carrier
+  small: Joint venture with
 
 h41:
   type: h4

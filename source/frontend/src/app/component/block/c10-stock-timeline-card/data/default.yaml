@@ -16,7 +16,7 @@ timeLine:
       copy: 2014
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier1
     small: Joint venture with  
   - id: 2
     h61:
@@ -24,10 +24,10 @@ timeLine:
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2015
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier2
     small: Joint venture with  
   - id: 3
     h61:
@@ -35,10 +35,10 @@ timeLine:
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2016
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier3
     small: Joint venture with  
   - id: 4
     h61:
@@ -46,23 +46,11 @@ timeLine:
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2017
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier4
     small: Joint venture with  
-
-timeLine0:
-  h61:
-    type: h6
-    copy: toshiba
-  h62:
-    type: h6
-    copy: 2014
-  h5:
-    type: h5
-    copy: Toshiba-Carrier
-  small: Joint venture with
 
 h41:
   type: h4

@@ -62,12 +62,8 @@
           }
 
           &.is-active {
-            transform: scale(1.3, 1.3);
+            transform: scale(1.5, 1.5);
             background: linear-gradient(225deg, #b7daff 0%, #4557e8 100%);
-
-            &:hover {
-              transform: none;
-            }
           }
 
           &:nth-child(1) {
@@ -137,7 +133,7 @@
       margin-bottom: 2.2rem;
 
       .c10-stock-timeline-card__text6 {
-        opacity: 0.4;
+        color: rgba(255, 255, 255, 0.4);
         display: inline-block;
         margin-left: 5.1rem;
       }
@@ -164,9 +160,16 @@
     }
 
     .c10-stock-timeline-card__text7 {
-      color: #ffffff;
-      opacity: 0.4;
+      color: rgba(255, 255, 255, 0.4);
       line-height: 16px;
+    }
+  }
+
+  .c10-stock-timeline-card__card {
+    display: none;
+
+    &.is-active {
+      display: block;
     }
   }
 }
@@ -192,10 +195,6 @@
 
             &::before {
               @include size(0.4rem, 0.4rem);
-            }
-
-            &.is-active {
-              @include size(2.2rem, 2.2rem);
             }
 
             &:nth-child(1) {

@@ -134,4 +134,8 @@ videoPlayer:
 
 videoOverlay:
   icon: icon-play
-    
+
+video-overlay:
+  video:
+    src: ''
+    data: controls

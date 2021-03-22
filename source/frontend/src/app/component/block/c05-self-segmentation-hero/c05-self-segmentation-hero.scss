@@ -11,7 +11,7 @@ $prm: 100vw / 360;
   overflow: hidden;
 
   @include respond-to(MEDIUM) {
-    height: 1080 * $prd;
+    height: 100vh;
     padding-top: 139 * $prd;
   }
 
@@ -20,7 +20,7 @@ $prm: 100vw / 360;
     .swiper-wrapper {
       height: 100%;
       .swiper-slide {
-        width: 534 * $prm;
+        width: 375 * $prm;
         height: 100%;
         position: relative;
 
@@ -31,26 +31,26 @@ $prm: 100vw / 360;
         &:nth-child(2) {
           width: 260 * $prm;
           @include respond-to(MEDIUM) {
-            width: 580px;
+            width: 410px;
           }
           .c05-self-segmentation-hero__title {
             position: absolute;
             top: 75 * $prm;
             left: 0;
-            font-size: 6.4rem;
-            line-height: 5.6rem;
+            font-size: 64 * $prm;
+            line-height: 56 * $prm;
             @include respond-to(MEDIUM) {
               top: 80 * $prd;
             }
             .c05-self-segmentation-hero__title-air {
-              font-size: 6.4rem;
+              font-size: 64 * $prm;
               font-weight: 300;
-              line-height: 4.6rem;
+              line-height: 56 * $prm;
               color: #151617;
 
               @include respond-to(MEDIUM) {
                 font-size: 14.4rem;
-                line-height: 9.2rem;
+                line-height: 11.2rem;
                 letter-spacing: -0.3px;
               }
               span {
@@ -59,24 +59,27 @@ $prm: 100vw / 360;
             }
 
             .c05-self-segmentation-hero__descript {
-              font-size: 1.6rem;
+              font-size: 16 * $prm;
               width: 209 * $prm;
               line-height: 24 * $prm;
               margin-top: 16 * $prm;
               @include respond-to(MEDIUM) {
                 width: 287 * $prd;
+                font-size: 24 * $prd;
                 line-height: 32 * $prd;
                 margin-top: 44 * $prd;
               }
             }
-          }
-          .card-weather {
-            position: absolute;
-            bottom: 148 * $prm;
-            right: 0;
-            @include respond-to(MEDIUM) {
-              bottom: 264 * $prd;
-              right: 0;
+            .card-weather {
+              position: absolute;
+              top: 258 * $prm;
+              left: 139 * $prm;
+              z-index: 10;
+              @include respond-to(MEDIUM) {
+                top: 302 * $prd;
+                left: auto;
+                right: 0;
+              }
             }
           }
         }
@@ -118,9 +121,10 @@ $prm: 100vw / 360;
         .c05-self-segmentation-hero__img {
           position: absolute;
           bottom: 104 * $prm;
-          left: 0;
-          width: 100%;
+          left: 29 * $prm;
+          width: 386 * $prm;
           &.right {
+            left: -21 * $prm;
             width: 563 * $prm;
             height: 224 * $prm;
           }

@@ -13,8 +13,8 @@
                 <span>{{this.air}}</span>
               </div>
               <div class="c05-self-segmentation-hero__descript copy large">{{this.descript}}</div>
+              {{> general/card-weather this.cardWeather }}
             </div>
-            {{> general/card-weather this.cardWeather }}
           {{else}}
             <div class="c05-self-segmentation-hero__name {{#if this.btn.class}}{{this.btn.class}}{{/if}}" >{{this.name}}</div>
             {{> cta/cta-border this.btn }}

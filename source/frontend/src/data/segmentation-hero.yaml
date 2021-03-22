@@ -1,0 +1,9 @@
+meta:
+  id: '' # can be number or string, used for ordering
+  status: 'done' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Base' # to group pages in the overview
+
+blocks:
+  - name: 'c05-self-segmentation-hero'
+    data: 'import!../app/component/block/c05-self-segmentation-hero/data/default.yaml'

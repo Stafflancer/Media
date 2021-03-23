@@ -1,6 +1,6 @@
 meta:
   id: 'index' # can be number or string, used for ordering
-  status: 'done' # dev, qa, feedback, done
+  status: 'dev' # dev, qa, feedback, done
   notes: '' # add some information about the page
   category: 'Page' # to group pages in the overview
 
@@ -13,8 +13,8 @@ blocks:
   - name: 'c05-self-segmentation-hero'
     data: 'import!../app/component/block/c05-self-segmentation-hero/data/default.yaml'
 
-  - name: c09-media-box-scroll-indicator
-    data: import!../app/component/block/c09-media-box-scroll-indicator/data/default
+  - name: c07-on-page-jump-links
+    data: import!../app/component/block/c07-on-page-jump-links/data/default
 
   - name: "c10-stock-timeline-card"
     data: "import!../app/component/block/c10-stock-timeline-card/data/default"

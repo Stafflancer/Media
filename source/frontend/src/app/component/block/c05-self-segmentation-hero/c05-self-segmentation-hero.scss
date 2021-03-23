@@ -32,7 +32,7 @@ $prm: 100vw / 360;
         &:nth-child(2) {
           width: 260 * $prm;
           @include respond-to(MEDIUM) {
-            width: 410px;
+            width: 46rem;
           }
           .c05-self-segmentation-hero__title {
             position: absolute;

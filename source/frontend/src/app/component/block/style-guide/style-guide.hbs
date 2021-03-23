@@ -143,17 +143,17 @@
     </section>
     <section class="content-section">
       <h2 class="heading-02">Typography</h2>
-      <p class="copy-01">H1</p>
+      <p class="copy-01">H1 144px/48px</p>
       {{> general/heading h1 class="heading-1" }}
-      <p class="copy-01">H2</p>
+      <p class="copy-01">H2 120px/36px</p>
       {{> general/heading h2 class="heading-2" }}
-      <p class="copy-01">H3</p>
+      <p class="copy-01">H3 88px/32px</p>
       {{> general/heading h3 class="heading-3" }}
-      <p class="copy-01">H4</p>
+      <p class="copy-01">H4 56px/24px</p>
       {{> general/heading h4 class="heading-4" }}
-      <p class="copy-01">H5</p>
+      <p class="copy-01">H5 40px/18px</p>
       {{> general/heading h5 class="heading-5" }}
-      <p class="copy-01">H6</p>
+      <p class="copy-01">H6 14px/14px</p>
       {{> general/heading h6 class="heading-6" }}
     </section>
     <section class="content-section">
@@ -229,16 +229,10 @@
 
     </section>
     <section class="content-section">
-      <h2 class="heading-02">Icons</h2>
+      <h2 class="heading-02">Others</h2>
       <div class="content-inner-section">
-        <div class="icons">
-          {{#each icons}}
-            <div class="icon-wrapper">
-              {{> general/icon name=this }}
-              <code>{{this}}</code>
-            </div>
-          {{/each}}
-        </div>
+        <h2 class="heading-02">Globe</h2>
+          {{> general/globe globe class='globe' }}
       </div>
     </section>
   </div>

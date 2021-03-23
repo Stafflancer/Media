@@ -1,14 +1,24 @@
 title: c10-stock-timeline-card
 
+cta-border-white-with-icon:
+  class: white
+  icon: arrow-right
+  copy: Take a tour in Midea factory
+
+cta-border-with-icon:
+  icon: arrow-right
+  copy: Take a tour in Midea factory
+  
 cardTitle: OUR HISTORY OF SUCCESS
 
 isActive: isActive
 
 vectorImage: media/stock-timeline-card/vector.png
 
+cornerImage: media/stock-timeline-card/corner.png
+
 timeLine:
   - id: 1
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
@@ -17,52 +27,41 @@ timeLine:
       copy: 2014
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier1
+    small: Joint venture with  
   - id: 2
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2015
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier2
+    small: Joint venture with  
   - id: 3
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2016
     h5:
       type: h5
-      copy: Toshiba-Carrier
+      copy: Toshiba-Carrier3
+    small: Joint venture with  
   - id: 4
-    dotImage: media/stock-timeline-card/dot.png
     h61:
       type: h6
       copy: toshiba
     h62:
       type: h6
-      copy: 2014
+      copy: 2017
     h5:
       type: h5
-      copy: Toshiba-Carrier
-
-timeLine0:
-  dotImage: media/stock-timeline-card/dot.png
-  h61:
-    type: h6
-    copy: toshiba
-  h62:
-    type: h6
-    copy: 2014
-  h5:
-    type: h5
-    copy: Toshiba-Carrier
+      copy: Toshiba-Carrier4
+    small: Joint venture with  
 
 h41:
   type: h4

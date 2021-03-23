@@ -16,8 +16,10 @@
               {{> general/card-weather this.cardWeather }}
             </div>
           {{else}}
-            <div class="c05-self-segmentation-hero__name {{#if this.btn.class}}{{this.btn.class}}{{/if}}" >{{this.name}}</div>
-            {{> cta/cta-border this.btn }}
+            <div class="c05-self-segmentation-hero__top {{#if this.btn.class}}{{this.btn.class}}{{/if}}">
+              <div class="c05-self-segmentation-hero__name" >{{this.name}}</div>
+              {{> cta/cta-border this.btn }}
+            </div>
             <img class="c05-self-segmentation-hero__img {{#if this.btn.class}}{{this.btn.class}}{{/if}}" src="{{this.img}}" alt="">
           {{/if}}
         </div>

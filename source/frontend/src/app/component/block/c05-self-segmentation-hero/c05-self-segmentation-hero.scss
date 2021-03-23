@@ -32,7 +32,7 @@ $prm: 100vw / 360;
         &:nth-child(2) {
           width: 260 * $prm;
           @include respond-to(MEDIUM) {
-            width: 46rem;
+            width: 58rem;
           }
           .c05-self-segmentation-hero__title {
             position: absolute;
@@ -65,7 +65,7 @@ $prm: 100vw / 360;
               line-height: 24 * $prm;
               margin-top: 16 * $prm;
               @include respond-to(MEDIUM) {
-                width: 287 * $prd;
+                width: 28.7rem;
                 font-size: 24 * $prd;
                 line-height: 32 * $prd;
                 margin-top: 44 * $prd;
@@ -77,7 +77,7 @@ $prm: 100vw / 360;
               left: 139 * $prm;
               z-index: 10;
               @include respond-to(MEDIUM) {
-                top: 302 * $prd;
+                top: 28.2rem;
                 left: auto;
                 right: 0;
               }
@@ -85,38 +85,38 @@ $prm: 100vw / 360;
           }
         }
 
-        .c05-self-segmentation-hero__name {
+        .c05-self-segmentation-hero__top {
           position: absolute;
           top: 123 * $prm;
           left: 23 * $prm;
+          @include respond-to(MEDIUM) {
+            top: 149 * $prd;
+            left: 233 * $prd;
+            &.right {
+              left: 191 * $prd;
+            }
+          }
+          [data-component="cta-border"] {
+            margin-top: 16 * $prm;
+            @include respond-to(MEDIUM) {
+              margin-top: 16 * $prd;
+            }
+            &.right {
+              float: right;
+            }
+          }
+        }
+        .c05-self-segmentation-hero__name {
           font-size: 6.4rem;
           line-height: 5.6rem;
           color: #ffffff;
           @include respond-to(MEDIUM) {
-            top: 149 * $prd;
-            left: 233 * $prd;
             font-size: 20rem;
             line-height: 24rem;
             letter-spacing: -0.3px;
-            &.right {
-              left: auto;
-              right: 211 * $prd;
-            }
           }
         }
-        [data-component="cta-border"] {
-          position: absolute;
-          top: 195 * $prm;
-          left: 23 * $prm;
-          @include respond-to(MEDIUM) {
-            top: 405 * $prd;
-            left: 242 * $prd;
-            &.right {
-              left: auto;
-              right: 229 * $prd;
-            }
-          }
-        }
+
         .c05-self-segmentation-hero__img {
           position: absolute;
           bottom: 104 * $prm;

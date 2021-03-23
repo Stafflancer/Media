@@ -1,8 +1,8 @@
-import AbstractComponent from 'app/component/AbstractComponent';
+import AbstractBlock from '../AbstractBlock';
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.css';
 
-export default class C05SelfSegmentationHero extends AbstractComponent {
+export default class C05SelfSegmentationHero extends AbstractBlock {
   public static readonly displayName: string = 'c05-self-segmentation-hero';
 
   private readonly swiperContainer = this.getElement<HTMLElement>('.swiper-container');

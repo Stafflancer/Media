@@ -59,10 +59,12 @@ export default class C01FixedHeader extends AbstractComponent {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > this.menuseDom!.clientHeight && !this.isChange) {
       this.isChange = true;
+      this.menuseDom!.classList.remove('dark-theme');
       this.menuseDom!.classList.add('white');
     }
     if (scrollTop < this.menuseDom!.clientHeight && this.isChange) {
       this.isChange = false;
+      this.menuseDom!.classList.add('dark-theme');
       this.menuseDom!.classList.remove('white');
     }
   };

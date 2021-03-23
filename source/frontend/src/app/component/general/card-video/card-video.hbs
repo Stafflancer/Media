@@ -2,7 +2,8 @@
 <script src="./CardVideo.ts"></script>
 
 <div data-component="card-video">
-  <video src="{{videoSrc}}" class="card-video__media"></video>
+  <img src="{{imgSrc}}" class="card-video__media img" alt="">
+  <video src="{{videoSrc}}" class="card-video__media video"></video>
   <div class="card-video__wrapper">
     <div class="card-video__wrapper-title">{{title}}</div>
     <div class="card-video__wrapper-content">{{content}}</div>
@@ -12,4 +13,5 @@
       {{> cta/cta-gradient stop }}
     </div>
   </div>
+  {{> general/video-overlay videoOverlay }}
 </div>

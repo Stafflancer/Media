@@ -217,12 +217,13 @@
         <p class="copy-01">card video</p>
         {{> general/card-video videoInfo }}
         <p class="copy-01">video player</p>
-        <div class="video-player">
+        <div class="general-video-player">
           {{> general/video-player videoPlayer }}
         </div>
         <p class="copy-01">video-overlay</p>
         <div class="js-video-overlay">
-          {{> cta/cta-gradient videoOverlay }}
+          {{> cta/cta-gradient cta-round }}
+          {{> general/video-overlay videoOverlay }}
         </div>
       </div>
 

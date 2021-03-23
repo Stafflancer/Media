@@ -216,13 +216,13 @@
       top: -9.1rem;
       z-index: 1;
 
-      .c09-media-box__icon-corner {
+      .c09-media-box__image-corner {
         @include size(4rem, 4.4rem);
         position: absolute;
-        right: 8.8rem;
-        top: 4rem;
+        right: 8.6rem;
+        top: 3.6rem;
 
-        [data-component="icon"] {
+        img {
           @include size(100%, 100%);
         }
       }
@@ -394,6 +394,12 @@
         position: absolute;
         right: 0;
         top: -4.5rem;
+
+        .c09-media-box__image-corner {
+          @include size(2rem, 2rem);
+          right: 3.7rem;
+          top: 1.7rem;
+        }
 
         .c09-media-box__iconfont {
           color: transparent;

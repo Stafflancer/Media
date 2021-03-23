@@ -155,11 +155,23 @@ $prm: 100vw / 360;
     [data-component="cta-text"] {
       margin-left: 15 * $prm;
     }
+    &.mobile {
+      display: block;
+    }
+    &.pc {
+      display: none;
+    }
 
     @include respond-to(MEDIUM) {
       bottom: 88 * $prd;
       [data-component="cta-text"] {
         margin-left: 15 * $prd;
+      }
+      &.mobile {
+        display: none;
+      }
+      &.pc {
+        display: block;
       }
     }
   }

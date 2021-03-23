@@ -22,7 +22,12 @@ swipers:
       icon: arrow-right
       copy: Explore LCAC products
 
-mouseIcon: mouse-icon
+mouseIcon:
+  with-icon: true
+  mouse-icon: mouse-icon
+  copy: Scroll to Explore
+  left-icon: arrow-left
+  right-icon: arrow-right
 
 cta-text-active:
   class: active

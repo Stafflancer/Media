@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="./c07-on-page-jump-links.scss">
+<script src="./C07OnPageJumpLinks.ts"></script>
+
+<div class="c07-on-page-jump-links" data-component="c07-on-page-jump-links">
+  <div class="c07-on-page-jump-links__block-wrapper">
+    <ul>
+      {{#each navList}}
+      <li>
+        <a href="{{this.href}}">
+          {{> cta/cta-text this }}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="c08-our-mission-text-box">
+  <div class="c08-our-mission-text-box__block-wrapper">
+    <div class="c08-our-mission-text-box__title">
+      {{> general/heading h1 class="heading-1" }}
+    </div>
+    <div class="c08-our-mission-text-box__content">
+      <p class="copy large">{{desc}}</p>
+    </div>
+  </div>
+</div>
+</div>

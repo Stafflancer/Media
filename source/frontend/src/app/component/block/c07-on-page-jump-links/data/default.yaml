@@ -1,0 +1,19 @@
+title: c07-on-page-jump-links
+
+h1:
+  type: h1
+  copy: Our Mission
+
+desc: Our mission is to bring the best air quality into people’s homes. In our ambition for excellence we have become the world’s largest air treatment brand, with with global recognitions in sustainability, design, safety and quality.
+
+navList:
+  - copy: Our Mission
+    href: #a
+    tag: span
+    class: active
+  - copy: The History
+    href: #b
+    tag: span
+  - copy: Global Capacity
+    href: #c
+    tag: span

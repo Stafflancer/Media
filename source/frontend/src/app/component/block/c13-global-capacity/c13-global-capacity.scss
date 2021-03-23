@@ -1,0 +1,142 @@
+.c13-global-capacity {
+  .c13-global-capacity__container {
+    display: flex;
+    align-items: center;
+    padding-top: 15.4rem;
+  }
+
+  .c15 {
+    @include size(50%, 112.2rem);
+    background: deepskyblue;
+  }
+
+  &__block-wrapper {
+    @include size(50%, auto);
+
+    .c13-global-capacity__t {
+      margin-bottom: 12rem;
+
+      .c08-our-mission-text-box__title {
+        margin-bottom: 3.2rem;
+      }
+
+      .c08-our-mission-text-box__desc {
+        @include size(51.1rem, auto);
+      }
+    }
+
+    .c13-global-capacity__b {
+      display: flex;
+
+      li {
+        @include size(27.3rem, auto);
+        margin-right: 2.4rem;
+        border-bottom: 0.2rem solid #000426;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .c13-global-capacity__b-title {
+          margin-bottom: 2.4rem;
+
+          .heading-3 {
+            font-weight: normal;
+          }
+        }
+
+        .c13-global-capacity__b-content {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .c15-h5 {
+    display: none;
+  }
+
+  .c13-global-capacity__mask {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c13-global-capacity {
+    position: relative;
+    .c13-global-capacity__container {
+      display: block;
+      padding-top: 8.2rem;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .c15 {
+      display: none;
+    }
+
+    .c13-global-capacity__block-wrapper {
+      width: 100%;
+      padding: 0 2.4rem;
+
+      .c13-global-capacity__t {
+        margin-bottom: 3.9rem;
+
+        .c08-our-mission-text-box__title {
+          margin-bottom: 1.6rem;
+        }
+
+        .c08-our-mission-text-box__desc {
+          width: 100%;
+
+          .large {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .c13-global-capacity__b {
+        width: 100%;
+        display: -webkit-box;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        li {
+          @include size(17.1rem, auto);
+
+          .c13-global-capacity__b-content {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .c15-h5 {
+      display: block;
+      margin-top: 4.8rem;
+      @include size(26.7rem, 26.5rem);
+      position: relative;
+
+      img {
+        @include size(100%, 100%);
+      }
+    }
+
+    .c13-global-capacity__mask {
+      display: block;
+      position: absolute;
+      @include size(100%, 100%);
+      @include offset(0, 0);
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

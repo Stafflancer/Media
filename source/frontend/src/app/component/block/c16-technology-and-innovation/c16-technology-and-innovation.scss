@@ -1,0 +1,58 @@
+.c16-technology-and-innovation {
+  position: relative;
+
+  &__container {
+    .c16-technology-and-innovation__title {
+      @include size(84.5rem, 24rem);
+      position: absolute;
+      z-index: 2;
+      @include offset(22.9rem, 13.7rem);
+
+      .heading-1 {
+        line-height: 112px;
+        color: #151617;
+      }
+    }
+
+    .swiper-container {
+      @include size(100%, 95.6rem);
+
+      .swiper-slide {
+        .c16-technology-and-innovation__image {
+          @include size(105.8rem, 95.6rem);
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .c16-technology-and-innovation__content {
+          position: absolute;
+          @include offset(22.9rem, 41.7rem);
+          z-index: 2;
+          display: flex;
+          align-items: flex-start;
+
+          .c16-technology-and-innovation__label {
+            color: #151617;
+            opacity: 0.5;
+            margin-right: 8rem;
+          }
+
+          .c16-technology-and-innovation__control {
+            @include size(42.2rem, auto);
+
+            .c16-technology-and-innovation__description {
+              margin-bottom: 4rem;
+              color: #151617;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

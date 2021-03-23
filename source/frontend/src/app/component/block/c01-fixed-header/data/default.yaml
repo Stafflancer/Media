@@ -6,9 +6,9 @@ logoUrl: ''
 fixedHeader:
   nav:
     - copy: Products
-      class: with-dot
       url: ''
     - copy: Canton Fair
+      class: with-dot
       url: ''
     - copy: Virtual Factory
       url: ''

@@ -1,0 +1,20 @@
+meta:
+  id: 'index' # can be number or string, used for ordering
+  status: 'done' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Page' # to group pages in the overview
+
+layout: home
+
+blocks:
+  - name: 'c01-fixed-header'
+    data: 'import!../app/component/block/c01-fixed-header/data/default.yaml'
+
+  - name: 'c05-self-segmentation-hero'
+    data: 'import!../app/component/block/c05-self-segmentation-hero/data/default.yaml'
+
+  - name: c09-media-box-scroll-indicator
+    data: import!../app/component/block/c09-media-box-scroll-indicator/data/default
+
+  - name: "c10-stock-timeline-card"
+    data: "import!../app/component/block/c10-stock-timeline-card/data/default"

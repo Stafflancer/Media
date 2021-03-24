@@ -26,3 +26,5 @@ blocks:
     data: "import!../app/component/block/c13-global-capacity/data/default"
   - name: "c16-technology-and-innovation"
     data: "import!../app/component/block/c16-technology-and-innovation/data/default"
+  - name: 'c02-footer'
+    data: 'import!../app/component/block/c02-footer/data/default.yaml'

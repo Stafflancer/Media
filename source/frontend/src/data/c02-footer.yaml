@@ -1,0 +1,8 @@
+meta:
+  id: '' # can be number or string, used for ordering
+  status: 'done' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+
+blocks:
+  - name: 'c02-footer'
+    data: 'import!../app/component/block/c02-footer/data/default.yaml'

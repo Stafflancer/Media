@@ -8,8 +8,21 @@ $prm: 100vw / 375;
   width: 100%;
   background: transparent;
   z-index: 6;
+
   &.white {
     background: #fff;
+  }
+  &.dark-theme {
+    [data-component="logo"] {
+      path {
+        fill: #fff;
+      }
+    }
+    [data-component="cta-text"] {
+      .cta-text-copy {
+        color: #fff;
+      }
+    }
   }
   .c01-fixed-header__popup {
     position: fixed;

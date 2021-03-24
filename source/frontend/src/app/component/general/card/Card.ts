@@ -6,7 +6,6 @@ export default class Card extends AbstractComponent {
   private readonly playBtn = this.getElement<HTMLElement>('.card__media-play');
   private readonly stopBtn = this.getElement<HTMLElement>('.card__media-stop');
 
-  private readonly docuW = document.body.offsetWidth;
   private readonly videoContent = this.getElement<HTMLVideoElement>('.card__media.video');
   private readonly videoPopup = document.body.querySelector<HTMLElement>(
     '[data-component="video-overlay"]',
@@ -26,7 +25,8 @@ export default class Card extends AbstractComponent {
 
   protected playVideo = (event: Event): void => {
     let src = this.videoContent!.getAttribute('src') || '';
-    if (this.docuW < 1024) {
+    let docuW = document.body.offsetWidth;
+    if (docuW < 1024) {
       this.videoPopup!.style.display = 'block';
       this.popupVideo!.setAttribute('src', src);
       this.$pageBody.style.overflow = 'hidden';

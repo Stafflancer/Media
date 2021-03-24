@@ -1,12 +1,11 @@
 .c07-on-page-jump-links {
   background: rgb(232, 239, 250);
-  padding: 19.2rem 45rem 4.2rem 22.9rem;
-
+  padding: 19.2rem 34rem 4.2rem 22.9rem;
   display: flex;
   justify-content: space-between;
 
   &__block-wrapper {
-    margin-top: 2.8rem;
+    margin-top: 2.2rem;
     li {
       font-size: 4rem;
       color: #151617;
@@ -41,26 +40,17 @@
   }
 }
 
-@media (max-width: 1600px) {
-  .c07-on-page-jump-links {
-    padding: 19.2rem 13rem 4.2rem 22.9rem;
-  }
-}
-
 @media (max-width: 1024px) {
   .c07-on-page-jump-links {
-    padding: 9.7rem 2.4rem 4rem;
-    .c07-on-page-jump-links__block-wrapper {
+    padding: 8rem 2.4rem 4rem;
+    &__block-wrapper {
       display: none;
     }
-    .c08-our-mission-text-box {
-      width: 100%;
 
-      .c08-our-mission-text-box__title {
-        margin-bottom: 1.6rem;
-        .heading-1 {
-          line-height: 56px;
-        }
+    .c08-our-mission-text-box__title {
+      margin-bottom: 1.6rem;
+      .heading-1 {
+        line-height: 56px;
       }
     }
   }

@@ -16,16 +16,21 @@
               {{> general/card-weather this.cardWeather }}
             </div>
           {{else}}
-            <div class="c05-self-segmentation-hero__name {{#if this.btn.class}}{{this.btn.class}}{{/if}}" >{{this.name}}</div>
-            {{> cta/cta-border this.btn }}
+            <div class="c05-self-segmentation-hero__top {{#if this.btn.class}}{{this.btn.class}}{{/if}}">
+              <div class="c05-self-segmentation-hero__name" >{{this.name}}</div>
+              {{> cta/cta-border this.btn }}
+            </div>
             <img class="c05-self-segmentation-hero__img {{#if this.btn.class}}{{this.btn.class}}{{/if}}" src="{{this.img}}" alt="">
           {{/if}}
         </div>
       {{/each}}
     </div>
   </div>
-  <div class="c05-self-segmentation-hero__mouse">
-    {{> general/icon name=mouseIcon }}
+  <div class="c05-self-segmentation-hero__mouse pc">
+    {{> general/icon name=mouseIcon.mouse-icon }}
     {{> cta/cta-text cta-text-active }}
+  </div>
+  <div class="c05-self-segmentation-hero__mouse mobile">
+    {{> cta/cta-text mouseIcon }}
   </div>
 </div>

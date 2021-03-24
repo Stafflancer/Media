@@ -8,7 +8,12 @@ export default class CardVideo extends AbstractComponent {
 
   private readonly docuW = document.body.offsetWidth;
   private readonly videoContent = this.getElement<HTMLVideoElement>('.card-video__media.video');
-  private readonly videoPopup = this.getElement<HTMLElement>('[data-component="video-overlay"]');
+  private readonly videoPopup = document.body.querySelector<HTMLElement>(
+    '[data-component="video-overlay"]',
+  );
+  private readonly popupVideo = document.body.querySelector<HTMLElement>(
+    '[data-component="video-overlay"] video',
+  );
   private readonly $pageBody = document.body;
 
   constructor(el: HTMLElement) {
@@ -20,8 +25,10 @@ export default class CardVideo extends AbstractComponent {
   }
   // 播放
   protected playVideo = (event: Event): void => {
+    let src = this.videoContent!.getAttribute('src') || '';
     if (this.docuW < 1024) {
       this.videoPopup!.style.display = 'block';
+      this.popupVideo!.setAttribute('src', src);
       this.$pageBody.style.overflow = 'hidden';
       this.$pageBody.style.height = '100%';
     } else {

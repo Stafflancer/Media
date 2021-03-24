@@ -3,8 +3,8 @@ import AbstractComponent from 'app/component/AbstractComponent';
 export default class Card extends AbstractComponent {
   public static readonly displayName: string = 'card';
 
-  protected readonly playBtn = this.getElement<HTMLElement>('.card__media-play');
-  protected readonly stopBtn = this.getElement<HTMLElement>('.card__media-stop');
+  private readonly playBtn = this.getElement<HTMLElement>('.card__media-play');
+  private readonly stopBtn = this.getElement<HTMLElement>('.card__media-stop');
 
   private readonly docuW = document.body.offsetWidth;
   private readonly videoContent = this.getElement<HTMLVideoElement>('.card__media.video');
@@ -14,9 +14,9 @@ export default class Card extends AbstractComponent {
   constructor(el: HTMLElement) {
     super(el);
 
-    this.playBtn!.addEventListener('click', this.playVideo);
-    this.stopBtn!.addEventListener('click', this.stopVideo);
-    this.videoContent!.addEventListener('ended', this.endVideo);
+    if (this.playBtn) this.playBtn!.addEventListener('click', this.playVideo);
+    if (this.stopBtn) this.stopBtn!.addEventListener('click', this.stopVideo);
+    if (this.videoContent) this.videoContent!.addEventListener('ended', this.endVideo);
   }
 
   protected playVideo = (event: Event): void => {

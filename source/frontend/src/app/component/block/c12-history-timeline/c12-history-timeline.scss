@@ -6,6 +6,7 @@ $prm: 100vw / 375;
   flex-wrap: wrap;
   @include respond-to(MEDIUM) {
     flex-wrap: nowrap;
+    padding-top: 106 * $prd;
   }
 
   .c12-history-timeline__left {

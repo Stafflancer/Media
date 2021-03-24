@@ -16,7 +16,7 @@ $prm: 100vw / 375;
     padding-top: 40 * $prm;
 
     @include respond-to(MEDIUM) {
-      width: 86.3rem;
+      width: auto;
       height: 467 * $prd;
       padding-left: 80 * $prd;
       padding-top: 146 * $prd;

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="./c12-history-timeline.scss">
+<script src="./C12HistoryTimeline.ts"></script>
+
+<div data-component="c12-history-timeline">
+  <div class="c12-history-timeline__left">
+    {{> general/heading left.title class="heading-1" }}
+    <p class="copy large">{{left.subTitle}}</p>
+  </div>
+  <div class="c12-history-timeline__right swiper-container">
+    <div class="swiper-wrapper">
+      {{#each swipers}}
+      <div class="swiper-slide">
+        <div class="swiper-slide__year">{{this.year}}</div>
+        {{> general/card this}}
+      </div>
+      {{/each}}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

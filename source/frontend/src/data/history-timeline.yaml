@@ -1,0 +1,11 @@
+meta:
+  id: '' # can be number or string, used for ordering
+  status: 'done' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Base' # to group pages in the overview
+
+blocks:
+  - name: 'c12-history-timeline'
+    data: 'import!../app/component/block/c12-history-timeline/data/default.yaml'
+  - name: 'video-overlay'
+    data: 'import!../app/component/block/video-overlay/data/default.yaml'

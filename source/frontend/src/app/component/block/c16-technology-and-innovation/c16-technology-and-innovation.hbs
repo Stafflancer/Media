@@ -3,6 +3,25 @@
 
 <div class="c16-technology-and-innovation" data-component="c16-technology-and-innovation">
   <div class="c16-technology-and-innovation__container">
+    <div class="c16-technology-and-innovation__video">
+      <div class="c16-technology-and-innovation__video-box">
+        <div class="c16-technology-and-innovation__video-slogan">
+          {{> general/heading slogan class="heading-6" }}
+        </div>
+        <div class="c16-technology-and-innovation__video-play">
+          <div class="c16-technology-and-innovation__video-play-button">
+            {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+          </div>
+          <div class="c16-technology-and-innovation__user-name">
+            <p class="copy large">{{userName}}</p>
+          </div>
+        </div>
+        <div class="c16-technology-and-innovation__video-progress-bar"></div>
+      </div>
+      <div class="c16-technology-and-innovation__video-image">
+        <img src="{{avatarSrc}}" alt="avatar">
+      </div>
+    </div>
     <div class="c16-technology-and-innovation__title">
       {{> general/heading h1 class="heading-1" }}
     </div>
@@ -22,7 +41,7 @@
                 <p class="copy large">{{description}}</p>
               </div>
               <div class="c16-technology-and-innovation__sub-title">
-                 {{> cta/cta-border subTitle }}
+                {{> cta/cta-border subTitle }}
               </div>
             </div>
           </div>
@@ -30,5 +49,21 @@
         {{/each}}
       </div>
     </div>
+  </div>
+
+  <div class="c16-technology-and-innovation__technology">
+    <div class="c16-technology-and-innovation__card-video">
+      {{> general/card-video videoInfo }}
+    </div>
+    <ul class="c16-technology-and-innovation__intro">
+      {{#each lists}}
+      <li>
+        <div class="c16-technology-and-innovation__intro-title">
+          {{> general/heading title class="heading-1" }}
+        </div>
+        <div class="copy cta c16-technology-and-innovation__intro-content">{{content}}</div>
+      </li>
+      {{/each}}
+    </ul>
   </div>
 </div>

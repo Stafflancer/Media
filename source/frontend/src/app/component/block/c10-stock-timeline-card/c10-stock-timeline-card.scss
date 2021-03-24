@@ -263,10 +263,10 @@
     position: relative;
 
     &__block-wrapper {
-      position: absolute;
+      position: relative;
       left: 2.4rem;
       right: 2.4rem;
-      top: 17rem;
+      top: -17rem;
       z-index: 10;
       padding-left: 0;
     }

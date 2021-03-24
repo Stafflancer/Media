@@ -1,0 +1,12 @@
+title: c02-footer
+logoUrl: ''
+# theme: dark-thtme
+theme: ''
+fixedHeader:
+  nav:
+    - copy: Terms & Conditions
+      url: ''
+    - copy: Privacy Policy
+      url: ''
+  menu: header-menu
+  close: header-close

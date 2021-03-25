@@ -1,18 +1,20 @@
 .card-weather {
-  width: 22.4rem;
-  background: linear-gradient(
-    144.98deg,
-    #c0e2f3 -2.32%,
-    #b6d4ee 33.3%,
-    #b2cfec 59.62%,
-    #c0e2f2 86.57%
-  );
-  border: 1px solid #ffffff;
-  border-radius: 1rem 6rem 1rem 1rem;
-  padding: 1.6rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .card-weather__container {
+    width: 22.4rem;
+    background: linear-gradient(
+      144.98deg,
+      #c0e2f3 -2.32%,
+      #b6d4ee 33.3%,
+      #b2cfec 59.62%,
+      #c0e2f2 86.57%
+    );
+    border: 1px solid #ffffff;
+    border-radius: 1rem 6rem 1rem 1rem;
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .card-weather__icon-sun {
     margin-top: 1.6rem;

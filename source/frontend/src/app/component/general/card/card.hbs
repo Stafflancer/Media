@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="./card.scss">
+<script src="./Card.ts"></script>
 
 <div data-component="card">
   <div class="card__content">
@@ -6,8 +7,10 @@
       <img src="{{img}}" alt="" class="card__media">
     {{/if}}
     {{#if video}}
-      <video src="{{video}}" class="card__media"></video>
-      {{> cta/cta-gradient cta-round }}
+      <img src="{{videoImg}}" class="card__media img" alt="">
+      <video src="{{video}}" class="card__media video"></video>
+      {{> cta/cta-gradient play }}
+      {{> cta/cta-gradient stop }}
     {{/if}}
     <div class="card__title-content">
       <div class="card__subtitle">{{subtitle}}</div>

@@ -19,36 +19,3 @@ intro:
       icon: arrow-right
       copy: Explore Key Technologies
   description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology.
-
-videoInfo:
-  imgSrc: ../../assets/placeholder/demo.jpg
-  videoSrc: ../../assets/placeholder/sample.mp4
-  videoOverlay:
-    video:
-      src: ../../assets/placeholder/sample.mp4
-      data: controls
-  title: Take A Tour
-  content: FACTORY OF THE FUTURE
-  time: '2:05'
-  play:
-    icon: icon-play
-    class: card-video__play
-  stop:
-    icon: icon-pause
-    class: card-video__stop
-  playicon: icon-play
-  stopicon: icon-pause
-
-lists:
-  - title: 
-      type: h1
-      copy: 89
-    content: TECHNOLOGY LABS
-  - title: 
-      type: h1
-      copy: 34
-    content: INTERNATIONAL LEADING TECHNOLOGIES
-  - title: 
-      type: h1
-      copy: 400
-    content: EXPERTS WITH  MASTER’S DEGREES

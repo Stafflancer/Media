@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="./card-weather.scss">
+<script src="./CardWeather.ts"></script>
 
-<div class="card-weather">
+<div class="card-weather" data-component="card-weather">
   <div class="card-weather__container">
     <div class="card-weather__icon-sun">
       {{> general/icon name="icon-sun" }}
@@ -25,6 +26,7 @@
         {{else}}
         <span>{{tips}}</span>
         {{/if}}
+        <div class="card-weather__location"></div>
       </div>
     </div>
   </div>

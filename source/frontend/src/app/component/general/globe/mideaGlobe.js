@@ -59,7 +59,7 @@ DAT.mideaGlobe = function(container, opts) {
   };
 
   var camera, scene, renderer, w, h;
-  var mesh, atmosphere, point;
+  var mesh, atmosphere, point, raycaster;
 
   var overRenderer;
 
@@ -133,6 +133,8 @@ DAT.mideaGlobe = function(container, opts) {
 
     point = new THREE.Mesh(geometry);
 
+		raycaster = new THREE.Raycaster();
+
     renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     renderer.setSize(w, h);
 
@@ -142,19 +144,21 @@ DAT.mideaGlobe = function(container, opts) {
 
     container.addEventListener('mousedown', onMouseDown, false);
 
-    container.addEventListener('mousewheel', onMouseWheel, false);
+    //container.addEventListener('mousewheel', onMouseWheel, false);
 
-    document.addEventListener('keydown', onDocumentKeyDown, false);
+    //document.addEventListener('keydown', onDocumentKeyDown, false);
 
     window.addEventListener('resize', onWindowResize, false);
 
-    container.addEventListener('mouseover', function() {
-      overRenderer = true;
-    }, false);
+		window.addEventListener('click', onWindowMouseDown, false);
 
-    container.addEventListener('mouseout', function() {
-      overRenderer = false;
-    }, false);
+    // container.addEventListener('mouseover', function() {
+    //   overRenderer = true;
+    // }, false);
+
+    // container.addEventListener('mouseout', function() {
+    //   overRenderer = false;
+    // }, false);
   }
 
 	function addData(data, opts) {
@@ -243,6 +247,11 @@ DAT.mideaGlobe = function(container, opts) {
     var phi = (90 - lat) * Math.PI / 180;
     var theta = (180 - lng) * Math.PI / 180;
 
+		point.callback = function() {
+			console.log('imback')
+		}
+		point.name = 'my name'
+
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
     point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
@@ -259,10 +268,6 @@ DAT.mideaGlobe = function(container, opts) {
       point.geometry.faces[i].color = color;
 
     }
-
-		point.addEventListener('click', function(){
-			console.log('1212')
-		})
 
     THREE.GeometryUtils.merge(subgeo, point);
   }
@@ -329,6 +334,23 @@ DAT.mideaGlobe = function(container, opts) {
         break;
     }
   }
+
+	function onWindowMouseDown(event) {
+		mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+
+    raycaster.setFromCamera( mouse, camera );
+
+    var intersects = raycaster.intersectObjects( scene.children );
+		
+		console.log(intersects)
+
+    if ( intersects.length > 0 ) {
+
+        intersects[1].object.callback();
+
+    }
+	}
 
   function onWindowResize( event ) {
     camera.aspect = window.innerWidth / window.innerHeight;

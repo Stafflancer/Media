@@ -4,8 +4,8 @@ $prm: 100vw / 360;
 [data-component="c05-self-segmentation-hero"] {
   width: 100%;
   height: 640 * $prm;
-  background: url("~/assets/c05-self-segmentation-hero/hero_bg1.png") no-repeat;
-  background-size: cover;
+  //background: url("~/assets/c05-self-segmentation-hero/hero_bg.png") no-repeat;
+  //background-size: cover;
   padding-top: 61 * $prm;
   box-sizing: border-box;
   overflow: hidden;
@@ -14,6 +14,29 @@ $prm: 100vw / 360;
   @include respond-to(MEDIUM) {
     height: 100vh;
     padding-top: 139 * $prd;
+  }
+  .c05-self-segmentation-hero__bg-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 542 * $prm;
+    background: url("~/assets/c05-self-segmentation-hero/hero_bg.png") no-repeat;
+    background-size: cover;
+    @include respond-to(MEDIUM) {
+      height: 81.5vh;
+    }
+  }
+  .c05-self-segmentation-hero__bg-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98 * $prm;
+    background: #f8ffff;
+    @include respond-to(MEDIUM) {
+      height: 18.5vh;
+    }
   }
 
   .swiper-container {
@@ -119,22 +142,23 @@ $prm: 100vw / 360;
 
         .c05-self-segmentation-hero__img {
           position: absolute;
-          bottom: 104 * $prm;
+          bottom: 98 * $prm;
           left: 29 * $prm;
           width: 386 * $prm;
           &.right {
+            bottom: 82 * $prm;
             left: -21 * $prm;
             width: 563 * $prm;
             height: 224 * $prm;
           }
           @include respond-to(MEDIUM) {
-            bottom: 52 * $prd;
+            bottom: 4.81vh;
             left: 179 * $prd;
             width: 1120 * $prd;
             height: 516 * $prd;
             &.right {
               left: 105 * $prd;
-              bottom: 52 * $prd;
+              bottom: 9.72vh;
               width: 1112 * $prd;
               height: 444 * $prd;
             }
@@ -163,7 +187,7 @@ $prm: 100vw / 360;
     }
 
     @include respond-to(MEDIUM) {
-      bottom: 88 * $prd;
+      bottom: 8.14vh;
       [data-component="cta-text"] {
         margin-left: 15 * $prd;
       }

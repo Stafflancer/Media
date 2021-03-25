@@ -10,6 +10,13 @@ swipers:
   - title: Discover the World of
     air: Air
     descript: Scroll horizontaly to explore our range of products for both home and office
+    mouseIcon:
+      with-icon: true
+      mouse-icon: mouse-icon
+      copy: Scroll to Explore
+    cta-text-active:
+      class: active
+      copy: Scroll to Explore
     cardWeather:
 #      centigrade: 38°C
       placeholder: Use your location

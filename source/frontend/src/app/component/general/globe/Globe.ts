@@ -30,7 +30,6 @@ export default class Globe extends AbstractComponent {
             globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});
           }
           globe.createPoints();
-          globe.animate();
         }
       }
     };

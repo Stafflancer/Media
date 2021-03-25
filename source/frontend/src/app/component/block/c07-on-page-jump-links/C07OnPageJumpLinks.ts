@@ -13,7 +13,7 @@ export default class C07OnPageJumpLinks extends AbstractBlock {
 
   private handleClick = (e: MouseEvent) => {
     let self = e.currentTarget as HTMLElement;
-    let targetElement = document.querySelector(`data-component=${self.dataset.target}`) as HTMLElement;
+    let targetElement = document.querySelector(`[data-component=${self.dataset.target}]`) as HTMLElement;
     if (targetElement) {
       window.scroll({
 				behavior: 'smooth',

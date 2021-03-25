@@ -20,7 +20,6 @@
     margin-top: 1.6rem;
     margin-bottom: 10rem;
     @include size(3.8rem, 3.8rem);
-    line-height: 0;
 
     span[data-component="icon"] {
       @include size(100%, 100%);

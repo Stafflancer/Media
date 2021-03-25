@@ -5,14 +5,25 @@
     padding-top: 15.4rem;
   }
 
-  .c15 {
-    @include size(50%, 112.2rem);
-    background: deepskyblue;
+  .c15-globe {
+    @include size(80rem, 112.2rem);
+    height: 112.2rem;
+    position: relative;
+    overflow: hidden;
+    margin-right: 17rem;
+
+    [data-component="globe"] {
+      position: absolute;
+      top: 0;
+      left: -32.2rem;
+      .globe__container {
+        @include size(125rem, 125rem);
+      }
+    }
   }
 
   &__block-wrapper {
-    @include size(50%, auto);
-
+    @include size(100rem, auto);
     .c13-global-capacity__t {
       margin-bottom: 12rem;
 
@@ -72,7 +83,7 @@
       z-index: 1;
     }
 
-    .c15 {
+    .c15-globe {
       display: none;
     }
 

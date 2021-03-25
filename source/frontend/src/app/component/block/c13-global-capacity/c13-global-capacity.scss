@@ -1,24 +1,16 @@
 .c13-global-capacity {
   .c13-global-capacity__container {
-    display: flex;
-    align-items: center;
     padding-top: 15.4rem;
   }
 
   .c15-globe {
-    @include size(80rem, 112.2rem);
-    height: 112.2rem;
     position: relative;
     overflow: hidden;
-    margin-right: 17rem;
 
     [data-component="globe"] {
       position: absolute;
       top: 0;
-      left: -32.2rem;
-      .globe__container {
-        @include size(125rem, 125rem);
-      }
+      left: -32.2%;
     }
   }
 
@@ -50,10 +42,6 @@
 
         .c13-global-capacity__b-title {
           margin-bottom: 2.4rem;
-
-          .heading-3 {
-            font-weight: normal;
-          }
         }
 
         .c13-global-capacity__b-content {

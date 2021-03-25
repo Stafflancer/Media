@@ -17,6 +17,9 @@ export default class C05SelfSegmentationHero extends AbstractBlock {
       slidesPerView: 'auto',
       mousewheel: true,
       freeMode: true,
+      initialSlide: 1,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
     });
   };
 }

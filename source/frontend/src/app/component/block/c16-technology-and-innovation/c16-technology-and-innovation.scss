@@ -1,6 +1,3 @@
-$prd: 100vw / 1920;
-$prm: 100vw / 375;
-
 .c16-technology-and-innovation {
   position: relative;
   user-select: none;
@@ -49,6 +46,10 @@ $prm: 100vw / 375;
           height: 0.4rem;
           background: $blueShade2;
         }
+
+        .c16-technology-and-innovation__video-audio {
+          display: none;
+        }
       }
 
       .c16-technology-and-innovation__video-image {
@@ -73,112 +74,41 @@ $prm: 100vw / 375;
       }
     }
 
-    .swiper-container {
+    .c16-technology-and-innovation__box {
       @include size(100%, 95.6rem);
+      position: relative;
 
-      .swiper-slide {
-        .c16-technology-and-innovation__image {
-          @include size(105.8rem, 76.5rem);
-          position: absolute;
-          right: 0;
-          top: 18.5rem;
+      .c16-technology-and-innovation__image {
+        @include size(105.8rem, 76.5rem);
+        position: absolute;
+        right: 0;
+        top: 18.5rem;
 
-          img {
-            height: 100%;
-          }
+        img {
+          height: 100%;
+        }
+      }
+
+      .c16-technology-and-innovation__content {
+        position: absolute;
+        @include offset(22.9rem, 41.7rem);
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+
+        .c16-technology-and-innovation__label {
+          color: #151617;
+          opacity: 0.5;
+          margin-right: 8rem;
         }
 
-        .c16-technology-and-innovation__content {
-          position: absolute;
-          @include offset(22.9rem, 41.7rem);
-          z-index: 2;
-          display: flex;
-          align-items: flex-start;
+        .c16-technology-and-innovation__control {
+          @include size(42.2rem, auto);
 
-          .c16-technology-and-innovation__label {
+          .c16-technology-and-innovation__description {
+            margin-bottom: 4rem;
             color: #151617;
-            opacity: 0.5;
-            margin-right: 8rem;
-          }
-
-          .c16-technology-and-innovation__control {
-            @include size(42.2rem, auto);
-
-            .c16-technology-and-innovation__description {
-              margin-bottom: 4rem;
-              color: #151617;
-              opacity: 0.8;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &__technology {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    background: $whiteShade1;
-    justify-content: space-between;
-
-    .c16-technology-and-innovation__card-video {
-      margin-top: -11rem;
-
-      .card-video__wrapper,
-      [data-component="card-video"] {
-        height: 42rem;
-      }
-    }
-
-    .c16-technology-and-innovation__intro {
-      padding: 8.4rem 4.8rem 8.4rem 10rem;
-      width: 100%;
-      display: -webkit-box;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      li {
-        @include size(27.3rem, auto);
-        margin-right: 4rem;
-        border-bottom: 0.2rem solid #000426;
-
-        .c16-technology-and-innovation__intro-title {
-          margin-bottom: 4.8rem;
-
-          .heading-1 {
-            line-height: 11.2rem;
-          }
-        }
-
-        .c16-technology-and-innovation__intro-content {
-          margin-bottom: 1.6rem;
-          line-height: 2.4rem;
-        }
-
-        &:first-child {
-          .c16-technology-and-innovation__intro-content {
-            @include size(12.5rem, auto);
-          }
-        }
-
-        &:nth-child(2) {
-          .c16-technology-and-innovation__intro-content {
-            @include size(23.5rem, auto);
-          }
-        }
-
-        &:last-child {
-          margin-right: 0;
-
-          .c16-technology-and-innovation__intro-content {
-            @include size(20rem, auto);
+            opacity: 0.8;
           }
         }
       }
@@ -192,6 +122,7 @@ $prm: 100vw / 375;
 
     &__container {
       margin-bottom: 6.4rem;
+
       .c16-technology-and-innovation__video {
         position: inherit;
         margin: 0 2.4rem 4rem;
@@ -218,71 +149,29 @@ $prm: 100vw / 375;
         }
       }
 
-      .swiper-container {
+      .c16-technology-and-innovation__box {
         @include size(100%, 52rem);
 
-        .swiper-slide {
-          .c16-technology-and-innovation__image {
-            @include size(100%, 26rem);
-            top: 0;
-            padding-left: 2.4rem;
-          }
-
-          .c16-technology-and-innovation__content {
-            left: 2.4rem;
-            top: 22.4rem;
-
-            .c16-technology-and-innovation__label {
-              display: none;
-            }
-
-            .c16-technology-and-innovation__control {
-              .c16-technology-and-innovation__description {
-                @include size(24.2rem, auto);
-                margin-bottom: 3.2rem;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &__technology {
-      flex-direction: column;
-      overflow: hidden;
-      .c16-technology-and-innovation__card-video {
-        width: 100%;
-        margin-top: 0;
-        order: 2;
-        .card-video__wrapper {
-          height: 120 * $prm;
+        .c16-technology-and-innovation__image {
+          @include size(100%, 26rem);
+          top: 0;
+          padding-left: 2.4rem;
         }
 
-        [data-component="card-video"] {
-          height: 284 * $prm;
-        }
-      }
+        .c16-technology-and-innovation__content {
+          left: 2.4rem;
+          top: 22.4rem;
 
-      .c16-technology-and-innovation__intro {
-        width: auto;
-        padding: 0;
-        order: 1;
-        margin: 0 2.4rem 5.7rem;
-        li {
-          margin-right: 3rem;
-          @include size(auto, auto);
-
-          .c16-technology-and-innovation__intro-title {
-            margin-bottom: 0.8rem;
-            .heading-1 {
-              line-height: 5.6rem;
-            }
+          .c16-technology-and-innovation__label {
+            display: none;
           }
 
-          .c16-technology-and-innovation__intro-content {
-            font-size: 1.4rem;
-            width: 100% !important;
-            margin-bottom: 0.8rem;
+          .c16-technology-and-innovation__control {
+            width: 100%;
+            .c16-technology-and-innovation__description {
+              @include size(24.2rem, auto);
+              margin-bottom: 3.2rem;
+            }
           }
         }
       }

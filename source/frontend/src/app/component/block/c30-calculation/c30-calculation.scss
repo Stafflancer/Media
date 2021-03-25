@@ -1,3 +1,221 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
 .c30-calculation {
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8rem;
+
+  &__text-box {
+    @include size(270 * $prd, auto);
+
+    .c30-calculation__product-title {
+      position: relative;
+      display: inline-block;
+      color: #000000;
+      padding-right: 2rem;
+      margin-bottom: 2rem;
+
+      .c30-calculation__product-title-mark {
+        position: absolute;
+        right: 0;
+        top: -1.8rem;
+      }
+    }
+
+    .c30-calculation__product-desc {
+      opacity: 0.6;
+      margin-bottom: 4rem;
+    }
+
+    .c30-calculation__product-button-h5 {
+      display: none;
+    }
+  }
+
+  &__media-box {
+    position: relative;
+    padding-top: 9rem;
+
+    .c30-calculation__content {
+      @include size(1314 * $prd, 722 * $prd);
+      border-radius: 6rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      [data-component="card"] {
+        @include size(100%, 100%);
+
+        .card__content {
+          @include size(100%, 100%);
+
+          .card__media {
+            border-radius: 0;
+          }
+
+          .card__media-stop,
+          .card__media-play {
+            @include size(12rem, 12rem);
+            right: 4.8rem;
+            bottom: 5rem;
+          }
+        }
+      }
+    }
+
+    .c30-calculation__fixed-button {
+      @include size(8.8rem, 21.7rem);
+      background: $blueShade2;
+      border-radius: 8rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      .c30-calculation__image-corner {
+        @include size(4rem, 4.4rem);
+        position: absolute;
+        right: 8.6rem;
+        top: 3.6rem;
+
+        img {
+          @include size(100%, 100%);
+        }
+      }
+
+      .c30-calculation__iconfont {
+        color: transparent;
+        @include size(8.8rem, 8rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        [data-component="icon"] {
+          @include size(3.4rem, 3.5rem);
+        }
+
+        .c30-calculation__icon-h5 {
+          display: none;
+        }
+      }
+    }
+
+    .c30-calculation__background {
+      @include size(779 * $prd, 110 * $prd);
+      background: $blueShade2;
+      position: absolute;
+      right: 8.8rem;
+      top: 8rem;
+      border-top-left-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .c30-calculation {
+    &__text-box {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .c30-calculation {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    &__text-box {
+      width: 100%;
+      order: 2;
+      margin-top: 3.2rem;
+      padding-right: 2.4rem;
+      max-width: 30rem;
+
+      .c30-calculation__product-title {
+        padding-right: 1.6rem;
+
+        .c30-calculation__product-title-mark {
+          top: -0.8rem;
+        }
+      }
+
+      .c30-calculation__product-desc {
+        font-size: 1.6rem;
+      }
+
+      .c30-calculation__product-button {
+        display: none;
+      }
+
+      .c30-calculation__product-button-h5 {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &__media-box {
+      order: 1;
+      padding-top: 4.5rem;
+
+      .c30-calculation__content {
+        @include size(100%, 29.5rem);
+        border-radius: 0;
+
+        [data-component="card"] {
+          .card__content {
+            .card__media-stop,
+            .card__media-play {
+              @include size(6rem, 6rem);
+              right: 2.4rem;
+              bottom: 2.4rem;
+            }
+          }
+        }
+      }
+
+      .c30-calculation__fixed-button {
+        @include size(3.8rem, 10.3rem);
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .c30-calculation__image-corner {
+          @include size(2rem, 2rem);
+          right: 3.7rem;
+          top: 1.7rem;
+        }
+
+        .c30-calculation__iconfont {
+          color: transparent;
+          @include size(3.85rem, 3.8rem);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          [data-component="icon"] {
+            @include size(1.6rem, 1.8rem);
+          }
+
+          .c30-calculation__icon {
+            display: none;
+          }
+
+          .c30-calculation__icon-h5 {
+            display: block;
+          }
+        }
+      }
+
+      .c30-calculation__background {
+        @include size(23rem, 0.8rem);
+        background: $blueShade2;
+        position: absolute;
+        right: 3.8rem;
+        top: 3.7rem;
+      }
+    }
+  }
 }

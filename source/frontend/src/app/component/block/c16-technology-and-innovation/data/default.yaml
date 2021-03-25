@@ -12,25 +12,13 @@ slogan:
 
 userName: Paul Fang - Midea CEO
 
-bannersArr:
-  - imgSrc: media/c16-technology-and-innovation/image.png
-    label: About
-    subTitle: 
-       icon: arrow-right
-       copy: Explore Key Technologies
-    description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology.
-  - imgSrc: media/c16-technology-and-innovation/image.png
-    label: About
-    subTitle: 
-       icon: arrow-right
-       copy: Explore Key Technologies
-    description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology. 
-  - imgSrc: media/c16-technology-and-innovation/image.png
-    label: About
-    subTitle: 
-       icon: arrow-right
-       copy: Explore Key Technologies
-    description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology.
+intro:
+  imgSrc: media/c16-technology-and-innovation/image.png
+  label: About
+  subTitle: 
+      icon: arrow-right
+      copy: Explore Key Technologies
+  description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology.
 
 videoInfo:
   imgSrc: ../../assets/placeholder/demo.jpg

@@ -4,18 +4,18 @@ cta-text-active:
  
 navList:
   - copy: Our Mission
-    href: #a
+    target: c07-on-page-jump-links
     tag: span
-    class: active
+    class: ' active'
   - copy: The History
-    href: #b
+    target: c12-history-timeline
     tag: span
   - copy: Global Capacity
-    href: #c
+    target: c13-global-capacity
     tag: span
 
 h1:
-  type: h1
+  type: h2
   copy: Our Mission
 
 desc: Our mission is to bring the best air quality into people’s homes. In our ambition for excellence we have become the world’s largest air treatment brand, with with global recognitions in sustainability, design, safety and quality.

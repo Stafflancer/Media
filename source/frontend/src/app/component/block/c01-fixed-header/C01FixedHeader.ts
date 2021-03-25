@@ -11,8 +11,13 @@ export default class C01FixedHeader extends AbstractComponent {
   private readonly menus2 = this.getElement<HTMLElement>('.c01-fixed-header__popup');
   private readonly menuItems = this.getElements<HTMLElement>('[data-component="cta-text"]');
   private readonly $window = window;
-  private readonly menuseDom = document.querySelector('.c01-fixed-header');
+  private readonly menuseDom = document.querySelector<HTMLElement>('.c01-fixed-header');
+  private readonly topDom = document.querySelector<HTMLElement>(
+    '[data-component=c05-self-segmentation-hero]',
+  );
+
   private isChange: Boolean = false;
+  private isDark: Boolean = false;
 
   constructor(el: HTMLElement) {
     super(el);
@@ -20,6 +25,11 @@ export default class C01FixedHeader extends AbstractComponent {
     this.openMenuTag!.addEventListener('click', this.openMenuContent);
     this.closeMenuTag!.addEventListener('click', this.closeMenuContent);
     this.$window.addEventListener('scroll', this.scrollMenu);
+
+    if (this.topDom) {
+      this.isDark = this.topDom!.offsetTop > 0;
+      if (this.isDark) this.menuseDom!.classList.add('dark-theme');
+    }
 
     for (let i = 0; i < this.menuItems.length; i++) {
       this.menuItems[i]!.addEventListener(
@@ -59,12 +69,12 @@ export default class C01FixedHeader extends AbstractComponent {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > this.menuseDom!.clientHeight && !this.isChange) {
       this.isChange = true;
-      this.menuseDom!.classList.remove('dark-theme');
+      if (this.isDark) this.menuseDom!.classList.remove('dark-theme');
       this.menuseDom!.classList.add('white');
     }
     if (scrollTop < this.menuseDom!.clientHeight && this.isChange) {
       this.isChange = false;
-      // this.menuseDom!.classList.add('dark-theme');
+      if (this.isDark) this.menuseDom!.classList.add('dark-theme');
       this.menuseDom!.classList.remove('white');
     }
   };

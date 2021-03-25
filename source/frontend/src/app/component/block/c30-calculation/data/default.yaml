@@ -1,0 +1,24 @@
+title: c30-calculation
+
+productTitle:
+  type: h5
+  copy: Breezeless
+  symbol: +
+
+productDesc: Is this the ideal choice for your situation? Perhaps we can be of assistance.
+
+productImage: media/c30-calculation/image.png
+
+cardVideo:
+  video: ../../assets/placeholder/sample.mp4
+  videoImg: ../../assets/placeholder/demo.jpg
+  videoOverlay:
+    video:
+      src: ../../assets/placeholder/sample.mp4
+      data: controls
+  play:
+    icon: icon-play
+    class: card__media-play
+  stop:
+    icon: icon-pause
+    class: card__media-stop

@@ -21,14 +21,21 @@ h6 {
 
 .heading-1 {
   font-size: 4.8rem;
+  line-height: 1.16;
 
   &.semi-bold {
     font-weight: 600;
   }
 
   @include respond-to(MEDIUM) {
+    font-size: 5.6rem;
+    line-height: .8615;
+  }
+
+  @include respond-to(LARGE) {
     font-size: 14.4rem;
     font-weight: 500;
+    line-height: .77777;
     letter-spacing: -3px;
   }
 }
@@ -36,6 +43,7 @@ h6 {
 .heading-2 {
   font-size: 3.6rem;
   font-weight: 300;
+  line-height: 1.3333;
 
   &.semi-bold {
     font-weight: 600;
@@ -46,7 +54,12 @@ h6 {
   }
 
   @include respond-to(MEDIUM) {
+    font-size: 4.8rem;
+  }
+
+  @include respond-to(LARGE) {
     font-size: 12rem;
+    line-height: .8667;
     letter-spacing: -2px;
   }
 }
@@ -54,6 +67,7 @@ h6 {
 .heading-3 {
   font-size: 3.2rem;
   font-weight: 300;
+  line-height: 1.4;
 
   &.semi-bold {
     font-weight: 600;
@@ -64,7 +78,12 @@ h6 {
   }
 
   @include respond-to(MEDIUM) {
+    font-size: 4rem;
+  }
+
+  @include respond-to(LARGE) {
     font-size: 8.8rem;
+    line-height: .8182;
     letter-spacing: -1px;
   }
 }
@@ -72,18 +91,27 @@ h6 {
 .heading-4 {
   font-size: 2.4rem;
   font-weight: 500;
+  line-height: 1;
 
   @include respond-to(MEDIUM) {
+    font-size: 2.8rem;
+    line-height: 1.14;
+  }
+
+  @include respond-to(LARGE) {
     font-size: 5.6rem;
+    line-height: .8571;
   }
 }
 
 .heading-5 {
   font-size: 1.8rem;
   font-weight: 500;
-
-  @include respond-to(MEDIUM) {
+  line-height: 1.333;
+  
+  @include respond-to(LARGE) {
     font-size: 4rem;
+    line-height:1;
   }
 }
 

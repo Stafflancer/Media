@@ -4,6 +4,12 @@
     padding: 19.2rem 0 4.2rem 0;
   }
 
+  &__wrapper {
+    @include respond-to(SMALL) {
+      max-width: inherit;
+    }
+  }
+
   &__block-wrapper {
     display: none;
 

@@ -9,13 +9,9 @@ $prm: 100vw / 375;
       }
       .cta-text {
         &:nth-child(1) {
-          margin-right: 27 * $prd;
         }
         &:nth-child(2) {
-          padding-left: 27 * $prd;
-          height: 24px;
-          border-left: 1px solid #fff;
-          line-height: 20px;
+         
         }
         span {
           font-weight: 300;
@@ -23,7 +19,10 @@ $prm: 100vw / 375;
       }
     }
     .right {
-      line-height: 6.5;
+      line-height: 6.5;color:#FFF;
+      .cta-text-copy {
+        color: #fff;font-weight: 300;font-size: 14px;
+      }
     }
     width: 100%;
     background-color: $blackShade2;
@@ -35,7 +34,7 @@ $prm: 100vw / 375;
         width: $prd * 1920;
         display: flex;
         justify-content: space-between;
-        max-width: 1920px;
+        // max-width: 1920px;
         color: #fff;
         padding: 0 4.1666666667vw;
         .left {
@@ -44,6 +43,16 @@ $prm: 100vw / 375;
             height: 38px;
             width: 94px;
           }
+        }
+        .content{
+          .cta-text{
+            &:nth-child(2){
+              .cta-text-copy{
+                width:1px;height:24px;background-color: #FFF;border-right:1px solid #FFF; margin-right: 27 * $prd;margin-left: 27 * $prd;position: relative;margin-bottom:-6px;
+              }
+            }
+          }
+          
         }
       }
 
@@ -59,6 +68,12 @@ $prm: 100vw / 375;
         max-width: 1920px;
         color: #fff;
         padding: 0 50px;
+        text-align: center;
+        .cta-text{
+          &:nth-child(2){
+            display:none;
+          }
+        }
         .left {
           text-align: left;
           svg {
@@ -113,6 +128,26 @@ $prm: 100vw / 375;
             margin-top: 8px;
           }
         }
+
+        .bottom{
+          .cta-text-copy {
+            color: #fff;
+          }
+          .cta-text{
+            display: block;
+            &:nth-child(1),&:nth-child(2){
+              font-weight: 500;font-size: 1.8rem;
+            }
+            &:nth-child(2){
+              margin-top:5px;
+              margin-bottom:8px;
+            }
+            &:nth-child(3){
+              font-size: 1.4rem;
+            }
+          }
+        }
+
       }
     }
   }

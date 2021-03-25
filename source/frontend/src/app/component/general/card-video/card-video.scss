@@ -89,7 +89,7 @@ $prm: 100vw / 375;
       @include respond-to(MEDIUM) {
         margin-left: 84 * $prd;
         font-size: 1.8rem;
-        line-height: 2.4rem;
+        line-height: 1.4rem;
         margin-bottom: 14 * $prd;
       }
     }
@@ -98,10 +98,15 @@ $prm: 100vw / 375;
       position: absolute;
       right: 16 * $prm;
       bottom: 36 * $prm;
+      height: 60 * $prm;
+      width: 60 * $prm;
+      z-index: 6;
 
       @include respond-to(MEDIUM) {
         left: 24 * $prd;
         bottom: 24 * $prd;
+        height: 60 * $prd;
+        width: 60 * $prd;
       }
 
       [data-component="cta-gradient"] {

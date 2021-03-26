@@ -1,141 +1,139 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
 .c13-global-capacity {
+  color: $textColor;
+  position: relative;
+
   .c13-global-capacity__container {
-    padding-top: 15.4rem;
+    padding-top: 82 * $prm;
+
+    @include respond-to(MEDIUM) {
+      padding-top: 156 * $prd;
+    }
   }
 
   .c15-globe {
     position: relative;
-    overflow: hidden;
 
     [data-component="globe"] {
       position: absolute;
-      top: 0;
-      left: -32.2%;
+      width: 70vw;
+      margin-top: -35vw;
+      top: 50%;
+      left: -40%;
     }
   }
 
   &__block-wrapper {
-    @include size(100rem, auto);
+    width: 100%;
+
+    @include respond-to(MEDIUM) {
+      width: 100 * $prd;
+    }
+
     .c13-global-capacity__t {
-      margin-bottom: 12rem;
+      margin-bottom: 39 * $prm;
+
+      @include respond-to(MEDIUM) {
+        margin-bottom: 120 * $prd;
+      }
 
       .c08-our-mission-text-box__title {
-        margin-bottom: 3.2rem;
+        margin-bottom: 16 * $prm;
+
+        @include respond-to(MEDIUM) {
+          margin-bottom: 32 * $prd;
+        }
       }
 
       .c08-our-mission-text-box__desc {
-        @include size(51.1rem, auto);
+        width: 100%;
+
+        @include respond-to(MEDIUM) {
+          width: 511 * $prd;
+        }
       }
     }
 
     .c13-global-capacity__b {
-      display: flex;
+      display: -webkit-box;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include respond-to(MEDIUM) {
+        display: flex;
+      }
 
       li {
-        @include size(27.3rem, auto);
-        margin-right: 2.4rem;
+        width: 171 * $prm;
+        margin-right: 31 * $prm;
         border-bottom: 0.2rem solid #000426;
+
+        @include respond-to(MEDIUM) {
+          width: 273 * $prd;
+          margin-right: 24 * $prd;
+        }
 
         &:last-child {
           margin-right: 0;
         }
 
         .c13-global-capacity__b-title {
-          margin-bottom: 2.4rem;
+          margin-bottom: 8 * $prm;
+
+          @include respond-to(MEDIUM) {
+            margin-bottom: 24 * $prd;
+          }
         }
 
         .c13-global-capacity__b-content {
-          margin-bottom: 1.6rem;
+          margin-bottom: 8 * $prm;
+
+          @include respond-to(MEDIUM) {
+            margin-bottom: 16 * $prd;
+          }
         }
       }
     }
   }
 
   .c15-h5 {
-    display: none;
-  }
-
-  .c13-global-capacity__mask {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .c13-global-capacity {
+    display: block;
+    margin-top: 4.8rem;
+    width: 267 * $prm;
+    height: 265 * $prm;
     position: relative;
-    .c13-global-capacity__container {
-      display: block;
-      padding-top: 8.2rem;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
+    left: -15px;
 
-    .c15-globe {
+    @include respond-to(MEDIUM) {
       display: none;
     }
 
-    .c13-global-capacity__block-wrapper {
-      width: 100%;
-      padding: 0 2.4rem;
-
-      .c13-global-capacity__t {
-        margin-bottom: 3.9rem;
-
-        .c08-our-mission-text-box__title {
-          margin-bottom: 1.6rem;
-        }
-
-        .c08-our-mission-text-box__desc {
-          width: 100%;
-
-          .large {
-            font-size: 16px;
-          }
-        }
-      }
-
-      .c13-global-capacity__b {
-        width: 100%;
-        display: -webkit-box;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-
-        li {
-          @include size(17.1rem, auto);
-
-          .c13-global-capacity__b-content {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-
-    .c15-h5 {
-      display: block;
-      margin-top: 4.8rem;
-      @include size(26.7rem, 26.5rem);
-      position: relative;
-
-      img {
-        @include size(100%, 100%);
-      }
-    }
-
-    .c13-global-capacity__mask {
-      display: block;
-      position: absolute;
+    img {
       @include size(100%, 100%);
-      @include offset(0, 0);
-      img {
-        height: 100%;
-      }
+    }
+  }
+
+  .c13-global-capacity__mask {
+    display: block;
+    position: absolute;
+    @include size(100%, 100%);
+    @include offset(0, 0);
+    z-index: -1;
+
+    @include respond-to(MEDIUM) {
+      display: none;
+    }
+
+    img {
+      height: 100%;
     }
   }
 }

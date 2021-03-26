@@ -1,0 +1,63 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
+[data-component="c26-product-intro"] {
+  background: #0d7dd1;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding-left: 21 * $prm;
+  padding-top: 86 * $prd;
+  @include respond-to(MEDIUM) {
+    padding-left: 216 * $prd;
+    padding-top: 139 * $prd;
+  }
+  .c26-product-intro__title {
+    font-size: 6.4rem;
+    line-height: 5.6rem;
+
+    @include respond-to(MEDIUM) {
+      font-size: 20rem;
+      line-height: 1.2;
+    }
+  }
+  .c26-product-intro__img {
+    display: flex;
+
+    &-left {
+      width: 25.4rem;
+      @include respond-to(MEDIUM) {
+        width: 42.1rem;
+      }
+    }
+
+    &-icon {
+    }
+
+    &-view {
+      width: 339 * $prm;
+      height: 215 * $prm;
+      @include respond-to(MEDIUM) {
+        width: 894 * $prd;
+        height: 515 * $prd;
+      }
+    }
+  }
+
+  .c26-product-intro__details {
+    position: relative;
+    bottom: 0;
+    left: 24 * $prm;
+    width: 351 * $prm;
+    height: 189 * $prm;
+    border-radius: 2rem 0 0 2rem;
+    background: #fff;
+    @include respond-to(MEDIUM) {
+      bottom: 0;
+      left: 366 * $prd;
+      width: 1554 * $prd;
+      height: 364 * $prd;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="./c26-product-intro.scss">
+<script src="./C26ProductIntro.ts"></script>
+
+<div data-component="c26-product-intro">
+  <div class="c26-product-intro__title">{{headerTitle }}</div>
+  <div class="c26-product-intro__img">
+    <div class="c26-product-intro__img-left">{{subTitle}}</div>
+    <div class="c26-product-intro__img-icon">
+      {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+    </div>
+    <div class="c26-product-intro__img-view">
+      <img src="{{topImg}}" alt="">
+    </div>
+  </div>
+  <div class="c26-product-intro__details">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {{#each details}}
+          <div class="swiper-slide">
+            <div class="c26-product-intro__detail-item-number">{{this.number}}</div>
+            <div class="c26-product-intro__detail-item-title">{{this.title}}</div>
+            <div class="c26-product-intro__detail-item-subtitle">{{this.subtitle}}</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

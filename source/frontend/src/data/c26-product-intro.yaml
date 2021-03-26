@@ -1,0 +1,14 @@
+title: Scaffold
+
+meta:
+  id: A
+  status: qa
+  notes:
+  category:
+
+layout: home
+
+blocks:
+
+  - name: c26-product-intro
+    data: import!../app/component/block/c26-product-intro/data/default

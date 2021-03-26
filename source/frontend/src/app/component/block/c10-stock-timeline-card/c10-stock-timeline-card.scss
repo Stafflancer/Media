@@ -106,8 +106,8 @@ $prm: 100vw / 375;
 
           &::before {
             content: "";
-            width: 4 * $prd;
-            height: 8 * $prd;
+            width: 4 * $prm;
+            height: 4 * $prm;
             background: #ffffff;
             border-radius: 50%;
             position: absolute;

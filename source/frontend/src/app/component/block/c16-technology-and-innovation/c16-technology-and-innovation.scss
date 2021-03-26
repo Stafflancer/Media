@@ -9,8 +9,9 @@ $prm: 100vw / 375;
 
   @include respond-to(MEDIUM) {
     flex-wrap: nowrap;
-    padding-top: 137 * $prd;
+    padding-top: 190 * $prd;
     position: relative;
+    margin-top: 150 * $prd;
   }
 
   .c16-technology-and-innovation__video {
@@ -48,9 +49,19 @@ $prm: 100vw / 375;
         color: $whiteShade1;
         opacity: 0.4;
         margin-bottom: 10 * $prm;
+        padding-right: 80 * $prm;
+
+        .heading-6 {
+          font-size: 14 * $prm;
+        }
 
         @include respond-to(MEDIUM) {
           margin-bottom: 10 * $prd;
+          padding-right: 80 * $prd;
+
+          .heading-6 {
+            font-size: 14 * $prd;
+          }
         }
       }
 
@@ -97,12 +108,12 @@ $prm: 100vw / 375;
 
           .large {
             font-weight: 500;
-            font-size: 1.8rem;
-            line-height: 2.4rem;
+            font-size: 18 * $prm;
+            line-height: 24 * $prm;
 
             @include respond-to(MEDIUM) {
-              font-size: 2.4rem;
-              line-height: 3.2rem;
+              font-size: 24 * $prd;
+              line-height: 32 * $prd;
             }
           }
         }
@@ -155,13 +166,33 @@ $prm: 100vw / 375;
 
       .c16-technology-and-innovation__title {
         color: $textColor;
+        position: relative;
+
+        @include respond-to(MEDIUM) {
+          &::before {
+            position: absolute;
+            content: "";
+            left: 440 * $prd;
+            top: 0;
+            width: 400 * $prd;
+            height: 100%;
+            background: radial-gradient(
+              34.95% 57.18% at 36.89% 37.41%,
+              rgba(255, 255, 255, 0.3) 0%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            backdrop-filter: blur(2px);
+          }
+        }
 
         .heading-1 {
           font-weight: 500;
-          line-height: 56px;
+          line-height: 56 * $prm;
+          font-size: 48 * $prm;
 
           @include respond-to(MEDIUM) {
-            line-height: 11.2rem;
+            line-height: 112 * $prd;
+            font-size: 144 * $prd;
           }
         }
       }
@@ -183,7 +214,7 @@ $prm: 100vw / 375;
             opacity: 0.5;
 
             .large {
-              line-height: 3.2rem;
+              line-height: 32 * $prd;
             }
           }
         }
@@ -198,6 +229,7 @@ $prm: 100vw / 375;
             color: $textColor;
             opacity: 0.8;
             margin-bottom: 32 * $prm;
+            width: 242 * $prm;
 
             @include respond-to(MEDIUM) {
               width: 422 * $prd;
@@ -205,12 +237,12 @@ $prm: 100vw / 375;
             }
 
             .large {
-              line-height: 2.4rem;
-              font-size: 1.6rem;
+              line-height: 24 * $prm;
+              font-size: 16 * $prm;
 
               @include respond-to(MEDIUM) {
-                font-size: 2.4rem;
-                line-height: 32px;
+                font-size: 24 * $prd;
+                line-height: 32 * $prd;
                 opacity: 0.8;
               }
             }

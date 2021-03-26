@@ -15,12 +15,13 @@ $prm: 100vw / 375;
 
   .c15-globe {
     position: relative;
-    overflow: hidden;
 
     [data-component="globe"] {
       position: absolute;
-      top: 0;
-      left: -32.2%;
+      width: 70vw;
+      margin-top: -35vw;
+      top: 50%;
+      left: -40%;
     }
   }
 

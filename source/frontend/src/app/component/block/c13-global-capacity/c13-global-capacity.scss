@@ -1,18 +1,21 @@
 .c13-global-capacity {
   .c13-global-capacity__container {
-    display: flex;
-    align-items: center;
     padding-top: 15.4rem;
   }
 
-  .c15 {
-    @include size(50%, 112.2rem);
-    background: deepskyblue;
+  .c15-globe {
+    position: relative;
+    overflow: hidden;
+
+    [data-component="globe"] {
+      position: absolute;
+      top: 0;
+      left: -32.2%;
+    }
   }
 
   &__block-wrapper {
-    @include size(50%, auto);
-
+    @include size(100rem, auto);
     .c13-global-capacity__t {
       margin-bottom: 12rem;
 
@@ -39,10 +42,6 @@
 
         .c13-global-capacity__b-title {
           margin-bottom: 2.4rem;
-
-          .heading-3 {
-            font-weight: normal;
-          }
         }
 
         .c13-global-capacity__b-content {
@@ -72,7 +71,7 @@
       z-index: 1;
     }
 
-    .c15 {
+    .c15-globe {
       display: none;
     }
 

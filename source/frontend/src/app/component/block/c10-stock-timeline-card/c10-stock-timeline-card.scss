@@ -50,7 +50,7 @@
           position: absolute;
           background: #4557e8;
           border-radius: 50%;
-          transition: 1s ease;
+          transition: 0.3s ease;
 
           &:hover {
             transform: scale(1.3, 1.3);
@@ -193,8 +193,11 @@
       @include size(100%, 100%);
       position: relative;
       z-index: 2;
-      background: $grayShade1;
       border-radius: 6rem;
+
+      img {
+        height: 100%;
+      }
 
       .c09-media-box__button {
         position: absolute;
@@ -258,21 +261,20 @@
 
 @media (max-width: 1024px) {
   .c10-stock-timeline-card {
-    padding-left: 0;
-    margin: 0 2.4rem;
     position: relative;
 
     &__block-wrapper {
-      position: absolute;
-      left: 2.4rem;
-      right: 2.4rem;
-      top: 17rem;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: -17rem;
       z-index: 10;
       padding-left: 0;
     }
 
     &__container {
-      @include size(100%, 32.1rem);
+      @include size(auto, 32.1rem);
+      margin: 0 2.4rem;
       padding: 1.6rem;
 
       .c10-stock-timeline-card__content {
@@ -342,7 +344,7 @@
       left: initial;
       top: initial;
       bottom: -3.7rem;
-      right: 2rem;
+      right: 4rem;
 
       .c10-stock-timeline-card__t {
         .c10-stock-timeline-card__text6 {
@@ -375,7 +377,15 @@
       }
 
       &__image {
+        overflow: hidden;
         border-radius: 0;
+
+        img {
+          width: 91.9rem;
+          height: 100%;
+          position: absolute;
+          left: -50%;
+        }
 
         .c09-media-box__button {
           display: none;

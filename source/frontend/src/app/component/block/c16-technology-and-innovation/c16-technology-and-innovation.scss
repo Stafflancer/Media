@@ -1,178 +1,249 @@
-.c16-technology-and-innovation {
-  position: relative;
-  user-select: none;
-  margin-top: 200px;
+$prd: 100vw / 1920;
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
 
-  &__container {
-    .c16-technology-and-innovation__video {
+[data-component="c16-technology-and-innovation"] {
+  display: flex;
+  flex-wrap: wrap;
+  color: $textColor;
+
+  @include respond-to(MEDIUM) {
+    flex-wrap: nowrap;
+    padding-top: 137 * $prd;
+    position: relative;
+  }
+
+  .c16-technology-and-innovation__video {
+    width: 100%;
+    margin-top: 83 * $prm;
+    margin-left: 24 * $prm;
+    margin-right: 24 * $prm;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+
+    @include respond-to(MEDIUM) {
+      width: 408 * $prd;
+      margin: 0;
       position: absolute;
-      right: 14rem;
-      top: -4.8rem;
-      z-index: 10;
+      right: 140 * $prd;
+      top: 0;
+    }
 
-      .c16-technology-and-innovation__video-box {
-        @include size(40.8rem, 11.2rem);
-        background: linear-gradient(90.52deg, #0b1548 3.45%, #3e45a9 112.37%);
-        border-radius: 1.4rem;
-        overflow: hidden;
+    .c16-technology-and-innovation__video-box {
+      width: 100%;
+      height: auto;
+      background: linear-gradient(90.52deg, #0b1548 3.45%, #3e45a9 112.37%);
+      border-radius: 1rem;
+      overflow: hidden;
+      padding-left: 16 * $prm;
+      padding-top: 16 * $prm;
 
-        .c16-technology-and-innovation__video-slogan {
-          color: $whiteShade1;
-          opacity: 0.4;
-          margin: 1.6rem 1.6rem 0.8rem;
+      @include respond-to(MEDIUM) {
+        padding-left: 16 * $prd;
+        padding-top: 16 * $prd;
+      }
+
+      .c16-technology-and-innovation__video-slogan {
+        color: $whiteShade1;
+        opacity: 0.4;
+        margin-bottom: 10 * $prm;
+
+        @include respond-to(MEDIUM) {
+          margin-bottom: 10 * $prd;
+        }
+      }
+
+      .c16-technology-and-innovation__video-play {
+        display: flex;
+        align-items: center;
+        padding-bottom: 12 * $prm;
+
+        @include respond-to(MEDIUM) {
+          padding-bottom: 22 * $prd;
         }
 
-        .c16-technology-and-innovation__video-play {
-          display: flex;
-          align-items: center;
-          margin: 0 1.6rem 1.9rem;
+        .c16-technology-and-innovation__video-play-button {
+          width: 32 * $prm;
+          height: 32 * $prm;
 
-          .c16-technology-and-innovation__video-play-button {
-            @include size(4.8rem, 4.8rem);
+          &.pause {
+            display: none;
+          }
 
-            [data-component="cta-gradient"] {
-              @include size(4.8rem, 4.8rem);
+          @include respond-to(MEDIUM) {
+            width: 48 * $prd;
+            height: 48 * $prd;
+          }
+
+          [data-component="cta-gradient"] {
+            width: 32 * $prm;
+            height: 32 * $prm;
+
+            @include respond-to(MEDIUM) {
+              width: 48 * $prd;
+              height: 48 * $prd;
             }
           }
+        }
 
-          .c16-technology-and-innovation__user-name {
-            color: $whiteShade1;
-            margin-left: 1.4rem;
+        .c16-technology-and-innovation__user-name {
+          color: $whiteShade1;
+          margin-left: 9 * $prm;
+
+          @include respond-to(MEDIUM) {
+            margin-left: 14 * $prd;
+          }
+
+          .large {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+
+            @include respond-to(MEDIUM) {
+              font-size: 2.4rem;
+              line-height: 3.2rem;
+            }
           }
         }
-
-        .c16-technology-and-innovation__video-progress-bar {
-          width: 40%;
-          height: 0.4rem;
-          background: $blueShade2;
-        }
-
-        .c16-technology-and-innovation__video-audio {
-          display: none;
-        }
       }
 
-      .c16-technology-and-innovation__video-image {
-        @include size(18.6rem, 18.6rem);
-        border-radius: 50%;
-        background: $whiteShade1;
+      .c16-technology-and-innovation__video-audio {
+        opacity: 0;
         position: absolute;
-        right: -8.8rem;
-        top: -12.4rem;
       }
     }
 
-    .c16-technology-and-innovation__title {
-      @include size(84.5rem, 24rem);
+    .c16-technology-and-innovation__video-image {
+      width: 75.4 * $prm;
+      height: 75.4 * $prm;
+      border-radius: 50%;
+      background: $whiteShade1;
       position: absolute;
-      z-index: 10;
-      @include offset(22.9rem, 13.7rem);
+      right: -17.4 * $prm;
+      top: -40.4 * $prm;
 
-      .heading-1 {
-        line-height: 112px;
-        color: #151617;
+      @include respond-to(MEDIUM) {
+        width: 186 * $prd;
+        height: 186 * $prd;
+        right: -93 * $prd;
+        top: -130 * $prd;
       }
     }
+  }
 
-    .c16-technology-and-innovation__box {
-      @include size(100%, 95.6rem);
+  .c16-technology-and-innovation__container {
+    padding-top: 40 * $prm;
+
+    @include respond-to(MEDIUM) {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    .c16-technology-and-innovation__left {
+      padding-left: 24 * $prm;
+      padding-right: 41 * $prm;
       position: relative;
+      z-index: 10;
 
-      .c16-technology-and-innovation__image {
-        @include size(105.8rem, 76.5rem);
-        position: absolute;
-        right: 0;
-        top: 18.5rem;
+      @include respond-to(MEDIUM) {
+        padding: 0;
+        max-width: 845 * $prd;
+      }
 
-        img {
-          height: 100%;
+      .c16-technology-and-innovation__title {
+        color: $textColor;
+
+        .heading-1 {
+          font-weight: 500;
+          line-height: 56px;
+
+          @include respond-to(MEDIUM) {
+            line-height: 11.2rem;
+          }
         }
       }
 
       .c16-technology-and-innovation__content {
-        position: absolute;
-        @include offset(22.9rem, 41.7rem);
-        z-index: 2;
-        display: flex;
-        align-items: flex-start;
+        margin-top: 260 * $prm;
+
+        @include respond-to(MEDIUM) {
+          margin-top: 40 * $prd;
+          display: flex;
+        }
 
         .c16-technology-and-innovation__label {
-          color: #151617;
-          opacity: 0.5;
-          margin-right: 8rem;
+          display: none;
+
+          @include respond-to(MEDIUM) {
+            display: block;
+            color: $textColor;
+            opacity: 0.5;
+
+            .large {
+              line-height: 3.2rem;
+            }
+          }
         }
 
         .c16-technology-and-innovation__control {
-          @include size(42.2rem, auto);
+          @include respond-to(MEDIUM) {
+            width: 100%;
+            margin-left: 90 * $prd;
+          }
 
           .c16-technology-and-innovation__description {
-            margin-bottom: 4rem;
-            color: #151617;
+            color: $textColor;
             opacity: 0.8;
+            margin-bottom: 32 * $prm;
+
+            @include respond-to(MEDIUM) {
+              width: 422 * $prd;
+              margin-bottom: 40 * $prd;
+            }
+
+            .large {
+              line-height: 2.4rem;
+              font-size: 1.6rem;
+
+              @include respond-to(MEDIUM) {
+                font-size: 2.4rem;
+                line-height: 32px;
+                opacity: 0.8;
+              }
+            }
           }
         }
       }
     }
-  }
-}
 
-@media (max-width: 1024px) {
-  .c16-technology-and-innovation {
-    margin-top: 8.3rem;
+    .c16-technology-and-innovation__right {
+      position: absolute;
+      right: 0;
+      top: 360 * $prm;
+      left: 24 * $prm;
+      flex: 1;
 
-    &__container {
-      margin-bottom: 6.4rem;
-
-      .c16-technology-and-innovation__video {
-        position: inherit;
-        margin: 0 2.4rem 4rem;
-
-        .c16-technology-and-innovation__video-box {
-          @include size(100%, auto);
-        }
-
-        .c16-technology-and-innovation__video-image {
-          @include size(7.5rem, 7.5rem);
-          right: 0.4rem;
-          top: -4rem;
-        }
+      @include respond-to(MEDIUM) {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        right: inherit;
       }
 
-      .c16-technology-and-innovation__title {
-        @include size(100%, auto);
-        position: inherit;
-        padding: 0 4rem 0 2.4rem;
-        margin-bottom: 3.6rem;
+      .c16-technology-and-innovation__image {
+        width: 100%;
+        height: 260 * $prm;
 
-        .heading-1 {
-          line-height: 56px;
-        }
-      }
-
-      .c16-technology-and-innovation__box {
-        @include size(100%, 52rem);
-
-        .c16-technology-and-innovation__image {
-          @include size(100%, 26rem);
-          top: 0;
-          padding-left: 2.4rem;
+        @include respond-to(MEDIUM) {
+          width: 1050 * $prd;
+          height: 750 * $prd;
+          position: absolute;
+          right: 0;
         }
 
-        .c16-technology-and-innovation__content {
-          left: 2.4rem;
-          top: 22.4rem;
-
-          .c16-technology-and-innovation__label {
-            display: none;
-          }
-
-          .c16-technology-and-innovation__control {
-            width: 100%;
-            .c16-technology-and-innovation__description {
-              @include size(24.2rem, auto);
-              margin-bottom: 3.2rem;
-            }
-          }
+        img {
+          height: 100%;
         }
       }
     }

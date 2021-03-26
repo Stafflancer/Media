@@ -3,13 +3,12 @@ $prm: 100vw / 375;
 
 [data-component="c26-product-intro"] {
   .c26-product-intro__top {
-    background: #6ab2fd;
     width: 100%;
     position: relative;
     padding-left: 21 * $prm;
     padding-top: 158 * $prm;
-    //background: url("../assets/c26-product-intro/intro-bg.png") no-repeat;
-    //background-size: contain;
+    background: url("~/assets/c26-product-intro/intro-bg.png") no-repeat;
+    background-size: cover;
     @include respond-to(MEDIUM) {
       padding-left: 216 * $prd;
       padding-top: 240 * $prd;
@@ -72,7 +71,7 @@ $prm: 100vw / 375;
       }
 
       &-left {
-        width: 254 * $prm;
+        width: 25.4rem;
         align-self: flex-start;
         color: #151617;
         opacity: 0.8;
@@ -136,7 +135,7 @@ $prm: 100vw / 375;
       }
 
       &-view {
-        width: 339 * $prm;
+        width: 372 * $prm;
         height: 215 * $prm;
         position: relative;
         z-index: 12;
@@ -144,14 +143,14 @@ $prm: 100vw / 375;
         @include respond-to(MEDIUM) {
           width: 894 * $prd;
           height: 613 * $prd;
-          margin-top: -2.5rem;
+          margin-top: -2.9rem;
         }
       }
     }
   }
   .c26-product-intro__details {
     position: relative;
-    top: -87 * $prm;
+    top: -67 * $prm;
     left: 24 * $prm;
     width: 351 * $prm;
     height: auto;

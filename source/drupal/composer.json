@@ -13,6 +13,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "drupal-handlebars": {
+          "type": "git",
+          "url": "https://github.com/mediamonks/drupal-handlebars.git"
         }
     },
     "require": {
@@ -23,6 +27,7 @@
         "drupal/config_split": "1.7",
         "drupal/console": "~1.9",
         "drupal/core-composer-scaffold": "^9.0",
+        "drupal/handlebars_theme_handler": "1.6",
         "drupal/metatag": "^1.14",
         "drupal/node_access_grants": "^3.0",
         "drupal/paragraphs": "1.x-dev",

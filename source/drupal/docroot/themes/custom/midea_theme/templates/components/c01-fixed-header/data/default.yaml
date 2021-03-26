@@ -1,0 +1,20 @@
+title: c01-fixed-header
+
+
+logoUrl: ''
+# theme: dark-thtme
+theme: ''
+fixedHeader:
+  nav:
+    - copy: Products
+      url: ''
+    - copy: Canton Fair
+      class: with-dot
+      url: ''
+    - copy: Virtual Factory
+      url: ''
+    - copy: Contact
+      url: ''
+  menu: header-menu
+  close: header-close
+

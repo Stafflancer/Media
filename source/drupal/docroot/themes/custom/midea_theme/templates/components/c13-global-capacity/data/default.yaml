@@ -1,0 +1,25 @@
+title: c13-global-capacity
+
+h1:
+  type: h1
+  copy: Global Capacity
+
+desc: The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products with 11 manufacturing bases in China, Vietnam, India, Egypt, Brazil, and Argentina.
+
+lists:
+  - title: 
+      type: h3
+      copy: 67M
+    content: SETS ANNUAL CAPACITY
+  - title: 
+      type: h3
+      copy: 300M
+    content: ANNUAL INVESTEMENTS
+  - title: 
+      type: h3
+      copy: 6K
+    content: PATENTS
+
+mapImage: media/c13-global-capacity/map-h5.png
+
+maskImage: media/c13-global-capacity/mask-h5.png

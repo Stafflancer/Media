@@ -14,9 +14,9 @@ $cardBgColor: rgba(0, 4, 38, 0.9);
 			width: $backSize;
 			padding-top: $backSize;
 			margin-left: -$backSize/2;
-			margin-top: -$backSize/4;
+			margin-top: -28%;
 			@include position(50%, 50%);
-			background: radial-gradient(50% 50% at 50% 50%, #2A30B5 0%, rgba(202, 223, 244, 0) 100%);
+			background: radial-gradient(50% 50% at 50% 50%, rgba(42, 48, 181, .5) 0%, rgba(202, 223, 244, 0) 100%);
 		}
 		.globe__container {
 			width: 100%;

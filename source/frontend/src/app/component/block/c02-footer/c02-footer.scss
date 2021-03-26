@@ -11,7 +11,6 @@ $prm: 100vw / 375;
         &:nth-child(1) {
         }
         &:nth-child(2) {
-         
         }
         span {
           font-weight: 300;
@@ -19,9 +18,12 @@ $prm: 100vw / 375;
       }
     }
     .right {
-      line-height: 6.5;color:#FFF;
+      line-height: 6.5;
+      color: #fff;
       .cta-text-copy {
-        color: #fff;font-weight: 300;font-size: 14px;
+        color: #fff;
+        font-weight: 300;
+        font-size: 14px;
       }
     }
     width: 100%;
@@ -44,15 +46,21 @@ $prm: 100vw / 375;
             width: 94px;
           }
         }
-        .content{
-          .cta-text{
-            &:nth-child(2){
-              .cta-text-copy{
-                width:1px;height:24px;background-color: #FFF;border-right:1px solid #FFF; margin-right: 27 * $prd;margin-left: 27 * $prd;position: relative;margin-bottom:-6px;
+        .content {
+          .cta-text {
+            &:nth-child(2) {
+              .cta-text-copy {
+                width: 1px;
+                height: 24px;
+                background-color: #fff;
+                border-right: 1px solid #fff;
+                margin-right: 27 * $prd;
+                margin-left: 27 * $prd;
+                position: relative;
+                margin-bottom: -6px;
               }
             }
           }
-          
         }
       }
 
@@ -69,9 +77,9 @@ $prm: 100vw / 375;
         color: #fff;
         padding: 0 50px;
         text-align: center;
-        .cta-text{
-          &:nth-child(2){
-            display:none;
+        .cta-text {
+          &:nth-child(2) {
+            display: none;
           }
         }
         .left {
@@ -99,7 +107,7 @@ $prm: 100vw / 375;
       }
     }
     @media screen and(max-width:700px) {
-        font-weight: 300;
+      font-weight: 300;
       .body {
         display: none;
       }
@@ -129,25 +137,26 @@ $prm: 100vw / 375;
           }
         }
 
-        .bottom{
+        .bottom {
           .cta-text-copy {
             color: #fff;
           }
-          .cta-text{
+          .cta-text {
             display: block;
-            &:nth-child(1),&:nth-child(2){
-              font-weight: 500;font-size: 1.8rem;
+            &:nth-child(1),
+            &:nth-child(2) {
+              font-weight: 500;
+              font-size: 1.8rem;
             }
-            &:nth-child(2){
-              margin-top:5px;
-              margin-bottom:8px;
+            &:nth-child(2) {
+              margin-top: 5px;
+              margin-bottom: 8px;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               font-size: 1.4rem;
             }
           }
         }
-
       }
     }
   }

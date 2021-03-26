@@ -364,7 +364,7 @@ $prm: 100vw / 375;
       overflow: hidden;
 
       @include respond-to(MEDIUM) {
-        border-radius: 6rem;
+        border-radius: 60 * $prd;
       }
 
       img {

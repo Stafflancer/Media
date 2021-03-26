@@ -1,0 +1,118 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
+.c21-video-player-section {
+  position: relative;
+  display: flex;
+  background: $whiteShade1;
+  justify-content: space-between;
+
+  .c21-video-player-section__card-video {
+    margin-top: -11rem;
+
+    .card-video__wrapper,
+    [data-component="card-video"] {
+      height: 42rem;
+    }
+  }
+
+  .c21-video-player-section__intro {
+    padding: 8.4rem 4.8rem 8.4rem 10rem;
+    width: 100%;
+    display: -webkit-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li {
+      @include size(27.3rem, auto);
+      margin-right: 4rem;
+      border-bottom: 0.2rem solid #000426;
+
+      .c21-video-player-section__intro-title {
+        margin-bottom: 4.8rem;
+
+        .heading-1 {
+          line-height: 11.2rem;
+        }
+      }
+
+      .c21-video-player-section__intro-content {
+        margin-bottom: 1.6rem;
+        line-height: 2.4rem;
+      }
+
+      &:first-child {
+        .c21-video-player-section__intro-content {
+          @include size(12.5rem, auto);
+        }
+      }
+
+      &:nth-child(2) {
+        .c21-video-player-section__intro-content {
+          @include size(23.5rem, auto);
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        .c21-video-player-section__intro-content {
+          @include size(20rem, auto);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .c21-video-player-section {
+    flex-direction: column;
+    overflow: hidden;
+
+    .c21-video-player-section__card-video {
+      width: 100%;
+      margin-top: 0;
+      order: 2;
+
+      .card-video__wrapper {
+        height: 120 * $prm;
+      }
+
+      [data-component="card-video"] {
+        height: 284 * $prm;
+      }
+    }
+
+    .c21-video-player-section__intro {
+      width: auto;
+      padding: 0;
+      order: 1;
+      margin: 0 2.4rem 5.7rem;
+
+      li {
+        margin-right: 3rem;
+        @include size(auto, auto);
+
+        .c21-video-player-section__intro-title {
+          margin-bottom: 0.8rem;
+
+          .heading-1 {
+            line-height: 5.6rem;
+          }
+        }
+
+        .c21-video-player-section__intro-content {
+          font-size: 1.4rem;
+          width: 100% !important;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+}

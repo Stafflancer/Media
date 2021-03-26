@@ -12,13 +12,13 @@ topImg: ../../assets/c26-product-intro/c26-product.png
 details:
   - title: Optional pre-title
     subtitle: The History
-    number: 01
+    number: '01'
   - title: Optional pre-title
     subtitle: The History
-    number: 02
+    number: '02'
   - title: Optional pre-title
     subtitle: The History
-    number: 03
+    number: '03'
   - title: Optional pre-title
     subtitle: The History
-    number: 04
+    number: '04'

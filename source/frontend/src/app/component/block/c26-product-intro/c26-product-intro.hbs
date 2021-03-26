@@ -11,7 +11,7 @@
       <div class="c26-product-intro__img-left copy">
         {{subTitle.main}}<span>{{subTitle.link}}</span>
       </div>
-      <div class="c26-product-intro__img-icon active">
+      <div class="c26-product-intro__img-icon">
         <span class="c26-product-intro__img-icon-shape"></span>
         <div class="c26-product-intro__img-icon-text">
           {{> general/icon name="icon-open" }}
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="c26-product-intro__img-view">
-        <img src="{{topImg}}" alt="">
+        <img class="c26-product-intro__product-img" src="{{topImg}}" alt="">
       </div>
     </div>
   </div>
@@ -28,12 +28,13 @@
       <div class="swiper-wrapper">
         {{#each details}}
           <div class="swiper-slide">
-            <div class="c26-product-intro__detail-item-number">{{this.number}}</div>
+            <div class="c26-product-intro__detail-item-number heading-5">{{this.number}}</div>
             <div class="c26-product-intro__detail-item-title">{{this.title}}</div>
             <div class="c26-product-intro__detail-item-subtitle">{{this.subtitle}}</div>
           </div>
         {{/each}}
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </div>

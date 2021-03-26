@@ -62,6 +62,7 @@ $prm: 100vw / 375;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      position: relative;
 
       @include respond-to(MEDIUM) {
         flex-direction: row;
@@ -86,6 +87,12 @@ $prm: 100vw / 375;
       &-icon {
         @include size(12rem, 12rem);
         position: relative;
+        margin-right: 24 * $prm;
+        @include respond-to(MEDIUM) {
+          margin-right: 0;
+          position: absolute;
+          right: 782 * $prd;
+        }
 
         &-shape {
           @include size(100%, 100%);
@@ -126,19 +133,6 @@ $prm: 100vw / 375;
             }
           }
         }
-
-        //[data-component="icon"] {
-        //  position: absolute;
-        //  @include size(20%, 20%);
-        //  @include position(50%, 50%);
-        //  margin-left: -10%;
-        //  margin-top: -10%;
-        //  svg {
-        //    * {
-        //      fill: $whiteShade1;
-        //    }
-        //  }
-        //}
       }
 
       &-view {
@@ -146,9 +140,10 @@ $prm: 100vw / 375;
         height: 215 * $prm;
         position: relative;
         z-index: 12;
+        margin-right: -18 * $prm;
         @include respond-to(MEDIUM) {
           width: 894 * $prd;
-          height: 515 * $prd;
+          height: 613 * $prd;
           margin-top: -2.5rem;
         }
       }
@@ -159,25 +154,75 @@ $prm: 100vw / 375;
     top: -87 * $prm;
     left: 24 * $prm;
     width: 351 * $prm;
-    height: 189 * $prm;
+    height: auto;
     border-radius: 2rem 0 0 2rem;
-    padding: 80 * $prd 0 80 * $prd 149 * $prd;
+    padding: 59 * $prm 0 24 * $prm 23 * $prm;
     background: #fff;
-    z-index: 10;
     @include respond-to(MEDIUM) {
       top: -218 * $prd;
       left: 366 * $prd;
       width: 1554 * $prd;
-      height: 364 * $prd;
+      height: auto;
       padding: 80 * $prd 0 80 * $prd 149 * $prd;
     }
+    .swiper-container {
+      z-index: 20;
+    }
+    .swiper-pagination {
+      top: auto;
+      bottom: 0;
+      height: 1px;
+      background: #ced3da;
+      .swiper-pagination-progressbar-fill {
+        height: 2px;
+        background: #000426;
+      }
+    }
     .swiper-slide {
+      width: auto;
       padding: 0 12 * $prm;
+      margin-bottom: 24 * $prm;
       &:first-child {
         padding-left: 0;
       }
       @include respond-to(MEDIUM) {
         padding: 0 77 * $prd;
+        margin-bottom: 56 * $prd;
+      }
+      .c26-product-intro__detail-item-number {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 16 * $prm;
+        color: #151617;
+        opacity: 0.4;
+        @include respond-to(MEDIUM) {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          margin-bottom: 36 * $prd;
+        }
+      }
+      .c26-product-intro__detail-item-title {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 0;
+        color: #151617;
+        opacity: 0.4;
+        @include respond-to(MEDIUM) {
+          font-size: 4rem;
+          line-height: 4rem;
+          margin-bottom: 8 * $prd;
+        }
+      }
+      .c26-product-intro__detail-item-subtitle {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 0;
+        color: #151617;
+        @include respond-to(MEDIUM) {
+          font-size: 4rem;
+          line-height: 4rem;
+          margin-bottom: 8 * $prd;
+        }
       }
     }
   }

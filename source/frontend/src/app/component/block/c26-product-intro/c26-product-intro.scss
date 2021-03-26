@@ -84,10 +84,11 @@ $prm: 100vw / 375;
       }
 
       &-icon {
-        @include size(12rem, 12rem);
+        @include size(8rem, 8rem);
         position: relative;
         margin-right: 24 * $prm;
         @include respond-to(MEDIUM) {
+          @include size(12rem, 12rem);
           margin-right: 0;
           position: absolute;
           right: 782 * $prd;
@@ -126,6 +127,22 @@ $prm: 100vw / 375;
           font-size: 1.4rem;
           color: $whiteShade1;
           text-align: center;
+          .icon-text {
+            display: none;
+          }
+          [data-component="icon"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            @include respond-to(MEDIUM) {
+              width: 1.8rem;
+              height: 2rem;
+            }
+          }
+          @include respond-to(MEDIUM) {
+            .icon-text {
+              display: block;
+            }
+          }
           svg {
             * {
               fill: $whiteShade1;

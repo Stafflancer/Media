@@ -5,6 +5,7 @@ export default class C02Footer extends AbstractBlock {
 
   constructor(el: HTMLElement) {
     super(el);
+    
   }
 
   public dispose() {

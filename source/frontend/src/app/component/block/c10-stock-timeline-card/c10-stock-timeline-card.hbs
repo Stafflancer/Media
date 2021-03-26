@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="./c10-stock-timeline-card.scss">
+<script src="./C10StockTimelineCard.ts"></script>
+
+<div class="c10-stock-timeline-card" data-component="c10-stock-timeline-card">
+  <div class="c09-media-box">
+    <div class="c09-media-box__block-wrapper">
+      <div class="c09-media-box__image">
+        <img src="{{bgImage}}" alt="" align="middle">
+        <div class="c09-media-box__button">
+          {{> cta/cta-border cta-border-white-with-icon }}
+        </div>
+        <div class="c09-media-box__button-h5">
+          {{> cta/cta-border cta-border-with-icon }}
+        </div>
+      </div>
+      <div class="c09-media-box__fixed-button">
+        <div class="c09-media-box__image-corner">
+          <img src="{{cornerImage}}" class="c09-stock-timeline-card__image-vector" />
+        </div>
+        <div class="c09-media-box__iconfont">
+          <div class="c09-media-box__icon">
+            {{> general/icon name='icon-arrow-down' }}
+          </div>
+          <div class="c09-media-box__icon-h5">
+            {{> general/icon name='icon-arrow-down-h5' }}
+          </div>
+        </div>
+      </div>
+      <div class="c09-media-box__background"></div>
+    </div>
+  </div>
+  <div class="c10-stock-timeline-card__block-wrapper">
+    <div class="c10-stock-timeline-card__container">
+      <div class="c10-stock-timeline-card__title">
+        <p class="copy cta">{{cardTitle}}</p>
+      </div>
+      <div class="c10-stock-timeline-card__content">
+        <div class="c10-stock-timeline-card__vector">
+          <img src="{{vectorImage}}" class="c10-stock-timeline-card__image-vector" />
+          <div class="c10-stock-timeline-card__step">
+            {{#each timeLine}}
+              {{#if 0}}
+                <div class="c10-stock-timeline-card__dot is-active"></div>
+              {{else}}
+                <div class="c10-stock-timeline-card__dot"> </div>
+              {{/if}}
+            {{/each}}
+          </div>
+          <div class="c10-stock-timeline-card__text-white">
+            <div class="c10-stock-timeline-card__text1">
+              {{> general/heading h41 class="heading-4" }}
+            </div>
+            <div class="c10-stock-timeline-card__text2">
+              {{> general/heading h42 class="heading-4" }}
+            </div>
+            <div class="c10-stock-timeline-card__text3">
+              {{> general/heading h61 class="heading-6" }}
+            </div>
+            <div class="c10-stock-timeline-card__text4">
+              {{> general/heading h62 class="heading-6" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{#each timeLine}}
+      <div class="c10-stock-timeline-card__text-white c10-stock-timeline-card__card">
+        <div class="c10-stock-timeline-card__t">
+          <div class="c10-stock-timeline-card__text5">
+            {{> general/heading h61 class="heading-6" }}
+          </div>
+          <div class="c10-stock-timeline-card__text6">
+            {{> general/heading h62 class="heading-6" }}
+          </div>
+          <div class="c10-stock-timeline-card__bg-white"></div>
+          <div class="c10-stock-timeline-card__bg-black"></div>
+        </div>
+        <div>
+          <p class="copy c10-stock-timeline-card__text7">{{small}}</p>
+          <p class="c10-stock-timeline-card__text8">{{> general/heading h5 class="heading-5" }}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

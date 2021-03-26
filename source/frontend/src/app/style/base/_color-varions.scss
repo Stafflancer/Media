@@ -1,17 +1,17 @@
 @mixin color-variations {
   &.light {
-    color: var(--color-white);
+    color: $whiteShade1;
   }
 
   &.grey {
-    color: var(--color-grey);
+    color: $grayShade1;
   }
 
   &.dark {
-    color: var(--color-black);
+    color: $black;
   }
 
   &.highlight {
-    color: var(--color-light-blue);
+    color: $blueShade2;
   }
 }

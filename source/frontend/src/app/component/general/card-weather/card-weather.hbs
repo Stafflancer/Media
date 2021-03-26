@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./card-weather.scss">
+
+<div class="card-weather" data-component="card-weather">
+  <div class="card-weather__container">
+    <div class="card-weather__icon-sun">
+      {{> general/icon name="icon-sun" }}
+    </div>
+    <div class="card-weather__content">
+      <div class="card-weather__centigrade">
+        {{#if centigrade}}
+        <div class="card-weather__icon-sun">
+          {{> general/icon name="icon-sun" }}
+        </div>
+        <span class="card-weather__num">{{centigrade}}</span>
+        {{else}}
+        <div class="card-weather__empty">
+          {{> general/icon name="icon-location" }}
+          <span class="card-weather__empty-text">{{placeholder}}</span>
+        </div>
+        {{/if}}
+      </div>
+      <div class="card-weather__text">
+        {{#if centigrade}}
+        <span>{{desc}}</span>
+        {{else}}
+        <span>{{tips}}</span>
+        {{/if}}
+        <div class="card-weather__location"></div>
+      </div>
+    </div>
+  </div>
+</div>

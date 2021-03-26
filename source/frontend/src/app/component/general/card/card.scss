@@ -1,0 +1,122 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
+[data-component="card"] {
+  font-size: 0;
+  width: 243 * $prm;
+
+  @include respond-to(MEDIUM) {
+    width: 442 * $prd;
+  }
+  .card__content {
+    @include size(243 * $prm, 152 * $prm);
+    position: relative;
+    border-radius: 1rem 6rem 1rem 1rem;
+
+    @include respond-to(MEDIUM) {
+      @include size(442 * $prd, 224 * $prd);
+    }
+
+    .card__media {
+      @include size(100%, 100%);
+      object-fit: cover;
+      background: rgba(0, 4, 38, 0.9);
+      border-radius: 1rem 6rem 1rem 1rem;
+      &.img {
+        display: block;
+      }
+      &.video {
+        display: none;
+      }
+      @include respond-to(MEDIUM) {
+        &.img {
+          display: none;
+        }
+        &.video {
+          display: block;
+        }
+      }
+    }
+    .card-video__play {
+      cursor: pointer;
+    }
+    .card__media-stop {
+      cursor: pointer;
+      display: none;
+    }
+
+    [data-component="cta-gradient"] {
+      position: absolute;
+      right: 2.4rem;
+      bottom: 2.5rem;
+      @include size(60 * $prm, 60 * $prm);
+      //background: #f3f4ff;
+      //border-radius: 50%;
+      z-index: 5;
+      cursor: pointer;
+      @include respond-to(MEDIUM) {
+        @include size(60 * $prd, 60 * $prd);
+      }
+    }
+
+    .card__title-content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: auto;
+      width: 100%;
+      padding: 11 * $prm 16 * $prm 17 * $prm;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      color: #fff;
+      letter-spacing: -0.25px;
+
+      @include respond-to(MEDIUM) {
+        //height: 110 * $prd;
+        padding: 28 * $prd 16 * $prd 24 * $prd;
+      }
+
+      .card__title {
+        font-size: 1.4rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        @include respond-to(MEDIUM) {
+          font-size: 2.4rem;
+          height: 3.2rem;
+          line-height: 3.2rem;
+        }
+      }
+
+      .card__subtitle {
+        font-size: 1.4rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        opacity: 0.4;
+
+        @include respond-to(MEDIUM) {
+          font-size: 1.4rem;
+          height: 1.8rem;
+          line-height: 1.8rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .card__footer {
+    width: 100%;
+    padding: 16 * $prm;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.25px;
+    color: #151617;
+    opacity: 0.4;
+    background: transparent;
+
+    @include respond-to(MEDIUM) {
+      width: 300 * $prd;
+      padding: 24 * $prd;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+  }
+}

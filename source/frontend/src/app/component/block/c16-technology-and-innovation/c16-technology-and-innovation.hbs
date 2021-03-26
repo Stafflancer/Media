@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./c16-technology-and-innovation.scss">
+<script src="./C16TechnologyAndInnovation.ts"></script>
+
+<div class="c16-technology-and-innovation" data-component="c16-technology-and-innovation">
+  <div class="c16-technology-and-innovation__container">
+    <div class="c16-technology-and-innovation__video">
+      <div class="c16-technology-and-innovation__video-box">
+        <div class="c16-technology-and-innovation__video-slogan">
+          {{> general/heading slogan class="heading-6" }}
+        </div>
+        <div class="c16-technology-and-innovation__video-play">
+          <div class="c16-technology-and-innovation__video-play-button">
+            {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+          </div>
+          <div class="c16-technology-and-innovation__user-name">
+            <p class="copy large">{{userName}}</p>
+          </div>
+        </div>
+        <div class="c16-technology-and-innovation__video-progress-bar"></div>
+        <div class="c16-technology-and-innovation__video-audio">
+          <audio src="" controls="controls"></audio>
+        </div>
+      </div>
+      <div class="c16-technology-and-innovation__video-image">
+        <img src="{{avatarSrc}}" alt="avatar">
+      </div>
+    </div>
+    <div class="c16-technology-and-innovation__title">
+      {{> general/heading h1 class="heading-1" }}
+    </div>
+    <div class="c16-technology-and-innovation__box">
+      <div class="c16-technology-and-innovation__image">
+        <img src="{{intro.imgSrc}}" alt="">
+      </div>
+      <div class="c16-technology-and-innovation__content">
+        <div class="c16-technology-and-innovation__label">
+          <p class="copy large">{{intro.label}}</p>
+        </div>
+        <div class="c16-technology-and-innovation__control">
+          <div class="c16-technology-and-innovation__description">
+            <p class="copy large">{{intro.description}}</p>
+          </div>
+          <div class="c16-technology-and-innovation__sub-title">
+            {{> cta/cta-border intro.subTitle }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

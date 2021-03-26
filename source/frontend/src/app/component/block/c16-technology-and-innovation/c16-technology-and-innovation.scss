@@ -1,0 +1,180 @@
+.c16-technology-and-innovation {
+  position: relative;
+  user-select: none;
+  margin-top: 200px;
+
+  &__container {
+    .c16-technology-and-innovation__video {
+      position: absolute;
+      right: 14rem;
+      top: -4.8rem;
+      z-index: 10;
+
+      .c16-technology-and-innovation__video-box {
+        @include size(40.8rem, 11.2rem);
+        background: linear-gradient(90.52deg, #0b1548 3.45%, #3e45a9 112.37%);
+        border-radius: 1.4rem;
+        overflow: hidden;
+
+        .c16-technology-and-innovation__video-slogan {
+          color: $whiteShade1;
+          opacity: 0.4;
+          margin: 1.6rem 1.6rem 0.8rem;
+        }
+
+        .c16-technology-and-innovation__video-play {
+          display: flex;
+          align-items: center;
+          margin: 0 1.6rem 1.9rem;
+
+          .c16-technology-and-innovation__video-play-button {
+            @include size(4.8rem, 4.8rem);
+
+            [data-component="cta-gradient"] {
+              @include size(4.8rem, 4.8rem);
+            }
+          }
+
+          .c16-technology-and-innovation__user-name {
+            color: $whiteShade1;
+            margin-left: 1.4rem;
+          }
+        }
+
+        .c16-technology-and-innovation__video-progress-bar {
+          width: 40%;
+          height: 0.4rem;
+          background: $blueShade2;
+        }
+
+        .c16-technology-and-innovation__video-audio {
+          display: none;
+        }
+      }
+
+      .c16-technology-and-innovation__video-image {
+        @include size(18.6rem, 18.6rem);
+        border-radius: 50%;
+        background: $whiteShade1;
+        position: absolute;
+        right: -8.8rem;
+        top: -12.4rem;
+      }
+    }
+
+    .c16-technology-and-innovation__title {
+      @include size(84.5rem, 24rem);
+      position: absolute;
+      z-index: 10;
+      @include offset(22.9rem, 13.7rem);
+
+      .heading-1 {
+        line-height: 112px;
+        color: #151617;
+      }
+    }
+
+    .c16-technology-and-innovation__box {
+      @include size(100%, 95.6rem);
+      position: relative;
+
+      .c16-technology-and-innovation__image {
+        @include size(105.8rem, 76.5rem);
+        position: absolute;
+        right: 0;
+        top: 18.5rem;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .c16-technology-and-innovation__content {
+        position: absolute;
+        @include offset(22.9rem, 41.7rem);
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+
+        .c16-technology-and-innovation__label {
+          color: #151617;
+          opacity: 0.5;
+          margin-right: 8rem;
+        }
+
+        .c16-technology-and-innovation__control {
+          @include size(42.2rem, auto);
+
+          .c16-technology-and-innovation__description {
+            margin-bottom: 4rem;
+            color: #151617;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .c16-technology-and-innovation {
+    margin-top: 8.3rem;
+
+    &__container {
+      margin-bottom: 6.4rem;
+
+      .c16-technology-and-innovation__video {
+        position: inherit;
+        margin: 0 2.4rem 4rem;
+
+        .c16-technology-and-innovation__video-box {
+          @include size(100%, auto);
+        }
+
+        .c16-technology-and-innovation__video-image {
+          @include size(7.5rem, 7.5rem);
+          right: 0.4rem;
+          top: -4rem;
+        }
+      }
+
+      .c16-technology-and-innovation__title {
+        @include size(100%, auto);
+        position: inherit;
+        padding: 0 4rem 0 2.4rem;
+        margin-bottom: 3.6rem;
+
+        .heading-1 {
+          line-height: 56px;
+        }
+      }
+
+      .c16-technology-and-innovation__box {
+        @include size(100%, 52rem);
+
+        .c16-technology-and-innovation__image {
+          @include size(100%, 26rem);
+          top: 0;
+          padding-left: 2.4rem;
+        }
+
+        .c16-technology-and-innovation__content {
+          left: 2.4rem;
+          top: 22.4rem;
+
+          .c16-technology-and-innovation__label {
+            display: none;
+          }
+
+          .c16-technology-and-innovation__control {
+            width: 100%;
+            .c16-technology-and-innovation__description {
+              @include size(24.2rem, auto);
+              margin-bottom: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

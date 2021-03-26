@@ -1,0 +1,89 @@
+[data-component="cta-text"] {
+	display: inline-block;
+	transition: opacity .3s, border .3s;
+
+	.cta-text-copy {
+		display: inline-block;
+		color: $defaultColor;
+	}
+
+	&.dark-mode {
+		.cta-text-copy {
+			color: $whiteShade1;
+		}
+	}
+
+	&.with-dot {
+		position: relative;
+		&::after {
+			position: absolute;
+			border-radius: 50%;
+			display: block;
+			content: '';
+			background: $uiError;
+			width: 6px;
+			height: 6px;
+			top: 0;
+			left: 100%;
+		}
+	}
+
+	&.underline {
+		cursor: pointer;
+		border-bottom: 2px solid $blueShade1;
+		text-decoration: none;
+		line-height: 1.2;
+		.cta-text-copy {
+			color: $blueShade1;
+		}
+	}
+
+	&.active, &.with-icon {
+		.cta-text-copy {
+			color: $blueShade2;
+		}
+	}
+
+	span[data-component=icon] {
+		width: .6rem;
+		padding: 0;
+		line-height: 1.80;
+		margin-right: 8px;
+		margin-left: 0;
+
+		svg {
+			fill: none;
+			stroke: $blueShade1;
+			stroke-width: .3rem;
+			transition: stroke .3s, transform .3s;
+		}
+	}
+
+	.cta-text-copy + span[data-component=icon] {
+		margin-left: 8px;
+		margin-right: 0;
+	}
+}
+
+a[data-component="cta-text"]{
+	&.underline {
+		&:hover {
+			text-decoration: none;
+			border-bottom: 2px solid #{$blueShade2}99;
+		}
+	}
+
+	&:hover {
+		opacity: .6;
+		span[data-component=icon] {
+			svg {
+				transform: translate(-.4rem, 0);
+			}
+		}
+		.cta-text-copy + span[data-component=icon] {
+			svg {
+				transform: translate(.4rem, 0);
+			}
+		}
+	}
+}

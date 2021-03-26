@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="./c13-global-capacity.scss">
+<script src="./C13GlobalCapacity.ts"></script>
+
+<div class="c13-global-capacity" data-component="c13-global-capacity">
+  <div class="c13-global-capacity__container container">
+    <div class="row">
+      <div class="c15-globe col-12 col-md-6">
+        {{> general/globe class='globe' }}
+      </div>
+      <div class="c13-global-capacity__block-wrapper col-12 col-md-6">
+        <div class="c13-global-capacity__t">
+          <div class="c08-our-mission-text-box__title">
+            {{> general/heading h1 class="heading-1" }}
+          </div>
+          <div class="c08-our-mission-text-box__desc">
+            <div class="copy large">{{desc}}</div>
+          </div>
+        </div>
+        <ul class="c13-global-capacity__b">
+          {{#each lists}}
+          <li>
+            <div class="c13-global-capacity__b-title">
+              {{> general/heading title class="heading-3" }}
+            </div>
+            <div class="copy cta c13-global-capacity__b-content">{{content}}</div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="c15-h5">
+      <img src="{{mapImage}}" alt="">
+    </div>
+  </div>
+  <div class="c13-global-capacity__mask">
+    <img src="{{maskImage}}" alt="">
+  </div>
+</div>

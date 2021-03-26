@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./card-video.scss">
+<script src="./CardVideo.ts"></script>
+
+<div data-component="card-video">
+  <img src="{{imgSrc}}" class="card-video__media img" alt="">
+  <video src="{{videoSrc}}" class="card-video__media video"></video>
+  <div class="card-video__wrapper">
+    <div class="card-video__wrapper-title">{{title}}</div>
+    <div class="card-video__wrapper-content">{{content}}</div>
+    <div class="card-video__wrapper-time">{{time}}</div>
+    <div class="card-video__wrapper-play">
+      {{> cta/cta-gradient play }}
+      {{> cta/cta-gradient stop }}
+    </div>
+  </div>
+</div>

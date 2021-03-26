@@ -1,0 +1,132 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
+[data-component="card-video"] {
+  width: 100%;
+  height: 284 * $prm;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-to(MEDIUM) {
+    width: 868 * $prd;
+    height: 346 * $prd;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-video__media {
+    width: 100%;
+    height: 211 * $prm;
+    object-fit: cover;
+    background: #c4c4c4;
+    &.img {
+      display: block;
+    }
+    &.video {
+      display: none;
+    }
+
+    @include respond-to(MEDIUM) {
+      width: 651 * $prd;
+      height: 100%;
+      object-fit: cover;
+      background: #c4c4c4;
+      &.img {
+        display: none;
+      }
+      &.video {
+        display: block;
+      }
+    }
+  }
+
+  .card-video__wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 93.6%;
+    height: 120 * $prm;
+    background: rgba(0, 4, 38, 0.9);
+    color: #fff;
+    padding: 17 * $prm 16 * $prm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond-to(MEDIUM) {
+      width: 217 * $prd;
+      height: 346 * $prd;
+      padding: 24 * $prd;
+    }
+
+    &-title {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #cccccc;
+      opacity: 0.5;
+
+      @include respond-to(MEDIUM) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-content {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.9 * $prm;
+
+      @include respond-to(MEDIUM) {
+        font-size: 2.4rem;
+        margin-bottom: 0;
+      }
+    }
+
+    &-time {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      @include respond-to(MEDIUM) {
+        margin-left: 84 * $prd;
+        font-size: 1.8rem;
+        line-height: 1.4rem;
+        margin-bottom: 14 * $prd;
+      }
+    }
+
+    &-play {
+      position: absolute;
+      right: 16 * $prm;
+      bottom: 36 * $prm;
+      height: 60 * $prm;
+      width: 60 * $prm;
+      z-index: 6;
+
+      @include respond-to(MEDIUM) {
+        left: 24 * $prd;
+        bottom: 24 * $prd;
+        height: 60 * $prd;
+        width: 60 * $prd;
+      }
+
+      [data-component="cta-gradient"] {
+        height: 60 * $prm;
+        width: 60 * $prm;
+
+        @include respond-to(MEDIUM) {
+          height: 60 * $prd;
+          width: 60 * $prd;
+        }
+      }
+
+      .card-video__play {
+        cursor: pointer;
+      }
+
+      .card-video__stop {
+        cursor: pointer;
+        display: none;
+      }
+    }
+  }
+}

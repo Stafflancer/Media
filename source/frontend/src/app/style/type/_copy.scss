@@ -1,6 +1,7 @@
 @import "../base/color-varions";
 
 .copy {
+  font-family: $defaultFontFamily;
   @include color-variations;
   font-size: 1.6rem;
   font-weight: 500;
@@ -11,8 +12,8 @@
   }
 
   &.cta {
-    font-size: 1.6rem;
-    font-weight: 900;
+    font-size: 1.8rem;
+    font-weight: normal;
   }
 
   &.small {
@@ -20,15 +21,23 @@
   }
 
   &.semi-bold {
-    font-family: var(--default-font-family-semibold);
+    font-weight: 600;
   }
 
   &.bold,
   &.strong {
-    font-family: var(--default-font-family-bold);
+    font-weight: 700;
   }
 
   a {
-    color: var(--color-light-blue);
+    font-size: 1.8rem;
+    font-weight: normal;
+    transition: color .3s;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      color: $blueShade2;
+      text-decoration: none;
+    }
   }
 }

@@ -5,7 +5,8 @@
   <div class="block-wrapper">
     <header>
       <h1 class="heading-01">Style <em>Guide</em></h1>
-      {{> general/icon name='logo' className='brand-midea' }}
+      {{> general/logo class='brand-midea' }}
+      {{> general/logo fill='#000' class='brand-midea' }}
     </header>
     <section class="content-section">
       <h2 class="heading-02">Colours</h2>
@@ -14,7 +15,7 @@
         <div class="colors">
           <div class="color" data-variant="primary">
             <div class="color-swatch"></div>
-            <p class="copy-01">--default-color</p>
+            <p class="copy-01">defaultColor</p>
           </div>
         </div>
       </div>
@@ -24,41 +25,41 @@
           <div class="color-wrapper">
             <div class="color" data-variant="blueShade1">
               <div class="color-swatch"></div>
-              <p class="copy-01">-color-dark-blue</p>
+              <p class="copy-01">blueShade1</p>
             </div>
             <div class="color" data-variant="blueShade2">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-light-blue</p>
+              <p class="copy-01">blueShade2</p>
             </div>
           </div>
           <div class="color-wrapper">
             <div class="color" data-variant="whiteShade1">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-white</p>
+              <p class="copy-01">whiteShade1</p>
             </div>
             <div class="color" data-variant="whiteShade2">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-light-grey</p>
+              <p class="copy-01">whiteShade2</p>
             </div>
           </div>
           <div class="color-wrapper">
             <div class="color" data-variant="grayShade1">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-grey</p>
+              <p class="copy-01">grayShade1</p>
             </div>
             <div class="color" data-variant="grayShade2">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-dark-gray</p>
+              <p class="copy-01">grayShade2</p>
             </div>
           </div>
           <div class="color-wrapper">
             <div class="color" data-variant="blackShade1">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-black</p>
+              <p class="copy-01">blackShade1</p>
             </div>
             <div class="color" data-variant="blackShade2">
               <div class="color-swatch"></div>
-              <p class="copy-01">--color-dark</p>
+              <p class="copy-01">blackShade2</p>
             </div>
           </div>
         </div>
@@ -95,13 +96,13 @@
       <div class="content-inner-section">
         <h3 class="heading-04 inner-section-heading">UI Colours</h3>
         <div class="colors">
-          <div class="color" data-variant="errorRed">
+          <div class="color" data-variant="uiError">
             <div class="color-swatch"></div>
-            <p class="copy-01">--error-red</p>
+            <p class="copy-01">uiError</p>
           </div>
           <div class="color" data-variant="textColor">
             <div class="color-swatch"></div>
-            <p class="copy-01">--default-color</p>
+            <p class="copy-01">textColor</p>
           </div>
           {{!-- <div class="color" data-variant="colorUiSuccess">
             <div class="color-swatch"></div>
@@ -126,20 +127,33 @@
           </div>
         </div>
       </div>
+      <div class="content-inner-section">
+        <h3 class="heading-04 inner-section-heading">Gradient Colours</h3>
+        <div class="colors">
+          <div class="color" data-variant="darkBlueGradient">
+            <div class="color-swatch"></div>
+            <p class="copy-01">Dark Blue</p>
+          </div>
+          <div class="color" data-variant="lightBlueGradient">
+            <div class="color-swatch"></div>
+            <p class="copy-01">Light Blue</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="content-section">
       <h2 class="heading-02">Typography</h2>
-      <p class="copy-01">H1</p>
+      <p class="copy-01">H1 144px/48px</p>
       {{> general/heading h1 class="heading-1" }}
-      <p class="copy-01">H2</p>
+      <p class="copy-01">H2 120px/36px</p>
       {{> general/heading h2 class="heading-2" }}
-      <p class="copy-01">H3</p>
+      <p class="copy-01">H3 88px/32px</p>
       {{> general/heading h3 class="heading-3" }}
-      <p class="copy-01">H4</p>
+      <p class="copy-01">H4 56px/24px</p>
       {{> general/heading h4 class="heading-4" }}
-      <p class="copy-01">H5</p>
+      <p class="copy-01">H5 40px/18px</p>
       {{> general/heading h5 class="heading-5" }}
-      <p class="copy-01">H6</p>
+      <p class="copy-01">H6 14px/14px</p>
       {{> general/heading h6 class="heading-6" }}
     </section>
     <section class="content-section">
@@ -156,20 +170,68 @@
     <section class="content-section">
       <h2 class="heading-02">Button</h2>
       <div class="content-inner-section">
-        
+        <p class="copy-01">cta-text</p>
+        {{> cta/cta-text cta-text }}
+        <p class="copy-01">cta-text add .dark-mode class</p>
+        {{> cta/cta-text cta-text class="dark-mode" }}
+        <p class="copy-01">cta-text add .with-dot class</p>
+        {{> cta/cta-text cta-text class="with-dot" }}
+        <p class="copy-01">cta-text add .active class</p>
+        {{> cta/cta-text cta-text-active }}
+        <p class="copy-01">cta-text left-icon</p>
+        {{> cta/cta-text cta-left-icon }}
+        <p class="copy-01">cta-text right-icon</p>
+        {{> cta/cta-text cta-right-icon }}
+        <p class="copy-01">cta-text left-right-icon</p>
+        {{> cta/cta-text cta-left-right-icon }}
+        <p class="copy-01">cta-text add .underline class</p>
+        {{> cta/cta-text cta-underline }}
+        <p class="copy-01">cta-text</p>
+        {{> cta/cta-text cta-text-heading }}
+        <p class="copy-01">cta-border</p>
+        {{> cta/cta-border cta-border }}
+        <p class="copy-01">cta-border add .white class</p>
+        {{> cta/cta-border cta-border-white }}
+        <p class="copy-01">cta-border with-icon</p>
+        {{> cta/cta-border cta-border-with-icon }}
+        <p class="copy-01">cta-border with-icon add .white class</p>
+        {{> cta/cta-border cta-border-white-with-icon }}
+        <p class="copy-01">cta-round</p>
+        {{> cta/cta-round cta-round }}
+        <p class="copy-01">cta-gradient</p>
+        {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+        {{> cta/cta-gradient icon="icon-pause"}}
+        <p class="copy-01">cta-round-border</p>
+        {{> cta/cta-round-border cta-round-border }}
       </div>
     </section>
     <section class="content-section">
-      <h2 class="heading-02">Icons</h2>
+      <h2 class="heading-02">Card</h2>
       <div class="content-inner-section">
-        <div class="icons">
-          {{#each icons}}
-            <div class="icon-wrapper">
-              {{> general/icon name=this }}
-              <code>{{this}}</code>
-            </div>
-          {{/each}}
+        <p class="copy-01">card img</p>
+        {{> general/card cardInfo }}
+        <p class="copy-01">card video</p>
+        {{> general/card cardVideo }}
+        <p class="copy-01">card weather</p>
+        {{> general/card-weather cardWeather }}
+        <p class="copy-01">card video</p>
+        {{> general/card-video videoInfo }}
+        <p class="copy-01">video player</p>
+        <div class="general-video-player">
+          {{> general/video-player videoPlayer }}
         </div>
+        <p class="copy-01">video-overlay</p>
+        <div class="js-video-overlay">
+          {{> cta/cta-gradient cta-round }}
+        </div>
+      </div>
+
+    </section>
+    <section class="content-section">
+      <h2 class="heading-02">Others</h2>
+      <div class="content-inner-section">
+        <h2 class="heading-02">Globe</h2>
+          {{> general/globe globe class='globe' }}
       </div>
     </section>
   </div>

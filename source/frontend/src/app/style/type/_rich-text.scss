@@ -1,6 +1,6 @@
 .rich-text {
   strong {
-    font-family: var(--default-font-family-bold);
+    font-weight: 700;
   }
 
   a {
@@ -17,7 +17,7 @@
       right: -0.1rem;
       background: linear-gradient(
         to right,
-        var(--color-light-blue) 4px,
+        $blueShade2 4px,
         transparent 4px,
         transparent 8px
       );

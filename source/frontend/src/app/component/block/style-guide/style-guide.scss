@@ -1,19 +1,21 @@
 .style-guide {
-  background: var(--color-white);
+  background: $whiteShade2;
   padding: 1.5rem;
 
   $colors: (
-    primary var(--default-color),
-    blueShade1 var(--color-dark-blue),
-    blueShade2 var(--color-light-blue),
-    whiteShade1 var(--color-white),
-    whiteShade2 var(--color-light-grey),
-    grayShade1 var(--color-grey),
-    grayShade2 var(--color-dark-gray),
-    blackShade1 var(--color-black),
-    blackShade2 var(--color-dark),
-    errorRed var(--error-red),
-    textColor var(--default-color)
+    primary $defaultColor,
+    blueShade1 $blueShade1,
+    blueShade2 $blueShade2,
+    whiteShade1 $whiteShade1,
+    whiteShade2 $whiteShade2,
+    grayShade1 $grayShade1,
+    grayShade2 $grayShade2,
+    blackShade1 $blackShade1,
+    blackShade2 $blackShade2,
+    uiError $uiError,
+    textColor $textColor,
+    darkBlueGradient $darkBlueGradient,
+    lightBlueGradient $lightBlueGradient
   );
 
   header {
@@ -25,22 +27,12 @@
 
   .brand-midea {
     @include size(5rem, auto);
-
-    padding: 1rem;
-    color: var(--color-white);
-    background-color: var(--color-black);
-    margin-left: 2rem;
-
-    &.inverse {
-      color: var(--color-black);
-      background-color: var(--color-white);
-    }
   }
 
   .content-section {
     > .heading-01,
     > .heading-02 {
-      border-bottom: 1px solid var(--color-black);
+      border-bottom: 1px solid $defaultColor;
       margin-bottom: 2rem;
     }
 
@@ -65,7 +57,7 @@
     font-size: 1.2rem;
     font-weight: 400;
     background: #d8d8d8;
-    color: var(--color-black);
+    color: $defaultColor;
   }
 
   .colors {
@@ -89,7 +81,7 @@
     .color-swatch {
       @include size(100%, 5rem);
       position: relative;
-      border: 0.1rem solid var(--color-black);
+      border: 0.1rem solid $blackShade1;
 
       &::before {
         // stylelint-disable-next-line
@@ -97,7 +89,7 @@
         right: 0;
         bottom: 0;
         position: absolute;
-        background: var(--color-white);
+        background: $whiteShade1;
         padding: 0.2rem;
       }
     }
@@ -118,7 +110,7 @@
   .buttons {
     display: flex;
     justify-content: flex-start;
-    background: var(--color-black);
+    background: $blackShade1;
     padding: 1rem 0;
 
     [class*="-button"] {
@@ -145,7 +137,7 @@
     .icon {
       @include size($iconSize * 0.5);
       padding: 1rem;
-      border: 1px solid var(--color-black);
+      border: 1px solid $blackShade2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -154,5 +146,14 @@
         margin-right: 1.5rem;
       }
     }
+  }
+
+  .cta-round-border {
+    @include size(4.8rem, 4.8rem);
+    background: rgba(7, 15, 29, 0.8);
+  }
+
+  .general-video-player {
+    @include size(30rem, 20rem);
   }
 }

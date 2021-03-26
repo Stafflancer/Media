@@ -5,5 +5,9 @@ meta:
   category: 'Base' # to group pages in the overview
 
 blocks:
+  - name: 'c01-fixed-header'
+    data: 'import!../app/component/block/c01-fixed-header/data/default.yaml'
   - name: 'style-guide'
     data: 'import!../app/component/block/style-guide/data/default.yaml'
+  - name: 'video-overlay'
+    data: 'import!../app/component/block/video-overlay/data/default.yaml'

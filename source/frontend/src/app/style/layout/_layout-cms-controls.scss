@@ -1,5 +1,5 @@
 #block-nfe-theme-local-tasks {
-  color: var(--color-light-grey);
+  color: $grayShade2;
   position: fixed;
   top: 50%;
   right: 0;
@@ -34,11 +34,10 @@
 
   button {
     padding: 2.7rem;
-    background: var(--color-light-blue);
-    font-family: var(--default-font-family-bold);
+    background: $blueShade2;
     font-size: 1rem;
     line-height: 1;
-    color: var(--color-white);
+    color: $whiteShade1;
     border-radius: 3.2rem;
     margin-bottom: 2rem;
     display: none;
@@ -50,7 +49,7 @@
 
   a {
     font-size: 1.4rem;
-    color: var(--color-light-blue);
+    color: $blueShade2;
   }
 
   button,

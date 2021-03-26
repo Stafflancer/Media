@@ -1,6 +1,7 @@
 declare module '*.hbs?include';
 declare module '*.json';
 declare module '*.yml';
+declare module 'swiper';
 
 type Constructor<T = {}> = new (...args: any[]) => T;
 

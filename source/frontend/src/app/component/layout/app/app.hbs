@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="./app.scss">
 <script src="./App.ts"></script>
 
-<div data-component="app-root">
-{{#each blocks}}
-  {{> (lookup . 'name') data }}
-{{/each}}
+<div data-component="app-root" class="index">
+  {{#each blocks}}
+    {{> (lookup . 'name') data }}
+  {{/each}}
 </div>

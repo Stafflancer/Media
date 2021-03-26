@@ -1,26 +1,5 @@
 :root {
   font-size: 62.5%;
-  --max-width: 192rem;
-  --color-light-blue: #2191E5; // blue shade 2
-  --color-dark-blue: #0D7DD1; // blue shade 1
-  --color-black: #070F1D;
-  --color-dark: #1B2331;
-  --color-white: #fff; // white shade 1
-  --color-grey: #D0D7E5; // gray shade 1
-  --color-light-grey: #F5F5F5; // white shade 2
-  --color-dark-gray: #BCC3D1;
-  --color-gradient-dark-blue: linear-gradient(225deg, #2191E5 0%, #1F73B3 100%);
-  --color-gradient-blue: linear-gradient(43.14deg, #6AB2FD 0%, #B1D5FB 115.14%);
-  --color-gradient-canton: linear-gradient(43.14deg, #c8def4 -30%, #f8fbfe 40%, #f8fbfe 60%, #d5e9fc 130%);
-  --default-color: #1B2331; // text-color
-  --error-red: #D21C1C;
-  //--color-dividers: #d8d8d8;
-  //--color-backgrounds: #f5f5f5;
-  //--focus-color: #e8bf2a;
-  --default-font-family: "Mont-Regular", serif;
-  --default-font-family-bold: "Mont-Bold", serif;
-  --default-font-family-semibold: "Mont-SemiBold", serif;
-  --gutter: 16px;
 
   @include respond-to(MEDIUM) {
     --gutter: 4px;
@@ -46,11 +25,10 @@ html {
 
 body {
   height: 100%;
-  font-family: var(--default-font-family);
-  color: var(--default-color);
+  font-family: $defaultFontFamily, arial, sans-serif;
+  color: $defaultColor;
   font-size: 1.6rem;
   line-height: 1.77;
-  background: var(--color-gradient-canton);
 }
 
 p {
@@ -60,9 +38,13 @@ p {
 }
 
 a {
-  color: currentColor;
+  color: $defaultColor;
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 ul {
@@ -90,7 +72,7 @@ img {
 input {
   display: block;
   width: 100%;
-  font-family: var(--default-font-family);
+  font-family: $defaultFontFamily;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   border: none;
@@ -101,7 +83,7 @@ input {
 select {
   display: block;
   width: 100%;
-  font-family: var(--default-font-family);
+  font-family: $defaultFontFamily;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   border: none;
@@ -139,5 +121,12 @@ button {
   &:focus,
   &:active {
     outline: none;
+  }
+}
+
+//fix bootstrap
+.container-md, .container-sm, .container {
+  @include respond-to(SMALL) {
+    max-width: inherit;
   }
 }

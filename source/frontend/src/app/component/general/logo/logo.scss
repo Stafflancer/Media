@@ -6,9 +6,12 @@
     display: block;
     width: 100%;
     height: auto;
+    * {
+      transition: fill .3s;
+    }
   }
 
-  @include respond-to(LARGE) {
+  @include respond-to(MEDIUM) {
     width: 20rem;
   }
 }

@@ -1,0 +1,57 @@
+.c07-on-page-jump-links {
+  padding: 8rem 2.4rem 4rem;
+  @include respond-to(MEDIUM) {
+    padding: 19.2rem 0 4.2rem 0;
+  }
+
+  &__block-wrapper {
+    display: none;
+
+    @include respond-to(MEDIUM) {
+      display: block;
+      margin-top: 2.2rem;
+      li {
+        color: #151617;
+        margin-bottom: 2.4rem;
+        transition: opacity .3s;
+        span {
+          line-height: 1;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .c08-our-mission-text-box {
+    margin-bottom: 1.6rem;
+
+    @include respond-to(MEDIUM) {
+      margin-bottom: 0;
+      min-width: 51.1rem;
+    }
+
+    &__title {
+      color: #151617;
+      margin-bottom: 4rem;
+
+      .heading-1 {
+        line-height: 56px;
+        @include respond-to(MEDIUM) {
+          line-height: 12rem;
+        }
+      }
+    }
+
+    &__content {
+      color: #151617;
+      opacity: 0.8;
+
+      .large {
+        line-height: 32px;
+      }
+    }
+  }
+}

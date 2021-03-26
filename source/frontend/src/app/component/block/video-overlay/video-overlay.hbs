@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./video-overlay.scss">
+<script src="./VideoOverlay.ts"></script>
+
+<div class="video-overlay" data-component="video-overlay">
+  <div class="video-overlay__popup">
+    <div class="video-overlay__popup-close-h5">
+      {{> cta/cta-round-border icon='icon-round-border' }}
+    </div>
+    <div class="video-overlay__popup-container">
+      <div class="video-overlay__popup-close">
+        {{> cta/cta-round-border icon='icon-round-border' }}
+      </div>
+      <div class="video-overlay__popup-content">
+        {{> general/video-player video }}
+      </div>
+    </div>
+  </div>
+</div>

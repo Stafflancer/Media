@@ -13,40 +13,44 @@ h6 {
 }
 
 .heading {
-  font-family: var(--default-font-family);
+  font-family: $defaultFontFamily;
   @include color-variations;
+  line-height: 1.25;
   word-break: break-word;
 }
 
 .heading-1 {
   font-size: 4.8rem;
-  line-height: 1.25;
-  font-family: var(--default-font-family-bold);
+  line-height: 1.16;
 
   &.semi-bold {
     font-weight: 600;
-    font-family: var(--default-font-family-semibold);
   }
 
   @include respond-to(MEDIUM) {
-    font-size: 6.4rem;
+    font-size: 5.6rem;
+    line-height: .8615;
   }
 
   @include respond-to(LARGE) {
     font-size: 14.4rem;
+    font-weight: 500;
+    line-height: .77777;
+    letter-spacing: -3px;
   }
 }
 
 .heading-2 {
   font-size: 3.6rem;
-  line-height: 1.25;
+  font-weight: 300;
+  line-height: 1.3333;
 
   &.semi-bold {
-    font-family: var(--default-font-family-semibold);
+    font-weight: 600;
   }
 
   &.bold {
-    font-family: var(--default-font-family-bold);
+    font-weight: 700;
   }
 
   @include respond-to(MEDIUM) {
@@ -55,20 +59,21 @@ h6 {
 
   @include respond-to(LARGE) {
     font-size: 12rem;
+    line-height: .8667;
+    letter-spacing: -2px;
   }
 }
 
 .heading-3 {
   font-size: 3.2rem;
-  line-height: 1.25;
+  font-weight: 300;
+  line-height: 1.4;
 
   &.semi-bold {
-    font-family: var(--default-font-family-semibold);
     font-weight: 600;
   }
 
   &.bold {
-    font-family: var(--default-font-family-bold);
     font-weight: 700;
   }
 
@@ -78,39 +83,42 @@ h6 {
 
   @include respond-to(LARGE) {
     font-size: 8.8rem;
+    line-height: .8182;
+    letter-spacing: -1px;
   }
 }
 
 .heading-4 {
-  font-family: var(--default-font-family-semibold);
   font-size: 2.4rem;
-  line-height: 1.45;
+  font-weight: 500;
+  line-height: 1;
 
   @include respond-to(MEDIUM) {
     font-size: 2.8rem;
+    line-height: 1.14;
   }
 
   @include respond-to(LARGE) {
-    font-family: var(--default-font-family);
     font-size: 5.6rem;
+    line-height: .8571;
   }
 }
 
 .heading-5 {
-  font-family: var(--default-font-family-bold);
   font-size: 1.8rem;
-
+  font-weight: 500;
+  line-height: 1.333;
+  
   @include respond-to(LARGE) {
-    font-family: var(--default-font-family);
     font-size: 4rem;
-    line-height: 1.39;
+    line-height:1;
   }
 }
 
 .heading-6 {
-  font-family: var(--default-font-family-bold);
   text-transform: uppercase;
   font-size: 1.4rem;
+  font-weight: bold;
 }
 
 

@@ -425,13 +425,13 @@ $prm: 100vw / 375;
         height: 20 * $prm;
         position: absolute;
         right: 36 * $prm;
-        top: 19 * $prm;
+        top: 18 * $prm;
 
         @include respond-to(MEDIUM) {
           width: 40 * $prd;
           height: 44 * $prd;
           right: 86 * $prd;
-          top: 36 * $prd;
+          top: 37 * $prd;
         }
 
         img {

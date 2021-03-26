@@ -1,0 +1,36 @@
+<div data-component="c05-self-segmentation-hero">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {{#each swipers}}
+        <div class="swiper-slide">
+          {{#if this.cardWeather }}
+            <div class="c05-self-segmentation-hero__title">
+              <div class="c05-self-segmentation-hero__title-air">
+                {{this.title}}
+                <span>{{this.air}}</span>
+              </div>
+              <div class="c05-self-segmentation-hero__descript copy large">{{this.descript}}</div>
+              {{> general/card-weather/card-weather this.cardWeather }}
+            </div>
+            <div class="c05-self-segmentation-hero__mouse pc">
+              {{> general/icon/icon name=this.mouseIcon.mouse-icon }}
+              {{> cta/cta-text/cta-text this.cta-text-active }}
+            </div>
+          {{else}}
+            <div class="c05-self-segmentation-hero__top {{#if this.btn.class}}{{this.btn.class}}{{/if}}">
+              <div class="c05-self-segmentation-hero__name" >{{this.name}}</div>
+              {{> cta/cta-border/cta-border this.btn }}
+            </div>
+            <img class="c05-self-segmentation-hero__img {{#if this.btn.class}}{{this.btn.class}}{{/if}}" src="{{this.img}}" alt="">
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="c05-self-segmentation-hero__bg-top"></div>
+  <div class="c05-self-segmentation-hero__bg-bottom"></div>
+
+  <div class="c05-self-segmentation-hero__mouse mobile">
+    {{> cta/cta-text/cta-text mouseIcon }}
+  </div>
+</div>

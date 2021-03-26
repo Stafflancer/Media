@@ -95,7 +95,7 @@ cardInfo:
   title: Historical event title
   subtitle: Optional pre-title
   descript: The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products.
-  img: ./app/svg/icon/logo.svg
+  img: ../../assets/placeholder/demo.jpg
   cta-round:
     icon: icon-play
 
@@ -103,10 +103,18 @@ cardInfo:
 cardVideo:
   title: Historical event title
   subtitle: Optional pre-title
-  video: '12'
-  cta-round:
+  video: ../../assets/placeholder/sample.mp4
+  videoImg: ../../assets/placeholder/demo.jpg
+  videoOverlay:
+    video:
+      src: ../../assets/placeholder/sample.mp4
+      data: controls
+  play:
     icon: icon-play
     class: card__media-play
+  stop:
+    icon: icon-pause
+    class: card__media-stop
 
 cardWeather:
   # centigrade: 38°C
@@ -115,7 +123,12 @@ cardWeather:
   tips: Find out which Midea solution is best for your situation.
 
 videoInfo:
-  videoSrc: ''
+  imgSrc: ../../assets/placeholder/demo.jpg
+  videoSrc: ../../assets/placeholder/sample.mp4
+  videoOverlay:
+    video:
+      src: ../../assets/placeholder/sample.mp4
+      data: controls
   title: Take A Tour
   content: FACTORY OF THE FUTURE
   time: '2:05'
@@ -133,5 +146,6 @@ videoPlayer:
   data: controls
 
 videoOverlay:
-  icon: icon-play
-    
+  video:
+    src: ''
+    data: controls

@@ -1,0 +1,9 @@
+<{{#if tag}}{{tag}}{{else}}a{{/if}} data-component="cta-text" class="cta-text {{#if heading}}heading {{heading }}{{/if}}{{#if class}}{{class }}{{/if}}{{#if with-icon}}with-icon{{/if}}" {{#if href}}href="{{href}}"{{/if}}>
+  {{#if left-icon}}
+    {{> general/icon/icon name=left-icon }}
+  {{/if}}
+  <span class="cta-text-copy">{{copy}}</span>
+  {{#if right-icon}}
+    {{> general/icon/icon name=right-icon }}
+  {{/if}}
+</{{#if tag}}{{tag}}{{else}}a{{/if}}>

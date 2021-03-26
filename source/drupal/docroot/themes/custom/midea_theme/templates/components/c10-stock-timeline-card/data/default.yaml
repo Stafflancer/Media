@@ -1,0 +1,82 @@
+title: c10-stock-timeline-card
+
+cta-border-white-with-icon:
+  class: white
+  icon: arrow-right
+  copy: Take a tour in Midea factory
+
+cta-border-with-icon:
+  icon: arrow-right
+  copy: Take a tour in Midea factory
+  
+cardTitle: OUR HISTORY OF SUCCESS
+
+isActive: isActive
+
+bgImage: media/stock-timeline-card/bgImage.png
+
+vectorImage: media/stock-timeline-card/vector.png
+
+cornerImage: media/stock-timeline-card/corner.png
+
+timeLine:
+  - id: 1
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2014
+    h5:
+      type: h5
+      copy: Toshiba-Carrier1
+    small: Joint venture with  
+  - id: 2
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2015
+    h5:
+      type: h5
+      copy: Toshiba-Carrier2
+    small: Joint venture with  
+  - id: 3
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2016
+    h5:
+      type: h5
+      copy: Toshiba-Carrier3
+    small: Joint venture with  
+  - id: 4
+    h61:
+      type: h6
+      copy: toshiba
+    h62:
+      type: h6
+      copy: 2017
+    h5:
+      type: h5
+      copy: Toshiba-Carrier4
+    small: Joint venture with  
+
+h41:
+  type: h4
+  copy: 6.2 B
+
+h42:
+  type: h4
+  copy: 110.2 B
+
+h61:
+  type: h6
+  copy: 2013
+
+h62:
+  type: h6
+  copy: 2021

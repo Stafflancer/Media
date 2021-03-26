@@ -1,0 +1,21 @@
+title: c16-technology-and-innovation
+
+h1:
+  type: h1
+  copy: Technology and Innovation
+  
+avatarSrc: media/c16-technology-and-innovation/avatar.png
+
+slogan:  
+  type: h6
+  copy: Our dedication to innovation
+
+userName: Paul Fang - Midea CEO
+
+intro:
+  imgSrc: media/c16-technology-and-innovation/image.png
+  label: About
+  subTitle: 
+      icon: arrow-right
+      copy: Explore Key Technologies
+  description: Our global innovation and manufacturing facilities continuously invent new ways to humanize technology.

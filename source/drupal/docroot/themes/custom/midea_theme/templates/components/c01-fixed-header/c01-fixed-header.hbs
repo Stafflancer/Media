@@ -1,0 +1,23 @@
+<div data-component="c01-fixed-header" class="c01-fixed-header {{#if theme}} {{theme}} {{/if}}">
+  <div class="c01-fixed-header__nav">
+    <a href="{{logoUrl}}">
+      {{> general/logo/logo }}
+    </a>
+    <div class="c01-fixed-header__nav-menu">
+      {{#each fixedHeader.nav }}
+        {{> cta/cta-text/cta-text this }}
+      {{/each}}
+    </div>
+    <div class="c01-fixed-header__menu">
+      {{> general/icon/icon name=fixedHeader.menu }}
+    </div>
+    <div class="c01-fixed-header__close">
+      {{> general/icon/icon name=fixedHeader.close }}
+    </div>
+  </div>
+  <div class="c01-fixed-header__popup">
+    {{#each fixedHeader.nav }}
+      {{> cta/cta-text/cta-text this }}
+    {{/each}}
+  </div>
+</div>

@@ -31,3 +31,107 @@ h6:
   copy: Example Title Text
 
 copy: The quick brown fox jumps over the lazy dog
+
+cta-text:
+  copy: About
+
+cta-left-icon:
+  with-icon: true
+  left-icon: arrow-right
+  copy: Scroll to Explore
+
+cta-right-icon:
+  with-icon: true
+  right-icon: arrow-right
+  copy: Scroll to Explore
+
+cta-left-right-icon:
+  tag: span
+  with-icon: true
+  left-icon: arrow-right
+  right-icon: arrow-right
+  copy: Scroll to Explore
+
+cta-text-active:
+  class: active
+  copy: About
+
+cta-underline:
+  class: underline
+  copy: Scroll to Explore
+
+cta-border:
+  copy: Scroll to Explore
+
+cta-border-white:
+  class: white
+  copy: Scroll to Explore
+
+cta-border-white-with-icon:
+  class: white
+  icon: arrow-right
+  copy: Scroll to Explore
+
+cta-border-with-icon:
+  icon: arrow-right
+  copy: Scroll to Explore
+
+cta-right:
+  right: true
+  copy: Cancel
+
+cta-round:
+  icon: icon-play
+
+cta-round-border:
+  icon: icon-round-border
+
+cta-text-heading:
+  heading: heading-4
+  copy: About
+
+
+cardInfo:
+  title: Historical event title
+  subtitle: Optional pre-title
+  descript: The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products.
+  img: ./app/svg/icon/logo.svg
+  cta-round:
+    icon: icon-play
+
+
+cardVideo:
+  title: Historical event title
+  subtitle: Optional pre-title
+  video: '12'
+  cta-round:
+    icon: icon-play
+    class: card__media-play
+
+cardWeather:
+  # centigrade: 38°C
+  placeholder: Use your location
+  desc: It's hot in Shenzhen today! Beat the heat with Midea.
+  tips: Find out which Midea solution is best for your situation.
+
+videoInfo:
+  videoSrc: ''
+  title: Take A Tour
+  content: FACTORY OF THE FUTURE
+  time: '2:05'
+  play:
+    icon: icon-play
+    class: card-video__play
+  stop:
+    icon: icon-pause
+    class: card-video__stop
+  playicon: icon-play
+  stopicon: icon-pause
+
+videoPlayer:
+  src: ''
+  data: controls
+
+videoOverlay:
+  icon: icon-play
+    

@@ -1,0 +1,7 @@
+name: Midea Components
+description: Connectors to Muban.
+package: Custom
+
+type: module
+core_version_requirement: ^8|^9
+

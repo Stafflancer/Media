@@ -2,14 +2,25 @@
 <script src="./C26ProductIntro.ts"></script>
 
 <div data-component="c26-product-intro">
-  <div class="c26-product-intro__title">{{headerTitle }}</div>
-  <div class="c26-product-intro__img">
-    <div class="c26-product-intro__img-left">{{subTitle}}</div>
-    <div class="c26-product-intro__img-icon">
-      {{> cta/cta-gradient icon="icon-play" class="sastat"}}
+  <div class="c26-product-intro__top">
+    <div class="c26-product-intro__title">
+      {{> cta/cta-text headerTitle }}
+      {{> general/icon name="icon-plus" }}
     </div>
-    <div class="c26-product-intro__img-view">
-      <img src="{{topImg}}" alt="">
+    <div class="c26-product-intro__img">
+      <div class="c26-product-intro__img-left copy">
+        {{subTitle.main}}<span>{{subTitle.link}}</span>
+      </div>
+      <div class="c26-product-intro__img-icon active">
+        <span class="c26-product-intro__img-icon-shape"></span>
+        <div class="c26-product-intro__img-icon-text">
+          {{> general/icon name="icon-open" }}
+          <div>{{open}}</div>
+        </div>
+      </div>
+      <div class="c26-product-intro__img-view">
+        <img src="{{topImg}}" alt="">
+      </div>
     </div>
   </div>
   <div class="c26-product-intro__details">

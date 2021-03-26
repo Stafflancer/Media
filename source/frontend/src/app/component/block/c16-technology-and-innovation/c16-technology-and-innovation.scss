@@ -134,6 +134,7 @@ $prm: 100vw / 375;
 
   .c16-technology-and-innovation__container {
     padding-top: 40 * $prm;
+    display: flex;
 
     @include respond-to(MEDIUM) {
       padding-top: 0;
@@ -149,6 +150,7 @@ $prm: 100vw / 375;
       @include respond-to(MEDIUM) {
         padding: 0;
         max-width: 845 * $prd;
+        margin-left: 230 * $prd;
       }
 
       .c16-technology-and-innovation__title {

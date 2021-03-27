@@ -10,3 +10,8 @@ regions:
   footer: 'Footer'
 libraries:
   - midea_theme/global-styling
+
+component-libraries:
+  components:
+    paths: 
+      - templates/components

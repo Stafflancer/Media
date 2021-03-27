@@ -1,0 +1,59 @@
+{% set data = {
+    "logoUrl": "",
+    "swipers": [
+      {
+        "name": "Home",
+        "img": "../../assets/c05-self-segmentation-hero/Furniture1.png",
+        "btn": {
+          "icon": "arrow-right",
+          "copy": "Explore RAC products"
+        }
+      },
+      {
+        "title": "Discover the World of",
+        "air": "Air",
+        "descript": "Scroll horizontaly to explore our range of products for both home and office",
+        "mouseIcon": {
+          "with-icon": true,
+          "mouse-icon": "mouse-icon",
+          "copy": "Scroll to Explore"
+        },
+        "cta-text-active": {
+          "class": "active",
+          "copy": "Scroll to Explore"
+        },
+        "cardWeather": {
+          "placeholder": "Use your location",
+          "desc": "It's hot in Shenzhen today! Beat the heat with Midea.",
+          "tips": "Find out which Midea solution is best for your situation."
+        }
+      },
+      {
+        "name": "Business",
+        "img": "../../assets/c05-self-segmentation-hero/Desk1.png",
+        "btn": {
+          "class": "right",
+          "icon": "arrow-right",
+          "copy": "Explore LCAC products"
+        }
+      }
+    ],
+    "mouseIcon": {
+      "with-icon": true,
+      "mouse-icon": "mouse-icon",
+      "copy": "Scroll to Explore",
+      "left-icon": "arrow-left",
+      "right-icon": "arrow-right"
+    },
+    "cta-text-active": {
+      "class": "active",
+      "copy": "Scroll to Explore"
+    }
+} 
+%}
+
+{% include "@components/c05-self-segmentation-hero/c05-self-segmentation-hero.twig" 
+  with {
+    "data": data
+  }
+%}

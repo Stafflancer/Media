@@ -44,7 +44,7 @@ DAT.mideaGlobe = function(container, opts) {
 
   var camera, scene, renderer, w, h;
   var mesh, atmosphere, point, raycaster;
-  var points = []
+  var points = [];
 
   var overRenderer;
 
@@ -63,7 +63,6 @@ DAT.mideaGlobe = function(container, opts) {
   var PI_HALF = Math.PI / 2;
 
   function init() {
-
     var shader, uniforms, material;
     // w = 1200;
     // h = 1200;
@@ -109,21 +108,22 @@ DAT.mideaGlobe = function(container, opts) {
     container.addEventListener('mousedown', onMouseDown, false);
 
     window.addEventListener('resize', onWindowResize, false);
-
   }
 
-	function addData(data, opts, handleClick) {
-    console.log(handleClick)
+  function addData(data, opts, handleClick) {
+    console.log(handleClick);
     var lat, lng, size, color, i, colorFnWrapper;
     var singleGeometry;
 
-    colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
+    colorFnWrapper = function(data, i) {
+      return colorFn(data[i + 2]);
+    };
 
     singleGeometry = new THREE.Geometry();
     for (i = 0; i < data.length; i += 3) {
       lat = data[i];
       lng = data[i + 1];
-      color = colorFnWrapper(data,i);
+      color = colorFnWrapper(data, i);
       size = 0;
       addPoint(lat, lng, size, color, singleGeometry);
     }
@@ -133,16 +133,18 @@ DAT.mideaGlobe = function(container, opts) {
     var highlight2 = opts.info.highlight2;
     var temp = opts.info.temperature;
     var singlePoint;
-    singlePoint = new THREE.Mesh(singleGeometry, new THREE.MeshBasicMaterial({
-      color: 0xffffff,
-      vertexColors: THREE.FaceColors,
-      morphTargets: true
-    }));
+    singlePoint = new THREE.Mesh(
+      singleGeometry,
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        vertexColors: THREE.FaceColors,
+        morphTargets: true,
+      }),
+    );
     scene.add(singlePoint);
-    singlePoint.on('click', () => handleClick( title, temp, units, highlight1, highlight2))
-    this.points.push(singlePoint)
-
-  };
+    singlePoint.on('click', () => handleClick(title, temp, units, highlight1, highlight2));
+    this.points.push(singlePoint);
+  }
 
   function addPoint(lat, lng, size, color, subgeo) {
 

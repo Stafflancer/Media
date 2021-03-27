@@ -1,0 +1,29 @@
+$prd: 100vw / 1920;
+$prm: 100vw / 375;
+
+[data-component="c04-canton-fair-entry-banner"] {
+  width: 100%;
+  height: 100vh;
+  background: url("~/assets/c04-canton-fair-entry-banner/c04-canton-fair-entry-banner_bg.png")
+    no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .c04-canton-fair-entry-banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("~/assets/c04-canton-fair-entry-banner/banner_pc.png") no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-top-right-radius: 40px;
+
+    @include respond-to(MEDIUM) {
+      width: 1463 * $prd;
+      height: 713 * $prd;
+      border-top-right-radius: 40px;
+    }
+  }
+}

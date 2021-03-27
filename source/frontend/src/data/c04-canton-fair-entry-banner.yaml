@@ -1,0 +1,14 @@
+title: Scaffold
+
+meta:
+  id: A
+  status: qa
+  notes:
+  category:
+
+layout: home
+
+blocks:
+
+  - name: c04-canton-fair-entry-banner
+    data: import!../app/component/block/c04-canton-fair-entry-banner/data/default

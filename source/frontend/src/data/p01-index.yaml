@@ -1,0 +1,38 @@
+meta:
+  id: 'index' # can be number or string, used for ordering
+  status: 'dev' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Page' # to group pages in the overview
+
+layout: home
+
+blocks:
+  - name: 'c01-fixed-header'
+    data: 'import!../app/component/block/c01-fixed-header/data/default.yaml'
+
+  - name: 'c05-self-segmentation-hero'
+    data: 'import!../app/component/block/c05-self-segmentation-hero/data/default.yaml'
+
+  - name: c07-on-page-jump-links
+    data: import!../app/component/block/c07-on-page-jump-links/data/default
+
+  - name: "c10-stock-timeline-card"
+    data: "import!../app/component/block/c10-stock-timeline-card/data/default"
+
+  - name: "c12-history-timeline"
+    data: "import!../app/component/block/c12-history-timeline/data/default"
+  - name: "video-overlay"
+    data: "import!../app/component/block/video-overlay/data/default"
+
+  - name: "c13-global-capacity"
+    data: "import!../app/component/block/c13-global-capacity/data/default"
+
+  - name: "c16-technology-and-innovation"
+    data: "import!../app/component/block/c16-technology-and-innovation/data/default"
+
+  - name: "c21-video-player-section"
+    data: "import!../app/component/block/c21-video-player-section/data/default"
+
+  - name: 'c02-footer'
+    data: 'import!../app/component/block/c02-footer/data/default.yaml'
+

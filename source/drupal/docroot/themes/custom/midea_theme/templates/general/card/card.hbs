@@ -1,0 +1,22 @@
+<div data-component="card">
+  <div class="card__content">
+    {{#if img}}
+      <img src="{{img}}" alt="" class="card__media">
+    {{/if}}
+    {{#if video}}
+      <img src="{{videoImg}}" class="card__media img" alt="">
+      <video src="{{video}}" class="card__media video"></video>
+      {{> cta/cta-gradient/cta-gradient play }}
+      {{> cta/cta-gradient/cta-gradient stop }}
+    {{/if}}
+    <div class="card__title-content">
+      <div class="card__subtitle">{{subtitle}}</div>
+      <div class="card__title">{{title}}</div>
+    </div>
+  </div>
+  {{#if descript}}
+    <div class="card__footer">
+      {{descript}}
+    </div>
+  {{/if}}
+</div>

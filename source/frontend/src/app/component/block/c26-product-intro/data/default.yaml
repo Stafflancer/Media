@@ -1,0 +1,24 @@
+title: c26-product-intro
+
+headerTitle:
+  type: h1
+  copy: Breezeless
+subTitle:
+  main: The first & only split AC with side outlets. Creating 360° surround cooling while maintaining the highest energy efficiency.
+  link: energy efficiency
+open: switch off
+topImg: ../../assets/c26-product-intro/c26-product.png
+
+details:
+  - title: Optional pre-title
+    subtitle: The History
+    number: '01'
+  - title: Optional pre-title
+    subtitle: The History
+    number: '02'
+  - title: Optional pre-title
+    subtitle: The History
+    number: '03'
+  - title: Optional pre-title
+    subtitle: The History
+    number: '04'

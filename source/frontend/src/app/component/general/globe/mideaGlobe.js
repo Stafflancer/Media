@@ -9,13 +9,8 @@ DAT.mideaGlobe = function(container, opts) {
   var colorFn =
     opts.colorFn ||
     function(x) {
-<<<<<<< .merge_file_a13556
-      var c = new THREE.Color();
-      c.setHSL(0.6 - x * 0.5, 1.0, 0.5);
-=======
       var c = new THREE.Color('#ffffff');
       //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
->>>>>>> .merge_file_a17500
       return c;
     };
 
@@ -45,47 +40,8 @@ DAT.mideaGlobe = function(container, opts) {
         'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
         'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
         '}',
-<<<<<<< .merge_file_a13556
       ].join('\n'),
     },
-    atmosphere: {
-      uniforms: {},
-      vertexShader: [
-        'varying vec3 vNormal;',
-        'void main() {',
-        'vNormal = normalize( normalMatrix * normal );',
-        'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
-        '}',
-      ].join('\n'),
-      fragmentShader: [
-        'varying vec3 vNormal;',
-        'void main() {',
-        'float intensity = pow( 0.8 - dot( vNormal, vec3( 0, 0, 1.0 ) ), 12.0 );',
-        'gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 ) * intensity;',
-        '}',
-      ].join('\n'),
-    },
-=======
-      ].join('\n'),
-    },
-    // 'atmosphere' : {
-    //   uniforms: {},
-    //   vertexShader: [
-    //     'varying vec3 vNormal;',
-    //     'void main() {',
-    //       'vNormal = normalize( normalMatrix * normal );',
-    //       'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
-    //     '}'
-    //   ].join('\n'),
-    //   fragmentShader: [
-    //     'varying vec3 vNormal;',
-    //     'void main() {',
-    //       'float intensity = pow( 0.8 - dot( vNormal, vec3( 0, 0, 1.0 ) ), 12.0 );',
-    //       'gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 ) * intensity;',
-    //     '}'
-    //   ].join('\n')
-    // }
->>>>>>> .merge_file_a17500
   };
 
   var camera, scene, renderer, w, h;
@@ -109,12 +65,6 @@ DAT.mideaGlobe = function(container, opts) {
   var PI_HALF = Math.PI / 2;
 
   function init() {
-<<<<<<< .merge_file_a13556
-    container.style.color = '#fff';
-    container.style.font = '13px/20px Arial, sans-serif';
-
-=======
->>>>>>> .merge_file_a17500
     var shader, uniforms, material;
     // w = 1200;
     // h = 1200;
@@ -143,40 +93,6 @@ DAT.mideaGlobe = function(container, opts) {
     mesh.rotation.y = Math.PI;
     scene.add(mesh);
 
-    // shader = Shaders['atmosphere'];
-    // uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-
-<<<<<<< .merge_file_a13556
-    material = new THREE.ShaderMaterial({
-      uniforms: uniforms,
-      vertexShader: shader.vertexShader,
-      fragmentShader: shader.fragmentShader,
-      side: THREE.BackSide,
-      blending: THREE.AdditiveBlending,
-      transparent: true,
-    });
-
-    mesh = new THREE.Mesh(geometry, material);
-    mesh.scale.set(1.1, 1.1, 1.1);
-    scene.add(mesh);
-
-=======
-    // material = new THREE.ShaderMaterial({
-
-    //       uniforms: uniforms,
-    //       vertexShader: shader.vertexShader,
-    //       fragmentShader: shader.fragmentShader,
-    //       side: THREE.BackSide,
-    //       blending: THREE.AdditiveBlending,
-    //       transparent: true
-
-    //     });
-
-    // mesh = new THREE.Mesh(geometry, material);
-    // mesh.scale.set( 1.1, 1.1, 1.1 );
-    // scene.add(mesh);
-
->>>>>>> .merge_file_a17500
     geometry = new THREE.CubeGeometry(0.75, 0.75, 1);
     geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0, 0, -0.5));
 
@@ -187,129 +103,17 @@ DAT.mideaGlobe = function(container, opts) {
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(w, h);
 
-    //renderer.domElement.style.position = 'absolute';
-
     container.appendChild(renderer.domElement);
 
     new Interaction(renderer, scene, camera);
 
     container.addEventListener('mousedown', onMouseDown, false);
 
-    //container.addEventListener('mousewheel', onMouseWheel, false);
-
-    //document.addEventListener('keydown', onDocumentKeyDown, false);
-
-    //window.addEventListener('resize', onWindowResize, false);
-
-<<<<<<< .merge_file_a13556
-    //window.addEventListener('click', onWindowMouseDown, false);
-=======
-    // window.addEventListener('click', onWindowMouseDown, false);
->>>>>>> .merge_file_a17500
-
-    // container.addEventListener('mouseover', function() {
-    //   overRenderer = true;
-    // }, false);
-
-    // container.addEventListener('mouseout', function() {
-    //   overRenderer = false;
-    // }, false);
+    window.addEventListener('resize', onWindowResize, false);
   }
 
-  function addData(data, opts) {
-<<<<<<< .merge_file_a13556
-    var lat, lng, size, color, i, step, colorFnWrapper;
-    console.log(opts);
-    opts.animated = opts.animated || false;
-    this.is_animated = opts.animated;
-    opts.format = opts.format || 'magnitude'; // other option is 'legend'
-    console.log(opts.format);
-    if (opts.format === 'magnitude') {
-      step = 3;
-      colorFnWrapper = function(data, i) {
-        return colorFn(data[i + 2]);
-      };
-    } else if (opts.format === 'legend') {
-      step = 4;
-      colorFnWrapper = function(data, i) {
-        return colorFn(data[i + 3]);
-      };
-    } else {
-      throw 'error: format not supported: ' + opts.format;
-    }
-
-    if (opts.animated) {
-      if (this._baseGeometry === undefined) {
-        this._baseGeometry = new THREE.Geometry();
-        for (i = 0; i < data.length; i += step) {
-          lat = data[i];
-          lng = data[i + 1];
-          //        size = data[i + 2];
-          color = colorFnWrapper(data, i);
-          size = 0;
-          addPoint(lat, lng, size, color, this._baseGeometry);
-        }
-      }
-      if (this._morphTargetId === undefined) {
-        this._morphTargetId = 0;
-      } else {
-        this._morphTargetId += 1;
-      }
-      opts.name = opts.name || 'morphTarget' + this._morphTargetId;
-    }
-    var subgeo = new THREE.Geometry();
-    for (i = 0; i < data.length; i += step) {
-      lat = data[i];
-      lng = data[i + 1];
-      color = colorFnWrapper(data, i);
-      size = data[i + 2];
-      size = size * 200;
-      addPoint(lat, lng, size, color, subgeo);
-    }
-    if (opts.animated) {
-      this._baseGeometry.morphTargets.push({ name: opts.name, vertices: subgeo.vertices });
-    } else {
-      this._baseGeometry = subgeo;
-    }
-  }
-
-  function createPoints() {
-    if (this._baseGeometry !== undefined) {
-      if (this.is_animated === false) {
-        this.points = new THREE.Mesh(
-          this._baseGeometry,
-          new THREE.MeshBasicMaterial({
-            color: 0xffffff,
-            vertexColors: THREE.FaceColors,
-            morphTargets: false,
-          }),
-        );
-      } else {
-        if (this._baseGeometry.morphTargets.length < 8) {
-          console.log('t l', this._baseGeometry.morphTargets.length);
-          var padding = 8 - this._baseGeometry.morphTargets.length;
-          console.log('padding', padding);
-          for (var i = 0; i <= padding; i++) {
-            console.log('padding', i);
-            this._baseGeometry.morphTargets.push({
-              name: 'morphPadding' + i,
-              vertices: this._baseGeometry.vertices,
-            });
-          }
-        }
-        this.points = new THREE.Mesh(
-          this._baseGeometry,
-          new THREE.MeshBasicMaterial({
-            color: 0xffffff,
-            vertexColors: THREE.FaceColors,
-            morphTargets: true,
-          }),
-        );
-      }
-      scene.add(this.points);
-
-      console.log(this.points);
-=======
+  function addData(data, opts, handleClick) {
+    console.log(handleClick);
     var lat, lng, size, color, i, colorFnWrapper;
     var singleGeometry;
 
@@ -324,25 +128,12 @@ DAT.mideaGlobe = function(container, opts) {
       color = colorFnWrapper(data, i);
       size = 0;
       addPoint(lat, lng, size, color, singleGeometry);
->>>>>>> .merge_file_a17500
     }
-    //this._baseGeometry.push(singleGeometry)
-    // if(this._morphTargetId === undefined) {
-    //   this._morphTargetId = 0;
-    // } else {
-    //   this._morphTargetId += 1;
-    // }
-    // opts.name = opts.name || 'morphTarget'+this._morphTargetId;
-    // var subgeo = new THREE.Geometry();
-    // for (i = 0; i < data.length; i += 3) {
-    //   lat = data[i];
-    //   lng = data[i + 1];
-    //   color = colorFnWrapper(data,i);
-    //   size = data[i + 2];
-    //   size = size*200;
-    //   addPoint(lat, lng, size, color, subgeo);
-    // }
-    var data = 123123123;
+    var title = opts.name;
+    var units = opts.info.units;
+    var highlight1 = opts.info.highlight1;
+    var highlight2 = opts.info.highlight2;
+    var temp = opts.info.temperature;
     var singlePoint;
     singlePoint = new THREE.Mesh(
       singleGeometry,
@@ -353,7 +144,7 @@ DAT.mideaGlobe = function(container, opts) {
       }),
     );
     scene.add(singlePoint);
-    singlePoint.on('click', () => handleClick(data));
+    singlePoint.on('click', () => handleClick(title, temp, units, highlight1, highlight2));
     this.points.push(singlePoint);
   }
 
@@ -421,59 +212,10 @@ DAT.mideaGlobe = function(container, opts) {
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
-  function onMouseWheel(event) {
-    event.preventDefault();
-    if (overRenderer) {
-      zoom(event.wheelDeltaY * 0.3);
-    }
-    return false;
-  }
-
-  function onDocumentKeyDown(event) {
-    switch (event.keyCode) {
-      case 38:
-        zoom(100);
-        event.preventDefault();
-        break;
-      case 40:
-        zoom(-100);
-        event.preventDefault();
-        break;
-    }
-  }
-
-<<<<<<< .merge_file_a13556
-  // function onWindowMouseDown(event) {
-  // 	mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
-  //   mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
-
-  //   raycaster.setFromCamera( mouse, camera );
-
-  //   var intersects = raycaster.intersectObjects( scene.children );
-
-  // 	console.log(intersects)
-
-  //   if ( intersects.length > 0 ) {
-
-  //       intersects[1].object.callback();
-
-  //   }
-  // }
-
-  function onWindowResize(event) {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-=======
-  function handleClick(data) {
-    console.log(data);
-  }
-
   function onWindowResize(event) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.offsetWidth, container.offsetHeight);
->>>>>>> .merge_file_a17500
   }
 
   function zoom(delta) {
@@ -506,46 +248,9 @@ DAT.mideaGlobe = function(container, opts) {
   init();
   this.animate = animate;
 
-  this.__defineGetter__('time', function() {
-    return this._time || 0;
-  });
-
-  this.__defineSetter__('time', function(t) {
-    console.log('1221');
-    var validMorphs = [];
-    var morphDict = this.points.morphTargetDictionary;
-    for (var k in morphDict) {
-      if (k.indexOf('morphPadding') < 0) {
-        validMorphs.push(morphDict[k]);
-      }
-    }
-    validMorphs.sort();
-    var l = validMorphs.length - 1;
-    var scaledt = t * l + 1;
-    var index = Math.floor(scaledt);
-    for (i = 0; i < validMorphs.length; i++) {
-      this.points.morphTargetInfluences[validMorphs[i]] = 0;
-    }
-    var lastIndex = index - 1;
-    var leftover = scaledt - index;
-    if (lastIndex >= 0) {
-      this.points.morphTargetInfluences[lastIndex] = 1 - leftover;
-    }
-    this.points.morphTargetInfluences[index] = leftover;
-    this._time = t;
-  });
-
-  function reset() {
-    scene.remove(this.points);
-    this.points = null;
-  }
-
   this.addData = addData;
-  //this.createPoints = createPoints;
   this.renderer = renderer;
   this.scene = scene;
-  this.reset = reset;
-  //this._baseGeometry = baseGeometry;
   this.points = points;
 
   return this;

@@ -1,0 +1,60 @@
+{% set data = {
+    "title": "c12-history-timeline",
+    "left": {
+      "title": {
+        "type": "h1",
+        "copy": "The History"
+      },
+      "subTitle": "The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products with 11 manufacturing bases in China, Vietnam, India, Egypt, Brazil, and Argentina."
+    },
+    "swipers": [
+      {
+        "title": "Historical event title",
+        "year": 2020,
+        "subtitle": "Optional pre-title",
+        "descript": "The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products.",
+        "img": "../../assets/placeholder/demo.jpg",
+        "cta-round": {
+          "icon": "icon-play"
+        }
+      },
+      {
+        "title": "Historical event title",
+        "year": 2019,
+        "subtitle": "Optional pre-title",
+        "video": "../../assets/placeholder/sample.mp4",
+        "videoImg": "../../assets/placeholder/demo.jpg",
+        "videoOverlay": {
+          "video": {
+            "src": "../../assets/placeholder/sample.mp4",
+            "data": "controls"
+          }
+        },
+        "play": {
+          "icon": "icon-play",
+          "class": "card__media-play"
+        },
+        "stop": {
+          "icon": "icon-pause",
+          "class": "card__media-stop"
+        }
+      },
+      {
+        "title": "Historical event title",
+        "year": 2018,
+        "subtitle": "Optional pre-title",
+        "descript": "The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products.",
+        "img": "../../assets/placeholder/demo.jpg",
+        "cta-round": {
+          "icon": "icon-play"
+        }
+      }
+    ]
+  }
+%}
+
+{% include "@components/c12-history-timeline/c12-history-timeline.twig" 
+  with {
+    "data": data
+  }
+%}

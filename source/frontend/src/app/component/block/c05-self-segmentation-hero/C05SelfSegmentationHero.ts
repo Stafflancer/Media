@@ -15,7 +15,10 @@ export default class C05SelfSegmentationHero extends AbstractBlock {
   protected init = (): void => {
     var swiper = new Swiper(this.swiperContainer!, {
       slidesPerView: 'auto',
-      mousewheel: true,
+      mousewheel: {
+        forceToAxis: true,
+        releaseOnEdges: true,
+      },
       freeMode: true,
       initialSlide: 1,
       centeredSlides: true,

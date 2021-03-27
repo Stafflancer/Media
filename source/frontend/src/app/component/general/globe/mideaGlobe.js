@@ -33,13 +33,13 @@ DAT.mideaGlobe = function(container, opts) {
         'varying vec3 vNormal;',
         'varying vec2 vUv;',
         'void main() {',
-          'vec3 diffuse = texture2D( texture, vUv ).xyz;',
-          'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
-          'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
-          'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
-        '}'
-      ].join('\n')
-    }
+        'vec3 diffuse = texture2D( texture, vUv ).xyz;',
+        'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
+        'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
+        'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
+        '}',
+      ].join('\n'),
+    },
   };
 
   var camera, scene, renderer, w, h;
@@ -147,9 +147,8 @@ DAT.mideaGlobe = function(container, opts) {
   }
 
   function addPoint(lat, lng, size, color, subgeo) {
-
-    var phi = (90 - lat) * Math.PI / 180;
-    var theta = (180 - lng) * Math.PI / 180;
+    var phi = ((90 - lat) * Math.PI) / 180;
+    var theta = ((180 - lng) * Math.PI) / 180;
 
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
@@ -211,10 +210,10 @@ DAT.mideaGlobe = function(container, opts) {
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
-  function onWindowResize( event ) {
+  function onWindowResize(event) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( container.offsetWidth, container.offsetHeight );
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
   }
 
   function zoom(delta) {

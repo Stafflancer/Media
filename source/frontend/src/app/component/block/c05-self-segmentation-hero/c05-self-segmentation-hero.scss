@@ -118,11 +118,10 @@ $prmh: 100vh / 640;
           position: absolute;
           //top: 123 * $prm;
           //top: auto;
-          bottom: 65%;
+          bottom: 60%;
           left: 23 * $prm;
           @include respond-to(MEDIUM) {
             top: auto;
-            bottom: 65%;
             left: 233 * $prd;
             &.right {
               left: 191 * $prd;
@@ -162,11 +161,12 @@ $prmh: 100vh / 640;
             height: 224 * $prmh;
           }
           @include respond-to(MEDIUM) {
-            top: 45%;
+            top: 40%;
             left: 233 * $prd;
             width: 1120 * $prd;
             height: 516 * $prh;
             &.right {
+              top: 40%;
               left: 191 * $prd;
               width: 1112 * $prd;
               height: 444 * $prh;

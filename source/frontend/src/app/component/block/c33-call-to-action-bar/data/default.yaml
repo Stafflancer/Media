@@ -1,0 +1,14 @@
+title: c33-call-to-action-bar
+
+mainClass: default
+topTitle: Explore home and business products and solutions by the world's No.1 air treatment brand.
+
+btns:
+  - icon: arrow-right
+    copy: Explore RAC products
+  - icon: arrow-right
+    copy: Explore LCAC products
+discover:
+  with-icon: true
+  right-icon: arrow-right
+  copy: Discover All

@@ -1,32 +1,34 @@
 import * as THREE from 'three';
 import { Interaction } from 'three.interaction';
 
-var DAT = DAT || {}
+var DAT = DAT || {};
 
 DAT.mideaGlobe = function(container, opts) {
   opts = opts || {};
 
-  var colorFn = opts.colorFn || function(x) {
-    var c = new THREE.Color('#ffffff');
-    //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
-    return c;
-  };
+  var colorFn =
+    opts.colorFn ||
+    function(x) {
+      var c = new THREE.Color('#ffffff');
+      //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+      return c;
+    };
 
-	var imgDir = opts.imgDir || '/globe/';
+  var imgDir = opts.imgDir || '/globe/';
 
   var Shaders = {
-    'earth' : {
+    earth: {
       uniforms: {
-        'texture': { type: 't', value: null }
+        texture: { type: 't', value: null },
       },
       vertexShader: [
         'varying vec3 vNormal;',
         'varying vec2 vUv;',
         'void main() {',
-          'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
-          'vNormal = normalize( normalMatrix * normal );',
-          'vUv = uv;',
-        '}'
+        'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
+        'vNormal = normalize( normalMatrix * normal );',
+        'vUv = uv;',
+        '}',
       ].join('\n'),
       fragmentShader: [
         'uniform sampler2D texture;',
@@ -44,24 +46,25 @@ DAT.mideaGlobe = function(container, opts) {
 
   var camera, scene, renderer, w, h;
   var mesh, atmosphere, point, raycaster;
-  var points = []
+  var points = [];
 
   var overRenderer;
 
   var curZoomSpeed = 0;
   var zoomSpeed = 50;
 
-  var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
+  var mouse = { x: 0, y: 0 },
+    mouseOnDown = { x: 0, y: 0 };
   var rotation = { x: 0, y: 0 },
-      target = { x: Math.PI*3/2, y: Math.PI / 6.0 },
-      targetOnDown = { x: 0, y: 0 };
+    target = { x: (Math.PI * 3) / 2, y: Math.PI / 6.0 },
+    targetOnDown = { x: 0, y: 0 };
 
-  var distance = 100000, distanceTarget = 100000;
+  var distance = 100000,
+    distanceTarget = 100000;
   var padding = 40;
   var PI_HALF = Math.PI / 2;
 
   function init() {
-
     var shader, uniforms, material;
     // w = 1200;
     // h = 1200;
@@ -78,28 +81,26 @@ DAT.mideaGlobe = function(container, opts) {
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture(imgDir+'world.jpg');
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture(imgDir + 'world.jpg');
 
     material = new THREE.ShaderMaterial({
-
-          uniforms: uniforms,
-          vertexShader: shader.vertexShader,
-          fragmentShader: shader.fragmentShader
-
-        });
+      uniforms: uniforms,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader,
+    });
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.y = Math.PI;
     scene.add(mesh);
 
     geometry = new THREE.CubeGeometry(0.75, 0.75, 1);
-    geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0,0,-0.5));
+    geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0, 0, -0.5));
 
     point = new THREE.Mesh(geometry);
 
-		raycaster = new THREE.Raycaster();
+    raycaster = new THREE.Raycaster();
 
-    renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(w, h);
 
     container.appendChild(renderer.domElement);
@@ -117,13 +118,15 @@ DAT.mideaGlobe = function(container, opts) {
     var lat, lng, size, color, i, colorFnWrapper;
     var singleGeometry;
 
-    colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
+    colorFnWrapper = function(data, i) {
+      return colorFn(data[i + 2]);
+    };
 
     singleGeometry = new THREE.Geometry();
     for (i = 0; i < data.length; i += 3) {
       lat = data[i];
       lng = data[i + 1];
-      color = colorFnWrapper(data,i);
+      color = colorFnWrapper(data, i);
       size = 0;
       addPoint(lat, lng, size, color, singleGeometry);
     }
@@ -133,11 +136,14 @@ DAT.mideaGlobe = function(container, opts) {
     var highlight2 = opts.info.highlight2;
     var temp = opts.info.temperature;
     var singlePoint;
-    singlePoint = new THREE.Mesh(singleGeometry, new THREE.MeshBasicMaterial({
-      color: 0xffffff,
-      vertexColors: THREE.FaceColors,
-      morphTargets: true
-    }));
+    singlePoint = new THREE.Mesh(
+      singleGeometry,
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        vertexColors: THREE.FaceColors,
+        morphTargets: true,
+      }),
+    );
     scene.add(singlePoint);
     singlePoint.on('click', () => handleClick( title, temp, units, highlight1, highlight2))
     this.points.push(singlePoint)
@@ -145,9 +151,8 @@ DAT.mideaGlobe = function(container, opts) {
   };
 
   function addPoint(lat, lng, size, color, subgeo) {
-
-    var phi = (90 - lat) * Math.PI / 180;
-    var theta = (180 - lng) * Math.PI / 180;
+    var phi = ((90 - lat) * Math.PI) / 180;
+    var theta = ((180 - lng) * Math.PI) / 180;
 
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
@@ -155,15 +160,13 @@ DAT.mideaGlobe = function(container, opts) {
 
     point.lookAt(mesh.position);
 
-		point.scale.x = Math.max( size, 10 );
-		point.scale.y = Math.max( size, 10 );
-    point.scale.z = Math.max( size, 0.1 ); // avoid non-invertible matrix
+    point.scale.x = Math.max(size, 10);
+    point.scale.y = Math.max(size, 10);
+    point.scale.z = Math.max(size, 0.1); // avoid non-invertible matrix
     point.updateMatrix();
 
     for (var i = 0; i < point.geometry.faces.length; i++) {
-
       point.geometry.faces[i].color = color;
-
     }
 
     THREE.GeometryUtils.merge(subgeo, point);
@@ -176,7 +179,7 @@ DAT.mideaGlobe = function(container, opts) {
     container.addEventListener('mouseup', onMouseUp, false);
     container.addEventListener('mouseout', onMouseOut, false);
 
-    mouseOnDown.x = - event.clientX;
+    mouseOnDown.x = -event.clientX;
     mouseOnDown.y = event.clientY;
 
     targetOnDown.x = target.x;
@@ -186,16 +189,16 @@ DAT.mideaGlobe = function(container, opts) {
   }
 
   function onMouseMove(event) {
-    mouse.x = - event.clientX;
+    mouse.x = -event.clientX;
     mouse.y = event.clientY;
 
-    var zoomDamp = distance/1000;
+    var zoomDamp = distance / 1000;
 
     target.x = targetOnDown.x + (mouse.x - mouseOnDown.x) * 0.005 * zoomDamp;
     target.y = targetOnDown.y + (mouse.y - mouseOnDown.y) * 0.005 * zoomDamp;
 
     target.y = target.y > PI_HALF ? PI_HALF : target.y;
-    target.y = target.y < - PI_HALF ? - PI_HALF : target.y;
+    target.y = target.y < -PI_HALF ? -PI_HALF : target.y;
   }
 
   function onMouseUp(event) {
@@ -214,7 +217,7 @@ DAT.mideaGlobe = function(container, opts) {
   function onWindowResize( event ) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( container.offsetWidth, container.offsetHeight );
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
   }
 
   function zoom(delta) {
@@ -253,8 +256,6 @@ DAT.mideaGlobe = function(container, opts) {
   this.points = points;
 
   return this;
-
 };
-
 
 export default DAT;

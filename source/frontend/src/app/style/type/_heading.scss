@@ -30,13 +30,13 @@ h6 {
 
   @include respond-to(MEDIUM) {
     font-size: 5.6rem;
-    line-height: .8615;
+    line-height: 0.8615;
   }
 
   @include respond-to(LARGE) {
     font-size: 14.4rem;
     font-weight: 500;
-    line-height: .77777;
+    line-height: 0.77777;
     letter-spacing: -3px;
   }
 }
@@ -60,7 +60,7 @@ h6 {
 
   @include respond-to(LARGE) {
     font-size: 12rem;
-    line-height: .8667;
+    line-height: 0.8667;
     letter-spacing: -2px;
   }
 }
@@ -84,7 +84,7 @@ h6 {
 
   @include respond-to(LARGE) {
     font-size: 8.8rem;
-    line-height: .8182;
+    line-height: 0.8182;
     letter-spacing: -1px;
   }
 }
@@ -101,7 +101,7 @@ h6 {
 
   @include respond-to(LARGE) {
     font-size: 5.6rem;
-    line-height: .8571;
+    line-height: 0.8571;
   }
 }
 
@@ -109,10 +109,10 @@ h6 {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.333;
-  
+
   @include respond-to(LARGE) {
     font-size: 4rem;
-    line-height:1;
+    line-height: 1;
   }
 }
 
@@ -121,5 +121,3 @@ h6 {
   font-size: 1.4rem;
   font-weight: bold;
 }
-
-

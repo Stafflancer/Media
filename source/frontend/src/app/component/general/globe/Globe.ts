@@ -1,8 +1,8 @@
 import AbstractComponent from '../../AbstractComponent';
-import DAT from './mideaGlobe.js'
+import DAT from './mideaGlobe.js';
 
 export default class Globe extends AbstractComponent {
-  public static readonly displayName:string = 'globe';
+  public static readonly displayName: string = 'globe';
   private readonly container = this.getElement<HTMLElement>('.globe__container');
   private readonly popup = this.getElement<HTMLElement>('.js-popup');
   private readonly title = this.getElement<HTMLElement>('.js-title');
@@ -12,7 +12,7 @@ export default class Globe extends AbstractComponent {
   private readonly highlight2 = this.getElement<HTMLElement>('.js-highlight2');
   private readonly close = this.getElement<HTMLElement>('.js-close');
 
-  constructor(el:HTMLElement) {
+  constructor(el: HTMLElement) {
     super(el);
 
     this.init()
@@ -32,13 +32,13 @@ export default class Globe extends AbstractComponent {
   private init = ()=> {
     let _this = this
     let globe = new DAT.mideaGlobe(this.container, {
-      imgDir: '../../assets/globe/'
+      imgDir: '../../assets/globe/',
     });
 
     globe.animate();
 
     var xhr: any;
-    
+
     xhr = new XMLHttpRequest();
     xhr.open('GET', '../../assets/globe/data.json', true);
     xhr.onreadystatechange = function() {
@@ -53,7 +53,7 @@ export default class Globe extends AbstractComponent {
       }
     };
     xhr.send(null);
-  }
+  };
 
   private handleClose = () => {
     this.popup!.classList.remove('show');

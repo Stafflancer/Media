@@ -13,6 +13,25 @@ $prm: 100vw / 375;
       padding-left: 216 * $prd;
       padding-top: 240 * $prd;
     }
+    &.active {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url("~/assets/c26-product-intro/Mobile_pattern.png") no-repeat;
+        background-size: cover;
+      }
+
+      @include respond-to(MEDIUM) {
+        &::after {
+          background: url("~/assets/c26-product-intro/Patterns.png") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
 
     .c26-product-intro__title {
       font-size: 6.4rem;
@@ -62,6 +81,7 @@ $prm: 100vw / 375;
       flex-direction: column;
       align-items: flex-end;
       position: relative;
+      z-index: 10;
 
       @include respond-to(MEDIUM) {
         flex-direction: row;

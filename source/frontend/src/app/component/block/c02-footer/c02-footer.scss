@@ -68,7 +68,46 @@ $prm: 100vw / 375;
         display: none;
       }
     }
+    // @media screen and(max-width:1024px) {
+    //   .body {
+    //     width: $prd * 1920;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     max-width: 1920px;
+    //     color: #fff;
+    //     padding: 0 50px;
+    //     text-align: center;
+    //     .cta-text{
+    //       &:nth-child(2){
+    //         display:none;
+    //       }
+    //     }
+    //     .left {
+    //       text-align: left;
+    //       svg {
+    //         height: 38px;
+    //         width: 94px;
+    //       }
+    //     }
+    //   }
+    //   .body2 {
+    //     display: none;
+    //   }
+    //   .content {
+    //     .cta-text {
+    //       display: block;
+    //       line-height: 70px;
+    //       font-weight: 300;
+    //     }
+    //     .cta-text {
+    //       &:nth-child(2) {
+    //         border: 0;
+    //       }
+    //     }
+    //   }
+    // }
     @media screen and(max-width:1024px) {
+<<<<<<< HEAD
       .body {
         width: $prd * 1920;
         display: flex;
@@ -108,6 +147,9 @@ $prm: 100vw / 375;
     }
     @media screen and(max-width:700px) {
       font-weight: 300;
+=======
+        font-weight: 300;
+>>>>>>> ddb1154 (修改1024像素分界线)
       .body {
         display: none;
       }

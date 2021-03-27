@@ -2,5 +2,26 @@
 <script src="./Globe.ts"></script>
 
 <div data-component="globe">
+  <div class="globe__bg-fix"></div>
   <div class="globe__container"></div>
+  <div class="globe__overlay js-popup">
+    <div class="globe__card-popup">
+      <div class="globe__card-name">
+        <span class="js-title copy">Thiland</span>
+        <div class="globe__card-line"></div>
+        <span class="js-temperature">38C</span>
+      </div>
+      <div class="globe__card-units">
+        <h4 class="heading heading-4 js-units">21M</h4>
+        <p class="copy">units yearly</p>
+      </div>
+      <div class="globe__card-place">
+        <h4 class="heading heading-4 js-highlight1">First</h4>
+        <p class="copy js-highlight2">overseas plant</p>
+      </div>
+      <a class="globe__card-close js-close">
+        {{> general/icon name="header-close" }}
+      </a>
+    </div>
+  </div>
 </div>

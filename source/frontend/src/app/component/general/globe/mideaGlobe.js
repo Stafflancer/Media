@@ -9,8 +9,13 @@ DAT.mideaGlobe = function(container, opts) {
   var colorFn =
     opts.colorFn ||
     function(x) {
+<<<<<<< .merge_file_a13556
       var c = new THREE.Color();
       c.setHSL(0.6 - x * 0.5, 1.0, 0.5);
+=======
+      var c = new THREE.Color('#ffffff');
+      //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+>>>>>>> .merge_file_a17500
       return c;
     };
 
@@ -40,6 +45,7 @@ DAT.mideaGlobe = function(container, opts) {
         'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
         'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
         '}',
+<<<<<<< .merge_file_a13556
       ].join('\n'),
     },
     atmosphere: {
@@ -59,10 +65,32 @@ DAT.mideaGlobe = function(container, opts) {
         '}',
       ].join('\n'),
     },
+=======
+      ].join('\n'),
+    },
+    // 'atmosphere' : {
+    //   uniforms: {},
+    //   vertexShader: [
+    //     'varying vec3 vNormal;',
+    //     'void main() {',
+    //       'vNormal = normalize( normalMatrix * normal );',
+    //       'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
+    //     '}'
+    //   ].join('\n'),
+    //   fragmentShader: [
+    //     'varying vec3 vNormal;',
+    //     'void main() {',
+    //       'float intensity = pow( 0.8 - dot( vNormal, vec3( 0, 0, 1.0 ) ), 12.0 );',
+    //       'gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 ) * intensity;',
+    //     '}'
+    //   ].join('\n')
+    // }
+>>>>>>> .merge_file_a17500
   };
 
   var camera, scene, renderer, w, h;
   var mesh, atmosphere, point, raycaster;
+  var points = [];
 
   var overRenderer;
 
@@ -81,12 +109,17 @@ DAT.mideaGlobe = function(container, opts) {
   var PI_HALF = Math.PI / 2;
 
   function init() {
+<<<<<<< .merge_file_a13556
     container.style.color = '#fff';
     container.style.font = '13px/20px Arial, sans-serif';
 
+=======
+>>>>>>> .merge_file_a17500
     var shader, uniforms, material;
-    w = container.offsetWidth || window.innerWidth;
-    h = container.offsetHeight || window.innerHeight;
+    // w = 1200;
+    // h = 1200;
+    w = container.offsetWidth;
+    h = container.offsetHeight;
 
     camera = new THREE.PerspectiveCamera(30, w / h, 1, 10000);
     camera.position.z = distance;
@@ -110,9 +143,10 @@ DAT.mideaGlobe = function(container, opts) {
     mesh.rotation.y = Math.PI;
     scene.add(mesh);
 
-    shader = Shaders['atmosphere'];
-    uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+    // shader = Shaders['atmosphere'];
+    // uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
+<<<<<<< .merge_file_a13556
     material = new THREE.ShaderMaterial({
       uniforms: uniforms,
       vertexShader: shader.vertexShader,
@@ -126,6 +160,23 @@ DAT.mideaGlobe = function(container, opts) {
     mesh.scale.set(1.1, 1.1, 1.1);
     scene.add(mesh);
 
+=======
+    // material = new THREE.ShaderMaterial({
+
+    //       uniforms: uniforms,
+    //       vertexShader: shader.vertexShader,
+    //       fragmentShader: shader.fragmentShader,
+    //       side: THREE.BackSide,
+    //       blending: THREE.AdditiveBlending,
+    //       transparent: true
+
+    //     });
+
+    // mesh = new THREE.Mesh(geometry, material);
+    // mesh.scale.set( 1.1, 1.1, 1.1 );
+    // scene.add(mesh);
+
+>>>>>>> .merge_file_a17500
     geometry = new THREE.CubeGeometry(0.75, 0.75, 1);
     geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0, 0, -0.5));
 
@@ -136,7 +187,7 @@ DAT.mideaGlobe = function(container, opts) {
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(w, h);
 
-    renderer.domElement.style.position = 'absolute';
+    //renderer.domElement.style.position = 'absolute';
 
     container.appendChild(renderer.domElement);
 
@@ -150,7 +201,11 @@ DAT.mideaGlobe = function(container, opts) {
 
     //window.addEventListener('resize', onWindowResize, false);
 
+<<<<<<< .merge_file_a13556
     //window.addEventListener('click', onWindowMouseDown, false);
+=======
+    // window.addEventListener('click', onWindowMouseDown, false);
+>>>>>>> .merge_file_a17500
 
     // container.addEventListener('mouseover', function() {
     //   overRenderer = true;
@@ -162,6 +217,7 @@ DAT.mideaGlobe = function(container, opts) {
   }
 
   function addData(data, opts) {
+<<<<<<< .merge_file_a13556
     var lat, lng, size, color, i, step, colorFnWrapper;
     console.log(opts);
     opts.animated = opts.animated || false;
@@ -253,7 +309,52 @@ DAT.mideaGlobe = function(container, opts) {
       scene.add(this.points);
 
       console.log(this.points);
+=======
+    var lat, lng, size, color, i, colorFnWrapper;
+    var singleGeometry;
+
+    colorFnWrapper = function(data, i) {
+      return colorFn(data[i + 2]);
+    };
+
+    singleGeometry = new THREE.Geometry();
+    for (i = 0; i < data.length; i += 3) {
+      lat = data[i];
+      lng = data[i + 1];
+      color = colorFnWrapper(data, i);
+      size = 0;
+      addPoint(lat, lng, size, color, singleGeometry);
+>>>>>>> .merge_file_a17500
     }
+    //this._baseGeometry.push(singleGeometry)
+    // if(this._morphTargetId === undefined) {
+    //   this._morphTargetId = 0;
+    // } else {
+    //   this._morphTargetId += 1;
+    // }
+    // opts.name = opts.name || 'morphTarget'+this._morphTargetId;
+    // var subgeo = new THREE.Geometry();
+    // for (i = 0; i < data.length; i += 3) {
+    //   lat = data[i];
+    //   lng = data[i + 1];
+    //   color = colorFnWrapper(data,i);
+    //   size = data[i + 2];
+    //   size = size*200;
+    //   addPoint(lat, lng, size, color, subgeo);
+    // }
+    var data = 123123123;
+    var singlePoint;
+    singlePoint = new THREE.Mesh(
+      singleGeometry,
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        vertexColors: THREE.FaceColors,
+        morphTargets: true,
+      }),
+    );
+    scene.add(singlePoint);
+    singlePoint.on('click', () => handleClick(data));
+    this.points.push(singlePoint);
   }
 
   function addPoint(lat, lng, size, color, subgeo) {
@@ -341,6 +442,7 @@ DAT.mideaGlobe = function(container, opts) {
     }
   }
 
+<<<<<<< .merge_file_a13556
   // function onWindowMouseDown(event) {
   // 	mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
   //   mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
@@ -362,6 +464,16 @@ DAT.mideaGlobe = function(container, opts) {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+=======
+  function handleClick(data) {
+    console.log(data);
+  }
+
+  function onWindowResize(event) {
+    camera.aspect = container.offsetWidth / container.offsetHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+>>>>>>> .merge_file_a17500
   }
 
   function zoom(delta) {
@@ -399,6 +511,7 @@ DAT.mideaGlobe = function(container, opts) {
   });
 
   this.__defineSetter__('time', function(t) {
+    console.log('1221');
     var validMorphs = [];
     var morphDict = this.points.morphTargetDictionary;
     for (var k in morphDict) {
@@ -428,10 +541,12 @@ DAT.mideaGlobe = function(container, opts) {
   }
 
   this.addData = addData;
-  this.createPoints = createPoints;
+  //this.createPoints = createPoints;
   this.renderer = renderer;
   this.scene = scene;
   this.reset = reset;
+  //this._baseGeometry = baseGeometry;
+  this.points = points;
 
   return this;
 };

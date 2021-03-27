@@ -27,9 +27,16 @@ export default class Globe extends AbstractComponent {
         if (xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
           for (var i = 0; i < data.length; i++) {
+<<<<<<< .merge_file_a11004
             globe.addData(data[i][1], { format: 'magnitude', name: data[i][0], animated: true });
           }
           globe.createPoints();
+=======
+            globe.addData(data[i][1], { name: data[i][0] });
+          }
+          //globe.createPoints();
+          globe.animate();
+>>>>>>> .merge_file_a05020
         }
       }
     };

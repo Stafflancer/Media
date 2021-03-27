@@ -253,6 +253,11 @@ DAT.mideaGlobe = function(container, opts) {
     var phi = (90 - lat) * Math.PI / 180;
     var theta = (180 - lng) * Math.PI / 180;
 
+		point.callback = function() {
+			console.log('imback')
+		}
+		point.name = 'my name'
+
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
     point.position.z = 200 * Math.sin(phi) * Math.sin(theta);

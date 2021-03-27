@@ -1,0 +1,37 @@
+title: c29-product-hightlights
+
+imgSrc: assets/c29-product-hightlights/image.png
+
+productTitle: 
+  type: h1
+  copy: Experience Smart Comfort
+
+productDesc: Breezeless combines innovative design, efficiency, rapid cooling with a uniform and "windless" (laminar) air distribution.
+
+productFunction:
+  - title: 
+      type: h3
+      copy: 60
+    unit: SEC
+    copy: TO DECREASE ROOM TEMPERATURE
+  - title: 
+      type: h3
+      copy: 21
+    unit: dB
+    copy: ULTRA-QUIET OPERATION NOISE
+  - title: 
+      type: h3
+      copy: 7K
+    unit: 
+    copy: MICRO-HOLES FOR THE SOFEST AIR FLOW
+
+timeLine:
+  - slog: Feature Highlight Tooltip
+  - slog: Feature Highlight Tooltip
+  - slog: Feature Highlight Tooltip
+
+cta-right-icon:
+  with-icon: true
+  right-icon: arrow-right
+  copy: Scroll to Explore
+  href: https://www.baidu.com

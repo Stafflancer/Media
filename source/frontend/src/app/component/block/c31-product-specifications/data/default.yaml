@@ -1,0 +1,34 @@
+title: c31-product-specifications
+
+h1: 
+  type: h1
+  copy: Specification
+
+cta-right-icon:
+  with-icon: true
+  right-icon: icon-download
+  copy: Scroll to Explore
+  href: http://www.baidu.com
+
+
+specification:
+  - name: Type
+    value: Breezeless
+  - name: Capacity
+    value: Breezeless
+  - name: Wi-Fi port
+    value: Breezeless
+  - name: Indoor noise level
+    value: 35.5/29.5/26.5
+  - name: Indoor noise level
+    value: 35.5/29.5/26.5
+  - name: Power Supply
+    value: 220-240/1/50
+  - name: Rated Input(W)
+    value: 20.0
+  - name: Indoor air flow
+    value: 560/450/350
+  - name: Dimension
+    value: 795*225*295
+  - name: Dimension
+    value: 795*225*295

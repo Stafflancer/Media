@@ -3,16 +3,26 @@
 		"newyork",
 		[
 			38.8951,
-			-77.0364,
-			1
-		]
+			-77.0364
+		],
+		{
+			"temperature": "38°C",
+			"units": "3M",
+			"highlight1": "Second",
+			"highlight2": "place"
+		}
 	],
 	[
 		"beijing",
 		[
 			39.916668,
-			116.383331,
-			1
-		]
+			116.383331
+		],
+		{
+			"temperature": "17°C",
+			"units": "2M",
+			"highlight1": "First",
+			"highlight2": "overseas plant"
+		}
 	]
 ]

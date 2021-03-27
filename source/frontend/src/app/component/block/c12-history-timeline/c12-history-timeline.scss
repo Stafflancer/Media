@@ -6,6 +6,7 @@ $prm: 100vw / 375;
   flex-wrap: wrap;
   @include respond-to(MEDIUM) {
     flex-wrap: nowrap;
+    padding-top: 106 * $prd;
   }
 
   .c12-history-timeline__left {
@@ -21,20 +22,23 @@ $prm: 100vw / 375;
       padding-left: 80 * $prd;
       padding-top: 146 * $prd;
       position: relative;
+
       &::before {
         position: absolute;
         content: "";
-        left: -178 * $prd;
+        width: 1133 * $prd;
+        height: 882 * $prd;
+        left: 610 * $prd;
         top: 0;
-        width: 100%;
-        height: 100%;
         background: radial-gradient(
           34.95% 57.18% at 36.89% 37.41%,
           rgba(255, 255, 255, 0.3) 0%,
           rgba(255, 255, 255, 0) 100%
         );
+        backdrop-filter: blur(8px);
       }
     }
+
     .heading-1 {
       margin-bottom: 16 * $prm;
 
@@ -65,8 +69,10 @@ $prm: 100vw / 375;
       padding-top: 56 * $prd;
       padding-left: 0;
     }
+
     .swiper-wrapper {
       align-items: center;
+
       @include respond-to(MEDIUM) {
         align-items: flex-start;
       }
@@ -97,9 +103,11 @@ $prm: 100vw / 375;
       height: 1px;
       background: #ced3da;
       left: 24 * $prm;
+
       @include respond-to(MEDIUM) {
         left: 0;
       }
+
       .swiper-pagination-progressbar-fill {
         background: #000426;
         height: 2px;

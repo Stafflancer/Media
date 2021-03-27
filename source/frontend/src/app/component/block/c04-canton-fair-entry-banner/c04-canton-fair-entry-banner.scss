@@ -33,7 +33,7 @@ $prm: 100vw / 375;
   }
   .c04-canton-fair-entry-banner__content-text {
     position: absolute;
-    top: 19.78vh;
+    bottom: 55%;
     left: 6.4vw;
     width: 87.2vw;
     display: flex;
@@ -45,9 +45,10 @@ $prm: 100vw / 375;
       color: #fff;
     }
     [data-component="cta-text"] {
-      margin: 3.125vh 0 5vh;
+      margin: 1.125vh 0 3vh;
     }
     @include respond-to(MEDIUM) {
+      bottom: auto;
       top: 50%;
       left: 12.84vw;
       transform: translateY(-50%);

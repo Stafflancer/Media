@@ -14,7 +14,7 @@ $prm: 100vw / 375;
       order: 2;
       position: absolute;
       left: 0;
-      bottom: 115 * $prm;
+      bottom: 11.5rem;
       z-index: 1;
 
       @include respond-to(MEDIUM) {

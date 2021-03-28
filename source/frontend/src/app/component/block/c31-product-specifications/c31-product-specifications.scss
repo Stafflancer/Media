@@ -127,7 +127,7 @@ $prm: 100vw / 375;
     .c31-product-specifications__card-weather {
       position: absolute;
       left: 82 * $prd;
-      bottom: 0;
+      bottom: 20 * $prd;
       z-index: 10;
     }
   }

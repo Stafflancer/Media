@@ -1,0 +1,19 @@
+uuid: d2c77fca-a201-40e7-88f7-75fcf5389dbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c16_description
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+id: paragraph.c16_technology_and_innovation.field_c16_description
+field_name: field_c16_description
+entity_type: paragraph
+bundle: c16_technology_and_innovation
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.c12_history_timeline
     - paragraphs.paragraphs_type.c13_global_capacity
     - paragraphs.paragraphs_type.c16_technology_and_innovation
+    - paragraphs.paragraphs_type.c21_video_player_section
   module:
     - entity_reference_revisions
 id: node.landing.field_component
@@ -34,6 +35,7 @@ settings:
       c12_history_timeline: c12_history_timeline
       c13_global_capacity: c13_global_capacity
       c16_technology_and_innovation: c16_technology_and_innovation
+      c21_video_player_section: c21_video_player_section
     target_bundles_drag_drop:
       c05_item:
         weight: -9
@@ -41,9 +43,15 @@ settings:
       c05_self_segmentation_hero:
         enabled: true
         weight: -15
+      c07_item:
+        weight: 15
+        enabled: false
       c07_on_page_jump_links:
         enabled: true
         weight: -14
+      c10_item:
+        weight: 17
+        enabled: false
       c10_stock_timeline_card:
         enabled: true
         weight: -13
@@ -53,7 +61,16 @@ settings:
       c13_global_capacity:
         enabled: true
         weight: -11
+      c13_item:
+        weight: 21
+        enabled: false
       c16_technology_and_innovation:
         enabled: true
         weight: -10
+      c21_item:
+        weight: 23
+        enabled: false
+      c21_video_player_section:
+        enabled: true
+        weight: 24
 field_type: entity_reference_revisions

@@ -1,27 +1,28 @@
-uuid: 0b4a53f7-5870-48db-94ba-f3c141e51f69
+uuid: 7f29bd39-e1f4-402d-9003-33f6d9187697
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.c13_global_capacity.field_c13_description
-    - field.field.paragraph.c13_global_capacity.field_c13_items
-    - field.field.paragraph.c13_global_capacity.field_c13_title
-    - paragraphs.paragraphs_type.c13_global_capacity
+    - field.field.paragraph.c21_video_player_section.field_c21_content
+    - field.field.paragraph.c21_video_player_section.field_c21_items
+    - field.field.paragraph.c21_video_player_section.field_c21_title
+    - paragraphs.paragraphs_type.c21_video_player_section
   module:
     - entity_reference_revisions
-id: paragraph.c13_global_capacity.default
+id: paragraph.c21_video_player_section.default
 targetEntityType: paragraph
-bundle: c13_global_capacity
+bundle: c21_video_player_section
 mode: default
 content:
-  field_c13_description:
+  field_c21_content:
     weight: 1
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
     region: content
-  field_c13_items:
+  field_c21_items:
     type: entity_reference_revisions_entity_view
     weight: 2
     label: above
@@ -30,7 +31,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_c13_title:
+  field_c21_title:
     weight: 0
     label: above
     settings:

@@ -1,0 +1,19 @@
+uuid: 87bbba44-a8c4-499c-9be0-341ea7b32af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c21_item_name
+    - paragraphs.paragraphs_type.c21_item
+id: paragraph.c21_item.field_c21_item_name
+field_name: field_c21_item_name
+entity_type: paragraph
+bundle: c21_item
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

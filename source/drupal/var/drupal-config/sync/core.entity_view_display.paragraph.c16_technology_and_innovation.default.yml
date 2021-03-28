@@ -3,13 +3,69 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_background_image
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_button
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_description
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_slogan
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_sub_title
     - field.field.paragraph.c16_technology_and_innovation.field_c16_title
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_avatar
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_name
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_record
     - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - file
+    - image
+    - link
 id: paragraph.c16_technology_and_innovation.default
 targetEntityType: paragraph
 bundle: c16_technology_and_innovation
 mode: default
 content:
+  field_c16_background_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_c16_button:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_c16_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_c16_slogan:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c16_sub_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_c16_title:
     weight: 0
     label: above
@@ -17,5 +73,30 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_c16_user_avatar:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_c16_user_name:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c16_user_record:
+    weight: 8
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
 hidden: {  }

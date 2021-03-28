@@ -1,28 +1,28 @@
-uuid: 26cb79f1-94b3-4de9-bf7b-e913787803d8
+uuid: 9296f847-35f8-4c7d-b6ab-4c5fc0af75e6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.c13_global_capacity.field_c13_description
-    - field.field.paragraph.c13_global_capacity.field_c13_items
-    - field.field.paragraph.c13_global_capacity.field_c13_title
-    - paragraphs.paragraphs_type.c13_global_capacity
+    - field.field.paragraph.c21_video_player_section.field_c21_content
+    - field.field.paragraph.c21_video_player_section.field_c21_items
+    - field.field.paragraph.c21_video_player_section.field_c21_title
+    - paragraphs.paragraphs_type.c21_video_player_section
   module:
     - paragraphs
-id: paragraph.c13_global_capacity.default
+id: paragraph.c21_video_player_section.default
 targetEntityType: paragraph
-bundle: c13_global_capacity
+bundle: c21_video_player_section
 mode: default
 content:
-  field_c13_description:
+  field_c21_content:
     weight: 1
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: string_textfield
     region: content
-  field_c13_items:
+  field_c21_items:
     type: paragraphs
     weight: 2
     settings:
@@ -40,7 +40,7 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
-  field_c13_title:
+  field_c21_title:
     weight: 0
     settings:
       size: 60

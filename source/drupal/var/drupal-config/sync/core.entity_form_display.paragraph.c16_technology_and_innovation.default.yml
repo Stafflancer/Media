@@ -3,13 +3,88 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_background_image
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_button
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_description
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_slogan
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_sub_title
     - field.field.paragraph.c16_technology_and_innovation.field_c16_title
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_avatar
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_name
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_user_record
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - field_group
+    - file
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_user_info:
+      children:
+        - field_c16_user_avatar
+        - field_c16_user_name
+        - field_c16_slogan
+        - field_c16_user_record
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        effect: none
+        direction: vertical
+        formatter: closed
+      label: 'User Info'
 id: paragraph.c16_technology_and_innovation.default
 targetEntityType: paragraph
 bundle: c16_technology_and_innovation
 mode: default
 content:
+  field_c16_background_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_c16_button:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_c16_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_c16_slogan:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c16_sub_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_c16_title:
     weight: 0
     settings:
@@ -17,6 +92,29 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_c16_user_avatar:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_c16_user_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c16_user_record:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
 hidden:
   created: true

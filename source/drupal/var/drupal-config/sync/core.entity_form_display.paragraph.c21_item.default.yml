@@ -1,0 +1,32 @@
+uuid: a138d451-5f61-40c1-ac13-36f9d9c44ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c21_item.field_c21_item_name
+    - field.field.paragraph.c21_item.field_c21_item_value
+    - paragraphs.paragraphs_type.c21_item
+id: paragraph.c21_item.default
+targetEntityType: paragraph
+bundle: c21_item
+mode: default
+content:
+  field_c21_item_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c21_item_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

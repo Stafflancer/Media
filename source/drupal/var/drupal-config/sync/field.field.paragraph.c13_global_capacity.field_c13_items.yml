@@ -1,0 +1,58 @@
+uuid: 1fa62a06-4e35-4a78-bdfb-52d048d53e39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c13_items
+    - paragraphs.paragraphs_type.c13_global_capacity
+    - paragraphs.paragraphs_type.c13_item
+  module:
+    - entity_reference_revisions
+id: paragraph.c13_global_capacity.field_c13_items
+field_name: field_c13_items
+entity_type: paragraph
+bundle: c13_global_capacity
+label: 'Card Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      c13_item: c13_item
+    target_bundles_drag_drop:
+      c05_item:
+        weight: 11
+        enabled: false
+      c05_self_segmentation_hero:
+        weight: 12
+        enabled: false
+      c07_item:
+        weight: 13
+        enabled: false
+      c07_on_page_jump_links:
+        weight: 14
+        enabled: false
+      c10_item:
+        weight: 15
+        enabled: false
+      c10_stock_timeline_card:
+        weight: 16
+        enabled: false
+      c12_history_timeline:
+        weight: 17
+        enabled: false
+      c13_global_capacity:
+        weight: 18
+        enabled: false
+      c13_item:
+        enabled: true
+        weight: 19
+      c16_technology_and_innovation:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

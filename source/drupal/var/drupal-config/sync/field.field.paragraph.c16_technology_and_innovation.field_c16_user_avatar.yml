@@ -1,0 +1,38 @@
+uuid: f32596d1-ff28-4ebb-be4d-1f2da35fe637
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c16_user_avatar
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - image
+id: paragraph.c16_technology_and_innovation.field_c16_user_avatar
+field_name: field_c16_user_avatar
+entity_type: paragraph
+bundle: c16_technology_and_innovation
+label: Avatar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,64 @@
+uuid: 6c2246b7-a651-460f-8f71-49ffba890032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c21_items
+    - paragraphs.paragraphs_type.c21_item
+    - paragraphs.paragraphs_type.c21_video_player_section
+  module:
+    - entity_reference_revisions
+id: paragraph.c21_video_player_section.field_c21_items
+field_name: field_c21_items
+entity_type: paragraph
+bundle: c21_video_player_section
+label: 'Card Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      c21_item: c21_item
+    target_bundles_drag_drop:
+      c05_item:
+        weight: 13
+        enabled: false
+      c05_self_segmentation_hero:
+        weight: 14
+        enabled: false
+      c07_item:
+        weight: 15
+        enabled: false
+      c07_on_page_jump_links:
+        weight: 16
+        enabled: false
+      c10_item:
+        weight: 17
+        enabled: false
+      c10_stock_timeline_card:
+        weight: 18
+        enabled: false
+      c12_history_timeline:
+        weight: 19
+        enabled: false
+      c13_global_capacity:
+        weight: 20
+        enabled: false
+      c13_item:
+        weight: 21
+        enabled: false
+      c16_technology_and_innovation:
+        weight: 22
+        enabled: false
+      c21_item:
+        enabled: true
+        weight: 23
+      c21_video_player_section:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

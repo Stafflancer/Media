@@ -1,0 +1,27 @@
+uuid: df923766-4696-4ea5-985f-1de7cf6c144e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c16_user_record
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - file
+id: paragraph.c16_technology_and_innovation.field_c16_user_record
+field_name: field_c16_user_record
+entity_type: paragraph
+bundle: c16_technology_and_innovation
+label: Record
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

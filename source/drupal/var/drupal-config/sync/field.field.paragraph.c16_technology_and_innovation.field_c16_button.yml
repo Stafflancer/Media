@@ -1,0 +1,23 @@
+uuid: 02a71efc-a35e-4411-a94a-260e3f1dee2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c16_button
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - link
+id: paragraph.c16_technology_and_innovation.field_c16_button
+field_name: field_c16_button
+entity_type: paragraph
+bundle: c16_technology_and_innovation
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

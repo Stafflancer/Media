@@ -1,0 +1,19 @@
+uuid: fa076091-8d63-4e6d-8596-827f8a684cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c21_content
+    - paragraphs.paragraphs_type.c21_video_player_section
+id: paragraph.c21_video_player_section.field_c21_content
+field_name: field_c21_content
+entity_type: paragraph
+bundle: c21_video_player_section
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

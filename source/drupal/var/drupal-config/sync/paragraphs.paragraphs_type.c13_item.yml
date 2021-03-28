@@ -1,0 +1,38 @@
+uuid: e7fb0bb8-df91-4a86-a5cc-f847541474e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    redirect:
+      add:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      edit:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      delete:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      anonymous:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+id: c13_item
+label: 'C13 Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 43fa2b39-2217-4a41-bfae-3c8e3bef2245
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_c13_item_name
+field_name: field_c13_item_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

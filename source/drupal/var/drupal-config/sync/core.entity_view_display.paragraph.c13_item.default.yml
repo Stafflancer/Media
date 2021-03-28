@@ -1,0 +1,30 @@
+uuid: 994203d8-2425-4d50-a937-1f385a8d958e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c13_item.field_c13_item_name
+    - field.field.paragraph.c13_item.field_c13_item_value
+    - paragraphs.paragraphs_type.c13_item
+id: paragraph.c13_item.default
+targetEntityType: paragraph
+bundle: c13_item
+mode: default
+content:
+  field_c13_item_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c13_item_value:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

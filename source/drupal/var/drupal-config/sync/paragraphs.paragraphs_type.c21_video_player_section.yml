@@ -1,0 +1,38 @@
+uuid: d5a7f095-7b99-485f-80fb-bbc7de311553
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    redirect:
+      add:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      edit:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      delete:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      anonymous:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+id: c21_video_player_section
+label: 'C21 Video player section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

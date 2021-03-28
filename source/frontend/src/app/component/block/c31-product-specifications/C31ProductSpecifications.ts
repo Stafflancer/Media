@@ -19,6 +19,10 @@ export default class C31ProductSpecifications extends AbstractBlock {
       slidesPerView: 'auto',
       centeredSlides: true,
       paginationClickable: true,
+      preventLinksPropagation: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
       spaceBetween: 30,
     });
     console.log(swiper);

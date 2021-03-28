@@ -32,3 +32,36 @@ specification:
     value: 795*225*295
   - name: Dimension
     value: 795*225*295
+
+bannerImage:
+  - type: 1
+    src: assets/c31-product-specifications/image-01.png
+  - type: 0
+    videoInfo:
+      imgSrc: ../../assets/placeholder/demo.jpg
+      videoSrc: ../../assets/placeholder/sample.mp4
+      videoOverlay:
+        video:
+          src: ../../assets/placeholder/sample.mp4
+          data: controls
+      title: Take A Tour
+      content: FACTORY OF THE FUTURE
+      time: '2:05'
+      play:
+        icon: icon-play
+        class: card-video__play
+      stop:
+        icon: icon-pause
+        class: card-video__stop
+      playicon: icon-play
+      stopicon: icon-pause
+  - type: 1
+    src: assets/c31-product-specifications/image-02.png
+  - type: 1
+    src: assets/c31-product-specifications/image-03.png  
+
+cardWeather:
+  # centigrade: 38°C
+  placeholder: Use your location
+  desc: It's hot in Shenzhen today! Beat the heat with Midea.
+  tips: Find out which Midea solution is best for your situation.    

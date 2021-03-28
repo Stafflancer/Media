@@ -26,11 +26,21 @@
       <div class="col-12 col-md-12 c31-product-specifications__swiper">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
+            {{#each bannerImage}}
+            <div class="swiper-slide">
+              {{#if type}}
+              <img src="{{src}}" alt="">
+              {{else}}
+              {{> general/card-video videoInfo }}
+              {{/if}}
+            </div>
+            {{/each}}
           </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="c31-product-specifications__card-weather">
+          {{> general/card-weather cardWeather }}
         </div>
       </div>
     </div>

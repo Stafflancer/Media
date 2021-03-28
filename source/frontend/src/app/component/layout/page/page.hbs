@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="./page.scss">
+<script src="./Page.ts"></script>
+
+<div data-component="app-root">
+  {{#each blocks}}
+    {{> (lookup . 'name') data }}
+  {{/each}}
+</div>

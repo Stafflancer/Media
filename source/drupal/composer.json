@@ -104,6 +104,9 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
+        },
+        "drupal/handlebars_theme_handler": {
+          "Incompatible with this version of Drupal core 9": "./var/drupal-patch/drupal-handlebars-make-incompatible-d9.patch"
         }
     }
 }

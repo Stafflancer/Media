@@ -1,0 +1,11 @@
+diff --git a/handlebars_theme_handler.info.yml b/handlebars_theme_handler.info.yml
+index 460eafb..f41b012 100644
+--- a/handlebars_theme_handler.info.yml
++++ b/handlebars_theme_handler.info.yml
+@@ -1,5 +1,6 @@
+ name: Handlebars theme process
+ type: module
+ description: Module for handling handlebars.js templates and rendering
++core_version_requirement: ^8|^9
+ core: 8.x
+ package: Custom

@@ -23,15 +23,47 @@ $cardBgColor: rgba(0, 4, 38, 0.9);
         rgba(202, 223, 244, 0) 100%
       );
     }
+
     .globe__container {
       width: 100%;
       padding-top: 100%;
+      position: relative;
+
       canvas {
         @include size(100%, 100%);
         @include position(0, 0);
         position: absolute;
       }
+
+      .globe__text-container {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        display: inline-flex;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+
+        .iconfont {
+          color: transparent;
+
+          [data-component="icon"] {
+            @include size(40px, 40px);
+          }
+        }
+
+        .globe__explore {
+          display: none;
+        }
+
+        .globe__content {
+          color: $blueShade2;
+          margin-left: 8px;
+          @include size(137px, 32px);
+        }
+      }
     }
+
     .globe__overlay {
       visibility: hidden;
       opacity: 0;

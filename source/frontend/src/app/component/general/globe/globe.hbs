@@ -3,7 +3,19 @@
 
 <div data-component="globe">
   <div class="globe__bg-fix"></div>
-  <div class="globe__container"></div>
+  <div class="globe__container">
+    <div class="globe__text-container">
+      <div class="iconfont globe__rotate">
+        {{> general/icon name="icon-drag" }}
+      </div>
+      <div class="iconfont globe__explore">
+        {{> general/icon name="icon-shape" }}
+      </div>
+      <div class="globe__content">
+        {{> general/heading globeText class="heading-6" }}
+      </div>
+    </div>
+  </div>
   <div class="globe__overlay js-popup">
     <div class="globe__card-popup">
       <div class="globe__card-name">

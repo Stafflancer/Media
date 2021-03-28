@@ -1,0 +1,13 @@
+title: c33-call-to-action-bar
+
+mainClass: pdp
+topTitle: Call-to-action driven title text
+
+btns:
+  - icon: arrow-right
+    copy: Talk it over with a Midea sales representative
+
+discover:
+  with-icon: true
+  right-icon: arrow-right
+  copy: Continue exploring residential AC solutions

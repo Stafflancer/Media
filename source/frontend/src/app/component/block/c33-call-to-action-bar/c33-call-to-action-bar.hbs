@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./c33-call-to-action-bar.scss">
+<script src="./C33CallToActionBar.ts"></script>
+
+<div data-component="c33-call-to-action-bar" class="{{mainClass}}">
+  <div class="c33-call-to-action-bar__title">{{topTitle}}</div>
+  <div class="c33-call-to-action-bar__btns">
+    {{#each btns}}
+      {{> cta/cta-border this }}
+    {{/each}}
+    {{> cta/cta-text discover }}
+  </div>
+</div>

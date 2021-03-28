@@ -33,6 +33,9 @@ blocks:
   - name: "c21-video-player-section"
     data: "import!../app/component/block/c21-video-player-section/data/default"
 
+  - name: "c33-call-to-action-bar"
+    data: "import!../app/component/block/c33-call-to-action-bar/data/default"
+
   - name: 'c02-footer'
     data: 'import!../app/component/block/c02-footer/data/default.yaml'
 

@@ -1,25 +1,28 @@
+{% set theme_path =  base_path ~ directory %}
+
 {% set data = {
-    "title": "c16-technology-and-innovation",
-    "h1": {
-      "type": "h1",
-      "copy": "Technology and Innovation"
+  "title": "c16-technology-and-innovation",
+  "h1": {
+    "type": "h1",
+    "copy": content.field_c16_title[0]['#context']['value'],
+  },
+  "avatarSrc": file_url(content.field_c16_user_avatar['#items'].entity.uri.value),
+  "map3Src": file_url(content.field_c16_user_record['#items'].entity.uri.value),
+  "slogan": {
+    "type": "h6",
+    "copy": content.field_c16_user_slogan[0]['#context']['value'],
+  },
+  "userName": content.field_c16_user_name[0]['#context']['value'],
+  "intro": {
+    "imgSrc": file_url(content.field_c16_background_image['#items'].entity.uri.value),
+    "label": content.field_c16_sub_title[0]['#context']['value'],
+    "subTitle": {
+      "icon": "arrow-right",
+      "copy": content.field_c16_button[0]['#title'],
     },
-    "avatarSrc": "media/c16-technology-and-innovation/avatar.png",
-    "slogan": {
-      "type": "h6",
-      "copy": "Our dedication to innovation"
-    },
-    "userName": "Paul Fang - Midea CEO",
-    "intro": {
-      "imgSrc": "media/c16-technology-and-innovation/image.png",
-      "label": "About",
-      "subTitle": {
-        "icon": "arrow-right",
-        "copy": "Explore Key Technologies"
-      },
-      "description": "Our global innovation and manufacturing facilities continuously invent new ways to humanize technology."
-    }
+    "description": content.field_c16_description[0]['#context']['value'],
   }
+}
 %}
 
 {% include "@components/c16-technology-and-innovation/c16-technology-and-innovation.twig" 

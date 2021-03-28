@@ -1,28 +1,23 @@
+{% set navList = [] %}
+{% for i in content.field_c07_items['#items']|keys %}
+  {% set item = {
+        "copy": content.field_c07_items[i]['#paragraph'].field_c07_item_title.getValue()[0]['value'],
+        "target": content.field_c07_items[i]['#paragraph'].field_c07_item_target.getValue()[0]['value'],
+        "tag": "span",
+        "class" : (content.field_c07_items[i]['#paragraph'].field_c07_item_active.getValue()[0]['value'] == '1') ? ' active':''
+      }
+  %}
+  {% set navList = navList|merge([item]) %}
+{% endfor %}
+
 {% set data = {
     "title": "c07-on-page-jump-links",
-    "navList": [
-      {
-        "copy": "Our Mission",
-        "target": "c07-on-page-jump-links",
-        "tag": "span",
-        "class": " active"
-      },
-      {
-        "copy": "The History",
-        "target": "c12-history-timeline",
-        "tag": "span"
-      },
-      {
-        "copy": "Global Capacity",
-        "target": "c13-global-capacity",
-        "tag": "span"
-      }
-    ],
+    "navList": navList,
     "h1": {
       "type": "h2",
-      "copy": "Our Mission"
+      "copy": content.field_c07_title[0]['#context']['value']
     },
-    "desc": "Our mission is to bring the best air quality into people’s homes. In our ambition for excellence we have become the world’s largest air treatment brand, with with global recognitions in sustainability, design, safety and quality."
+    "desc": content.field_c07_description[0]['#context']['value']
   }
 %}
 

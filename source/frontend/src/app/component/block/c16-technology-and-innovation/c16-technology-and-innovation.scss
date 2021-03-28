@@ -1,30 +1,25 @@
 $prd: 100vw / 1920;
-$prd: 100vw / 1920;
 $prm: 100vw / 375;
 
 [data-component="c16-technology-and-innovation"] {
-  display: flex;
-  flex-wrap: wrap;
   color: $textColor;
+  padding-top: 8.3rem;
 
   @include respond-to(MEDIUM) {
-    flex-wrap: nowrap;
-    padding-top: 190 * $prd;
+    padding-top: 13.5rem;
+    padding-bottom: 25rem;
     position: relative;
-    margin-top: 150 * $prd;
   }
 
   .c16-technology-and-innovation__video {
     width: 100%;
-    margin-top: 83 * $prm;
-    margin-left: 24 * $prm;
-    margin-right: 24 * $prm;
     position: relative;
     z-index: 10;
     user-select: none;
 
     @include respond-to(MEDIUM) {
       width: 408 * $prd;
+      padding: 0;
       margin: 0;
       position: absolute;
       right: 140 * $prd;
@@ -32,8 +27,9 @@ $prm: 100vw / 375;
     }
 
     .c16-technology-and-innovation__video-box {
-      width: 100%;
       height: auto;
+      margin-left: 24 * $prm;
+      margin-right: 24 * $prm;
       background: linear-gradient(90.52deg, #0b1548 3.45%, #3e45a9 112.37%);
       border-radius: 1rem;
       overflow: hidden;
@@ -41,14 +37,16 @@ $prm: 100vw / 375;
       padding-top: 16 * $prm;
 
       @include respond-to(MEDIUM) {
+        width: 100%;
         padding-left: 16 * $prd;
         padding-top: 16 * $prd;
+        margin: 0;
       }
 
       .c16-technology-and-innovation__video-slogan {
         color: $whiteShade1;
         opacity: 0.4;
-        margin-bottom: 10 * $prm;
+        margin-bottom: 1rem;
         padding-right: 80 * $prm;
 
         .heading-6 {
@@ -56,7 +54,6 @@ $prm: 100vw / 375;
         }
 
         @include respond-to(MEDIUM) {
-          margin-bottom: 10 * $prd;
           padding-right: 80 * $prd;
 
           .heading-6 {
@@ -131,7 +128,7 @@ $prm: 100vw / 375;
       border-radius: 50%;
       background: $whiteShade1;
       position: absolute;
-      right: -17.4 * $prm;
+      right: 0;
       top: -40.4 * $prm;
 
       @include respond-to(MEDIUM) {
@@ -144,11 +141,10 @@ $prm: 100vw / 375;
   }
 
   .c16-technology-and-innovation__container {
-    padding-top: 40 * $prm;
-    display: flex;
+    padding-top: 4rem;
 
     @include respond-to(MEDIUM) {
-      padding-top: 0;
+      padding-top: 8rem;
       width: 100%;
     }
 
@@ -160,8 +156,7 @@ $prm: 100vw / 375;
 
       @include respond-to(MEDIUM) {
         padding: 0;
-        max-width: 845 * $prd;
-        margin-left: 230 * $prd;
+        padding-left: 230 * $prd;
       }
 
       .c16-technology-and-innovation__title {
@@ -186,22 +181,23 @@ $prm: 100vw / 375;
         }
 
         .heading-1 {
-          font-weight: 500;
           line-height: 56 * $prm;
-          font-size: 48 * $prm;
 
           @include respond-to(MEDIUM) {
             line-height: 112 * $prd;
-            font-size: 144 * $prd;
+          }
+
+          @media (min-width: 1025px) {
+            font-size: 10rem;
           }
         }
       }
 
       .c16-technology-and-innovation__content {
-        margin-top: 260 * $prm;
+        margin-top: 26rem;
 
         @include respond-to(MEDIUM) {
-          margin-top: 40 * $prd;
+          margin-top: 4rem;
           display: flex;
         }
 
@@ -228,22 +224,20 @@ $prm: 100vw / 375;
           .c16-technology-and-innovation__description {
             color: $textColor;
             opacity: 0.8;
-            margin-bottom: 32 * $prm;
+            margin-bottom: 3.2rem;
             width: 242 * $prm;
 
             @include respond-to(MEDIUM) {
               width: 422 * $prd;
-              margin-bottom: 40 * $prd;
+              margin-bottom: 4rem;
             }
 
             .large {
-              line-height: 24 * $prm;
-              font-size: 16 * $prm;
+              font-size: 1.6rem;
+              opacity: 0.8;
 
               @include respond-to(MEDIUM) {
-                font-size: 24 * $prd;
-                line-height: 32 * $prd;
-                opacity: 0.8;
+                font-size: 2.4rem;
               }
             }
           }
@@ -253,26 +247,22 @@ $prm: 100vw / 375;
 
     .c16-technology-and-innovation__right {
       position: absolute;
-      right: 0;
-      top: 360 * $prm;
-      left: 24 * $prm;
-      flex: 1;
+      top: 36rem;
+      left: -15px;
 
       @include respond-to(MEDIUM) {
-        position: relative;
-        top: inherit;
-        left: inherit;
-        right: inherit;
+        position: inherit;
       }
 
       .c16-technology-and-innovation__image {
         width: 100%;
-        height: 260 * $prm;
+        height: 26.4rem;
+        padding-left: 24 * $prm;
+        position: absolute;
 
         @include respond-to(MEDIUM) {
           width: 1050 * $prd;
-          height: 750 * $prd;
-          position: absolute;
+          height: 75rem;
           right: 0;
         }
 

@@ -123,3 +123,10 @@ button {
     outline: none;
   }
 }
+
+//fix bootstrap
+.container-md, .container-sm, .container {
+  @include respond-to(SMALL) {
+    max-width: inherit;
+  }
+}

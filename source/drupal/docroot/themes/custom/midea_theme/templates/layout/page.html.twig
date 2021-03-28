@@ -45,39 +45,40 @@
 <div id="app">
   <div data-component="app-root" class="index">
 
-    <header role="banner">
-      {{ page.header }}
-    </header>
+    {% set data = {
+      "fixedHeader": {
+        "nav": [
+          {
+            "copy": "Products",
+            "url": ""
+          },
+          {
+            "copy": "Canton Fair",
+            "class": "with-dot",
+            "url": ""
+          },
+          {
+            "copy": "Virtual Factory",
+            "url": ""
+          },
+          {
+            "copy": "Contact",
+            "url": ""
+          }
+        ],
+        "menu": "header-menu",
+        "close": "header-close"
+        }
+      }
+    %}
 
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
+    {% include "@components/c01-fixed-header/c01-fixed-header.twig" 
+      with {
+        "data": data
+      }
+    %}
 
-    {{ page.breadcrumb }}
-
-    {{ page.highlighted }}
-
-    {{ page.help }}
-
-    <main role="main">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      <div class="layout-content">
-        {{ page.content }}
-      </div>{# /.layout-content #}
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-
-    </main>
+    {{ page.content }}
 
     {% set data = {
       "title": "c02-footer",

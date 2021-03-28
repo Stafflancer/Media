@@ -149,3 +149,8 @@ videoOverlay:
   video:
     src: ''
     data: controls
+
+globe: 
+  globeText:
+    type: h2
+    copy: Example Title Text

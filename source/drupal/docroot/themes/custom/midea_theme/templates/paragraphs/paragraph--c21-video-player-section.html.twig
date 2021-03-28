@@ -1,0 +1,47 @@
+{% set lists = [] %}
+{% for i in content.field_c21_items['#items']|keys %}
+  {% set item = {
+        "title": {
+          "type": "h3",
+          "copy": content.field_c21_items[i]['#paragraph'].field_c21_item_value.getValue()[0]['value'],
+        },
+        "content": content.field_c21_items[i]['#paragraph'].field_c21_item_name.getValue()[0]['value'],
+      }
+  %}
+  {% set lists = lists|merge([item]) %}
+{% endfor %}
+
+
+{% set data = {
+    "title": "c21-video-player-section",
+    "videoInfo": {
+      "imgSrc": "../../assets/placeholder/demo.jpg",
+      "videoSrc": "../../assets/placeholder/sample.mp4",
+      "videoOverlay": {
+        "video": {
+          "src": "../../assets/placeholder/sample.mp4",
+          "data": "controls"
+        }
+      },
+      "title": content.field_c21_title[0]['#context']['value'],
+      "content": content.field_c21_content[0]['#context']['value'],
+      "time": "2:05",
+      "play": {
+        "icon": "icon-play",
+        "class": "card-video__play"
+      },
+      "stop": {
+        "icon": "icon-pause",
+        "class": "card-video__stop"
+      },
+      "playicon": "icon-play",
+      "stopicon": "icon-pause"
+    },
+    "lists": lists
+}
+%}
+{% include "@components/c21-video-player-section/c21-video-player-section.twig" 
+  with {
+    "data": data
+  }
+%}

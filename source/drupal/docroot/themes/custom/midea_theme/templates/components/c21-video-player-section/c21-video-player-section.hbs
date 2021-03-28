@@ -1,0 +1,15 @@
+<div class="c21-video-player-section" data-component="c21-video-player-section">
+  <div class="c21-video-player-section__card-video">
+      {{> general/card-video/card-video videoInfo }}
+    </div>
+    <ul class="c21-video-player-section__intro">
+      {{#each lists}}
+      <li>
+        <div class="c21-video-player-section__intro-title">
+          {{> general/heading/heading title class="heading-1" }}
+        </div>
+        <div class="copy cta c21-video-player-section__intro-content">{{content}}</div>
+      </li>
+      {{/each}}
+    </ul>
+</div>

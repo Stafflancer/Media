@@ -2,31 +2,52 @@ $prd: 100vw / 1920;
 $prm: 100vw / 375;
 
 .c30-calculation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 8rem;
+  color: $textColor;
+  padding-top: 64 * $prm;
+
+  @include respond-to(MEDIUM) {
+    margin: 0 80 * $prd;
+    padding-top: inherit;
+  }
 
   &__text-box {
-    @include size(270 * $prd, auto);
+    order: 2;
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100 * $prm !important;
+
+    @include respond-to(MEDIUM) {
+      order: 1;
+      max-width: 270 * $prd;
+      margin-top: 0;
+      padding-left: 0 !important;
+    }
 
     .c30-calculation__product-title {
-      position: relative;
-      display: inline-block;
-      color: #000000;
-      padding-right: 2rem;
-      margin-bottom: 2rem;
+      @include respond-to(MEDIUM) {
+        position: relative;
+        display: inline-block;
+        color: #000000;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+      }
 
       .c30-calculation__product-title-mark {
-        position: absolute;
-        right: 0;
-        top: -1.8rem;
+        display: inline-block;
+        vertical-align: text-bottom;
       }
     }
 
     .c30-calculation__product-desc {
       opacity: 0.6;
       margin-bottom: 4rem;
+      font-size: 1.6rem !important;
+
+      @include respond-to(MEDIUM) {
+        font-size: 2.4rem;
+      }
     }
 
     .c30-calculation__product-button-h5 {
@@ -36,14 +57,27 @@ $prm: 100vw / 375;
 
   &__media-box {
     position: relative;
-    padding-top: 9rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 4.5rem;
+    order: 1;
+
+    @include respond-to(MEDIUM) {
+      order: 2;
+      padding-top: 9rem;
+    }
 
     .c30-calculation__content {
-      @include size(1314 * $prd, 722 * $prd);
-      border-radius: 6rem;
-      overflow: hidden;
+      @include size(100%, 29.5rem);
       position: relative;
       z-index: 1;
+      border-radius: 0;
+
+      @include respond-to(MEDIUM) {
+        @include size(100%, 72.2rem);
+        border-radius: 6rem;
+        overflow: hidden;
+      }
 
       [data-component="card"] {
         @include size(100%, 100%);
@@ -57,27 +91,43 @@ $prm: 100vw / 375;
 
           .card__media-stop,
           .card__media-play {
-            @include size(12rem, 12rem);
-            right: 4.8rem;
-            bottom: 5rem;
+            @include size(6rem, 6rem);
+            right: 2.4rem;
+            bottom: 2.4rem;
+
+            @include respond-to(MEDIUM) {
+              @include size(12rem, 12rem);
+              right: 4.8rem;
+              bottom: 5rem;
+            }
           }
         }
       }
     }
 
     .c30-calculation__fixed-button {
-      @include size(8.8rem, 21.7rem);
+      @include size(3.8rem, 10.3rem);
       background: $blueShade2;
       border-radius: 8rem;
       position: absolute;
       right: 0;
       top: 0;
 
+      @include respond-to(MEDIUM) {
+        @include size(8.8rem, 21.7rem);
+      }
+
       .c30-calculation__image-corner {
-        @include size(4rem, 4.4rem);
+        @include size(2rem, 2rem);
         position: absolute;
-        right: 8.6rem;
-        top: 3.6rem;
+        right: 3.7rem;
+        top: 2.6rem;
+
+        @include respond-to(MEDIUM) {
+          @include size(4rem, 4.4rem);
+          right: 8.6rem;
+          top: 3.6rem;
+        }
 
         img {
           @include size(100%, 100%);
@@ -86,17 +136,37 @@ $prm: 100vw / 375;
 
       .c30-calculation__iconfont {
         color: transparent;
-        @include size(8.8rem, 8rem);
         display: flex;
         align-items: center;
         justify-content: center;
+        @include size(3.85rem, 3.8rem);
+
+        @include respond-to(MEDIUM) {
+          @include size(8.8rem, 8rem);
+        }
 
         [data-component="icon"] {
-          @include size(3.4rem, 3.5rem);
+          @include size(1.6rem, 1.8rem);
+
+          @include respond-to(MEDIUM) {
+            @include size(3.4rem, 3.5rem);
+          }
+        }
+
+        .c30-calculation__icon {
+          display: none;
+
+          @include respond-to(MEDIUM) {
+            display: block;
+          }
         }
 
         .c30-calculation__icon-h5 {
-          display: none;
+          display: block;
+
+          @include respond-to(MEDIUM) {
+            display: none;
+          }
         }
       }
     }
@@ -108,114 +178,6 @@ $prm: 100vw / 375;
       right: 8.8rem;
       top: 8rem;
       border-top-left-radius: 1rem;
-    }
-  }
-}
-
-@media (max-width: 1480px) {
-  .c30-calculation {
-    &__text-box {
-      flex: 1;
-    }
-  }
-}
-
-@media (max-width: 1180px) {
-  .c30-calculation {
-    margin: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-
-    &__text-box {
-      width: 100%;
-      order: 2;
-      margin-top: 3.2rem;
-      padding-right: 2.4rem;
-      max-width: 30rem;
-
-      .c30-calculation__product-title {
-        padding-right: 1.6rem;
-
-        .c30-calculation__product-title-mark {
-          top: -0.8rem;
-        }
-      }
-
-      .c30-calculation__product-desc {
-        font-size: 1.6rem;
-      }
-
-      .c30-calculation__product-button {
-        display: none;
-      }
-
-      .c30-calculation__product-button-h5 {
-        display: flex;
-        justify-content: flex-end;
-      }
-    }
-
-    &__media-box {
-      order: 1;
-      padding-top: 4.5rem;
-
-      .c30-calculation__content {
-        @include size(100%, 29.5rem);
-        border-radius: 0;
-
-        [data-component="card"] {
-          .card__content {
-            .card__media-stop,
-            .card__media-play {
-              @include size(6rem, 6rem);
-              right: 2.4rem;
-              bottom: 2.4rem;
-            }
-          }
-        }
-      }
-
-      .c30-calculation__fixed-button {
-        @include size(3.8rem, 10.3rem);
-        position: absolute;
-        right: 0;
-        top: 0;
-
-        .c30-calculation__image-corner {
-          @include size(2rem, 2rem);
-          right: 3.7rem;
-          top: 1.7rem;
-        }
-
-        .c30-calculation__iconfont {
-          color: transparent;
-          @include size(3.85rem, 3.8rem);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          [data-component="icon"] {
-            @include size(1.6rem, 1.8rem);
-          }
-
-          .c30-calculation__icon {
-            display: none;
-          }
-
-          .c30-calculation__icon-h5 {
-            display: block;
-          }
-        }
-      }
-
-      .c30-calculation__background {
-        @include size(23rem, 0.8rem);
-        background: $blueShade2;
-        position: absolute;
-        right: 3.8rem;
-        top: 3.7rem;
-      }
     }
   }
 }

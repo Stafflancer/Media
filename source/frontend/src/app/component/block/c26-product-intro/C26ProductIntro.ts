@@ -28,15 +28,32 @@ export default class C26ProductIntro extends AbstractBlock {
   }
 
   protected changeImg = (): void => {
+    this.imgView!.classList.remove('fade-in');
+    this.imgView!.classList.add('fade-out');
     if (this.playIcon!.classList.contains('active')) {
       this.contentView!.classList.remove('active');
-      this.imgView!.setAttribute('src', '../../assets/c26-product-intro/c26-product.png');
       this.playIcon!.classList.remove('active');
     } else {
       this.contentView!.classList.add('active');
-      this.imgView!.setAttribute('src', '../../assets/c26-product-intro/c26-product2.png');
       this.playIcon!.classList.add('active');
     }
+    let timer = setTimeout(() => {
+      if (this.playIcon!.classList.contains('active')) {
+        this.imgView!.setAttribute('src', '../../assets/c26-product-intro/c26-product2.png');
+        this.imgView!.onload = () => {
+          this.imgView!.classList.remove('fade-out');
+          this.imgView!.classList.add('fade-in');
+          clearInterval(timer);
+        };
+      } else {
+        this.imgView!.setAttribute('src', '../../assets/c26-product-intro/c26-product.png');
+        this.imgView!.onload = () => {
+          this.imgView!.classList.remove('fade-out');
+          this.imgView!.classList.add('fade-in');
+          clearInterval(timer);
+        };
+      }
+    }, 400);
   };
   public dispose() {
     super.dispose();

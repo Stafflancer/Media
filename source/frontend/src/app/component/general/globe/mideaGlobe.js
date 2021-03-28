@@ -6,11 +6,13 @@ var DAT = DAT || {};
 DAT.mideaGlobe = function(container, opts) {
   opts = opts || {};
 
-  var colorFn = opts.colorFn || function(x) {
-    var c = new THREE.Color('#ffffff');
-    //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
-    return c;
-  };
+  var colorFn =
+    opts.colorFn ||
+    function(x) {
+      var c = new THREE.Color('#ffffff');
+      //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+      return c;
+    };
 
   var imgDir = opts.imgDir || '/globe/';
 

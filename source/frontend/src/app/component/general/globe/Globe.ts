@@ -16,6 +16,7 @@ export default class Globe extends AbstractComponent {
     super(el);
 
     this.init();
+<<<<<<< HEAD
 
     this.close!.addEventListener('click', this.handleClose);
   }
@@ -37,6 +38,11 @@ export default class Globe extends AbstractComponent {
 
   private init = () => {
     let _this = this;
+=======
+  }
+
+  private init = () => {
+>>>>>>> origin/c01-fixed-header
     let globe = new DAT.mideaGlobe(this.container, {
       imgDir: '../../assets/globe/',
     });

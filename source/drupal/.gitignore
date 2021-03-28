@@ -17,7 +17,7 @@ docroot/themes/contrib
 docroot/themes/mediamonks
 docroot/sites/*/files
 
-composer.lock
+#composer.lock
 /.csslintrc
 /.editorconfig
 /.eslintignore

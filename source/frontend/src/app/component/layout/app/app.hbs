@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./app.scss">
 <script src="./App.ts"></script>
 
-<div data-component="app-root">
+<div data-component="app-root" class="index">
   {{#each blocks}}
     {{> (lookup . 'name') data }}
   {{/each}}

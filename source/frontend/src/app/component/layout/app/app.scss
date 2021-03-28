@@ -1,1 +1,19 @@
 @import "../../../style/main";
+
+.index {
+	background: linear-gradient(335deg, #D8E3F5, #E1EDFB, #E6EFFA, #EEF5FC, #F8FCFF, #FFFFFF, #F8FCFF, #EEF5FC, #E6EFFA, #E6EFFA, #E1EDFB, #D8E3F5);
+	background-size: 400% 400%;
+	animation: gradient-bg 15s ease infinite;
+}
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

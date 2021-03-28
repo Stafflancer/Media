@@ -1,100 +1,61 @@
+{% set theme_path =  base_path ~ directory %}
+
+{% set timeLine = [] %}
+{% for i in content.field_c10_items['#items']|keys %}
+  {% set item = {
+        "id": i,
+        "h61": {
+          "type": "h6",
+          "copy": content.field_c10_items[i]['#paragraph'].field_c10_item_title.getValue()[0]['value'],
+        },
+        "h62": {
+          "type": "h6",
+          "copy": content.field_c10_items[i]['#paragraph'].field_c10_item_year.getValue()[0]['value'],
+        },
+        "h5": {
+          "type": "h5",
+          "copy": content.field_c10_items[i]['#paragraph'].field_c10_item_description.getValue()[0]['value'],
+        },
+        "small": content.field_c10_items[i]['#paragraph'].field_c10_item_sub_title.getValue()[0]['value'],
+      }
+  %}
+  {% set timeLine = timeLine|merge([item]) %}
+{% endfor %}
+
 {% set data = {
     "title": "c10-stock-timeline-card",
     "cta-border-white-with-icon": {
       "class": "white",
       "icon": "arrow-right",
-      "copy": "Take a tour in Midea factory"
+      "copy": content.field_c10_button[0]['#title'],
+      "url" : content.field_c10_button[0]['#url']|render
     },
     "cta-border-with-icon": {
       "icon": "arrow-right",
-      "copy": "Take a tour in Midea factory"
+      "copy": content.field_c10_button[0]['#title'],
+      "url" : content.field_c10_button[0]['#url']|render
     },
-    "cardTitle": "OUR HISTORY OF SUCCESS",
+    "cardTitle": content.field_c10_title[0]['#context']['value'],
     "isActive": "isActive",
-    "bgImage": "media/stock-timeline-card/bgImage.png",
-    "vectorImage": "media/stock-timeline-card/vector.png",
-    "cornerImage": "media/stock-timeline-card/corner.png",
-    "timeLine": [
-      {
-        "id": 1,
-        "h61": {
-          "type": "h6",
-          "copy": "toshiba"
-        },
-        "h62": {
-          "type": "h6",
-          "copy": 2014
-        },
-        "h5": {
-          "type": "h5",
-          "copy": "Toshiba-Carrier1"
-        },
-        "small": "Joint venture with"
-      },
-      {
-        "id": 2,
-        "h61": {
-          "type": "h6",
-          "copy": "toshiba"
-        },
-        "h62": {
-          "type": "h6",
-          "copy": 2015
-        },
-        "h5": {
-          "type": "h5",
-          "copy": "Toshiba-Carrier2"
-        },
-        "small": "Joint venture with"
-      },
-      {
-        "id": 3,
-        "h61": {
-          "type": "h6",
-          "copy": "toshiba"
-        },
-        "h62": {
-          "type": "h6",
-          "copy": 2016
-        },
-        "h5": {
-          "type": "h5",
-          "copy": "Toshiba-Carrier3"
-        },
-        "small": "Joint venture with"
-      },
-      {
-        "id": 4,
-        "h61": {
-          "type": "h6",
-          "copy": "toshiba"
-        },
-        "h62": {
-          "type": "h6",
-          "copy": 2017
-        },
-        "h5": {
-          "type": "h5",
-          "copy": "Toshiba-Carrier4"
-        },
-        "small": "Joint venture with"
-      }
-    ],
+    "bgImage": file_url(content.field_c10_background_image['#items'].entity.uri.value),
+    "vectorImage": theme_path ~ "/asset/media/stock-timeline-card/vector.png",
+    "cornerImage": theme_path ~ "/asset/media/stock-timeline-card/corner.png",
+    "timeLine": timeLine,
     "h41": {
       "type": "h4",
-      "copy": "6.2 B"
+      "copy": content.field_c10_from_number[0]['#context']['value'],
     },
     "h42": {
       "type": "h4",
-      "copy": "110.2 B"
+      "copy": content.field_c10_to_number[0]['#context']['value'],
     },
     "h61": {
       "type": "h6",
-      "copy": 2013
+      "copy": content.field_c10_from_year[0]['#context']['value'],
     },
     "h62": {
       "type": "h6",
-      "copy": 2021
+      "copy": content.field_c10_to_year[0]['#context']['value'],
     }
   }
 %}

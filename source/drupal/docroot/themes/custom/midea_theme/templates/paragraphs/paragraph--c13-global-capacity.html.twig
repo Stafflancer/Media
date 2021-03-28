@@ -1,35 +1,28 @@
+{% set theme_path =  base_path ~ directory %}
+
+{% set lists = [] %}
+{% for i in content.field_c13_items['#items']|keys %}
+  {% set item = {
+        "title": {
+          "type": "h3",
+          "copy": content.field_c13_items[i]['#paragraph'].field_c13_item_value.getValue()[0]['value'],
+        },
+        "content": content.field_c13_items[i]['#paragraph'].field_c13_item_name.getValue()[0]['value'],
+      }
+  %}
+  {% set lists = lists|merge([item]) %}
+{% endfor %}
+
 {% set data = {
     "title": "c13-global-capacity",
     "h1": {
       "type": "h1",
-      "copy": "Global Capacity"
+      "copy": content.field_c13_title[0]['#context']['value'],
     },
-    "desc": "The Midea Residential Air Conditioner Division (RAC) offers a full range of residential AC products with 11 manufacturing bases in China, Vietnam, India, Egypt, Brazil, and Argentina.",
-    "lists": [
-      {
-        "title": {
-          "type": "h3",
-          "copy": "67M"
-        },
-        "content": "SETS ANNUAL CAPACITY"
-      },
-      {
-        "title": {
-          "type": "h3",
-          "copy": "300M"
-        },
-        "content": "ANNUAL INVESTEMENTS"
-      },
-      {
-        "title": {
-          "type": "h3",
-          "copy": "6K"
-        },
-        "content": "PATENTS"
-      }
-    ],
-    "mapImage": "media/c13-global-capacity/map-h5.png",
-    "maskImage": "media/c13-global-capacity/mask-h5.png"
+    "desc": content.field_c13_description[0]['#context']['value'],
+    "lists": lists,
+    "mapImage": theme_path ~ "/asset/media/c13-global-capacity/map-h5.png",
+    "maskImage": theme_path ~ "/asset/media/c13-global-capacity/mask-h5.png"
   }
 %}
 

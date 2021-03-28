@@ -1,1 +1,28 @@
+{% set data = {
+    "fixedHeader": {
+      "nav": [
+        {
+          "copy": "Products",
+          "url": ""
+        },
+        {
+          "copy": "Canton Fair",
+          "class": "with-dot",
+          "url": ""
+        },
+        {
+          "copy": "Virtual Factory",
+          "url": ""
+        },
+        {
+          "copy": "Contact",
+          "url": ""
+        }
+      ],
+      "menu": "header-menu",
+      "close": "header-close"
+    }
+  }
+%}
+
 {{ handlebars('c01-fixed-header.hbs', data) }}

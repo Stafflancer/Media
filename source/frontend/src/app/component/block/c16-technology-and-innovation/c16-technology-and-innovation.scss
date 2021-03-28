@@ -4,6 +4,7 @@ $prm: 100vw / 375;
 [data-component="c16-technology-and-innovation"] {
   color: $textColor;
   padding-top: 8.3rem;
+  position: relative;
 
   @include respond-to(MEDIUM) {
     padding-top: 13.5rem;

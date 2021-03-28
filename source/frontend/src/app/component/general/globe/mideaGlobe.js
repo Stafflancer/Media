@@ -46,7 +46,7 @@ DAT.mideaGlobe = function(container, opts) {
 
   var camera, scene, renderer, w, h;
   var mesh, atmosphere, point, raycaster;
-  var points = [];
+  var points = []
 
   var overRenderer;
 
@@ -212,7 +212,7 @@ DAT.mideaGlobe = function(container, opts) {
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
-  function onWindowResize(event) {
+  function onWindowResize( event ) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.offsetWidth, container.offsetHeight);

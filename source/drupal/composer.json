@@ -15,8 +15,8 @@
             "url": "https://packages.drupal.org/8"
         },
         "drupal-handlebars": {
-          "type": "git",
-          "url": "https://github.com/mediamonks/drupal-handlebars.git"
+            "type": "git",
+            "url": "https://github.com/mediamonks/drupal-handlebars.git"
         }
     },
     "require": {
@@ -28,6 +28,7 @@
         "drupal/config_split": "1.7",
         "drupal/console": "~1.9",
         "drupal/core-composer-scaffold": "^9.0",
+        "drupal/entity_redirect": "^2.0",
         "drupal/handlebars_theme_handler": "1.6",
         "drupal/metatag": "^1.14",
         "drupal/node_access_grants": "^3.0",
@@ -53,7 +54,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-      "sort-packages": true
+        "sort-packages": true
     },
     "autoload": {
         "classmap": [
@@ -77,8 +78,12 @@
     },
     "extra": {
         "installer-paths": {
-            "docroot/core": ["type:drupal-core"],
-            "docroot/libraries/{$name}": ["type:drupal-library"],
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
             "docroot/modules/mediamonks/{$name}": [
                 "mediamonks/mm_decoupled",
                 "mediamonks/mm_gaia",
@@ -87,10 +92,18 @@
                 "mediamonks/mm_rest",
                 "mediamonks/mm_slug"
             ],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         }
     }
 }

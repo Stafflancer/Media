@@ -29,6 +29,7 @@
         "drupal/console": "~1.9",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/entity_redirect": "^2.0",
+        "drupal/field_group": "^3.1",
         "drupal/handlebars_theme_handler": "1.6",
         "drupal/metatag": "^1.14",
         "drupal/node_access_grants": "^3.0",

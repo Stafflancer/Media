@@ -1,18 +1,37 @@
+
+{% set left = content.field_c05_items[0]['#paragraph']%}
+{% set right = content.field_c05_items[1]['#paragraph'] %}
+
+{% set swipers_left = {
+        "name": left.field_c05_item_name.getValue()[0]['value'],
+        "img": file_url(left.field_c05_item_background_image.entity.uri.value),
+        "btn": {
+          "icon": "arrow-right",
+          "copy": left.field_c05_item_button.title,
+          "url" : left.field_c05_item_button.0.url|render
+        }
+      } 
+%}
+
+{% set swipers_right = {
+        "name": right.field_c05_item_name.getValue()[0]['value'],
+        "img": file_url(right.field_c05_item_background_image.entity.uri.value),
+        "btn": {
+          "class": "right",
+          "icon": "arrow-right",
+          "copy": right.field_c05_item_button.title,
+          "url" : right.field_c05_item_button.0.url|render
+        }
+      }
+%}
 {% set data = {
     "logoUrl": "",
     "swipers": [
+      swipers_left,
       {
-        "name": "Home",
-        "img": "../../assets/c05-self-segmentation-hero/Furniture1.png",
-        "btn": {
-          "icon": "arrow-right",
-          "copy": "Explore RAC products"
-        }
-      },
-      {
-        "title": "Discover the World of",
-        "air": "Air",
-        "descript": "Scroll horizontaly to explore our range of products for both home and office",
+        "title": content.field_c05_title[0]['#context']['value'],
+        "air": content.field_c05_extra_title[0]['#context']['value'],
+        "descript": content.field_c05_description[0]['#context']['value'],
         "mouseIcon": {
           "with-icon": true,
           "mouse-icon": "mouse-icon",
@@ -28,15 +47,7 @@
           "tips": "Find out which Midea solution is best for your situation."
         }
       },
-      {
-        "name": "Business",
-        "img": "../../assets/c05-self-segmentation-hero/Desk1.png",
-        "btn": {
-          "class": "right",
-          "icon": "arrow-right",
-          "copy": "Explore LCAC products"
-        }
-      }
+      swipers_right
     ],
     "mouseIcon": {
       "with-icon": true,

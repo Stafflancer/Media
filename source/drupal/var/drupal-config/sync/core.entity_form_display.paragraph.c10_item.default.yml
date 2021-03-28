@@ -1,0 +1,50 @@
+uuid: 33dccfa4-5e59-4e3e-9993-4972e1ddf648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c10_item.field_c10_item_description
+    - field.field.paragraph.c10_item.field_c10_item_sub_title
+    - field.field.paragraph.c10_item.field_c10_item_title
+    - field.field.paragraph.c10_item.field_c10_item_year
+    - paragraphs.paragraphs_type.c10_item
+id: paragraph.c10_item.default
+targetEntityType: paragraph
+bundle: c10_item
+mode: default
+content:
+  field_c10_item_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_c10_item_sub_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_item_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_item_year:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

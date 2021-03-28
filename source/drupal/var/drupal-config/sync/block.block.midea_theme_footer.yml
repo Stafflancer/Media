@@ -1,6 +1,6 @@
 uuid: eff3b96e-11d3-4ceb-9ec8-3c597b95d890
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: midea_theme_footer
 theme: midea_theme
-region: header
-weight: 0
+region: footer
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

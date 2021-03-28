@@ -1,0 +1,101 @@
+uuid: c1b23064-1294-4d29-aac9-3273ee085da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_background_image
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_button
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_from_number
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_from_year
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_items
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_title
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_to_number
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_to_year
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+  module:
+    - image
+    - link
+    - paragraphs
+id: paragraph.c10_stock_timeline_card.default
+targetEntityType: paragraph
+bundle: c10_stock_timeline_card
+mode: default
+content:
+  field_c10_background_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_c10_button:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_c10_from_number:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_from_year:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_items:
+    type: paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_c10_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_to_number:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c10_to_year:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

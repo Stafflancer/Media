@@ -1,0 +1,94 @@
+uuid: 8651191b-6113-42bd-a0ea-2f59133901d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_background_image
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_button
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_from_number
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_from_year
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_items
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_title
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_to_number
+    - field.field.paragraph.c10_stock_timeline_card.field_c10_to_year
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+id: paragraph.c10_stock_timeline_card.default
+targetEntityType: paragraph
+bundle: c10_stock_timeline_card
+mode: default
+content:
+  field_c10_background_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_c10_button:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_c10_from_number:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c10_from_year:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c10_items:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_c10_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c10_to_number:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c10_to_year:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

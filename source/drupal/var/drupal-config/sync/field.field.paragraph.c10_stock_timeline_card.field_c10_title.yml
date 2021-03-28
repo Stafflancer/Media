@@ -1,0 +1,19 @@
+uuid: efe666c2-c7be-4add-99be-e80a693e2341
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_title
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+id: paragraph.c10_stock_timeline_card.field_c10_title
+field_name: field_c10_title
+entity_type: paragraph
+bundle: c10_stock_timeline_card
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

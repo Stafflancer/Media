@@ -1,0 +1,10 @@
+uuid: 61373fa3-1afe-4f0f-b6c6-091d007ebbbd
+langcode: en
+status: true
+dependencies: {  }
+id: c05_self_segmentation_hero
+label: 'C05 Self segmentation hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

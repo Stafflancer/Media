@@ -1,0 +1,10 @@
+uuid: 75372068-645f-4e6a-b0c6-27ade8f8c826
+langcode: en
+status: true
+dependencies: {  }
+id: c10_item
+label: 'C10 Item'
+icon_uuid: null
+icon_default: null
+description: 'The item card of C10 Stock Timeline Card'
+behavior_plugins: {  }

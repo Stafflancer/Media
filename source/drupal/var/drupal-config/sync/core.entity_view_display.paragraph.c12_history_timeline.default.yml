@@ -1,0 +1,29 @@
+uuid: 6695c413-1f8b-421d-ac09-906a55c0e006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c12_history_timeline.field_c12_description
+    - field.field.paragraph.c12_history_timeline.field_c12_title
+    - paragraphs.paragraphs_type.c12_history_timeline
+id: paragraph.c12_history_timeline.default
+targetEntityType: paragraph
+bundle: c12_history_timeline
+mode: default
+content:
+  field_c12_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_c12_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

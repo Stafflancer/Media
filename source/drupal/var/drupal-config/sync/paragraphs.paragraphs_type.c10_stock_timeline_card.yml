@@ -1,0 +1,10 @@
+uuid: 33bb0281-dac2-456c-96ea-c3154efcea4d
+langcode: en
+status: true
+dependencies: {  }
+id: c10_stock_timeline_card
+label: 'C10 Stock Timeline Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

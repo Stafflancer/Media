@@ -1,6 +1,6 @@
 uuid: 8b1e7fbe-ad7e-4125-9cbb-bc2da0915b78
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: midea_theme_breadcrumbs
 theme: midea_theme
 region: header
-weight: 0
+weight: -1
 provider: null
 plugin: system_breadcrumb_block
 settings:

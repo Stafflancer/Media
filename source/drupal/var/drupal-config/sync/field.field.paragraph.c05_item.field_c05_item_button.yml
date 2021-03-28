@@ -1,0 +1,23 @@
+uuid: 55c7b1d3-e93e-4cc0-8206-29f01c49e4a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c05_item_button
+    - paragraphs.paragraphs_type.c05_item
+  module:
+    - link
+id: paragraph.c05_item.field_c05_item_button
+field_name: field_c05_item_button
+entity_type: paragraph
+bundle: c05_item
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

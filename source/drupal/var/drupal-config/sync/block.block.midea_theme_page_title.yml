@@ -1,6 +1,6 @@
 uuid: 137297a8-616b-45ba-8f8b-9bf69beee9f8
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - midea_theme
@@ -9,7 +9,7 @@ _core:
 id: midea_theme_page_title
 theme: midea_theme
 region: content
-weight: -50
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

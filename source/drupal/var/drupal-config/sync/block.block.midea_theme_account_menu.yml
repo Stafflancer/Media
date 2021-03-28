@@ -1,6 +1,6 @@
 uuid: f7ef7adc-515a-4fc3-bead-d922d439030f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -13,7 +13,7 @@ _core:
 id: midea_theme_account_menu
 theme: midea_theme
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

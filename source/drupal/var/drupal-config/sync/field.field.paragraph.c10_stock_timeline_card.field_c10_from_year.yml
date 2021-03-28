@@ -1,0 +1,19 @@
+uuid: 090a07b4-3654-4e48-b116-7172f51340a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_from_year
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+id: paragraph.c10_stock_timeline_card.field_c10_from_year
+field_name: field_c10_from_year
+entity_type: paragraph
+bundle: c10_stock_timeline_card
+label: 'From Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

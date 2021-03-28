@@ -1,0 +1,10 @@
+uuid: ecabb162-ba02-414f-bcc2-bdacda29b18f
+langcode: en
+status: true
+dependencies: {  }
+id: c16_technology_and_innovation
+label: 'C16 Technology and Innovation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

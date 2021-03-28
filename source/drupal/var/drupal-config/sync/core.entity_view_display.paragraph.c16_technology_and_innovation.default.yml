@@ -1,0 +1,21 @@
+uuid: 6dbdc00b-510d-4cd3-ae35-2b5fe2714e2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c16_technology_and_innovation.field_c16_title
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+id: paragraph.c16_technology_and_innovation.default
+targetEntityType: paragraph
+bundle: c16_technology_and_innovation
+mode: default
+content:
+  field_c16_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

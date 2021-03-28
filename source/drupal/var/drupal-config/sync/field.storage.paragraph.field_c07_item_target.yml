@@ -1,0 +1,30 @@
+uuid: d0e22a9b-8d1b-445f-89ec-cde2ec02e28a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_c07_item_target
+field_name: field_c07_item_target
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: c07-on-page-jump-links
+      label: c07-on-page-jump-links
+    -
+      value: c12-history-timeline
+      label: c12-history-timeline
+    -
+      value: c13-global-capacity
+      label: c13-global-capacity
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

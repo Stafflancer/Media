@@ -1,0 +1,19 @@
+uuid: 8ed3dcd2-4de0-4cb5-9ca5-d09f1086a9ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c05_extra_title
+    - paragraphs.paragraphs_type.c05_self_segmentation_hero
+id: paragraph.c05_self_segmentation_hero.field_c05_extra_title
+field_name: field_c05_extra_title
+entity_type: paragraph
+bundle: c05_self_segmentation_hero
+label: 'Extra title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

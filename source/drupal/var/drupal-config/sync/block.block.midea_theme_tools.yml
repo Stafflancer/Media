@@ -1,6 +1,6 @@
 uuid: fb0aa397-2ec7-4243-9f2d-dcd4d16ca49d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -13,7 +13,7 @@ _core:
 id: midea_theme_tools
 theme: midea_theme
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

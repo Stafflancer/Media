@@ -1,6 +1,6 @@
 uuid: 59f3e383-e7c0-4bb6-825f-dfbaef9b0599
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: midea_theme_messages
 theme: midea_theme
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:

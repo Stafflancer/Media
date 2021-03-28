@@ -11,7 +11,7 @@ _core:
 id: midea_theme_help
 theme: midea_theme
 region: content
-weight: -30
+weight: -4
 provider: null
 plugin: help_block
 settings:

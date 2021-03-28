@@ -1,0 +1,10 @@
+uuid: 1593ecd8-ccaf-4d81-9001-abb09c4b2e81
+langcode: en
+status: true
+dependencies: {  }
+id: c05_item
+label: 'C05 Item'
+icon_uuid: null
+icon_default: null
+description: 'The item for Block c05-self-segmentation-hero'
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: 0b4a53f7-5870-48db-94ba-f3c141e51f69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c13_global_capacity.field_c13_description
+    - field.field.paragraph.c13_global_capacity.field_c13_title
+    - paragraphs.paragraphs_type.c13_global_capacity
+id: paragraph.c13_global_capacity.default
+targetEntityType: paragraph
+bundle: c13_global_capacity
+mode: default
+content:
+  field_c13_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_c13_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

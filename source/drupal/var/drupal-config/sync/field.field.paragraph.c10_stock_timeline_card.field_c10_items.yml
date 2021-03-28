@@ -1,0 +1,55 @@
+uuid: e374907e-a0fd-4e8f-85cf-9022d8ca87c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_items
+    - paragraphs.paragraphs_type.c10_item
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+  module:
+    - entity_reference_revisions
+id: paragraph.c10_stock_timeline_card.field_c10_items
+field_name: field_c10_items
+entity_type: paragraph
+bundle: c10_stock_timeline_card
+label: 'Card Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      c10_item: c10_item
+    target_bundles_drag_drop:
+      c05_item:
+        weight: 10
+        enabled: false
+      c05_self_segmentation_hero:
+        weight: 11
+        enabled: false
+      c07_item:
+        weight: 12
+        enabled: false
+      c07_on_page_jump_links:
+        weight: 13
+        enabled: false
+      c10_item:
+        enabled: true
+        weight: 14
+      c10_stock_timeline_card:
+        weight: 15
+        enabled: false
+      c12_history_timeline:
+        weight: 16
+        enabled: false
+      c13_global_capacity:
+        weight: 17
+        enabled: false
+      c16_technology_and_innovation:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

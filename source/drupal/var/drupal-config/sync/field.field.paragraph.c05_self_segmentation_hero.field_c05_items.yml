@@ -1,0 +1,37 @@
+uuid: baf3b6a8-2ff0-4829-bb8d-0301959eb1a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c05_items
+    - paragraphs.paragraphs_type.c05_item
+    - paragraphs.paragraphs_type.c05_self_segmentation_hero
+  module:
+    - entity_reference_revisions
+id: paragraph.c05_self_segmentation_hero.field_c05_items
+field_name: field_c05_items
+entity_type: paragraph
+bundle: c05_self_segmentation_hero
+label: 'C05 Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      c05_item: c05_item
+    target_bundles_drag_drop:
+      c05_item:
+        enabled: true
+        weight: 4
+      c05_self_segmentation_hero:
+        weight: 5
+        enabled: false
+      c10_stock_timeline_card:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

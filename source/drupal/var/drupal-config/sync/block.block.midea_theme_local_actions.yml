@@ -9,7 +9,7 @@ _core:
 id: midea_theme_local_actions
 theme: midea_theme
 region: content
-weight: -20
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

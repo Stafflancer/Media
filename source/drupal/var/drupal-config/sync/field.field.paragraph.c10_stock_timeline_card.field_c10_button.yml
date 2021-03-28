@@ -1,0 +1,23 @@
+uuid: eef0bc89-8537-4cdb-901c-8ed2124c5afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_button
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+  module:
+    - link
+id: paragraph.c10_stock_timeline_card.field_c10_button
+field_name: field_c10_button
+entity_type: paragraph
+bundle: c10_stock_timeline_card
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

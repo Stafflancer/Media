@@ -1,0 +1,19 @@
+uuid: b12dcff5-21c2-43bb-ae6b-2310dbf3f19f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_history_description
+    - node.type.history
+id: node.history.field_history_description
+field_name: field_history_description
+entity_type: node
+bundle: history
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: 8dc9742b-dd0f-48c6-8a6c-30ce3636ba68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c12_title
+    - paragraphs.paragraphs_type.c12_history_timeline
+id: paragraph.c12_history_timeline.field_c12_title
+field_name: field_c12_title
+entity_type: paragraph
+bundle: c12_history_timeline
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 1731a072-849e-41b6-a5e4-f957c5c98de1
+langcode: en
+status: true
+dependencies: {  }
+id: c07_item
+label: 'C07 Item'
+icon_uuid: null
+icon_default: null
+description: 'The item for C07 On page jump links'
+behavior_plugins: {  }

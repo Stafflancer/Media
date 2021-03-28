@@ -1,0 +1,19 @@
+uuid: f33a9657-d276-40c5-b4de-e412e0689b92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_item_sub_title
+    - paragraphs.paragraphs_type.c10_item
+id: paragraph.c10_item.field_c10_item_sub_title
+field_name: field_c10_item_sub_title
+entity_type: paragraph
+bundle: c10_item
+label: SubTitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

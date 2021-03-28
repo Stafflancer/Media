@@ -1,6 +1,6 @@
 uuid: e8984c0e-6791-43d0-9e86-14e5db347267
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: midea_theme_powered
 theme: midea_theme
 region: header
-weight: 10
+weight: -2
 provider: null
 plugin: system_powered_by_block
 settings:

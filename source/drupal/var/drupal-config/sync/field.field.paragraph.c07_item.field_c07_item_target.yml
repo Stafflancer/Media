@@ -1,0 +1,21 @@
+uuid: 286adbc6-1a88-4589-831f-cba192f82b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c07_item_target
+    - paragraphs.paragraphs_type.c07_item
+  module:
+    - options
+id: paragraph.c07_item.field_c07_item_target
+field_name: field_c07_item_target
+entity_type: paragraph
+bundle: c07_item
+label: Target
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

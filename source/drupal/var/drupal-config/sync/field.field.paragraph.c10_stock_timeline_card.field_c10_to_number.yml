@@ -1,0 +1,19 @@
+uuid: 46300410-a1aa-41f8-988b-9fe9cb96213f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c10_to_number
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+id: paragraph.c10_stock_timeline_card.field_c10_to_number
+field_name: field_c10_to_number
+entity_type: paragraph
+bundle: c10_stock_timeline_card
+label: 'To Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

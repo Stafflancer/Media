@@ -1,0 +1,32 @@
+uuid: 26cb79f1-94b3-4de9-bf7b-e913787803d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c13_global_capacity.field_c13_description
+    - field.field.paragraph.c13_global_capacity.field_c13_title
+    - paragraphs.paragraphs_type.c13_global_capacity
+id: paragraph.c13_global_capacity.default
+targetEntityType: paragraph
+bundle: c13_global_capacity
+mode: default
+content:
+  field_c13_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_c13_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

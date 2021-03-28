@@ -1,6 +1,6 @@
 uuid: 806aefa0-22d9-4af1-95c5-9b99bf420fc2
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: midea_theme_branding
 theme: midea_theme
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

@@ -1,0 +1,44 @@
+uuid: f49a7070-45c6-4519-8bbb-b85b4a55b3d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  entity_redirect:
+    redirect:
+      add:
+        active: true
+        destination: url
+        url: /admin/content
+        external: ''
+        personalizable: false
+      edit:
+        active: true
+        destination: url
+        url: /admin/content
+        external: ''
+        personalizable: false
+      delete:
+        active: true
+        destination: url
+        url: /admin/content
+        external: ''
+        personalizable: false
+      anonymous:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+name: History
+type: history
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

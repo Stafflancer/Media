@@ -1,0 +1,10 @@
+uuid: b58491f8-1054-491c-a29c-0bc8da4bb899
+langcode: en
+status: true
+dependencies: {  }
+id: c13_global_capacity
+label: 'C13 Global Capacity'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

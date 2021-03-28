@@ -1,0 +1,42 @@
+uuid: 9a27d425-eeaa-436b-952e-63d11035b477
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c07_item.field_c07_item_active
+    - field.field.paragraph.c07_item.field_c07_item_target
+    - field.field.paragraph.c07_item.field_c07_item_title
+    - paragraphs.paragraphs_type.c07_item
+  module:
+    - options
+id: paragraph.c07_item.default
+targetEntityType: paragraph
+bundle: c07_item
+mode: default
+content:
+  field_c07_item_active:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_c07_item_target:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_c07_item_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

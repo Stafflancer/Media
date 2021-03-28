@@ -1,0 +1,19 @@
+uuid: d2dde4d2-431c-471d-920e-fa0ca10fd54d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_c10_button
+field_name: field_c10_button
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

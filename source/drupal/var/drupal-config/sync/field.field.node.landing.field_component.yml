@@ -1,0 +1,59 @@
+uuid: 565e5269-0824-4493-9d85-9807474d8a70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.landing
+    - paragraphs.paragraphs_type.c05_self_segmentation_hero
+    - paragraphs.paragraphs_type.c07_on_page_jump_links
+    - paragraphs.paragraphs_type.c10_stock_timeline_card
+    - paragraphs.paragraphs_type.c12_history_timeline
+    - paragraphs.paragraphs_type.c13_global_capacity
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+  module:
+    - entity_reference_revisions
+id: node.landing.field_component
+field_name: field_component
+entity_type: node
+bundle: landing
+label: Component
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      c05_self_segmentation_hero: c05_self_segmentation_hero
+      c07_on_page_jump_links: c07_on_page_jump_links
+      c10_stock_timeline_card: c10_stock_timeline_card
+      c12_history_timeline: c12_history_timeline
+      c13_global_capacity: c13_global_capacity
+      c16_technology_and_innovation: c16_technology_and_innovation
+    target_bundles_drag_drop:
+      c05_item:
+        weight: -9
+        enabled: false
+      c05_self_segmentation_hero:
+        enabled: true
+        weight: -15
+      c07_on_page_jump_links:
+        enabled: true
+        weight: -14
+      c10_stock_timeline_card:
+        enabled: true
+        weight: -13
+      c12_history_timeline:
+        enabled: true
+        weight: -12
+      c13_global_capacity:
+        enabled: true
+        weight: -11
+      c16_technology_and_innovation:
+        enabled: true
+        weight: -10
+field_type: entity_reference_revisions

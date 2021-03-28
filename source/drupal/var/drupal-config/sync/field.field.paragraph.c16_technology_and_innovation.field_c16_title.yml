@@ -1,0 +1,19 @@
+uuid: 4b1981a4-b6c1-4f73-86be-cde90bcf7723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c16_title
+    - paragraphs.paragraphs_type.c16_technology_and_innovation
+id: paragraph.c16_technology_and_innovation.field_c16_title
+field_name: field_c16_title
+entity_type: paragraph
+bundle: c16_technology_and_innovation
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

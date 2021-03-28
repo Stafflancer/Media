@@ -1,0 +1,41 @@
+uuid: 4c00a655-9a64-4ad0-9689-392f133aed43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c07_on_page_jump_links.field_c07_description
+    - field.field.paragraph.c07_on_page_jump_links.field_c07_items
+    - field.field.paragraph.c07_on_page_jump_links.field_c07_title
+    - paragraphs.paragraphs_type.c07_on_page_jump_links
+  module:
+    - entity_reference_revisions
+id: paragraph.c07_on_page_jump_links.default
+targetEntityType: paragraph
+bundle: c07_on_page_jump_links
+mode: default
+content:
+  field_c07_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_c07_items:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_c07_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

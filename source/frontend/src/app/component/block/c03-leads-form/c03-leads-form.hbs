@@ -12,7 +12,11 @@
         {{#each forms}}
           <div class="form-group">
             {{#if this.type}}
-              <input class="form-control" type="text" name="{{this.name}}" placeholder="{{this.placeholder}}">
+              {{#if this.texts}}
+                <textarea class="form-control" type="textarea" name="{{this.name}}" placeholder="{{this.placeholder}}" rows="3"></textarea>
+              {{else}}
+                <input class="form-control" type="text" name="{{this.name}}" placeholder="{{this.placeholder}}">
+              {{/if}}
             {{else}}
               <select class="form-control" name="{{this.name}}" placeholder="{{this.placeholder}}">
                 <option value="1">Disabled select</option>

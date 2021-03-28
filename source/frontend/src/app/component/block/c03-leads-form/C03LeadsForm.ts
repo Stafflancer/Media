@@ -7,8 +7,12 @@ export default class C03LeadsForm extends AbstractBlock {
   private readonly submitBtn = this.getElement<HTMLElement>('.sure-btn');
   private readonly closeIcon = this.getElement<HTMLElement>('.c03-leads-form__content-close');
   private readonly formInputs = this.getElements<HTMLInputElement>('.form-control[type="text"]');
+  private readonly formText = this.getElement<HTMLTextAreaElement>(
+    '.form-control[type="textarea"]',
+  );
+  private readonly formOption = this.getElement<HTMLElement>('.form-option');
 
-  private formData: any = {
+  private formData: object = {
     country: '1',
     companyName: '',
     userName: '',
@@ -24,7 +28,10 @@ export default class C03LeadsForm extends AbstractBlock {
       this.formInputs[i]!.addEventListener(
         'input',
         (): void => {
-          if (name !== 'leaveMessage') this.formData[name] = this.formInputs[i]!.value;
+          console.log(name);
+          if (name !== 'leaveMessage') {
+            this.formData[name] = this.formInputs[i]!.value;
+          }
           if (Object.values(this.formData).some(v => v === '')) {
             this.submitBtn!.setAttribute('disabled', 'disable');
           } else {
@@ -33,7 +40,17 @@ export default class C03LeadsForm extends AbstractBlock {
         },
       );
     }
+    this.formText!.addEventListener('input', this.changeText);
   }
+
+  protected changeText = (): void => {
+    let value = this.formText!.value.trim() || '';
+    if (value === '') {
+      this.formOption!.style.display = 'block';
+    } else {
+      this.formOption!.style.display = 'none';
+    }
+  };
 
   protected closePopup = (): void => {
     this.element.style.display = 'none';

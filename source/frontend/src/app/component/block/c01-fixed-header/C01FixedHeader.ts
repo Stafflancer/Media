@@ -16,6 +16,11 @@ export default class C01FixedHeader extends AbstractComponent {
     '[data-component=c05-self-segmentation-hero]',
   );
 
+  private readonly $pageBody = document.body;
+  private readonly formView = document.querySelector<HTMLElement>(
+    '[data-component=c03-leads-form]',
+  );
+
   private isChange: Boolean = false;
   private isDark: Boolean = false;
 
@@ -49,6 +54,11 @@ export default class C01FixedHeader extends AbstractComponent {
             if (i - 4 === j || i === j) {
               childs1[j].classList.add('active');
             }
+          }
+          if ((i === 3 || i === 7) && this.formView) {
+            this.formView!.style.display = 'block';
+            this.$pageBody.style.overflow = 'hidden';
+            this.$pageBody.style.height = '100%';
           }
         },
       );

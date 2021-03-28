@@ -8,7 +8,7 @@ export default class C03LeadsForm extends AbstractBlock {
   private readonly closeIcon = this.getElement<HTMLElement>('.c03-leads-form__content-close');
   private readonly formInputs = this.getElements<HTMLInputElement>('.form-control[type="text"]');
 
-  private formData: object = {
+  private formData: any = {
     country: '1',
     companyName: '',
     userName: '',

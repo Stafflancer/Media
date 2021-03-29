@@ -39,6 +39,7 @@ forms:
 
   - placeholder: Leave a message
     type: true
+    texts: true
     name: leaveMessage
     required: false
     option: Optional

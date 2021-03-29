@@ -1,7 +1,7 @@
 import AbstractBlock from '../AbstractBlock';
 
-export default class C02Footer extends AbstractBlock {
-  public static readonly displayName: string = 'c02-footer';
+export default class C04CantonFairEntryBanner extends AbstractBlock {
+  public static readonly displayName: string = 'c04-canton-fair-entry-banner';
 
   constructor(el: HTMLElement) {
     super(el);

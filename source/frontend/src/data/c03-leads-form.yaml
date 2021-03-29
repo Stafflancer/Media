@@ -1,0 +1,14 @@
+title: Scaffold
+
+meta:
+  id: A
+  status: qa
+  notes:
+  category:
+
+layout: home
+
+blocks:
+
+  - name: c03-leads-form
+    data: import!../app/component/block/c03-leads-form/data/default

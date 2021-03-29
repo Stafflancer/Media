@@ -1,0 +1,14 @@
+title: Scaffold
+
+meta:
+  id: A
+  status: qa
+  notes:
+  category:
+
+layout: home
+
+blocks:
+
+  - name: c33-call-to-action-bar
+    data: import!../app/component/block/c33-call-to-action-bar/data/default

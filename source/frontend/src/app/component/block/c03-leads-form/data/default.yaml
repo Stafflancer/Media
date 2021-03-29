@@ -1,0 +1,49 @@
+title: c03-leads-form
+
+
+
+imgMobile: ../../assets/c03-leads-form/form_mobile.png
+imgPc: ../../assets/c03-leads-form/form_pc.png
+
+formTitle:
+  title: Connect
+  subtitle: Leave your comments if you have
+cta-round-border:
+  icon: icon-round-border
+  class: white
+
+forms:
+  - placeholder: Country/Region
+    type: false
+    name: country
+    required: true
+    message: For assigning our best suited representative.
+
+  - placeholder: Company name
+    type: true
+    name: companyName
+    required: true
+    message: ''
+
+  - placeholder: Your name
+    type: true
+    name: userName
+    required: true
+    message: ''
+
+  - placeholder: Email address
+    type: true
+    name: email
+    required: true
+    message: ''
+
+  - placeholder: Leave a message
+    type: true
+    texts: true
+    name: leaveMessage
+    required: false
+    option: Optional
+    message: ''
+sureBtn: Submit
+
+actionSrc: ''

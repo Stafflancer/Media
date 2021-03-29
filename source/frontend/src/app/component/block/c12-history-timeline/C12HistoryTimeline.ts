@@ -12,7 +12,10 @@ export default class C12HistoryTimeline extends AbstractBlock {
 
     var swiper = new Swiper(this.swiperContainer!, {
       slidesPerView: 'auto',
-      mousewheel: true,
+      mousewheel: {
+        forceToAxis: true,
+        releaseOnEdges: true,
+      },
       // scrollbar: {
       //   el: '.swiper-scrollbar',
       //   hide: true,

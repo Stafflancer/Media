@@ -11,7 +11,7 @@ fixedHeader:
     - copy: Canton Fair
       class: with-dot
       url: ''
-    - copy: Virtual Factory
+    - copy: Manufuture
       url: ''
     - copy: Contact
       url: ''

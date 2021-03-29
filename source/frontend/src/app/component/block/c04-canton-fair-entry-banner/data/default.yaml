@@ -1,0 +1,13 @@
+title: c04-canton-fair-entry-banner
+
+mouseTitle: Scroll to Explore
+
+content:
+  title: Midea RAC 129th
+  subtitle:
+    type: h1
+    copy: Online Canton Fair
+  join:
+    class: white
+    icon: arrow-right
+    copy: Join us now

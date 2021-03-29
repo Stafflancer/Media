@@ -1,26 +1,29 @@
 $prd: 100vw / 1920;
 $prm: 100vw / 360;
 
+$prh: 100vh / 1080;
+$prmh: 100vh / 640;
+
 [data-component="c05-self-segmentation-hero"] {
   width: 100%;
-  height: 640 * $prm;
+  height: 100vh;
   //background: url("~/assets/c05-self-segmentation-hero/hero_bg.png") no-repeat;
   //background-size: cover;
-  padding-top: 61 * $prm;
+  padding-top: 61 * $prmh;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
 
   @include respond-to(MEDIUM) {
     height: 100vh;
-    padding-top: 139 * $prd;
+    padding-top: 139 * $prh;
   }
   .c05-self-segmentation-hero__bg-top {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 542 * $prm;
+    height: 84.69vh;
     background: url("~/assets/c05-self-segmentation-hero/hero_bg.png") no-repeat;
     background-size: cover;
     @include respond-to(MEDIUM) {
@@ -32,7 +35,7 @@ $prm: 100vw / 360;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 98 * $prm;
+    height: 15.31vh;
     background: #f8ffff;
     @include respond-to(MEDIUM) {
       height: 18.5vh;
@@ -59,12 +62,15 @@ $prm: 100vw / 360;
           }
           .c05-self-segmentation-hero__title {
             position: absolute;
-            top: 75 * $prm;
+            bottom: 50%;
             left: 0;
             font-size: 64 * $prm;
             line-height: 56 * $prm;
+            @media (max-width: 768px) {
+              bottom: 40%;
+            }
             @include respond-to(MEDIUM) {
-              top: 80 * $prd;
+              bottom: 40%;
             }
             .c05-self-segmentation-hero__title-air {
               font-size: 64 * $prm;
@@ -110,19 +116,22 @@ $prm: 100vw / 360;
 
         .c05-self-segmentation-hero__top {
           position: absolute;
-          top: 123 * $prm;
+          //top: 123 * $prm;
+          //top: auto;
+          bottom: 65%;
           left: 23 * $prm;
           @include respond-to(MEDIUM) {
-            top: 149 * $prd;
+            top: auto;
+            bottom: 65%;
             left: 233 * $prd;
             &.right {
               left: 191 * $prd;
             }
           }
           [data-component="cta-border"] {
-            margin-top: 16 * $prm;
+            margin-top: 16 * $prmh;
             @include respond-to(MEDIUM) {
-              margin-top: 16 * $prd;
+              margin-top: 16 * $prh;
             }
             &.right {
               float: right;
@@ -142,25 +151,25 @@ $prm: 100vw / 360;
 
         .c05-self-segmentation-hero__img {
           position: absolute;
-          bottom: 98 * $prm;
+          top: 55%;
           left: 29 * $prm;
           width: 386 * $prm;
+          object-fit: contain;
           &.right {
-            bottom: 82 * $prm;
-            left: -21 * $prm;
-            width: 563 * $prm;
-            height: 224 * $prm;
+            top: 50%;
+            left: 23 * $prm;
+            width: 100%;
+            height: 224 * $prmh;
           }
           @include respond-to(MEDIUM) {
-            bottom: 4.81vh;
-            left: 179 * $prd;
+            top: 45%;
+            left: 233 * $prd;
             width: 1120 * $prd;
-            height: 516 * $prd;
+            height: 516 * $prh;
             &.right {
-              left: 105 * $prd;
-              bottom: 9.72vh;
+              left: 191 * $prd;
               width: 1112 * $prd;
-              height: 444 * $prd;
+              height: 444 * $prh;
             }
           }
         }

@@ -6,11 +6,13 @@ var DAT = DAT || {};
 DAT.mideaGlobe = function(container, opts) {
   opts = opts || {};
 
-  var colorFn = opts.colorFn || function(x) {
-    var c = new THREE.Color('#ffffff');
-    //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
-    return c;
-  };
+  var colorFn =
+    opts.colorFn ||
+    function(x) {
+      var c = new THREE.Color('#ffffff');
+      //c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+      return c;
+    };
 
   var imgDir = opts.imgDir || '/globe/';
 
@@ -33,18 +35,18 @@ DAT.mideaGlobe = function(container, opts) {
         'varying vec3 vNormal;',
         'varying vec2 vUv;',
         'void main() {',
-          'vec3 diffuse = texture2D( texture, vUv ).xyz;',
-          'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
-          'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
-          'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
-        '}'
-      ].join('\n')
-    }
+        'vec3 diffuse = texture2D( texture, vUv ).xyz;',
+        'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
+        'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
+        'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
+        '}',
+      ].join('\n'),
+    },
   };
 
   var camera, scene, renderer, w, h;
   var mesh, atmosphere, point, raycaster;
-  var points = []
+  var points = [];
 
   var overRenderer;
 
@@ -63,7 +65,6 @@ DAT.mideaGlobe = function(container, opts) {
   var PI_HALF = Math.PI / 2;
 
   function init() {
-
     var shader, uniforms, material;
     // w = 1200;
     // h = 1200;
@@ -109,21 +110,22 @@ DAT.mideaGlobe = function(container, opts) {
     container.addEventListener('mousedown', onMouseDown, false);
 
     window.addEventListener('resize', onWindowResize, false);
-
   }
 
-	function addData(data, opts, handleClick) {
-    console.log(handleClick)
+  function addData(data, opts, handleClick) {
+    console.log(handleClick);
     var lat, lng, size, color, i, colorFnWrapper;
     var singleGeometry;
 
-    colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
+    colorFnWrapper = function(data, i) {
+      return colorFn(data[i + 2]);
+    };
 
     singleGeometry = new THREE.Geometry();
     for (i = 0; i < data.length; i += 3) {
       lat = data[i];
       lng = data[i + 1];
-      color = colorFnWrapper(data,i);
+      color = colorFnWrapper(data, i);
       size = 0;
       addPoint(lat, lng, size, color, singleGeometry);
     }
@@ -133,26 +135,22 @@ DAT.mideaGlobe = function(container, opts) {
     var highlight2 = opts.info.highlight2;
     var temp = opts.info.temperature;
     var singlePoint;
-    singlePoint = new THREE.Mesh(singleGeometry, new THREE.MeshBasicMaterial({
-      color: 0xffffff,
-      vertexColors: THREE.FaceColors,
-      morphTargets: true
-    }));
+    singlePoint = new THREE.Mesh(
+      singleGeometry,
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        vertexColors: THREE.FaceColors,
+        morphTargets: true,
+      }),
+    );
     scene.add(singlePoint);
-    singlePoint.on('click', () => handleClick( title, temp, units, highlight1, highlight2))
-    this.points.push(singlePoint)
-
-  };
+    singlePoint.on('click', () => handleClick(title, temp, units, highlight1, highlight2));
+    this.points.push(singlePoint);
+  }
 
   function addPoint(lat, lng, size, color, subgeo) {
-
-    var phi = (90 - lat) * Math.PI / 180;
-    var theta = (180 - lng) * Math.PI / 180;
-
-		point.callback = function() {
-			console.log('imback')
-		}
-		point.name = 'my name'
+    var phi = ((90 - lat) * Math.PI) / 180;
+    var theta = ((180 - lng) * Math.PI) / 180;
 
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
@@ -214,10 +212,10 @@ DAT.mideaGlobe = function(container, opts) {
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
-  function onWindowResize( event ) {
+  function onWindowResize(event) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( container.offsetWidth, container.offsetHeight );
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
   }
 
   function zoom(delta) {

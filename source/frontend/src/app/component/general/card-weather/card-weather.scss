@@ -15,41 +15,34 @@
     flex-direction: column;
     justify-content: space-between;
   }
-
   .card-weather__icon-sun {
     margin-top: 1.6rem;
     margin-bottom: 10rem;
     @include size(3.8rem, 3.8rem);
     line-height: 0;
-
     span[data-component="icon"] {
       @include size(100%, 100%);
       color: transparent;
     }
   }
-
   .card-weather__centigrade {
     margin-bottom: 1.6rem;
     .card-weather__icon-sun {
       display: none;
     }
-
     .card-weather__num {
       font-size: 4rem;
       color: #ffffff;
       font-weight: bold;
       line-height: 3.2rem;
     }
-
     .card-weather__empty {
       display: flex;
       align-items: center;
-
       span[data-component="icon"] {
         @include size(1.2rem, 1.2rem);
         margin-right: 0.6rem;
       }
-
       .card-weather__empty-text {
         font-size: 1.4rem;
         line-height: 2.2rem;
@@ -59,7 +52,6 @@
       }
     }
   }
-
   .card-weather__text {
     color: #ffffff;
     font-size: 1.8rem;
@@ -67,7 +59,6 @@
     font-weight: 500;
   }
 }
-
 @media (max-width: 1024px) {
   .card-weather {
     border-radius: 1rem 4rem 1rem 1rem;
@@ -76,17 +67,14 @@
       display: none;
       margin-right: 1rem;
     }
-
     .card-weather__centigrade {
       display: flex;
       align-items: center;
-
       .card-weather__icon-sun {
         display: block;
         margin-top: 0;
         margin-bottom: 0;
       }
-
       .card-weather__num {
         font-size: 1.6rem;
         color: #ffffff;

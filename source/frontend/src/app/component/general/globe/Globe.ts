@@ -15,22 +15,28 @@ export default class Globe extends AbstractComponent {
   constructor(el: HTMLElement) {
     super(el);
 
-    this.init()
+    this.init();
 
-    this.close!.addEventListener('click', this.handleClose)
+    this.close!.addEventListener('click', this.handleClose);
   }
 
-  private handlePopup = (title: string, temperature: string, units: string, highlight1: string, highlight2: string) => {
+  private handlePopup = (
+    title: string,
+    temperature: string,
+    units: string,
+    highlight1: string,
+    highlight2: string,
+  ) => {
     this.title!.innerHTML = title;
     this.units!.innerHTML = units;
     this.temperature!.innerHTML = temperature;
     this.highlight1!.innerHTML = highlight1;
     this.highlight2!.innerHTML = highlight2;
     this.popup!.classList.add('show');
-  }
+  };
 
-  private init = ()=> {
-    let _this = this
+  private init = () => {
+    let _this = this;
     let globe = new DAT.mideaGlobe(this.container, {
       imgDir: '../../assets/globe/',
     });
@@ -45,7 +51,7 @@ export default class Globe extends AbstractComponent {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
-          for (var i=0;i<data.length;i++) {
+          for (var i = 0; i < data.length; i++) {
             globe.addData(data[i][1], { name: data[i][0], info: data[i][2] }, _this.handlePopup);
           }
           globe.animate();
@@ -57,8 +63,7 @@ export default class Globe extends AbstractComponent {
 
   private handleClose = () => {
     this.popup!.classList.remove('show');
-  }
-
+  };
 
   public dispose() {
     super.dispose();

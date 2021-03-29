@@ -2,114 +2,156 @@ $backSize: 160%;
 $cardBgColor: rgba(0, 4, 38, 0.9);
 
 [data-component="globe"] {
-	display: none;
+  display: none;
 
-	@include respond-to(MEDIUM) {
-		display: block;
-		@include size(100%, 0);
-		position: relative;
-		overflow: visible;
-		.globe__bg-fix, .globe__overlay {
-			position: absolute;
-			width: $backSize;
-			padding-top: $backSize;
-			margin-left: -$backSize/2;
-			margin-top: -28%;
-			@include position(50%, 50%);
-			background: radial-gradient(50% 50% at 50% 50%, rgba(42, 48, 181, .5) 0%, rgba(202, 223, 244, 0) 100%);
-		}
-		.globe__container {
-			width: 100%;
-			padding-top: 100%;
-			canvas {
-				@include size(100%, 100%);
-				@include position(0, 0);
-				position: absolute;
-			}
-		}
-		.globe__overlay {
-			visibility: hidden;
-			opacity: 0;
-			z-index: 4;
-			background: radial-gradient(50% 50% at 50% 50%, #CADFF4 0%, rgba(202, 223, 244, 0) 100%);
-			transition: visibility .3s, opacity .3s;
+  @include respond-to(MEDIUM) {
+    display: block;
+    @include size(100%, 0);
+    position: relative;
+    overflow: visible;
 
-			&.show {
-				visibility: visible;
-				opacity: 1;
-			}
+    .globe__bg-fix,
+    .globe__overlay {
+      position: absolute;
+      width: $backSize;
+      padding-top: $backSize;
+      margin-left: -$backSize/2;
+      margin-top: -28%;
+      @include position(50%, 50%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(42, 48, 181, 0.5) 0%,
+        rgba(202, 223, 244, 0) 100%
+      );
+    }
 
-			.globe__card {
+    .globe__container {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
 
-				&-popup{
-					font-weight: 500;
-					color: $whiteShade1;
-					position: absolute;
-					padding: 4rem;
-					@include size(422px, 480px);
-					@include offset(50%, 50%);
-					background: $cardBgColor;
-					backdrop-filter: blur(30px);
-					border-radius: 10px 10px 60px 10px;
-				}
-				
-				&-name {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					text-transform: uppercase;
-					.globe__card-line {
-						width: 18.9rem;
-						display: inline-block;
-						height: 1px;
-						background: radial-gradient(#ACB2EA 100%, #748CCA 100%, #3B4384 80%);
-						opacity: .4;
-					}
-				}
+      canvas {
+        @include size(100%, 100%);
+        @include position(0, 0);
+        position: absolute;
+      }
 
-				&-units {
-					margin-top: 17.2rem;
-					.copy {
-						opacity: .6;
-						padding-top: 4px;
-						line-height: 2;
-					}
-				}
+      .globe__text-container {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        display: inline-flex;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
 
-				&-place {
-					margin-top: 3.6rem;
-					.copy {
-						opacity: .6;
-						padding-top: 4px;
-						line-height: 2;
-					}
-				}
+        .iconfont {
+          color: transparent;
 
-				&-close {
-					position: absolute;
-					@include size(4rem, 4rem);
-					background: $whiteShade1;
-					border-radius: 50%;
-					right: 4rem;
-					bottom: 4rem;
-					transition: transform .3s;
-					span[data-component="icon"] {
-						@include size(1rem, 1rem);
-						@include offset(50%, 50%);
-						position: absolute;
-						transform: translate(-50%, -50%);
-						svg {
-							path{
-								fill: $cardBgColor;
-							}
-						}
-					}
-					
-					&:hover {
-						transform: scale(.8)
-					}
-				}
-			}
-		}
-	}
+          [data-component="icon"] {
+            @include size(40px, 40px);
+          }
+        }
+
+        .globe__explore {
+          display: none;
+        }
+
+        .globe__content {
+          color: $blueShade2;
+          margin-left: 8px;
+          @include size(137px, 32px);
+        }
+      }
+    }
+
+    .globe__overlay {
+      visibility: hidden;
+      opacity: 0;
+      z-index: 4;
+      background: radial-gradient(50% 50% at 50% 50%, #cadff4 0%, rgba(202, 223, 244, 0) 100%);
+      transition: visibility 0.3s, opacity 0.3s;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .globe__card {
+        &-popup {
+          font-weight: 500;
+          color: $whiteShade1;
+          position: absolute;
+          padding: 4rem;
+          @include size(422px, 480px);
+          @include offset(50%, 50%);
+          background: $cardBgColor;
+          backdrop-filter: blur(30px);
+          border-radius: 10px 10px 60px 10px;
+        }
+
+        &-name {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform: uppercase;
+
+          .globe__card-line {
+            width: 18.9rem;
+            display: inline-block;
+            height: 1px;
+            background: radial-gradient(#acb2ea 100%, #748cca 100%, #3b4384 80%);
+            opacity: 0.4;
+          }
+        }
+
+        &-units {
+          margin-top: 17.2rem;
+
+          .copy {
+            opacity: 0.6;
+            padding-top: 4px;
+            line-height: 2;
+          }
+        }
+
+        &-place {
+          margin-top: 3.6rem;
+
+          .copy {
+            opacity: 0.6;
+            padding-top: 4px;
+            line-height: 2;
+          }
+        }
+
+        &-close {
+          position: absolute;
+          @include size(4rem, 4rem);
+          background: $whiteShade1;
+          border-radius: 50%;
+          right: 4rem;
+          bottom: 4rem;
+          transition: transform 0.3s;
+
+          span[data-component="icon"] {
+            @include size(1rem, 1rem);
+            @include offset(50%, 50%);
+            position: absolute;
+            transform: translate(-50%, -50%);
+
+            svg {
+              path {
+                fill: $cardBgColor;
+              }
+            }
+          }
+
+          &:hover {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
 }

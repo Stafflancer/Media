@@ -28,3 +28,28 @@ function midea_theme_preprocess_paragraph(array &$vars) {
     $vars['history'] = Json::decode($history['#markup']->__toString());
   }
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function midea_theme_preprocess_page(array &$vars) {
+
+  $menu_name = 'main';
+  $menu_tree = \Drupal::menuTree();
+  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+  $parameters->setMinDepth(0);
+  $tree = $menu_tree->load($menu_name, $parameters);
+  $manipulators = array(
+    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+  );
+  $tree = $menu_tree->transform($tree, $manipulators);
+  $list = [];
+
+  foreach ($tree as $item) {
+    $title = $item->link->getTitle();
+    $url = $item->link->getUrlObject();
+    $list[] = ['copy' => $title, 'url' => ''];
+  }
+  $vars['main_menu'] = $list;
+}

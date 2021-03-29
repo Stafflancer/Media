@@ -107,11 +107,17 @@ $prm: 100vw / 375;
         @include size(8rem, 8rem);
         position: relative;
         margin-right: 24 * $prm;
+        cursor: pointer;
         @include respond-to(MEDIUM) {
           @include size(12rem, 12rem);
           margin-right: 0;
           position: absolute;
           right: 782 * $prd;
+        }
+        &:hover {
+          .c26-product-intro__img-icon-shape {
+            transform: scale(1.2);
+          }
         }
 
         &-shape {
@@ -170,7 +176,22 @@ $prm: 100vw / 375;
           }
         }
       }
-
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        105% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
       &-view {
         width: 372 * $prm;
         height: 215 * $prm;
@@ -181,6 +202,12 @@ $prm: 100vw / 375;
           width: 894 * $prd;
           height: 613 * $prd;
           margin-top: -2.9rem;
+        }
+        .fade-in {
+          animation: fadeIn 0.5s;
+        }
+        .fade-out {
+          animation: fadeOut 0.5s;
         }
       }
     }

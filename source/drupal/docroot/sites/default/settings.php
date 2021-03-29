@@ -10,21 +10,14 @@ $settings['trusted_host_patterns'] = [
   '^mideafinancesystem\.local$',
 ];
 
-# Configuration for acquia cloud.
-if (file_exists('/var/www/site-php')) {
+# Configuration for AWS hosting.
+if (defined('PHP_ENV') && defined('DB_NAME')) {
   $settings['update_free_access'] = FALSE;
 
-  # You have to override this file with the right one for your project on acquia.
-  // require('/var/www/site-php/[MY-SITE-NAME]/[MY-SITE-NAME]-settings.inc');
-
-  // Import the acquia settings, if available.
-  if (file_exists(DRUPAL_ROOT . '/../var/drupal-settings/settings.acquia.php')) {
-    require DRUPAL_ROOT . '/../var/drupal-settings/settings.acquia.php';
-  }
-
+  require DRUPAL_ROOT . '/../var/drupal-settings/settings.mmaws-all.php';
   // Per environment settings.
-  if (file_exists(DRUPAL_ROOT . '/../var/drupal-settings/settings.acquia.' . $_ENV['AH_SITE_ENVIRONMENT'] . '.php')) {
-    require DRUPAL_ROOT . '/../var/drupal-settings/settings.acquia.' . $_ENV['AH_SITE_ENVIRONMENT'] . '.php';
+  if (file_exists(DRUPAL_ROOT . '/../var/drupal-settings/settings.mmaws-' . PHP_ENV . '.php')) {
+    require DRUPAL_ROOT . '/../var/drupal-settings/settings.mmaws-' . PHP_ENV . '.php';
   }
 }
 

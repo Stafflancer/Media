@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_media_video_thumbnail
     - media.type.video
   module:
     - file
+    - image
 _core:
   default_config_hash: dQR0mYK5NNg27OigHrxZrHSsnwewnNZcPJKjKIO0cpA
 id: media.video.default
@@ -27,6 +29,15 @@ content:
       loop: false
       multiple_file_display_type: tags
     third_party_settings: {  }
+    region: content
+  field_media_video_thumbnail:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
 hidden:
   created: true

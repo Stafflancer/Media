@@ -1,16 +1,42 @@
 {% set swipers = [] %}
 {% for h in history %}
-  {% set item = {
+  {% if h.type == 'image' %}
+    {% set item = {
+          "title": h.title.0.value,
+          "year": h.field_history_year.0.value,
+          "subtitle": h.field_history_sub_title.0.value,
+          "descript": h.field_history_description.0.value,
+          "img": h.image_url,
+          "cta-round": {
+            "icon": "icon-play"
+          }
+        }
+    %}
+  {% elseif h.type == 'video' %}
+    {% set item = {
         "title": h.title.0.value,
         "year": h.field_history_year.0.value,
         "subtitle": h.field_history_sub_title.0.value,
-        "descript": h.field_history_description.0.value,
-        "img": "../../assets/placeholder/demo.jpg",
-        "cta-round": {
-          "icon": "icon-play"
+        "video": h.video_url,
+        "videoImg": h.image_url,
+        "videoOverlay": {
+          "video": {
+            "src": h.video_url,
+            "data": "controls"
+          }
+        },
+        "play": {
+          "icon": "icon-play",
+          "class": "card__media-play"
+        },
+        "stop": {
+          "icon": "icon-pause",
+          "class": "card__media-stop"
         }
       }
-  %}
+    %}
+
+  {% endif %}
 
   {% set swipers = swipers|merge([item]) %}
 {% endfor %}

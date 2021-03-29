@@ -24,8 +24,35 @@ function midea_theme_preprocess_paragraph(array &$vars) {
     $history = $view->executeDisplay();
 
     //$media =  \Drupal::entityTypeManager()->getStorage('media')->load(1);
-    //dump($media);
-    $vars['history'] = Json::decode($history['#markup']->__toString());
+    $list_history = Json::decode($history['#markup']->__toString());
+
+    $list = [];
+    foreach($list_history as $h) {
+      if (!empty($h['field_history_media'])) {
+        $media = \Drupal::entityTypeManager()->getStorage('media')->load($h['field_history_media'][0]['target_id']);
+        $h['image_url'] = '';
+        $h['video_url'] = '';
+        if ($media->bundle() == 'image') {
+          $h['type'] = 'image';
+          $uri = $media->field_media_image->entity->getFileUri();
+          $h['image_url'] = file_create_url($uri);
+        } 
+        else if ($media->bundle() == 'video') {
+          $h['type'] = 'video';
+          if (!empty($media->field_media_video_thumbnail->entity)) {
+            $uri = $media->get('field_media_video_thumbnail')->entity->get('uri')->value;
+            $h['image_url'] = file_create_url($uri);
+          }
+          $uri_video = $media->field_media_video_file->entity->getFileUri();
+          $h['video_url'] = file_create_url($uri_video);
+        }
+        else {
+          $h['type'] = 'other';
+        }
+      }
+      $list[] = $h;
+    }
+    $vars['history'] = $list;
   }
 }
 

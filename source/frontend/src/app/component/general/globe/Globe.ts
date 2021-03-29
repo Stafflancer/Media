@@ -15,7 +15,7 @@ export default class Globe extends AbstractComponent {
   constructor(el: HTMLElement) {
     super(el);
 
-    this.init();
+    this.init()
 
     this.close!.addEventListener('click', this.handleClose);
   }
@@ -35,8 +35,8 @@ export default class Globe extends AbstractComponent {
     this.popup!.classList.add('show');
   };
 
-  private init = () => {
-    let _this = this;
+  private init = ()=> {
+    let _this = this
     let globe = new DAT.mideaGlobe(this.container, {
       imgDir: '../../assets/globe/',
     });
@@ -51,7 +51,7 @@ export default class Globe extends AbstractComponent {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
-          for (var i = 0; i < data.length; i++) {
+          for (var i=0;i<data.length;i++) {
             globe.addData(data[i][1], { name: data[i][0], info: data[i][2] }, _this.handlePopup);
           }
           globe.animate();

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./c30-calculation.scss">
+<script src="./C30Calculation.ts"></script>
+
+<div class="c30-calculation" data-component="c30-calculation">
+  <div class="container">
+    <div class="row">
+      <div class=" col-12 col-md-3 c30-calculation__text-box">
+        <div class="c30-calculation__product-title">
+          {{> general/heading productTitle class="heading-5" }}
+          <div class="c30-calculation__product-title-mark">
+            {{> general/heading productTitleMark class="heading-5" }}
+          </div>
+        </div>
+        <div class="copy large c30-calculation__product-desc">{{productDesc}}</div>
+        <div class="c30-calculation__product-button">{{> cta/cta-border cta-border-with-icon }}</div>
+        <div class="c30-calculation__product-button-h5">{{> cta/cta-border cta-border-with-icon-h5 }}</div>
+      </div>
+      <div class=" col-12 col-md-9 c30-calculation__media-box">
+        <div class="c30-calculation__content">
+          {{> general/card cardVideo }}
+        </div>
+        <div class="c30-calculation__fixed-button">
+          <div class="c30-calculation__image-corner">
+            <img src="{{cornerImage}}" class="c09-stock-timeline-card__image-vector" />
+          </div>
+          <div class="c30-calculation__iconfont">
+            <div class="c30-calculation__icon">
+              {{> general/icon name='icon-arrow-down' }}
+            </div>
+            <div class="c30-calculation__icon-h5">
+              {{> general/icon name='icon-arrow-down-h5' }}
+            </div>
+          </div>
+        </div>
+        <div class="c30-calculation__background"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -35,13 +35,13 @@ DAT.mideaGlobe = function(container, opts) {
         'varying vec3 vNormal;',
         'varying vec2 vUv;',
         'void main() {',
-        'vec3 diffuse = texture2D( texture, vUv ).xyz;',
-        'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
-        'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
-        'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
-        '}',
-      ].join('\n'),
-    },
+          'vec3 diffuse = texture2D( texture, vUv ).xyz;',
+          'float intensity = 1.05 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) );',
+          'vec3 atmosphere = vec3( 1.0, 1.0, 1.0 ) * pow( intensity, 3.0 );',
+          'gl_FragColor = vec4( diffuse + atmosphere, 1.0 );',
+        '}'
+      ].join('\n')
+    }
   };
 
   var camera, scene, renderer, w, h;
@@ -110,10 +110,11 @@ DAT.mideaGlobe = function(container, opts) {
     container.addEventListener('mousedown', onMouseDown, false);
 
     window.addEventListener('resize', onWindowResize, false);
+
   }
 
-  function addData(data, opts, handleClick) {
-    console.log(handleClick);
+	function addData(data, opts, handleClick) {
+    console.log(handleClick)
     var lat, lng, size, color, i, colorFnWrapper;
     var singleGeometry;
 
@@ -144,9 +145,10 @@ DAT.mideaGlobe = function(container, opts) {
       }),
     );
     scene.add(singlePoint);
-    singlePoint.on('click', () => handleClick(title, temp, units, highlight1, highlight2));
-    this.points.push(singlePoint);
-  }
+    singlePoint.on('click', () => handleClick( title, temp, units, highlight1, highlight2))
+    this.points.push(singlePoint)
+
+  };
 
   function addPoint(lat, lng, size, color, subgeo) {
     var phi = ((90 - lat) * Math.PI) / 180;
@@ -217,7 +219,7 @@ DAT.mideaGlobe = function(container, opts) {
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
-  function onWindowResize(event) {
+  function onWindowResize( event ) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.offsetWidth, container.offsetHeight);

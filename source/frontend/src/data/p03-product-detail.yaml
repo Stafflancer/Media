@@ -1,0 +1,30 @@
+meta:
+  id: 'product-detail' # can be number or string, used for ordering
+  status: 'dev' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Page' # to group pages in the overview
+
+layout: home
+
+blocks:
+  - name: 'c01-fixed-header'
+    data: 'import!../app/component/block/c01-fixed-header/data/default.yaml'
+
+  - name: 'c26-product-intro'
+    data: 'import!../app/component/block/c26-product-intro/data/default.yaml'
+
+  - name: 'c29-product-hightlights'
+    data: 'import!../app/component/block/c29-product-hightlights/data/default.yaml'
+
+  - name: 'c30-calculation'
+    data: 'import!../app/component/block/c30-calculation/data/default.yaml'
+
+  - name: 'c31-product-specifications'
+    data: 'import!../app/component/block/c31-product-specifications/data/default.yaml'
+
+  - name: 'c03-leads-form'
+    data: 'import!../app/component/block/c03-leads-form/data/default.yaml'
+
+  - name: 'c02-footer'
+    data: 'import!../app/component/block/c02-footer/data/default.yaml'
+

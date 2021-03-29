@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./c31-product-specifications.scss">
+<script src="./C31ProductSpecifications.ts"></script>
+
+<div data-component="c31-product-specifications">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 c31-product-specifications__head">
+        <div class="c31-product-specifications__title">
+          {{> general/heading h1 class="heading-1" }}
+        </div>
+        <div class="c31-product-specifications-button">
+          {{> cta/cta-text cta-right-icon }}
+        </div>
+      </div>
+      <div class="col-12 col-md-12 c31-product-specifications__content">
+        <ul class="c31-product-specifications__specification">
+          {{#each specification}}
+          <li class="c31-product-specifications__specification-item">
+            <p class="copy large c31-product-specifications__specification-label">{{name}}</p>
+            <p class="copy large c31-product-specifications__specification-value">{{value}}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-12 c31-product-specifications__swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {{#each bannerImage}}
+            <div class="swiper-slide">
+              {{#if type}}
+              <img src="{{src}}" alt="">
+              {{else}}
+              {{> general/card-video videoInfo }}
+              {{/if}}
+            </div>
+            {{/each}}
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="c31-product-specifications__card-weather">
+          {{> general/card-weather cardWeather }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

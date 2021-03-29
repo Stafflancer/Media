@@ -1,0 +1,12 @@
+title: C31ProductSpecifications
+
+meta:
+  id: '' # can be number or string, used for ordering
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: '' # to group pages in the overview
+
+blocks:
+  - name: "c31-product-specifications"
+    data: "import!../app/component/block/c31-product-specifications/data/default"
+

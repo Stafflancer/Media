@@ -10,19 +10,66 @@ $prm: 100vw / 375;
     padding-top: inherit;
   }
 
+  .right {
+    @include respond-to(MEDIUM) {
+      .c30-calculation__text-box {
+        order: 2;
+
+        .c30-calculation__content-l {
+          padding-left: 170 * $prd !important;
+
+          @media screen and (min-width: 1025px) and (max-width: 1680px) {
+            .c30-calculation__product-button {
+              [data-component="cta-border"] {
+                padding: 0.6rem;
+                .cta {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .c30-calculation__media-box {
+        order: 1;
+
+        .c30-calculation__fixed-button {
+          left: 0;
+
+          .c30-calculation__image-corner {
+            transform: rotate(90deg);
+            top: 3.9rem;
+            right: -4.2rem;
+          }
+        }
+
+        .c30-calculation__background {
+          left: 0;
+        }
+      }
+    }
+  }
+
   &__text-box {
     order: 2;
     margin-top: 3.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100 * $prm !important;
 
     @include respond-to(MEDIUM) {
       order: 1;
-      max-width: 270 * $prd;
       margin-top: 0;
-      padding-left: 0 !important;
+    }
+
+    .c30-calculation__content-l {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 100 * $prm !important;
+
+      @include respond-to(MEDIUM) {
+        padding-left: 0 !important;
+      }
     }
 
     .c30-calculation__product-title {
@@ -47,11 +94,8 @@ $prm: 100vw / 375;
 
       @include respond-to(MEDIUM) {
         font-size: 2.4rem;
+        max-width: 270 * $prd;
       }
-    }
-
-    .c30-calculation__product-button-h5 {
-      display: none;
     }
   }
 

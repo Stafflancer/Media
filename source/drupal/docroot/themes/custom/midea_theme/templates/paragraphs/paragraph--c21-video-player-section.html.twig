@@ -11,21 +11,20 @@
   {% set lists = lists|merge([item]) %}
 {% endfor %}
 
-
 {% set data = {
     "title": "c21-video-player-section",
     "videoInfo": {
-      "imgSrc": "../../assets/placeholder/demo.jpg",
-      "videoSrc": "../../assets/placeholder/sample.mp4",
+      "imgSrc": image_url,
+      "videoSrc": video_url,
       "videoOverlay": {
         "video": {
-          "src": "../../assets/placeholder/sample.mp4",
+          "src": video_url,
           "data": "controls"
         }
       },
       "title": content.field_c21_title[0]['#context']['value'],
       "content": content.field_c21_content[0]['#context']['value'],
-      "time": "2:05",
+      "time": content.field_c21_video_duration[0]['#context']['value'],
       "play": {
         "icon": "icon-play",
         "class": "card-video__play"

@@ -54,6 +54,17 @@ function midea_theme_preprocess_paragraph(array &$vars) {
     }
     $vars['history'] = $list;
   }
+  if($paragraph->bundle() == 'c21_video_player_section') {
+    $video = $paragraph->get('field_c21_video')->entity;
+    if (!empty($video)) {
+      if (!empty($video->field_media_video_thumbnail->entity)) {
+        $uri = $video->get('field_media_video_thumbnail')->entity->get('uri')->value;
+        $vars['image_url'] = file_create_url($uri);
+      }
+      $uri_video = $video->field_media_video_file->entity->getFileUri();
+      $vars['video_url'] = file_create_url($uri_video);
+    }
+  }
 }
 
 /**

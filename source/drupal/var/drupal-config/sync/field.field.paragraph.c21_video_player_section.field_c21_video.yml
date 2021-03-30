@@ -1,17 +1,16 @@
-uuid: 5a52754b-d789-4479-acd3-b01c3795860b
+uuid: 943cf812-c91a-44af-a554-a0ccf4987c6d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_history_media
-    - media.type.image
+    - field.storage.paragraph.field_c21_video
     - media.type.video
-    - node.type.history
-id: node.history.field_history_media
-field_name: field_history_media
-entity_type: node
-bundle: history
-label: Media
+    - paragraphs.paragraphs_type.c21_video_player_section
+id: paragraph.c21_video_player_section.field_c21_video
+field_name: field_c21_video
+entity_type: paragraph
+bundle: c21_video_player_section
+label: Video
 description: ''
 required: true
 translatable: false
@@ -21,11 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
       video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: image
+    auto_create_bundle: ''
 field_type: entity_reference

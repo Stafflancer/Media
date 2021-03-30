@@ -6,8 +6,11 @@ dependencies:
     - field.field.paragraph.c21_video_player_section.field_c21_content
     - field.field.paragraph.c21_video_player_section.field_c21_items
     - field.field.paragraph.c21_video_player_section.field_c21_title
+    - field.field.paragraph.c21_video_player_section.field_c21_video
+    - field.field.paragraph.c21_video_player_section.field_c21_video_duration
     - paragraphs.paragraphs_type.c21_video_player_section
   module:
+    - media_library
     - paragraphs
 id: paragraph.c21_video_player_section.default
 targetEntityType: paragraph
@@ -24,7 +27,7 @@ content:
     region: content
   field_c21_items:
     type: paragraphs
-    weight: 2
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -42,6 +45,21 @@ content:
     region: content
   field_c21_title:
     weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c21_video:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_c21_video_duration:
+    weight: 3
     settings:
       size: 60
       placeholder: ''

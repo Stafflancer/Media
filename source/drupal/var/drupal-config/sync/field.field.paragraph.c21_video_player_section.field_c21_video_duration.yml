@@ -1,0 +1,19 @@
+uuid: 877c1a44-3283-4b77-b52c-2fb70c86da4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c21_video_duration
+    - paragraphs.paragraphs_type.c21_video_player_section
+id: paragraph.c21_video_player_section.field_c21_video_duration
+field_name: field_c21_video_duration
+entity_type: paragraph
+bundle: c21_video_player_section
+label: 'Video Duration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

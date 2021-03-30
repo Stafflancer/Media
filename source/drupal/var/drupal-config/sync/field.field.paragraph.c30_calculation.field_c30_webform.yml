@@ -1,0 +1,25 @@
+uuid: 8a548a98-1842-4aaa-b72c-8c8af6857b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c30_webform
+    - paragraphs.paragraphs_type.c30_calculation
+  module:
+    - webform
+id: paragraph.c30_calculation.field_c30_webform
+field_name: field_c30_webform
+entity_type: paragraph
+bundle: c30_calculation
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

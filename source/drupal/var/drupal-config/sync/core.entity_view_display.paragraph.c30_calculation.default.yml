@@ -1,0 +1,111 @@
+uuid: d626a0cc-9216-4e4b-83fa-ff1c2ca2fc89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c30_calculation.field_c30_description
+    - field.field.paragraph.c30_calculation.field_c30_image
+    - field.field.paragraph.c30_calculation.field_c30_title
+    - field.field.paragraph.c30_calculation.field_c30_video
+    - field.field.paragraph.c30_calculation.field_c30_webform
+    - paragraphs.paragraphs_type.c30_calculation
+  module:
+    - field_group
+    - file
+    - image
+    - webform
+third_party_settings:
+  field_group:
+    group_left:
+      children:
+        - field_c30_title
+        - field_c30_description
+        - field_c30_webform
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: left
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+    group_right:
+      children:
+        - field_c30_image
+        - field_c30_video
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: right
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+id: paragraph.c30_calculation.default
+targetEntityType: paragraph
+bundle: c30_calculation
+mode: default
+content:
+  field_c30_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_c30_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_c30_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_c30_video:
+    weight: 3
+    label: hidden
+    settings:
+      muted: false
+      width: 640
+      height: 480
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    type: file_video
+    region: content
+  field_c30_webform:
+    weight: 4
+    label: hidden
+    settings:
+      label: 'Request advice'
+      dialog: normal
+      attributes: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_link
+    region: content
+hidden: {  }

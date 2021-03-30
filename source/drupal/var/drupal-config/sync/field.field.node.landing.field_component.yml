@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.c13_global_capacity
     - paragraphs.paragraphs_type.c16_technology_and_innovation
     - paragraphs.paragraphs_type.c21_video_player_section
+    - paragraphs.paragraphs_type.c30_calculation
   module:
     - entity_reference_revisions
 id: node.landing.field_component
@@ -36,6 +37,7 @@ settings:
       c13_global_capacity: c13_global_capacity
       c16_technology_and_innovation: c16_technology_and_innovation
       c21_video_player_section: c21_video_player_section
+      c30_calculation: c30_calculation
     target_bundles_drag_drop:
       c05_item:
         weight: -9
@@ -73,4 +75,7 @@ settings:
       c21_video_player_section:
         enabled: true
         weight: 24
+      c30_calculation:
+        enabled: true
+        weight: 26
 field_type: entity_reference_revisions

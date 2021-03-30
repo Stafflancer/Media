@@ -1,0 +1,19 @@
+uuid: 531c114f-0b20-4ada-8c98-f93e0ded5c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c30_description
+    - paragraphs.paragraphs_type.c30_calculation
+id: paragraph.c30_calculation.field_c30_description
+field_name: field_c30_description
+entity_type: paragraph
+bundle: c30_calculation
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

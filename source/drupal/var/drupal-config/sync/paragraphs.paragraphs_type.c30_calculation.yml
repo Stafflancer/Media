@@ -1,0 +1,38 @@
+uuid: 87b3a9ce-5599-4fa5-935f-e0b3424418af
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    redirect:
+      add:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      edit:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      delete:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+        personalizable: 1
+      anonymous:
+        active: 0
+        destination: default
+        url: ''
+        external: ''
+id: c30_calculation
+label: 'C30 Calculation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

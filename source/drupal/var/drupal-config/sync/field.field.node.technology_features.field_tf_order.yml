@@ -1,0 +1,23 @@
+uuid: 7d5ed0d2-3632-48a2-a5e3-71ce438adbf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tf_order
+    - node.type.technology_features
+id: node.technology_features.field_tf_order
+field_name: field_tf_order
+entity_type: node
+bundle: technology_features
+label: Order
+description: 'The order of the items in the list'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

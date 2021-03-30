@@ -1,0 +1,19 @@
+uuid: a2c07b55-7234-4f99-aabd-be53e5fd65b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tf_item_name
+    - paragraphs.paragraphs_type.technology_feature_item
+id: paragraph.technology_feature_item.field_tf_item_name
+field_name: field_tf_item_name
+entity_type: paragraph
+bundle: technology_feature_item
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

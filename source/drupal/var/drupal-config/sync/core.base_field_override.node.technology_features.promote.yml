@@ -1,0 +1,22 @@
+uuid: c57ee2a9-2020-49c2-bfcb-31b32207243e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.technology_features
+id: node.technology_features.promote
+field_name: promote
+entity_type: node
+bundle: technology_features
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

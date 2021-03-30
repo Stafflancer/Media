@@ -1,0 +1,28 @@
+uuid: b93caaec-fa84-4ea6-bd05-7ebdb5626086
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.technology_features.field_tf_description
+    - field.field.node.technology_features.field_tf_image
+    - field.field.node.technology_features.field_tf_order
+    - field.field.node.technology_features.field_tf_selling_point_items
+    - node.type.technology_features
+  module:
+    - user
+id: node.technology_features.teaser
+targetEntityType: node
+bundle: technology_features
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_tf_description: true
+  field_tf_image: true
+  field_tf_order: true
+  field_tf_selling_point_items: true

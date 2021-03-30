@@ -1,0 +1,67 @@
+uuid: cf1e47c9-0b58-452f-a839-a39aac6e4e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tf_selling_point_items
+    - node.type.technology_features
+    - paragraphs.paragraphs_type.technology_feature_item
+  module:
+    - entity_reference_revisions
+id: node.technology_features.field_tf_selling_point_items
+field_name: field_tf_selling_point_items
+entity_type: node
+bundle: technology_features
+label: 'Selling point'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      technology_feature_item: technology_feature_item
+    target_bundles_drag_drop:
+      c05_item:
+        weight: 14
+        enabled: false
+      c05_self_segmentation_hero:
+        weight: 15
+        enabled: false
+      c07_item:
+        weight: 16
+        enabled: false
+      c07_on_page_jump_links:
+        weight: 17
+        enabled: false
+      c10_item:
+        weight: 18
+        enabled: false
+      c10_stock_timeline_card:
+        weight: 19
+        enabled: false
+      c12_history_timeline:
+        weight: 20
+        enabled: false
+      c13_global_capacity:
+        weight: 21
+        enabled: false
+      c13_item:
+        weight: 22
+        enabled: false
+      c16_technology_and_innovation:
+        weight: 23
+        enabled: false
+      c21_item:
+        weight: 24
+        enabled: false
+      c21_video_player_section:
+        weight: 25
+        enabled: false
+      technology_feature_item:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions

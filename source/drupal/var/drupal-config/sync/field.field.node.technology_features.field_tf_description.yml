@@ -1,0 +1,19 @@
+uuid: e214b2dd-cb77-4f60-88f0-aaefb2bd5511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tf_description
+    - node.type.technology_features
+id: node.technology_features.field_tf_description
+field_name: field_tf_description
+entity_type: node
+bundle: technology_features
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,20 @@
+uuid: 46273769-53d9-4b5a-9693-6282b20c0aca
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_tf_item_video
+field_name: field_tf_item_video
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

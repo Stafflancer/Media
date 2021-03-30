@@ -1,0 +1,59 @@
+uuid: 016e1b1b-ce32-437c-b283-7b80a899e29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.technology_features.field_tf_description
+    - field.field.node.technology_features.field_tf_image
+    - field.field.node.technology_features.field_tf_order
+    - field.field.node.technology_features.field_tf_selling_point_items
+    - node.type.technology_features
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.technology_features.default
+targetEntityType: node
+bundle: technology_features
+mode: default
+content:
+  field_tf_description:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tf_image:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tf_order:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tf_selling_point_items:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

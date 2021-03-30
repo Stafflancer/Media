@@ -1,0 +1,53 @@
+uuid: 08906699-71fd-49fa-8272-e398c404fcef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.technology_feature_item.field_tf_item_description
+    - field.field.paragraph.technology_feature_item.field_tf_item_image
+    - field.field.paragraph.technology_feature_item.field_tf_item_name
+    - field.field.paragraph.technology_feature_item.field_tf_item_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.technology_feature_item
+  module:
+    - image
+    - media_library
+id: paragraph.technology_feature_item.default
+targetEntityType: paragraph
+bundle: technology_feature_item
+mode: default
+content:
+  field_tf_item_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_tf_item_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tf_item_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tf_item_video:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

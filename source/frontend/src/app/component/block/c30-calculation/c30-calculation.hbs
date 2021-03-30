@@ -3,17 +3,18 @@
 
 <div class="c30-calculation" data-component="c30-calculation">
   <div class="container">
-    <div class="row">
+    <div class="row {{direction}}">
       <div class=" col-12 col-md-3 c30-calculation__text-box">
-        <div class="c30-calculation__product-title">
-          {{> general/heading productTitle class="heading-5" }}
-          <div class="c30-calculation__product-title-mark">
-            {{> general/heading productTitleMark class="heading-5" }}
+        <div class="c30-calculation__content-l">
+          <div class="c30-calculation__product-title">
+            {{> general/heading productTitle class="heading-5" }}
+            <div class="c30-calculation__product-title-mark">
+              {{> general/heading productTitleMark class="heading-5" }}
+            </div>
           </div>
+          <div class="copy large c30-calculation__product-desc">{{productDesc}}</div>
+          <div class="c30-calculation__product-button">{{> cta/cta-border cta-border-with-icon }}</div>
         </div>
-        <div class="copy large c30-calculation__product-desc">{{productDesc}}</div>
-        <div class="c30-calculation__product-button">{{> cta/cta-border cta-border-with-icon }}</div>
-        <div class="c30-calculation__product-button-h5">{{> cta/cta-border cta-border-with-icon-h5 }}</div>
       </div>
       <div class=" col-12 col-md-9 c30-calculation__media-box">
         <div class="c30-calculation__content">

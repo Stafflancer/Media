@@ -1,5 +1,7 @@
 title: c30-calculation
 
+direction: right
+
 productTitle:
   type: span
   copy: Breezeless
@@ -29,10 +31,5 @@ cardVideo:
 cta-border-with-icon:
   icon: arrow-right
   copy: Request advice
-
-cta-border-with-icon-h5:
-  icon: arrow-right
-  copy:  Explore RAC products
- 
 
 cornerImage: media/c30-calculation/corner.png

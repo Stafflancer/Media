@@ -1,0 +1,16 @@
+<div data-component="c04-canton-fair-entry-banner">
+  <div class="c04-canton-fair-entry-banner__content-text">
+    <div>
+      <p class="copy large">{{content.title}}</p>
+      {{> cta/cta-text/cta-text content.subtitle class="heading-1" }}
+    </div>
+    <div>
+      {{> cta/cta-border/cta-border content.join }}
+    </div>
+  </div>
+  <div class="c04-canton-fair-entry-banner__content"></div>
+  <div class="c04-canton-fair-entry-banner__mouse">
+    {{> general/icon/icon name="mouse-icon"}}
+    <span class="copy cta">{{mouseTitle}}</span>
+  </div>
+</div>

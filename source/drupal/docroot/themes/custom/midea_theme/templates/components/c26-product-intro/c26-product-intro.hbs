@@ -1,0 +1,37 @@
+<div data-component="c26-product-intro">
+  <div class="c26-product-intro__top">
+    <div class="c26-product-intro__title">
+      {{> cta/cta-text/cta-text headerTitle }}
+      {{> general/icon/icon name="icon-plus" }}
+    </div>
+    <div class="c26-product-intro__img">
+      <div class="c26-product-intro__img-left copy">
+        {{subTitle.main}}<span>{{subTitle.link}}</span>
+      </div>
+      <a class="c26-product-intro__img-icon">
+        <span class="c26-product-intro__img-icon-shape"></span>
+        <div class="c26-product-intro__img-icon-text">
+          {{> general/icon/icon name="icon-open" }}
+          <div class="icon-text">{{open}}</div>
+        </div>
+      </a>
+      <div class="c26-product-intro__img-view ">
+        <img class="c26-product-intro__product-img" src="{{topImg}}" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="c26-product-intro__details">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {{#each details}}
+          <div class="swiper-slide">
+            <div class="c26-product-intro__detail-item-number heading-5">{{this.number}}</div>
+            <div class="c26-product-intro__detail-item-title">{{this.title}}</div>
+            <div class="c26-product-intro__detail-item-subtitle">{{this.subtitle}}</div>
+          </div>
+        {{/each}}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>

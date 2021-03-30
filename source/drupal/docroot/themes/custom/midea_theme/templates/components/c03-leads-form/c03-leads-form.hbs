@@ -1,0 +1,36 @@
+<div data-component="c03-leads-form">
+  <div class="c03-leads-form__content">
+    {{> cta/cta-round-border/cta-round-border cta-round-border class="c03-leads-form__content-close" }}
+    <img src="{{imgPc}}" alt="" class="c03-leads-form__content-img">
+    <div class="c03-leads-form__content-form">
+      <div class="c03-leads-form__content-form-title">{{formTitle.title}}</div>
+      <div class="c03-leads-form__content-form-subtitle">{{formTitle.subtitle}}</div>
+      <form action="{{actionSrc}}" name="leadsForm">
+        {{#each forms}}
+          <div class="form-group">
+            {{#if this.type}}
+              {{#if this.texts}}
+                <textarea class="form-control" type="textarea" name="{{this.name}}" placeholder="{{this.placeholder}}" rows="3"></textarea>
+              {{else}}
+                <input class="form-control" type="text" name="{{this.name}}" placeholder="{{this.placeholder}}">
+              {{/if}}
+            {{else}}
+              <select class="form-control" name="{{this.name}}" placeholder="{{this.placeholder}}">
+                <option value="1">Disabled select</option>
+              </select>
+            {{/if}}
+            <small id="emailHelp" class="form-text text-muted">{{this.message}}</small>
+            {{#if this.required}}
+              <div class="form-require">*</div>
+            {{else}}
+              <div class="form-option">{{this.option}}</div>
+            {{/if}}
+          </div>
+        {{/each}}
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block sure-btn" disabled>{{sureBtn}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

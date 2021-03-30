@@ -24,28 +24,32 @@
       <img src="{{avatarSrc}}" alt="avatar">
     </div>
   </div>
-  <div class="c16-technology-and-innovation__container">
-    <div class="c16-technology-and-innovation__left">
-      <div class="c16-technology-and-innovation__title">
-        {{> general/heading/heading h1 class="heading-1" }}
-      </div>
-      <div class="c16-technology-and-innovation__content">
-        <div class="c16-technology-and-innovation__label">
-          <p class="copy large">{{intro.label}}</p>
-        </div>
-        <div class="c16-technology-and-innovation__control">
-          <div class="c16-technology-and-innovation__description">
-            <p class="copy large">{{intro.description}}</p>
+  <div class="c16-technology-and-innovation__container ">
+    <div class="container">
+      <div class="row">
+        <div class="c16-technology-and-innovation__left col-12 col-md-6">
+          <div class="c16-technology-and-innovation__title">
+            {{> general/heading/heading h1 class="heading-1" }}
           </div>
-          <div class="c16-technology-and-innovation__button">
-            {{> cta/cta-border/cta-border intro.subTitle }}
+          <div class="c16-technology-and-innovation__content">
+            <div class="c16-technology-and-innovation__label">
+              <p class="copy large">{{intro.label}}</p>
+            </div>
+            <div class="c16-technology-and-innovation__control">
+              <div class="c16-technology-and-innovation__description">
+                <p class="copy large">{{intro.description}}</p>
+              </div>
+              <div class="c16-technology-and-innovation__button">
+                {{> cta/cta-border/cta-border intro.subTitle }}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="c16-technology-and-innovation__right">
-      <div class="c16-technology-and-innovation__image">
-        <img src="{{intro.imgSrc}}" alt="">
+        <div class="c16-technology-and-innovation__right col-12 col-md-6">
+          <div class="c16-technology-and-innovation__image">
+            <img src="{{intro.imgSrc}}" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>

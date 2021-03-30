@@ -1,0 +1,45 @@
+<div data-component="c29-product-hightlights">
+  <div class="c29-product-hightlights__container container">
+    <div class="row">
+      <div class="col-12 col-md-6 c29-product-hightlights__l">
+        <div class="c29-product-hightlights__product">
+          <div class="c29-product-hightlights__product-image">
+            <img src="{{imgSrc}}" alt="">
+            <ul class="c29-product-hightlights__step">
+              {{#each timeLine}}
+              <li class="c29-product-hightlights__step-item">
+                <p class="c29-product-hightlights__dot"></p>
+                <p class="copy cta c29-product-hightlights__slog">{{slog}}</p>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 c29-product-hightlights__r">
+        <div class="c29-product-hightlights__product-intro">
+          <div class="c29-product-hightlights__product-link">
+            {{> cta/cta-text/cta-text cta-right-icon }}
+          </div>
+          <div class="c29-product-hightlights__product-title">
+            {{> general/heading/heading productTitle class="heading-1" }}
+          </div>
+          <div class="copy large c29-product-hightlights__product-desc">
+            {{productDesc}}
+          </div>
+          <ul class="c29-product-hightlights__product-function">
+            {{#each productFunction}}
+            <li class="c29-product-hightlights__product-function-item">
+              <div class="c29-product-hightlights__function-title">
+                {{> general/heading/heading title class="heading-3" }}
+                <span class="unit">{{unit}}</span>
+              </div>
+              <div class="c29-product-hightlights__function-content">{{copy}}</div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

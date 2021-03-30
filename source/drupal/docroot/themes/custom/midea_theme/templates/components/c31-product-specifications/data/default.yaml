@@ -1,0 +1,67 @@
+title: c31-product-specifications
+
+h1: 
+  type: h1
+  copy: Specification
+
+cta-right-icon:
+  with-icon: true
+  right-icon: icon-download
+  copy: Scroll to Explore
+  href: http://www.baidu.com
+
+
+specification:
+  - name: Type
+    value: Breezeless
+  - name: Capacity
+    value: Breezeless
+  - name: Wi-Fi port
+    value: Breezeless
+  - name: Indoor noise level
+    value: 35.5/29.5/26.5
+  - name: Indoor noise level
+    value: 35.5/29.5/26.5
+  - name: Power Supply
+    value: 220-240/1/50
+  - name: Rated Input(W)
+    value: 20.0
+  - name: Indoor air flow
+    value: 560/450/350
+  - name: Dimension
+    value: 795*225*295
+  - name: Dimension
+    value: 795*225*295
+
+bannerImage:
+  - type: 1
+    src: assets/c31-product-specifications/image-01.png
+  - type: 0
+    videoInfo:
+      imgSrc: ../../assets/placeholder/demo.jpg
+      videoSrc: ../../assets/placeholder/sample.mp4
+      videoOverlay:
+        video:
+          src: ../../assets/placeholder/sample.mp4
+          data: controls
+      title: Take A Tour
+      content: FACTORY OF THE FUTURE
+      time: '2:05'
+      play:
+        icon: icon-play
+        class: card-video__play
+      stop:
+        icon: icon-pause
+        class: card-video__stop
+      playicon: icon-play
+      stopicon: icon-pause
+  - type: 1
+    src: assets/c31-product-specifications/image-02.png
+  - type: 1
+    src: assets/c31-product-specifications/image-03.png  
+
+cardWeather:
+  # centigrade: 38°C
+  placeholder: Use your location
+  desc: It's hot in Shenzhen today! Beat the heat with Midea.
+  tips: Find out which Midea solution is best for your situation.    
